@@ -32,4 +32,6 @@
 
 ***
 
-* [Get Involved 🚀](get-involved.md)
+* [Get Involved 🚀](get-involved/README.md)
+  * [Contributing Guide](get-involved/contributing-guide.md)
+  * [Code of Conduct](get-involved/code-of-conduct.md)
