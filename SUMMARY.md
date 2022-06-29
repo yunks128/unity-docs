@@ -4,7 +4,16 @@
 
 ## User Docs
 
-* [Unity Cloud](user-docs/unity-cloud.md)
+* [Unity Cloud](user-docs/unity-cloud/README.md)
+  * [Getting Started](user-docs/unity-cloud/getting-started.md)
+  * [Key Unity Concepts](user-docs/unity-cloud/key-unity-concepts.md)
+  * [Tutorials](user-docs/unity-cloud/tutorials/README.md)
+    * [The Development Environment](user-docs/unity-cloud/tutorials/the-development-environment.md)
+    * [Exploring the Unity Data Catalog](user-docs/unity-cloud/tutorials/exploring-the-unity-data-catalog.md)
+    * [Exploring the Application Catalog](user-docs/unity-cloud/tutorials/exploring-the-application-catalog.md)
+    * [Executing a Job](user-docs/unity-cloud/tutorials/executing-a-job.md)
+    * [Advanced Tutorials](user-docs/unity-cloud/tutorials/advanced-tutorials/README.md)
+      * [Managing Permission](user-docs/unity-cloud/tutorials/advanced-tutorials/managing-permission.md)
 * [Community Edition](user-docs/community-edition.md)
 
 ## Developer Docs
