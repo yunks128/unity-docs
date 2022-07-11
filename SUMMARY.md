@@ -33,7 +33,14 @@
     * [Admin Guide](developer-docs/common-services/docs/admin-guide.md)
   * [FAQ](developer-docs/common-services/faq.md)
   * [Contributing](developer-docs/common-services/contributing.md)
-* [Data](developer-docs/data.md)
+* [Data](developer-docs/data/README.md)
+  * [Features](developer-docs/data/features.md)
+  * [Quick Start](developer-docs/data/quick-start.md)
+  * [Docs](developer-docs/data/docs/README.md)
+    * [Users Guide](developer-docs/data/docs/users-guide.md)
+    * [Developers Guide](developer-docs/data/docs/developers-guide.md)
+    * [Admin Guide](developer-docs/data/docs/admin-guide.md)
+  * [FAQ](developer-docs/data/faq.md)
 * [Science Processing](developer-docs/science-processing.md)
 
 ## Getting Help

@@ -48,8 +48,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 [common-services](developer-docs/common-services/)
 {% endcontent-ref %}
 
-{% content-ref url="developer-docs/data.md" %}
-[data.md](developer-docs/data.md)
+{% content-ref url="developer-docs/data/" %}
+[data](developer-docs/data/)
 {% endcontent-ref %}
 
 {% content-ref url="developer-docs/science-processing.md" %}
