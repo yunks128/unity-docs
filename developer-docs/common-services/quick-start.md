@@ -45,7 +45,7 @@ If, after working through this guide, you are still stuck, please create a [disc
 \
 **The main things that service areas need to do**, to integrate with the Unity CS deployment framework are as follows:
 
-* Identify what components you need to deploy, and [create terraform scripts](https://github.com/unity-sds/unity-cs/wiki/Creating-Deployment-Terraform-Scripts) for them
+* Identify what components you need to deploy, and [create terraform scripts](https://unity-sds.gitbook.io/docs/developer-docs/common-services/docs/users-guide/deployment/creating-terraform-scripts) for them
 * Make necessary changes to kubectl config files
 * [Create an initial terraform metadata file](https://github.com/unity-sds/unity-cs/wiki/Initial-Terraform-Metadata-Config-File), that identifies basic information about your deployment
 * Ensure that you have a proper [smoketest script](https://github.com/unity-sds/unity-cs-infra/blob/main/README\_deploy.md#common-entry-points-1) set up
