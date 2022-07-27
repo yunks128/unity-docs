@@ -8,6 +8,8 @@ MCP access request: to Ramesh
 
 Jupyter notebook home: (dev) [https://jupyter-test-alb-1374844384.us-west-2.elb.amazonaws.com:8000/](https://jupyter-test-alb-1374844384.us-west-2.elb.amazonaws.com:8000/)
 
+Working with Jobs tutorial: [https://github.com/unity-sds/sounder-sips-tutorial/blob/develop/jupyter-notebooks/tutorials/3\_working\_with\_jobs.ipynb](https://github.com/unity-sds/sounder-sips-tutorial/blob/develop/jupyter-notebooks/tutorials/3\_working\_with\_jobs.ipynb)
+
 Dockstore workflow list (Application Catalog): [http://ec2-52-25-78-158.us-west-2.compute.amazonaws.com:9998/workflows](http://ec2-52-25-78-158.us-west-2.compute.amazonaws.com:9998/workflows)
 
 Dockstore user guide: [https://docs.dockstore.org/en/stable/getting-started/getting-started.html](https://docs.dockstore.org/en/stable/getting-started/getting-started.html)
