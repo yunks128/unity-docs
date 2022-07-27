@@ -24,5 +24,9 @@ DAPA endpoint:
 
 DAPA example: [https://github.com/unity-sds/unity-cli/blob/main/unity/commands/ds.py](https://github.com/unity-sds/unity-cli/blob/main/unity/commands/ds.py)
 
+**System overview**
+
+![](https://documents.lucid.app/documents/2eaf0390-bb79-4c4d-af02-e7f64e0914a3/pages/.2F-os\_15SZe?a=6270\&x=5292\&y=661\&w=1141\&h=1342\&store=1\&accept=image%2F\*\&auth=LCA%207b9b5677bf9594c38ff6dc4ac26c469452baa251-ts%3D1658948780)
+
 
 
