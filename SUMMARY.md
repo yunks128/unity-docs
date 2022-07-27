@@ -18,6 +18,7 @@
 
 ## Developer Docs
 
+* [Starting Line](developer-docs/starting-line.md)
 * [Algorithm Development](developer-docs/algorithm-development.md)
 * [Analytics](developer-docs/analytics.md)
 * [Common Services](developer-docs/common-services/README.md)
