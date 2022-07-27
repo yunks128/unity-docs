@@ -28,7 +28,7 @@ DAPA example: [https://github.com/unity-sds/unity-cli/blob/main/unity/commands/d
 
 **System overview**
 
-Jupyter is the primary interface to the system. For job-management activities you will interact with the WPS-T API provided by the SPS (Processing System) subsystem. For data input and output, you interact with the DAPA API from the DS (Data Store) subsystem. The ADS subsystem for Algorithm Development has several pieces, including code source-control and the Application Catalog (using Dockstore).
+Jupyter is the primary interface to the system. For job-management activities you will interact with the WPS-T API provided by the SPS (Processing System) subsystem. For data input and output, you interact with the DAPA API from the DS (Data Store) subsystem. The ADS subsystem for Algorithm Development has several pieces, including code source-control and the Application Catalog (implemented using Dockstore).
 
 At the release of R2, the interface between Dockstore and the rest of the system is limited. It will eventually be possible to directly deploy applications from Dockstore into the scaled compute environment (SPS subsystem). The user interface to do so will evolve with system capabilities.
 
