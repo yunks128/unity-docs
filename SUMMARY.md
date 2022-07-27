@@ -4,6 +4,7 @@
 
 ## User Docs
 
+* [Starting Line](user-docs/starting-line.md)
 * [Unity Cloud](user-docs/unity-cloud/README.md)
   * [Getting Started](user-docs/unity-cloud/getting-started.md)
   * [Key Unity Concepts](user-docs/unity-cloud/key-unity-concepts.md)
@@ -18,7 +19,6 @@
 
 ## Developer Docs
 
-* [Starting Line](developer-docs/starting-line.md)
 * [Algorithm Development](developer-docs/algorithm-development.md)
 * [Analytics](developer-docs/analytics.md)
 * [Common Services](developer-docs/common-services/README.md)
