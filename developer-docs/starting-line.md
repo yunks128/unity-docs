@@ -10,6 +10,8 @@ Jupyter notebook home: (dev) [https://jupyter-test-alb-1374844384.us-west-2.elb.
 
 Dockstore workflow list (Application Catalog): [http://ec2-52-25-78-158.us-west-2.compute.amazonaws.com:9998/workflows](http://ec2-52-25-78-158.us-west-2.compute.amazonaws.com:9998/workflows)
 
+Dockstore user guide: [https://docs.dockstore.org/en/stable/getting-started/getting-started.html](https://docs.dockstore.org/en/stable/getting-started/getting-started.html)
+
 Learning Jupyter: [https://jupyterlab.readthedocs.io/en/stable/getting\_started/overview.html](https://jupyterlab.readthedocs.io/en/stable/getting\_started/overview.html)
 
 SounderSIPS Jupyter tutorials: [https://github.com/unity-sds/sounder-sips-tutorial](https://github.com/unity-sds/sounder-sips-tutorial)
