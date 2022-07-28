@@ -4,7 +4,7 @@ description: Procedure detailing how to create a U-CS release
 
 # Creating a Release
 
-Procedure:
+## **Procedure**:
 
 For each of these repositories:
 
@@ -24,5 +24,7 @@ do the following:
    1. "Bug Fixes"
    2. "Improvements"
    3. "Full Changelog" (this link should already be automatically generate from the "Generate release notes" button click)
+6. Check the "This is a pre-release" checkbox, if not fully a production release
+7. Click "Publish release"
 
 Then, back on the main [unity-cs CHANGELOG.md file](https://github.com/unity-sds/unity-cs/blob/main/CHANGELOG.md), add a release section, that reference the releases you created in the above steps.
