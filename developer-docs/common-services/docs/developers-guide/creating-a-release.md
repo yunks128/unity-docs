@@ -27,4 +27,4 @@ do the following:
 6. Check the "This is a pre-release" checkbox, if not fully a production release
 7. Click "Publish release"
 
-Then, back on the main [unity-cs CHANGELOG.md file](https://github.com/unity-sds/unity-cs/blob/main/CHANGELOG.md), add a release section, that reference the releases you created in the above steps.
+Then, back on the main [unity-cs CHANGELOG.md file](https://github.com/unity-sds/unity-cs/blob/main/CHANGELOG.md), add a release section, that reference the releases you created in the above steps.  See examples on that page, for more details.
