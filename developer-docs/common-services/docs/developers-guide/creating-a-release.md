@@ -1,0 +1,25 @@
+---
+description: Procedure detailing how to create a U-CS release
+---
+
+# Creating a Release
+
+Procedure:
+
+For each of these repositories:
+
+* [https://github.com/unity-sds/unity-cs-infra](https://github.com/unity-sds/unity-cs-infra)
+* [https://github.com/unity-sds/unity-cs-deployment-catalog](https://github.com/unity-sds/unity-cs-deployment-catalog)
+* [https://github.com/unity-sds/unity-cs-terraform-transformer](https://github.com/unity-sds/unity-cs-terraform-transformer)
+* [https://github.com/unity-sds/unity-cs-security](https://github.com/unity-sds/unity-cs-security)
+
+do the following:
+
+1. From the github repo root page, click "Create a new release"
+2. Create a new tag, for example "unity-prototype-0.2"
+3. Enter a title, for example "Unity Prototype 0.2"
+4. Click on "Generate release notes"
+5. Manually curate the content, to make human-readable entries.  If possible, create these main sections:
+   1. "Bug Fixes"
+   2. "Improvements"
+   3. "Full Changelog" (this link should already be automatically generate from the "Generate release notes" button click)
