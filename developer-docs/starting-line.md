@@ -34,7 +34,11 @@ Jupyter is the primary interface to the system. For job-management activities yo
 
 At the release of R2, the interface between Dockstore and the rest of the system is limited. It will eventually be possible to directly deploy applications from Dockstore into the scaled compute environment (SPS subsystem). The user interface to do so will evolve with system capabilities.
 
-![](https://documents.lucid.app/documents/2eaf0390-bb79-4c4d-af02-e7f64e0914a3/pages/.2F-os\_15SZe?a=6270\&x=5292\&y=661\&w=1141\&h=1342\&store=1\&accept=image%2F\*\&auth=LCA%207b9b5677bf9594c38ff6dc4ac26c469452baa251-ts%3D1658948780)
+**An overview of the Unity Prototype Release 0.2 system**
+
+Blue boxes indicate user-interfaces. Orange boxes are other service subsystems, with grey dotted-border boxes indicating APIs used to interact with those subsystems.
+
+![](https://documents.lucid.app/documents/2eaf0390-bb79-4c4d-af02-e7f64e0914a3/pages/.2F-os\_15SZe?a=6273\&x=5292\&y=661\&w=1141\&h=1342\&store=1\&accept=image%2F\*\&auth=LCA%204ffb33e23d9c8212fca25bf036f885be2e9a068b-ts%3D1659395518)
 
 
 
