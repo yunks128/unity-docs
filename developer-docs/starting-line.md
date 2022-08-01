@@ -24,7 +24,8 @@ SounderSIPS Jupyter tutorials: [https://github.com/unity-sds/sounder-sips-tutori
 
 WPS-T endpoint:
 
-DAPA endpoint:
+DAPA endpoints: [https://58nbcawrvb.execute-api.us-west-2.amazonaws.com/test/am-uds-dapa/collections](https://58nbcawrvb.execute-api.us-west-2.amazonaws.com/test/am-uds-dapa/collections) and\
+https://58nbcawrvb.execute-api.us-west-2.amazonaws.com/test/am-uds-dapa/collections/{collection}/items&#x20;
 
 DAPA example: [https://github.com/unity-sds/unity-cli/blob/main/unity/commands/ds.py](https://github.com/unity-sds/unity-cli/blob/main/unity/commands/ds.py)
 
