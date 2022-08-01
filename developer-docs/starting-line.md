@@ -36,7 +36,13 @@ At the release of R2, the interface between Dockstore and the rest of the system
 
 **An overview of the Unity Prototype Release 0.2 system**
 
-Blue boxes indicate user-interfaces. Orange boxes are other service subsystems, with grey dotted-border boxes indicating APIs used to interact with those subsystems.
+Blue boxes indicate graphical user-interfaces. Orange boxes are other service subsystems, with grey dotted-border boxes indicating APIs used to interact with those subsystems.
+
+Initially the two GUIs are&#x20;
+
+1\) Jupyter, where the system may be interfaced via the indicated APIs, and
+
+2\) Dockstore, where the Application Packages are stored
 
 ![](https://documents.lucid.app/documents/2eaf0390-bb79-4c4d-af02-e7f64e0914a3/pages/.2F-os\_15SZe?a=6273\&x=5292\&y=661\&w=1141\&h=1342\&store=1\&accept=image%2F\*\&auth=LCA%204ffb33e23d9c8212fca25bf036f885be2e9a068b-ts%3D1659395518)
 
