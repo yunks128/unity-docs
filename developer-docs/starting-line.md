@@ -26,6 +26,8 @@ WPS-T endpoint: [http://af9ab68f04f5a470bb55ba29ff6a6215-1326373853.us-west-2.el
 
 WPS-T API reference: [http://af9ab68f04f5a470bb55ba29ff6a6215-1326373853.us-west-2.elb.amazonaws.com:5001/api/docs](http://af9ab68f04f5a470bb55ba29ff6a6215-1326373853.us-west-2.elb.amazonaws.com:5001/api/docs)
 
+Job/process status dictionary: [https://hysds-core.atlassian.net/wiki/spaces/HYS/pages/527761452/Job+Workflow+in+HySDS](https://hysds-core.atlassian.net/wiki/spaces/HYS/pages/527761452/Job+Workflow+in+HySDS)
+
 DAPA endpoints: [https://58nbcawrvb.execute-api.us-west-2.amazonaws.com/test/am-uds-dapa/collections](https://58nbcawrvb.execute-api.us-west-2.amazonaws.com/test/am-uds-dapa/collections) and others are the same location; see DAPA API reference below
 
 DAPA API reference: [https://docs.ogc.org/per/20-025r1.html#\_dapa\_overview](https://docs.ogc.org/per/20-025r1.html#\_dapa\_overview)
