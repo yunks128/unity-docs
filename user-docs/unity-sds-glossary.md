@@ -10,6 +10,8 @@ Application
 
 Application Catalog
 
+Application Deployment and Execution Service (ADES)
+
 Application Package
 
 Job
@@ -19,3 +21,13 @@ Process
 Workflow
 
 Workspace
+
+SPS
+
+ADS
+
+ADE
+
+DS
+
+AS
