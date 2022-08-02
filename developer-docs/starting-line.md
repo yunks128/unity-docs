@@ -8,7 +8,7 @@ description: Unity Prototype Release 2 Links to Get Started
 
 1. First you will need to confirm access to the Unity test environment. You will need to make a MCP access request to the support team if it does not already work. The core user interface will be [JupyterLab](https://jupyter-test-alb-1374844384.us-west-2.elb.amazonaws.com:8000/).
 2. Once you have JupyterLab access set up, we suggest trying out the official JupyterLab tutorial at [https://jupyterlab.readthedocs.io/en/stable/getting\_started/overview.html](https://jupyterlab.readthedocs.io/en/stable/getting\_started/overview.html). This will help you get familiar with the Jupyter user interface and concepts.
-3. Next, try the "Working with data" Python notebook tutorial in the /tutorials folder. This will get you started learning some of the Unity APIs and how to find data from Jupyter.
+3. The next step is to clone the [sounder-sips-tutorial code repository](https://github.com/unity-sds/sounder-sips-tutorial) into your jupyter notebook, and follow along with the tutorials.
 
 
 
@@ -16,11 +16,11 @@ description: Unity Prototype Release 2 Links to Get Started
 
 Unity is a set of cloud services that provide an end-to-end tool set for science analysis, algorithm development, and scaled processing. They key service areas available are:
 
-ADS: the Algorithm Development service, which includes a JupyterLab environment, code source-control and the Application Catalog (implemented using Dockstore).
+**Application Development**: the Algorithm Development service, which includes a JupyterHub environment, code source-control and the Application Catalog (implemented using Dockstore).
 
-SPS: For job-management activities you will interact with the WPS-T API provided by the SPS (Processing System) subsystem.&#x20;
+**Processing System**: For deploying applications and job-management activities you will interact with the WPS-T API provided by the Science Processing System (SPS) subsystems.&#x20;
 
-DS: For data input and output, you interact with the DAPA API from the DS (Data Store) subsystem.
+**Data Services**: For data input and output, you interact with the Data Access and Processing API (DAPA) from the Data Services (DS) subsystem.
 
 Jupyter is the primary graphical interface to the system.&#x20;
 
