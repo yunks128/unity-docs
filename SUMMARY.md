@@ -19,8 +19,22 @@
 
 ## Developer Docs
 
-* [Algorithm Development](developer-docs/algorithm-development.md)
-* [Analytics](developer-docs/analytics.md)
+* [Algorithm Development](developer-docs/algorithm-development/README.md)
+  * [Features](developer-docs/algorithm-development/features.md)
+  * [Quick Start](developer-docs/algorithm-development/quick-start.md)
+  * [Docs](developer-docs/algorithm-development/docs/README.md)
+    * [Users Guide](developer-docs/algorithm-development/docs/users-guide.md)
+    * [Developers Guide](developer-docs/algorithm-development/docs/developers-guide.md)
+    * [Admin Guide](developer-docs/algorithm-development/docs/admin-guide.md)
+  * [FAQ](developer-docs/algorithm-development/faq.md)
+* [Analytics](developer-docs/analytics/README.md)
+  * [Features](developer-docs/analytics/features.md)
+  * [Quick Start](developer-docs/analytics/quick-start.md)
+  * [Docs](developer-docs/analytics/docs/README.md)
+    * [Users Guide](developer-docs/analytics/docs/users-guide.md)
+    * [Developers Guide](developer-docs/analytics/docs/developers-guide.md)
+    * [Admin Guide](developer-docs/analytics/docs/admin-guide.md)
+  * [FAQ](developer-docs/analytics/faq.md)
 * [Common Services](developer-docs/common-services/README.md)
   * [Features](developer-docs/common-services/features.md)
   * [Quick Start](developer-docs/common-services/quick-start.md)
@@ -43,7 +57,14 @@
     * [Developers Guide](developer-docs/data/docs/developers-guide.md)
     * [Admin Guide](developer-docs/data/docs/admin-guide.md)
   * [FAQ](developer-docs/data/faq.md)
-* [Science Processing](developer-docs/science-processing.md)
+* [Science Processing](developer-docs/science-processing/README.md)
+  * [Features](developer-docs/science-processing/features.md)
+  * [Quick Start](developer-docs/science-processing/quick-start.md)
+  * [Docs](developer-docs/science-processing/docs/README.md)
+    * [Users Guide](developer-docs/science-processing/docs/users-guide.md)
+    * [Developers Guide](developer-docs/science-processing/docs/developers-guide.md)
+    * [Admin Guide](developer-docs/science-processing/docs/admin-guide.md)
+  * [FAQ](developer-docs/science-processing/faq.md)
 
 ## Getting Help
 
