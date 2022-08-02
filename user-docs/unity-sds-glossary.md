@@ -31,3 +31,11 @@ ADE
 DS
 
 AS
+
+DAPA
+
+STAC
+
+WPS (WPS-T)
+
+Dockstore
