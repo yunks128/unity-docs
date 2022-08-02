@@ -4,7 +4,7 @@ description: Unity Prototype Release 2 Links to Get Started
 
 # Starting Line
 
-**Getting started**
+### **Getting started**
 
 1. First you will need to confirm access to the Unity test environment. You will need to make a MCP access request to the support team if it does not already work. The core user interface will be [JupyterLab](https://jupyter-test-alb-1374844384.us-west-2.elb.amazonaws.com:8000/).
 2. Once you have JupyterLab access set up, we suggest trying out the official JupyterLab tutorial at [https://jupyterlab.readthedocs.io/en/stable/getting\_started/overview.html](https://jupyterlab.readthedocs.io/en/stable/getting\_started/overview.html). This will help you get familiar with the Jupyter user interface and concepts.
@@ -12,7 +12,7 @@ description: Unity Prototype Release 2 Links to Get Started
 
 
 
-**System overview**
+### **System overview**
 
 Unity is a set of cloud services that provide an end-to-end tool set for science analysis, algorithm development, and scaled processing. They key service areas available are:
 
@@ -26,7 +26,7 @@ Jupyter is the primary graphical interface to the system.&#x20;
 
 At the release of R2, the interface between Dockstore and the rest of the system is limited. It will eventually be possible to directly deploy applications from Dockstore into the scaled compute environment (SPS subsystem). The user interface to do so will evolve with system capabilities.
 
-**An overview of the Unity Prototype Release 0.2 system**
+#### **An overview of the Unity Prototype Release 0.2 system**
 
 Blue boxes indicate graphical user-interfaces. Orange boxes are other service subsystems, with grey dotted-border boxes indicating APIs used to interact with those subsystems.
 
@@ -34,11 +34,11 @@ Initially the two GUIs are&#x20;
 
 1\) Jupyter, where the system may be interfaced via the indicated APIs, and
 
-2\) Dockstore, where the Application Packages are stored
+2\) Dockstore, where the Application Packages are stored.
 
 ![](https://documents.lucid.app/documents/2eaf0390-bb79-4c4d-af02-e7f64e0914a3/pages/.2F-os\_15SZe?a=6273\&x=5292\&y=661\&w=1141\&h=1342\&store=1\&accept=image%2F\*\&auth=LCA%204ffb33e23d9c8212fca25bf036f885be2e9a068b-ts%3D1659395518)
 
-**Links and references**
+### **Links and references**
 
 JupyterLab home: (dev) [https://jupyter-test-alb-1374844384.us-west-2.elb.amazonaws.com:8000/](https://jupyter-test-alb-1374844384.us-west-2.elb.amazonaws.com:8000/)
 
@@ -52,7 +52,7 @@ Learning Jupyter: [https://jupyterlab.readthedocs.io/en/stable/getting\_started/
 
 SounderSIPS Jupyter tutorials: [https://github.com/unity-sds/sounder-sips-tutorial](https://github.com/unity-sds/sounder-sips-tutorial)
 
-**API endpoints and references**
+### **API endpoints and references**
 
 WPS-T endpoint: [http://af9ab68f04f5a470bb55ba29ff6a6215-1326373853.us-west-2.elb.amazonaws.com:5001/processes](http://af9ab68f04f5a470bb55ba29ff6a6215-1326373853.us-west-2.elb.amazonaws.com:5001/processes) and others at the same location; see WPS-T API reference below
 
