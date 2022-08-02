@@ -14,7 +14,15 @@ description: Unity Prototype Release 2 Links to Get Started
 
 **System overview**
 
-Jupyter is the primary interface to the system. For job-management activities you will interact with the WPS-T API provided by the SPS (Processing System) subsystem. For data input and output, you interact with the DAPA API from the DS (Data Store) subsystem. The ADS subsystem for Algorithm Development has several pieces, including code source-control and the Application Catalog (implemented using Dockstore).
+Unity is a set of cloud services that provide an end-to-end tool set for science analysis, algorithm development, and scaled processing. They key service areas available are:
+
+ADS: the Algorithm Development service, which includes a JupyterLab environment, code source-control and the Application Catalog (implemented using Dockstore).
+
+SPS: For job-management activities you will interact with the WPS-T API provided by the SPS (Processing System) subsystem.&#x20;
+
+DS: For data input and output, you interact with the DAPA API from the DS (Data Store) subsystem.
+
+Jupyter is the primary graphical interface to the system.&#x20;
 
 At the release of R2, the interface between Dockstore and the rest of the system is limited. It will eventually be possible to directly deploy applications from Dockstore into the scaled compute environment (SPS subsystem). The user interface to do so will evolve with system capabilities.
 
