@@ -16,6 +16,7 @@
     * [Executing a Job](user-docs/unity-cloud/tutorials/executing-a-job.md)
     * [Advanced Tutorials](user-docs/unity-cloud/tutorials/advanced-tutorials/README.md)
       * [Managing Permission](user-docs/unity-cloud/tutorials/advanced-tutorials/managing-permission.md)
+  * [Endpoints](user-docs/unity-cloud/endpoints.md)
 * [Community Edition](user-docs/community-edition.md)
 
 ## Developer Docs
