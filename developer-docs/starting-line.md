@@ -4,6 +4,8 @@ description: Unity Prototype Release 2 Links to Get Started
 
 # Starting Line
 
+**Getting started**
+
 1. First you will need to confirm access to the Unity test environment. You will need to make a MCP access request to the support team if it does not already work. The core user interface will be [JupyterLab](https://jupyter-test-alb-1374844384.us-west-2.elb.amazonaws.com:8000/).
 2. Once you have JupyterLab access set up, we suggest trying out the official JupyterLab tutorial at [https://jupyterlab.readthedocs.io/en/stable/getting\_started/overview.html](https://jupyterlab.readthedocs.io/en/stable/getting\_started/overview.html). This will help you get familiar with the Jupyter user interface and concepts.
 3. Next, try the "Working with data" Python notebook tutorial in the /tutorials folder. This will get you started learning some of the Unity APIs and how to find data from Jupyter.
