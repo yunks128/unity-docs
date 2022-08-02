@@ -16,9 +16,9 @@ description: Unity Prototype Release 2 Links to Get Started
 
 Unity is a set of cloud services that provide an end-to-end tool set for science analysis, algorithm development, and scaled processing. They key service areas available are:
 
-**Application Development**: the Algorithm Development service, which includes a JupyterHub environment, code source-control and the Application Catalog (implemented using Dockstore).
+**Application Development**: the Algorithm Development Service (ADS), which includes a JupyterHub environment, code source-control and the Application Catalog (implemented using Dockstore).
 
-**Processing System**: For deploying applications and job-management activities you will interact with the WPS-T API provided by the Science Processing System (SPS) subsystems.&#x20;
+**Science Processing Service**: For deploying applications and job-management activities you will interact with the WPS-T API provided by the Science Processing Service (SPS) subsystems.&#x20;
 
 **Data Services**: For data input and output, you interact with the Data Access and Processing API (DAPA) from the Data Services (DS) subsystem.
 
