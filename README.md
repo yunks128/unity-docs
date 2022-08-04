@@ -36,12 +36,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-{% content-ref url="developer-docs/algorithm-development.md" %}
-[algorithm-development.md](developer-docs/algorithm-development.md)
+{% content-ref url="developer-docs/algorithm-development/" %}
+[algorithm-development](developer-docs/algorithm-development/)
 {% endcontent-ref %}
 
-{% content-ref url="developer-docs/analytics.md" %}
-[analytics.md](developer-docs/analytics.md)
+{% content-ref url="developer-docs/analytics/" %}
+[analytics](developer-docs/analytics/)
 {% endcontent-ref %}
 
 {% content-ref url="developer-docs/common-services/" %}
@@ -52,8 +52,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 [data](developer-docs/data/)
 {% endcontent-ref %}
 
-{% content-ref url="developer-docs/science-processing.md" %}
-[science-processing.md](developer-docs/science-processing.md)
+{% content-ref url="developer-docs/science-processing/" %}
+[science-processing](developer-docs/science-processing/)
 {% endcontent-ref %}
 
 ## Getting Help
