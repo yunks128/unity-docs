@@ -39,6 +39,7 @@
   * [FAQ](developer-docs/analytics/faq.md)
 * [Common Services](developer-docs/common-services/README.md)
   * [Features](developer-docs/common-services/features.md)
+  * [Unity Account and Login](developer-docs/common-services/unity-account-and-login.md)
   * [Quick Start](developer-docs/common-services/quick-start.md)
   * [Docs](developer-docs/common-services/docs/README.md)
     * [Users Guide](developer-docs/common-services/docs/users-guide.md)
