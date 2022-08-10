@@ -1,5 +1,7 @@
 ---
-description: This page describes the Unity Account and how to log in.
+description: >-
+  This page describes the Unity Account, how to log in, and how to reset your
+  password.
 ---
 
 # Unity Account and Login
