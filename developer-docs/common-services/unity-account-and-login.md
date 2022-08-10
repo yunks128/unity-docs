@@ -30,8 +30,8 @@ Currently it necessary for a Unity administrator to create a new account for you
 If you forget your password or need to reset it for some reason:
 
 1. Go to the login page for the environment that you want to work in, e.g. [https://unitysds-test.auth.us-west-2.amazoncognito.com/login?client\_id=59hp9flt6hm7k2nvacqhudqpl2\&response\_type=code\&scope=email+openid+profile\&redirect\_uri=https://jupyter-test-alb-1633047587.us-west-2.elb.amazonaws.com:8000/hub/oauth\_callback](https://unitysds-test.auth.us-west-2.amazoncognito.com/login?client\_id=59hp9flt6hm7k2nvacqhudqpl2\&response\_type=code\&scope=email+openid+profile\&redirect\_uri=https://jupyter-test-alb-1633047587.us-west-2.elb.amazonaws.com:8000/hub/oauth\_callback)
-2. Select the reset password option, then
-3. enter your user name and press the button "Reset my password".&#x20;
+2. Select the "Forgot your password?" option, then
+3. Enter your user name and press the button "Reset my password".&#x20;
 4. That will send a code to your email, which can be used to change the password.
 
 ![](<../../.gitbook/assets/Screen Shot 2022-08-10 at 11.27.13 AM.png>)\
