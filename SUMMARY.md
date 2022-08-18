@@ -17,6 +17,9 @@
     * [Advanced Tutorials](user-docs/unity-cloud/tutorials/advanced-tutorials/README.md)
       * [Managing Permission](user-docs/unity-cloud/tutorials/advanced-tutorials/managing-permission.md)
   * [Endpoints](user-docs/unity-cloud/endpoints.md)
+  * [Unity Releases](user-docs/unity-cloud/unity-releases/README.md)
+    * [Unity Prototype Release 1 Documentation](user-docs/unity-cloud/unity-releases/unity-prototype-release-1-documentation.md)
+    * [Unity Prototype Release 2 Documentation](user-docs/unity-cloud/unity-releases/unity-prototype-release-2-documentation.md)
 * [Community Edition](user-docs/community-edition.md)
 
 ## Developer Docs
@@ -68,6 +71,9 @@
     * [Developers Guide](developer-docs/science-processing/docs/developers-guide.md)
     * [Admin Guide](developer-docs/science-processing/docs/admin-guide.md)
   * [FAQ](developer-docs/science-processing/faq.md)
+* [System Processes](developer-docs/system-processes/README.md)
+  * [Testing](developer-docs/system-processes/testing.md)
+  * [Release Process](developer-docs/system-processes/release-process.md)
 
 ## Getting Help
 
