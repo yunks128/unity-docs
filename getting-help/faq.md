@@ -4,9 +4,47 @@ description: Frequently Asked Questions
 
 # FAQ
 
-## On Usage
+## Usage
 
-## On Documentation
+<details>
+
+<summary>Can I run my own algorithms on Unity?</summary>
+
+Currently, within the Jupyter-based interface you may unit test your own algorithms. Running your algorithms at scale in our Science Processing system is a future capability being actively developed.
+
+</details>
+
+<details>
+
+<summary>Where do I report a bug?</summary>
+
+TBD
+
+</details>
+
+<details>
+
+<summary>What's the best way to learn and get started with Jupyter?</summary>
+
+Please see: [https://jupyterlab.readthedocs.io/en/stable/getting\_started/overview.html](https://jupyterlab.readthedocs.io/en/stable/getting\_started/overview.html)
+
+</details>
+
+<details>
+
+<summary>What's an example of the type of data I can expect from a Unity user-interface?</summary>
+
+As an example, see the below query and data returned from the "Working with Data" Jupyter notebook: \
+\
+Query/Action:\
+\
+Response:&#x20;
+
+
+
+</details>
+
+## Development
 
 <details>
 
@@ -16,5 +54,20 @@ Think of a `README.md` as an introduction to a particular module of software and
 
 </details>
 
-## On Coding
+<details>
 
+<summary>I'm getting a parse error when trying to embed my Open API file / reference in GitBook</summary>
+
+If you're getting an error such as "Could not parse the Open API file, it is most likely invalid" - try ensuring you are pointing to a URL that is showing the _raw_ OpenAPI document file - not a rendering. For example, pointing to a GitHub link, ensure your link is pointing to the raw version and not an HTML page (check via the page source).
+
+</details>
+
+## General
+
+<details>
+
+<summary>Where can I see a timeline of upcoming features?</summary>
+
+TBD
+
+</details>
