@@ -8,6 +8,8 @@
 
 **Example Run:**
 
+**NOTE:  For resources to appear, they must follow the** [**Unity AWS Resource Tagging Convention**](https://unity-sds.gitbook.io/docs/developer-docs/common-services/docs/users-guide/deployment/unity-aws-resource-tagging-conventions)**, and use the `ServiceArea` tag.**
+
 ```
 % ./resources-by-service-area.sh
 ----------------------------------
