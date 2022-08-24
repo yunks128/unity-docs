@@ -50,6 +50,7 @@
         * [Querying for Resources](developer-docs/common-services/docs/users-guide/management-and-monitoring/querying-for-resources.md)
       * [Deployment](developer-docs/common-services/docs/users-guide/deployment/README.md)
         * [Creating Terraform Scripts](developer-docs/common-services/docs/users-guide/deployment/creating-terraform-scripts.md)
+        * [Unity AWS Resource Tagging Conventions](developer-docs/common-services/docs/users-guide/deployment/unity-aws-resource-tagging-conventions.md)
     * [Developers Guide](developer-docs/common-services/docs/developers-guide/README.md)
       * [API](developer-docs/common-services/docs/developers-guide/api.md)
       * [Build from Source Code](developer-docs/common-services/docs/developers-guide/build-from-source-code.md)
