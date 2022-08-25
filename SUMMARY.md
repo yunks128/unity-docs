@@ -5,7 +5,6 @@
 ## User Docs
 
 * [Starting Line](developer-docs/starting-line.md)
-* [Unity SDS Glossary](user-docs/unity-sds-glossary.md)
 * [Unity Cloud](user-docs/unity-cloud/README.md)
   * [Getting Started](user-docs/unity-cloud/getting-started.md)
   * [Key Unity Concepts](user-docs/unity-cloud/key-unity-concepts.md)
@@ -81,6 +80,7 @@
 ## Getting Help
 
 * [FAQ](getting-help/faq.md)
+* [Glossary](getting-help/glossary.md)
 * [Contact Us](getting-help/contact-us.md)
 
 ***
