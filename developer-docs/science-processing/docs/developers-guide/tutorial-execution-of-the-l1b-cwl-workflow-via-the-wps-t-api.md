@@ -19,7 +19,7 @@ load_balancer_hostnames = {
   "mozart_rest_api" = "a22fbab5f394240a5b4eed0571b84b40-1028912979.us-west-2.elb.amazonaws.com"
 }
 # Set the the value of WPST_API for future API requests
-(local-machine) $WPST_API=a61fe24ebf181450c91f845f49630a2d-573246423.us-west-2.elb.amazonaws.com
+(local-machine) WPST_API=a61fe24ebf181450c91f845f49630a2d-573246423.us-west-2.elb.amazonaws.com
 ```
 
 #### Step 2 - Deploy a Process Named `l1b-cwl` with the WPS-T API
