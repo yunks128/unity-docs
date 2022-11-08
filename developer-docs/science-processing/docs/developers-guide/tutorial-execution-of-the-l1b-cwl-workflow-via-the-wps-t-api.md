@@ -24,6 +24,26 @@ load_balancer_hostnames = {
 
 #### Step 2 - Deploy a Process Named `l1b-cwl` with the WPS-T API
 
+* First check if any processes are already registered:
+
+```shell
+curl -s "http://${WPST_API}:5001/processes" |  jq
+```
+
+<details>
+
+<summary>Expected Response</summary>
+
+```json
+{
+  "processes": []
+}
+```
+
+</details>
+
+* Deploy the process:
+
 ```shell
 curl -s -0 -X POST "http://${WPST_API}:5001/processes" \
 -H "Expect:" \
