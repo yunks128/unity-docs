@@ -140,9 +140,13 @@ curl -s "http://${WPST_API}:5001/processes" |  jq
 
 #### Step 3 - Check That the Newly Created `l1b-cwl` Image Was Uploaded to GHCR
 
-* [Link to GHCR](https://github.com/orgs/unity-sds/packages/container/package/unity-sps-prototype%2Fl1b-cwl)
+<details>
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<summary><a href="https://github.com/orgs/unity-sds/packages/container/package/unity-sps-prototype%2Fl1b-cwl">Link to GHCR</a></summary>
+
+<img src="../../../../.gitbook/assets/image (2).png" alt="" data-size="original">
+
+</details>
 
 #### Step 4 - Trigger Execution of the `l1b-cwl` Process Through the WPS-T API
 
