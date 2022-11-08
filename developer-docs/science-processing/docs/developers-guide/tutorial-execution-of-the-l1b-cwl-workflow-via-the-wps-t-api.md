@@ -231,6 +231,29 @@ curl -s "http://${WPST_API}:5001/processes/l1b-cwl:develop/jobs/${JOB_ID}" | jq
 
 </details>
 
+* Continuously monitor the status of the job by it's ID:
+
+```shell
+watch -n 5 "curl -s "http://${WPST_API}:5001/processes/l1b-cwl:develop/jobs/${JOB_ID}" | jq"
+```
+
+<details>
+
+<summary>Expected Response</summary>
+
+```shell
+Every 5.0s: curl -s http://a71a54...  MT-315710: Mon Nov  7 17:20:10 2022
+
+{
+  "jobID": "68066f70-85f1-4894-9545-8791a1945842",
+  "message": "Status of job 68066f70-85f1-4894-9545-8791a1945842",
+  "status": "running" # monitor until completion (succeeded/failed)
+}
+
+```
+
+</details>
+
 Check the status of all submitted `l1b-cwl:develop` jobs:
 
 ```shell
