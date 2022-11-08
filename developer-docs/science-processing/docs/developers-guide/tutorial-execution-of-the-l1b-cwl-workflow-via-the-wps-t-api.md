@@ -47,7 +47,7 @@ curl -s "http://${WPST_API}:5001/processes" |  jq
   * Build a Docker container image for the `l1b-cwl` PGE and upload it to the Github Container Registry (GHCR). The image will also be registered in the Mozart Elasticsearch.
   * Build a HySDS `hysds-io` document and register it in the GRQ Elasticsearch.
   * Build a HySDS `job-spec` document and register it in the Mozart Elasticsearch.
-* **Note:** The CWL file to be run is specified as a raw GitHub URL.
+* **Note:** The CWL file to be run is specified as a raw GitHub URL in the request body.
 
 ```shell
 curl -s -0 -X POST "http://${WPST_API}:5001/processes" \
