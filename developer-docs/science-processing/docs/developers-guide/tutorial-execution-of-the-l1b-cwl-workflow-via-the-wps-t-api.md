@@ -42,7 +42,12 @@ curl -s "http://${WPST_API}:5001/processes" |  jq
 
 </details>
 
-* Deploy the process:
+* Deploy the process.
+* This request will do the following:
+  * Build a Docker container image for the `l1b-cwl` PGE and upload it to the Github Container Registry (GHCR). The image will also be registered in the Mozart Elasticsearch.
+  * Build a HySDS `hysds-io` document and register it in the GRQ Elasticsearch.
+  * Build a HySDS `job-spec` document and register it in the Mozart Elasticsearch.
+* **Note:** The CWL file to be run is specified as a raw GitHub URL.
 
 ```shell
 curl -s -0 -X POST "http://${WPST_API}:5001/processes" \
@@ -170,6 +175,8 @@ curl -s "http://${WPST_API}:5001/processes" |  jq
 
 #### Step 4 - Trigger Execution of the `l1b-cwl` Process Through the WPS-T API
 
+* This request will trigger the running Verdi container to pull and run the `l1b-cwl` Docker image from GHCR.
+
 ```shell
 curl -0 -s -D - -o /dev/null "http://${WPST_API}:5001/processes/l1b-cwl:develop/jobs" \
 -H "Expect:" \
@@ -254,7 +261,7 @@ Every 5.0s: curl -s http://a71a54...  MT-315710: Mon Nov  7 17:20:10 2022
 
 </details>
 
-Check the status of all submitted `l1b-cwl:develop` jobs:
+* Check the status of all submitted `l1b-cwl:develop` jobs:
 
 ```shell
 curl -s "http://${WPST_API}:5001/processes/l1b-cwl:develop/jobs" | jq
