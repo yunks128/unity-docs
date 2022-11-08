@@ -322,3 +322,72 @@ curl -s -X DELETE "http://${WPST_API}:5001/processes/l1b-cwl:develop" | jq
 ```
 
 </details>
+
+#### Step 6. - Check the UDS Output Data Collection for the Executed L1B PGE
+
+```shell
+aws s3 ls s3://uds-dev-cumulus-staging/SNDR_SNPP_ATMS_L1B_OUTPUT___1: --human-readable --recursive
+```
+
+<details>
+
+<summary>Expected Response</summary>
+
+```shell
+2022-11-07 17:19:15    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file02/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file02.cmr.xml
+2022-11-07 17:18:33    5.6 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file02/test_file02.nc
+2022-11-07 17:18:33    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file02/test_file02.nc.cas
+2022-11-07 17:19:13    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file03/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file03.cmr.xml
+2022-11-07 17:18:33    5.3 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file03/test_file03.nc
+2022-11-07 17:18:33    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file03/test_file03.nc.cas
+2022-11-07 17:19:11    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file04/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file04.cmr.xml
+2022-11-07 17:18:33    5.5 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file04/test_file04.nc
+2022-11-07 17:18:34    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file04/test_file04.nc.cas
+2022-11-07 17:19:17    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file05/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file05.cmr.xml
+2022-11-07 17:18:34    5.3 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file05/test_file05.nc
+2022-11-07 17:18:34    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file05/test_file05.nc.cas
+2022-11-07 17:19:12    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file06/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file06.cmr.xml
+2022-11-07 17:18:34    5.3 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file06/test_file06.nc
+2022-11-07 17:18:34    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file06/test_file06.nc.cas
+2022-11-07 17:19:14    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file07/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file07.cmr.xml
+2022-11-07 17:18:34    5.3 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file07/test_file07.nc
+2022-11-07 17:18:34    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file07/test_file07.nc.cas
+2022-11-07 17:19:15    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file08/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file08.cmr.xml
+2022-11-07 17:18:35    5.7 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file08/test_file08.nc
+2022-11-07 17:18:35    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file08/test_file08.nc.cas
+2022-11-07 17:19:14    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file09/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file09.cmr.xml
+2022-11-07 17:18:35    5.7 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file09/test_file09.nc
+2022-11-07 17:18:35    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file09/test_file09.nc.cas
+2022-11-07 17:19:13    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file10/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file10.cmr.xml
+2022-11-07 17:18:35    5.4 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file10/test_file10.nc
+2022-11-07 17:18:35    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file10/test_file10.nc.cas
+2022-11-07 17:19:15    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file11/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file11.cmr.xml
+2022-11-07 17:18:36    5.5 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file11/test_file11.nc
+2022-11-07 17:18:36    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file11/test_file11.nc.cas
+2022-11-07 17:19:16    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file12/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file12.cmr.xml
+2022-11-07 17:18:36    5.8 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file12/test_file12.nc
+2022-11-07 17:18:36    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file12/test_file12.nc.cas
+2022-11-07 17:19:12    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file13/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file13.cmr.xml
+2022-11-07 17:18:36    5.8 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file13/test_file13.nc
+2022-11-07 17:18:37    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file13/test_file13.nc.cas
+2022-11-07 17:19:14    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file14/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file14.cmr.xml
+2022-11-07 17:18:37    5.7 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file14/test_file14.nc
+2022-11-07 17:18:37    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file14/test_file14.nc.cas
+2022-11-07 17:19:15    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file15/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file15.cmr.xml
+2022-11-07 17:18:37    5.9 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file15/test_file15.nc
+2022-11-07 17:18:37    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file15/test_file15.nc.cas
+2022-11-07 17:19:15    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file16/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file16.cmr.xml
+2022-11-07 17:18:37    5.9 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file16/test_file16.nc
+2022-11-07 17:18:38    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file16/test_file16.nc.cas
+2022-11-07 17:19:15    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file17/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file17.cmr.xml
+2022-11-07 17:18:38    5.7 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file17/test_file17.nc
+2022-11-07 17:18:38    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file17/test_file17.nc.cas
+2022-11-07 17:19:16    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file18/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file18.cmr.xml
+2022-11-07 17:18:38    5.6 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file18/test_file18.nc
+2022-11-07 17:18:38    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file18/test_file18.nc.cas
+2022-11-07 17:19:16    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file19/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file19.cmr.xml
+2022-11-07 17:18:38    5.3 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file19/test_file19.nc
+2022-11-07 17:18:38    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file19/test_file19.nc.cas
+```
+
+</details>
