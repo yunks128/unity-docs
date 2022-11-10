@@ -2,7 +2,9 @@
 
 
 
-#### Step 1 - Deploy a U-SPS Cluster in the MCP Dev Account
+#### Step 1 (optional) - Deploy a U-SPS Cluster in the MCP Dev Account
+
+* **Note:** You can skip this step if you're using the WPS-T API of a cluster that has already been deployed. You'll just need the URL of the API.
 
 ```shell
 (local-machine) $ cd unity-sps-prototype/terraform-unity
