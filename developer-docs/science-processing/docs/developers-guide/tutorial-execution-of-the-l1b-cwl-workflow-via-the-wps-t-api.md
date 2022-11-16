@@ -297,41 +297,6 @@ curl -s "http://${WPST_API}:5001/processes/l1b-cwl:develop/jobs" | jq
 
 </details>
 
-#### Step 5b (Optional) - Un-deploy the `l1b-cwl` Process Through the WPS-T API
-
-* Note this optional step is useful if debugging a failed job.
-
-```shell
-curl -s -X DELETE "http://${WPST_API}:5001/processes/l1b-cwl:develop" | jq
-```
-
-<details>
-
-<summary>Expected Response</summary>
-
-```json
-{
-  "undeploymentResult": {
-    "abstract": "l1b_pge_cwl",
-    "executionUnit": "docker.registry/ndvims:latest",
-    "id": "l1b-cwl:develop",
-    "immediateDeployment": "true",
-    "jobControlOptions": [
-      "async-execute"
-    ],
-    "keywords": "",
-    "outputTransmission": [
-      "reference"
-    ],
-    "owsContextURL": "https://raw.githubusercontent.com/unity-sds/unity-sps-workflows/main/sounder_sips/ssips_L1b_workflow.cwl",
-    "processVersion": "develop",
-    "title": "l1b_pge_cwl"
-  }
-}
-```
-
-</details>
-
 #### Step 6. - Check the UDS Output Data Collection for the Executed L1B PGE
 
 ```shell
@@ -397,6 +362,41 @@ aws s3 ls s3://uds-dev-cumulus-staging/SNDR_SNPP_ATMS_L1B_OUTPUT___1: --human-re
 2022-11-07 17:19:16    1.7 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file19/SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file19.cmr.xml
 2022-11-07 17:18:38    5.3 MiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file19/test_file19.nc
 2022-11-07 17:18:38    3.8 KiB SNDR_SNPP_ATMS_L1B_OUTPUT___1:test_file19/test_file19.nc.cas
+```
+
+</details>
+
+#### Step 7 (Optional) - Un-deploy the `l1b-cwl` Process Through the WPS-T API
+
+* Note this optional step is useful if debugging a failed job.
+
+```shell
+curl -s -X DELETE "http://${WPST_API}:5001/processes/l1b-cwl:develop" | jq
+```
+
+<details>
+
+<summary>Expected Response</summary>
+
+```json
+{
+  "undeploymentResult": {
+    "abstract": "l1b_pge_cwl",
+    "executionUnit": "docker.registry/ndvims:latest",
+    "id": "l1b-cwl:develop",
+    "immediateDeployment": "true",
+    "jobControlOptions": [
+      "async-execute"
+    ],
+    "keywords": "",
+    "outputTransmission": [
+      "reference"
+    ],
+    "owsContextURL": "https://raw.githubusercontent.com/unity-sds/unity-sps-workflows/main/sounder_sips/ssips_L1b_workflow.cwl",
+    "processVersion": "develop",
+    "title": "l1b_pge_cwl"
+  }
+}
 ```
 
 </details>
