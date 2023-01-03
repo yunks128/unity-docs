@@ -4,9 +4,7 @@ description: Documentation for provisioning a U-SPS cluster on MCP using Terrafo
 
 # Cluster Provisioning with Terraform
 
-### Development Workflow
-
-#### Dev Requirements:
+### Dev Requirements:
 
 * [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 * [tfenv](https://github.com/tfutils/tfenv) - Terraform version manager.
@@ -18,7 +16,7 @@ description: Documentation for provisioning a U-SPS cluster on MCP using Terrafo
 * [terraform-docs](https://github.com/terraform-docs/terraform-docs) - Generate documentation from Terraform modules.
 * [Terratest](https://terratest.gruntwork.io) - Go library that provides patterns and helper functions for testing infrastructure, with 1st-class support for Terraform.
 
-#### Provision an EKS Cluster on MCP
+### Provision an EKS Cluster on MCP
 
 * Determine which MCP account (`Dev`, `Test`) you would like to create an EKS cluster in.
   * For MCP `Dev`, use this [GH action.](https://github.com/unity-sds/unity-cs-infra/actions/workflows/deploy\_eks.yml)
@@ -41,7 +39,7 @@ $ kubectl get nodes
 ```
 {% endcode %}
 
-#### Auto-generate a terraform.tfvars template file:
+### Auto-generate a terraform.tfvars template file:
 
 ```shell
 $ cd terraform-unity
@@ -183,29 +181,29 @@ $ rm terraform.tfstate
 $ rm terraform.tf.backup
 ```
 
-## Auto-generated Documentation of the Unity SPS Terraform Root Module
+### Auto-generated Documentation of the Unity SPS Terraform Root Module
 
-### Requirements
+#### Requirements
 
 | Name      | Version  |
 | --------- | -------- |
 | terraform | >= 1.1.9 |
 
-### Providers
+#### Providers
 
 No providers.
 
-### Modules
+#### Modules
 
 | Name                    | Source                                                 | Version |
 | ----------------------- | ------------------------------------------------------ | ------- |
 | unity-sps-hysds-cluster | ../terraform-modules/terraform-unity-sps-hysds-cluster | n/a     |
 
-### Resources
+#### Resources
 
 No resources.
 
-### Inputs
+#### Inputs
 
 | Name                    | Description                                                           | Type                                                                                                             | Default                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Required |
 | ----------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------: |
@@ -225,7 +223,7 @@ No resources.
 | service\_type           | value                                                                 | `string`                                                                                                         | `"LoadBalancer"`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |    no    |
 | venue                   | The MCP venue in which the cluster will be deployed (dev, test, prod) | `string`                                                                                                         | n/a                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |    yes   |
 
-### Outputs
+#### Outputs
 
 | Name                      | Description                     |
 | ------------------------- | ------------------------------- |
