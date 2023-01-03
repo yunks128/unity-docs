@@ -24,7 +24,11 @@ description: Documentation for provisioning a U-SPS cluster on MCP using Terrafo
   * For MCP `Dev`, use this [GH action.](https://github.com/unity-sds/unity-cs-infra/actions/workflows/deploy\_eks.yml)
   * For MCP `Test`, use this [GH action.](https://github.com/unity-sds/unity-cs-infra/actions/workflows/deploy\_eks\_test.yml)
   * **Note:** For both of these workflows you will need to input your MCP Short-term Access Keys.
-  * The interface and input parameters for running this workflow is shown below:&#x20;
+  *   The interface and input parameters for running this workflow is shown below:&#x20;
+
+
+
+      <figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>The Github Action interface and input parameters</p></figcaption></figure>
 * Once the workflow has completed, run the following commands:
   * **Note 1:** For below command, you'll have to specify the EKS cluster name you entered for running the workflow.
   * **Note 2:** I personally like to keep my kubeconfig files for various clusters organized through subdirectories within `~/.kube/`. You'll want to find a system that works for you and create the directory structure prior to running the above command.
