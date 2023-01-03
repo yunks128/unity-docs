@@ -18,15 +18,36 @@ description: Documentation for provisioning a U-SPS cluster on MCP using Terrafo
 * [terraform-docs](https://github.com/terraform-docs/terraform-docs) - Generate documentation from Terraform modules.
 * [Terratest](https://terratest.gruntwork.io) - Go library that provides patterns and helper functions for testing infrastructure, with 1st-class support for Terraform.
 
+#### Provision an EKS Cluster on MCP
+
+* Determine which MCP account (`Dev`, `Test`) you would like to create an EKS cluster in.
+  * For MCP `Dev`, use this [GH action.](https://github.com/unity-sds/unity-cs-infra/actions/workflows/deploy\_eks.yml)
+  * For MCP `Test`, use this [GH action.](https://github.com/unity-sds/unity-cs-infra/actions/workflows/deploy\_eks\_test.yml)
+  * **Note:** For both of these workflows you will need to input your MCP Short-term Access Keys.
+  * The interface and input parameters for running this workflow is shown below:&#x20;
+* Once the workflow has completed, run the following commands:
+  * **Note 1:** For below command, you'll have to specify the EKS cluster name you entered for running the workflow.
+  * **Note 2:** I personally like to keep my kubeconfig files for various clusters organized through subdirectories within `~/.kube/`. You'll want to find a system that works for you and create the directory structure prior to running the above command.
+
+{% code overflow="wrap" %}
+```
+$ aws eks update-kubeconfig --region us-west-2 --name <insert-selected-eks-cluster-name> --kubeconfig <insert-path-to-kubeconfig>
+$ export KUBECONFIG=<insert-path-to-kubeconfig>
+$ kubectl get nodes
+```
+{% endcode %}
+
 #### Auto-generate a terraform.tfvars template file:
 
 ```shell
 $ cd terraform-unity
-$ terraform-docs tfvars hcl .
+$ terraform-docs tfvars hcl . --output-file "terraform.tfvars"
 ```
 
 ```json
+<!-- BEGIN_TF_DOCS -->
 celeryconfig_filename  = "celeryconfig_remote.py"
+counter                = ""
 datasets_filename      = "datasets.remote.template.json"
 deployment_environment = "mcp"
 docker_images = {
@@ -59,14 +80,11 @@ node_port_map = {
   "minio_service_api": 30007,
   "minio_service_interface": 30008,
   "mozart_es": 30013,
-  "mozart_service": 30001,
-  "rabbitmq_mgmt_service_cluster_rpc": 30003,
-  "rabbitmq_service_cluster_rpc": 30006,
-  "rabbitmq_service_epmd": 30004,
-  "rabbitmq_service_listener": 30005,
-  "redis_service": 30010
+  "mozart_service": 30001
 }
 service_type = "LoadBalancer"
+venue        = ""
+<!-- END_TF_DOCS -->%
 ```
 
 ### Deploy the Cluster
