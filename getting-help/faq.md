@@ -18,7 +18,19 @@ Currently, within the Jupyter-based interface you may unit test your own algorit
 
 <summary>Where do I report a bug?</summary>
 
-TBD
+Currently, the best way to file a bug is to navigate to [https://github.com/unity-sds](https://github.com/unity-sds) and identify the repository which best pertains to your issue, and file there by clicking on the "Issues" tab.
+
+For example, for:\
+\- Analytics issues: [https://github.com/unity-sds/unity-analytics](https://github.com/unity-sds/unity-analytics)\
+\- Algorithm issues: [https://github.com/unity-sds/unity-ads-deployment](https://github.com/unity-sds/unity-ads-deployment)\
+\- Common service issues: [https://github.com/unity-sds/unity-cs](https://github.com/unity-sds/unity-cs)\
+\- Data issues: [https://github.com/unity-sds/unity-data-services](https://github.com/unity-sds/unity-data-services)\
+\- Science processing issues: [https://github.com/unity-sds/unity-sps-prototype](https://github.com/unity-sds/unity-sps-prototype), [https://github.com/unity-sds/unity-sps-workflows](https://github.com/unity-sds/unity-sps-workflows), [https://github.com/unity-sds/ades\_wpst](https://github.com/unity-sds/ades\_wpst)\
+\- Documentation issues: [https://github.com/unity-sds/unity-docs](https://github.com/unity-sds/unity-docs)\
+\
+In the future, we aim to have a centralized ticket triaging system.
+
+
 
 </details>
 
