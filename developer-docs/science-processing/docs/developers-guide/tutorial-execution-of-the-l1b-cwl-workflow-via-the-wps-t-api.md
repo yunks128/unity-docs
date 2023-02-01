@@ -58,48 +58,88 @@ curl -s -0 -X POST "http://${WPST_API}:5001/processes" \
 --data-binary @- << EOF | jq
 {
    "processDescription":{
-	  "process":{
-		 "id":"l1b-cwl",
-		 "title":"l1b_pge_cwl",
-		 "owsContext":{
-			"offering":{
-			   "code":"http://www.opengis.net/eoc/applicationContext/cwl",
-			   "content":{
-				  "href":"https://raw.githubusercontent.com/unity-sds/unity-sps-workflows/main/sounder_sips/ssips_L1b_workflow.cwl"
-			   }
-			}
-		 },
-		 "abstract":"l1b_pge_cwl",
-		 "keywords":[
-		 ],
-		 "inputs":[
-		 ],
-		 "outputs":[
-			{
-			   "id":"output",
-			   "title":"L1B-product",
-			   "formats":[
-				  {
-					 "mimeType":"image/tiff",
-					 "default":true
-				  }
-			   ]
-			}
-		 ]
-	  },
-	  "processVersion":"develop",
-	  "jobControlOptions":[
-		 "async-execute"
-	  ],
-	  "outputTransmission":[
-		 "reference"
-	  ]
+      "process":{
+         "id":"l1b-cwl",
+         "title":"l1b_pge_cwl",
+         "owsContext":{
+            "offering":{
+               "code":"http://www.opengis.net/eoc/applicationContext/cwl",
+               "content":{
+                  "href":"https://raw.githubusercontent.com/unity-sds/unity-sps-workflows/main/sounder_sips/ssips_L1b_workflow.cwl"
+               }
+            }
+         },
+         "abstract":"l1b_pge_cwl",
+         "keywords":[
+         ],
+         "inputs":[
+         	{
+               "id":"input_collection_id",
+               "title":"input_collection_id",
+               "formats":[
+                  {
+                     "mimeType":"text",
+                     "default":true
+                  }
+               ]
+            },
+            {
+               "id":"start_datetime",
+               "title":"start_datetime",
+               "formats":[
+                  {
+                     "mimeType":"text",
+                     "default":true
+                  }
+               ]
+            },
+            {
+               "id":"stop_datetime",
+               "title":"stop_datetime",
+               "formats":[
+                  {
+                     "mimeType":"text",
+                     "default":true
+                  }
+               ]
+            },
+            {
+            	"id": "output_collection_id",
+            	"title": "output_collection_id",
+            	"formats":[
+                  {
+                     "mimeType":"text",
+                     "default":true
+                  }
+               ]
+            }
+         ],
+         "outputs":[
+            {
+               "id":"output",
+               "title":"L1B-product",
+               "formats":[
+                  {
+                     "mimeType":"image/tiff",
+                     "default":true
+                  }
+               ]
+            }
+         ]
+      },
+      "processVersion":"develop",
+      "jobControlOptions":[
+         "async-execute"
+      ],
+      "outputTransmission":[
+         "reference"
+      ]
    },
    "immediateDeployment":true,
    "executionUnit":[
-	  {
-		 "href":"docker.registry/ndvims:latest"
-	  }
+      {
+         "href":"docker.registry/ndvims:latest"
+      }
    ],
    "deploymentProfileName":"http://www.opengis.net/profiles/eoc/dockerizedApplication"
 }
@@ -187,14 +227,31 @@ curl -0 -s -D - -o /dev/null "http://${WPST_API}:5001/processes/l1b-cwl:develop/
 {
   "mode": "async",
   "response": "document",
-  "inputs": [
-  ],
-  "outputs": [
-        {
-          "id": "output",
-          "transmissionMode": "reference"
-        }
-  ]
+    "inputs":[
+    {
+        "id": "input_collection_id",
+        "data": "SNDR_SNPP_ATMS_L1A___1"
+    },
+    {
+        "id": "start_datetime",
+        "data": "2016-01-14T08:00:00Z"
+    },
+    {
+        "id": "stop_datetime",
+        "data": "2016-01-14T11:59:59Z"
+    },
+    {
+        "id": "output_collection_id",
+        "data": "SNDR_SNPP_ATMS_L1B_OUTPUT___1"
+    }
+
+    ],
+    "outputs": [
+    {
+      "id": "output",
+      "transmissionMode": "reference"
+    }
+    ] 
 }
 EOF
 ```
@@ -223,7 +280,7 @@ Connection: close
 
 ```shell
 JOB_ID={Find in the `location` field in above response header}
-curl -s "http://${WPST_API}:5001/processes/l1b-cwl:develop/jobs/${JOB_ID}" | jq
+watch -n 5 "curl -s "http://${WPST_API}:5001/processes/l1b-cwl:develop/jobs/${JOB_ID}" | jq"${JOB_ID}" | jq
 ```
 
 <details>
@@ -400,3 +457,4 @@ curl -s -X DELETE "http://${WPST_API}:5001/processes/l1b-cwl:develop" | jq
 ```
 
 </details>
+
