@@ -280,7 +280,7 @@ Connection: close
 
 ```shell
 JOB_ID={Find in the `location` field in above response header}
-watch -n 5 "curl -s "http://${WPST_API}:5001/processes/l1b-cwl:develop/jobs/${JOB_ID}" | jq"${JOB_ID}" | jq
+watch -n 5 "curl -s "http://${WPST_API}:5001/processes/l1b-cwl:develop/jobs/${JOB_ID}" | jq"
 ```
 
 <details>
