@@ -81,6 +81,7 @@
     * [Admin Guide](developer-docs/science-processing/docs/admin-guide/README.md)
       * [Cluster Provisioning with Terraform](developer-docs/science-processing/docs/admin-guide/cluster-provisioning-with-terraform.md)
   * [FAQ](developer-docs/science-processing/faq.md)
+* [On-Demand](developer-docs/on-demand.md)
 * [System Processes](developer-docs/system-processes/README.md)
   * [Testing](developer-docs/system-processes/testing.md)
   * [Release Process](developer-docs/system-processes/release-process.md)
