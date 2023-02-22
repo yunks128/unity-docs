@@ -22,7 +22,7 @@
 17)	Monitor the stack creation in the CloudFormations->Stacks screen
 ```
 
-## Destroy Instructions:  (NOT TESTED YET)
+## Manual Destroy Instructions:  (NOT TESTED YET)
 
 ```
 1) drain pods
