@@ -14,8 +14,8 @@ Currently, the SPS API is implemented by a [FastAPI](https://fastapi.tiangolo.co
 
 The **Create Prewarm Request** is used to initialize an increase of the SPS compute infrastructure in anticipation of process executions.
 
-{% swagger src="../../../../.gitbook/assets/spsapi.json" path="/sps/prewarm" method="post" %}
-[spsapi.json](../../../../.gitbook/assets/spsapi.json)
+{% swagger src="../../../../.gitbook/assets/spsapidocs.json" path="/sps/prewarm" method="post" %}
+[spsapidocs.json](../../../../.gitbook/assets/spsapidocs.json)
 {% endswagger %}
 
 #### &#x20;Example create prewarm request using curl:
@@ -101,23 +101,18 @@ curl -s -X DELETE "http://${SPS_API}:5002/sps/prewarm/reqid" | jq
 
 </details>
 
-### Echo Request
+### Health Check Request
 
-**Echo** is a simple test endpoint to be used by deployment and integration tests to verify the liveness status of the SPS api service.
+**Health Check** is a simple test endpoint to be used by deployment and integration tests to verify the liveness status of the SPS api service.
 
-{% swagger src="../../../../.gitbook/assets/spsapi.json" path="/test/echo" method="get" %}
-[spsapi.json](../../../../.gitbook/assets/spsapi.json)
+{% swagger src="../../../../.gitbook/assets/spsapidocs.json" path="/sps/health-check" method="get" %}
+[spsapidocs.json](../../../../.gitbook/assets/spsapidocs.json)
 {% endswagger %}
 
 #### Example echo request using curl:
 
 ```
-curl -s "http://${SPS_API}:5002/test/echo" \                                                                                                                                                                                                                           <aws:mcp-test>
--H 'Content-Type: application/json;' \
---data-binary @- << EOF | jq
-{ "echo_str" : "hello"
-}
-EOF
+curl -s "http://${SPS_API}:5002/sps/health-check" | jq
 ```
 
 <details>
@@ -126,8 +121,7 @@ EOF
 
 ```
 {
-    "success": true,
-    "message": "hello"
+    "message": "The U-SPS On-Demand API is running and accessible"
 }
 ```
 
