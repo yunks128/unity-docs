@@ -6,6 +6,10 @@ If, after working through this guide, you are still stuck, please create a [disc
 
 
 
+The envisioned lifecycle of building, testing, and deploying of Unity service components, can be seen in the diagram below:
+
+<figure><img src="../../.gitbook/assets/Screenshot 2023-03-21 at 2.36.32 PM.png" alt=""><figcaption></figcaption></figure>
+
 ## Application Integration
 
 ### Building
