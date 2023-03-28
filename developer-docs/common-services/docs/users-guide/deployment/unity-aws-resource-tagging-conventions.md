@@ -47,40 +47,40 @@ This is a living document, and may be subjected to change as requirements may ch
 
 These tags should be provided in all AWS resources.
 
-| Name                | Description                                                                    |
-| ------------------- | ------------------------------------------------------------------------------ |
-| Name                | Name of the resource                                                           |
-| Creator             | Email of the creator of the resource                                           |
-| POC                 | A list of email(s) for the point of contact for the resource                   |
-| Venue               | The name of the venue that the resource is being deployed on                   |
-| Project             | The name of the project                                                        |
-| ServiceArea         | Which service area is this related to?                                         |
-| Capability          | Name of the application                                                        |
-| CapVersion          | The version number of the capability provided. Assumes semantic versioning.    |
-| Release             | The version number that this resource belongs to. Assumes semantic versioning. |
-| Component           | What is the primary component that makes up the application                    |
-| SecurityPlanID      | IT Security Plan ID for the resource                                           |
-| ExposedWeb          | Will this resource be exposed to the web?                                      |
-| Experimental        | Is this an experimental resource?                                              |
-| UserFacing          | Will this resource be user facing?                                             |
-| CritInfra           | Is this resource a part of the critical infrastructure?                        |
-| SourceControl       | Documentation or SCM link for resources deployed                               |
-| Alfa                | Cost tag 1 -- better instructions coming soon..                                |
-| Bravo               | Cost tag 2 -- better instructions coming soon..                                |
-| Charlie             | Cost tag 3 -- better instructions coming soon..                                |
-| Delta               | Cost tag 4 -- better instructions coming soon..                                |
-| Echo                | Cost tag 5 -- better instructions coming soon..                                |
-| Foxtrot             | Cost tag 6 -- better instructions coming soon..                                |
-| CreatedBy           | Kion tag used for costing                                                      |
-| Customer            | Kion tag used for costing                                                      |
-| Env                 | Kion tag used for costing                                                      |
-| mcpBilling          | Kion tag used for costing                                                      |
-| mission             | Kion tag used for costing                                                      |
-| Name                | Kion tag used for costing                                                      |
-| Proj                | Kion tag used for costing                                                      |
-| ServiceNow Instance | Kion tag used for costing                                                      |
-| Stack               | Kion tag used for costing                                                      |
-| station             | Kion tag used for costing                                                      |
+| Name                                                | Description                                                                    |
+| --------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Name                                                | Name of the resource                                                           |
+| Creator                                             | Email of the creator of the resource                                           |
+| POC                                                 | A list of email(s) for the point of contact for the resource                   |
+| Venue                                               | The name of the venue that the resource is being deployed on                   |
+| Project                                             | The name of the project                                                        |
+| ServiceArea                                         | Which service area is this related to?                                         |
+| Capability                                          | Name of the application                                                        |
+| CapVersion                                          | The version number of the capability provided. Assumes semantic versioning.    |
+| Release                                             | The version number that this resource belongs to. Assumes semantic versioning. |
+| Component                                           | What is the primary component that makes up the application                    |
+| SecurityPlanID                                      | IT Security Plan ID for the resource                                           |
+| ExposedWeb                                          | Will this resource be exposed to the web?                                      |
+| Experimental                                        | Is this an experimental resource?                                              |
+| UserFacing                                          | Will this resource be user facing?                                             |
+| CritInfra                                           | Is this resource a part of the critical infrastructure?                        |
+| SourceControl                                       | Documentation or SCM link for resources deployed                               |
+| Alfa                                                | Cost tag 1 -- better instructions coming soon..                                |
+| Bravo                                               | Cost tag 2 -- better instructions coming soon..                                |
+| Charlie                                             | Cost tag 3 -- better instructions coming soon..                                |
+| Delta                                               | Cost tag 4 -- better instructions coming soon..                                |
+| Echo                                                | Cost tag 5 -- better instructions coming soon..                                |
+| Foxtrot                                             | Cost tag 6 -- better instructions coming soon..                                |
+| <mark style="color:red;">CreatedBy</mark>           | Kion tag used for costing                                                      |
+| <mark style="color:red;">Customer</mark>            | Kion tag used for costing                                                      |
+| <mark style="color:orange;">Env</mark>              | Kion tag used for costing                                                      |
+| <mark style="color:red;">mcpBilling</mark>          | Kion tag used for costing                                                      |
+| <mark style="color:red;">mission</mark>             | Kion tag used for costing                                                      |
+| <mark style="color:red;">Name</mark>                | Kion tag used for costing                                                      |
+| <mark style="color:red;">Proj</mark>                | Kion tag used for costing                                                      |
+| <mark style="color:red;">ServiceNow Instance</mark> | Kion tag used for costing                                                      |
+| <mark style="color:red;">Stack</mark>               | Kion tag used for costing                                                      |
+| <mark style="color:red;">station</mark>             | Kion tag used for costing                                                      |
 
 
 
