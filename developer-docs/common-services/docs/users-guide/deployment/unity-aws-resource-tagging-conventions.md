@@ -50,7 +50,7 @@ These tags should be provided in all AWS resources.
 | Name                                                | Description                                                                    |
 | --------------------------------------------------- | ------------------------------------------------------------------------------ |
 | Name                                                | Name of the resource                                                           |
-| Creator                                             | Email of the creator of the resource                                           |
+| ~~Creator~~                                         | Email of the creator of the resource                                           |
 | POC                                                 | A list of email(s) for the point of contact for the resource                   |
 | Venue                                               | The name of the venue that the resource is being deployed on                   |
 | Project                                             | The name of the project                                                        |
