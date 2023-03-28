@@ -49,6 +49,7 @@
       * [Deployment](developer-docs/common-services/docs/users-guide/deployment/README.md)
         * [Creating Terraform Scripts](developer-docs/common-services/docs/users-guide/deployment/creating-terraform-scripts.md)
         * [Unity AWS Resource Tagging Conventions](developer-docs/common-services/docs/users-guide/deployment/unity-aws-resource-tagging-conventions.md)
+        * [Necessary MCP Roles / Policies](developer-docs/common-services/docs/users-guide/deployment/necessary-mcp-roles-policies.md)
       * [Security](developer-docs/common-services/docs/users-guide/security/README.md)
         * [Token Management](developer-docs/common-services/docs/users-guide/security/token-management.md)
     * [Developers Guide](developer-docs/common-services/docs/developers-guide/README.md)
