@@ -210,9 +210,6 @@ These tags can be used to provide additional information and context about the A
 | String | `europa`, `unity` | True     | `foo`         | Business |
 
 * Description: The name of the project/mission (e.g. `europa`), or `unity` if it's a shared service
-* Pattern: `{Project}`
-* Pattern Components:
-  * **Project**:`(foo)` for the shorthand project abbreviation
 * Category: Technical, Costing
 
 ## ServiceArea
