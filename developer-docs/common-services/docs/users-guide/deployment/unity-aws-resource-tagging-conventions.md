@@ -113,9 +113,9 @@ These tags can be used to provide additional information and context about the A
 
 ## Customer
 
-| Type   | Example Value | Required | Default Value      |
-| ------ | ------------- | -------- | ------------------ |
-| String |               | True     | N/A - User Defined |
+| Type   | Example Value        | Required | Default Value      |
+| ------ | -------------------- | -------- | ------------------ |
+| String | `Sounder SIPS Admin` | True     | N/A - User Defined |
 
 * Description: The customer (who uses it) for the AWS resource
 * Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
@@ -134,7 +134,7 @@ These tags can be used to provide additional information and context about the A
 
 | Type   | Example Value | Required | Default Value      |
 | ------ | ------------- | -------- | ------------------ |
-| String |               | True     | N/A - User Defined |
+| String | `true`        | True     | N/A - User Defined |
 
 * Description: <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
 * Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
@@ -153,7 +153,7 @@ These tags can be used to provide additional information and context about the A
 
 | Type   | Example Value | Required | Default Value      |
 | ------ | ------------- | -------- | ------------------ |
-| String | ``            | True     | N/A - User Defined |
+| String | tbd           | True     | N/A - User Defined |
 
 * `Category: Technical, Costing`
 * Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
@@ -173,7 +173,7 @@ These tags can be used to provide additional information and context about the A
 
 | Type   | Example Value | Required | Default Value      |
 | ------ | ------------- | -------- | ------------------ |
-| String |               | True     | N/A - User Defined |
+| String | `tbd`         | True     | N/A - User Defined |
 
 * `Category: Technical, Costing`
 * Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
@@ -207,7 +207,7 @@ These tags can be used to provide additional information and context about the A
 
 | Type   | Example Value | Required | Default Value | Category |
 | ------ | ------------- | -------- | ------------- | -------- |
-| String | europa        | True     | `foo`         | Business |
+| String | `europa`      | True     | `foo`         | Business |
 
 * Description: The name of the project or mission.
 * Pattern: `{Project}`
