@@ -47,24 +47,24 @@ This is a living document, and may be subjected to change as requirements may ch
 
 These tags should be provided in all AWS resources.
 
-| Name                                                | Description                                                                 |
-| --------------------------------------------------- | --------------------------------------------------------------------------- |
-| <mark style="color:red;">Name</mark>                | Name of the resource.                                                       |
-| Venue                                               | The name of the venue that the resource is being deployed on                |
-| Project                                             | The name of the project                                                     |
-| ServiceArea                                         | Which service area is this related to?                                      |
-| Capability                                          | Name of the application                                                     |
-| CapVersion                                          | The version number of the capability provided. Assumes semantic versioning. |
-| Component                                           | What is the primary component that makes up the application                 |
-| <mark style="color:red;">CreatedBy</mark>           | Kion tag used for costing                                                   |
-| <mark style="color:red;">Customer</mark>            | Kion tag used for costing                                                   |
-| <mark style="color:red;">Env</mark>                 | Kion tag used for costing                                                   |
-| <mark style="color:red;">mcpBilling</mark>          | Kion tag used for costing                                                   |
-| <mark style="color:red;">mission</mark>             | Kion tag used for costing                                                   |
-| <mark style="color:red;">Proj</mark>                | Kion tag used for costing                                                   |
-| <mark style="color:red;">ServiceNow Instance</mark> | Kion tag used for costing                                                   |
-| <mark style="color:red;">Stack</mark>               | Kion tag used for costing                                                   |
-| <mark style="color:red;">station</mark>             | Kion tag used for costing                                                   |
+| Name                                                                                                                                                             | Description                                                                 |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| <mark style="color:red;">Name</mark>                                                                                                                             | Name of the resource.                                                       |
+| Venue                                                                                                                                                            | The name of the venue that the resource is being deployed on                |
+| Project                                                                                                                                                          | The name of the project                                                     |
+| ServiceArea                                                                                                                                                      | Which service area is this related to?                                      |
+| Capability                                                                                                                                                       | Name of the application                                                     |
+| CapVersion                                                                                                                                                       | The version number of the capability provided. Assumes semantic versioning. |
+| Component                                                                                                                                                        | What is the primary component that makes up the application                 |
+| <mark style="color:red;"></mark>[<mark style="color:red;">CreatedBy</mark>](unity-aws-resource-tagging-conventions.md#createdby)<mark style="color:red;"></mark> | Kion tag used for costing                                                   |
+| <mark style="color:red;">Customer</mark>                                                                                                                         | Kion tag used for costing                                                   |
+| <mark style="color:red;">Env</mark>                                                                                                                              | Kion tag used for costing                                                   |
+| <mark style="color:red;">mcpBilling</mark>                                                                                                                       | Kion tag used for costing                                                   |
+| <mark style="color:red;">mission</mark>                                                                                                                          | Kion tag used for costing                                                   |
+| <mark style="color:red;">Proj</mark>                                                                                                                             | Kion tag used for costing                                                   |
+| <mark style="color:red;">ServiceNow Instance</mark>                                                                                                              | Kion tag used for costing                                                   |
+| <mark style="color:red;">Stack</mark>                                                                                                                            | Kion tag used for costing                                                   |
+| <mark style="color:red;">station</mark>                                                                                                                          | Kion tag used for costing                                                   |
 
 ### Optional Baseline Tags <a href="#mbt" id="mbt"></a>
 
@@ -109,9 +109,13 @@ These tags can be used to provide additional information and context about the A
   * `foo-dev-sps-hysds-mid01`
   * `foo-train1-rps-rsvp-ft01`
 
+## CreatedBy
+
 | Tag           | Description                          | Type   | Pattern Example    | Required | Default Value      | Category |
 | ------------- | ------------------------------------ | ------ | ------------------ | -------- | ------------------ | -------- |
 | **CreatedBy** | Email of the creator of the resource | String | `foo@jpl.nasa.gov` | True     | N/A - User Defined | Business |
+
+
 
 * Description: The email of the creator of the AWS resource.
 * Pattern: `{Email}`
