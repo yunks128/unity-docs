@@ -81,7 +81,7 @@ These tags can be used to provide additional information and context about the A
 
 ## Name
 
-| Type   | Pattern Example           | Required | Default Value      |
+| Type   | Example Value             | Required | Default Value      |
 | ------ | ------------------------- | -------- | ------------------ |
 | String | `foo-dev-sps-hysds-mid01` | True     | N/A - User Defined |
 
@@ -99,7 +99,7 @@ These tags can be used to provide additional information and context about the A
 
 ## CreatedBy
 
-| Type   | Pattern Example    | Required | Default Value      |
+| Type   | Example Value      | Required | Default Value      |
 | ------ | ------------------ | -------- | ------------------ |
 | String | `foo@jpl.nasa.gov` | True     | N/A - User Defined |
 
@@ -113,9 +113,9 @@ These tags can be used to provide additional information and context about the A
 
 ## Customer
 
-| Type   | Pattern Example | Required | Default Value      |
-| ------ | --------------- | -------- | ------------------ |
-| String |                 | True     | N/A - User Defined |
+| Type   | Example Value | Required | Default Value      |
+| ------ | ------------- | -------- | ------------------ |
+| String |               | True     | N/A - User Defined |
 
 
 
@@ -125,9 +125,9 @@ These tags can be used to provide additional information and context about the A
 
 ## Env
 
-| Type   | Pattern Example | Required | Default Value      |
-| ------ | --------------- | -------- | ------------------ |
-| String |                 | True     | N/A - User Defined |
+| Type   | Example Value | Required | Default Value      |
+| ------ | ------------- | -------- | ------------------ |
+| String |               | True     | N/A - User Defined |
 
 
 
@@ -137,9 +137,9 @@ These tags can be used to provide additional information and context about the A
 
 ## mcpBilling
 
-| Type   | Pattern Example | Required | Default Value      |
-| ------ | --------------- | -------- | ------------------ |
-| String |                 | True     | N/A - User Defined |
+| Type   | Example Value | Required | Default Value      |
+| ------ | ------------- | -------- | ------------------ |
+| String |               | True     | N/A - User Defined |
 
 * Description: <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
 * Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
@@ -147,17 +147,17 @@ These tags can be used to provide additional information and context about the A
 
 ## mission
 
-| Type   | Pattern Example | Required | Default Value      |
-| ------ | --------------- | -------- | ------------------ |
-| String |                 | True     | N/A - User Defined |
+| Type   | Example Value | Required | Default Value      |
+| ------ | ------------- | -------- | ------------------ |
+| String |               | True     | N/A - User Defined |
 
 * Description:  This tag is required by Kion/MCP for cost monitoring purposes, and should contain the **same value as the "Proj" tag**.  See documentation [here](unity-aws-resource-tagging-conventions.md#proj).
 
 ## ServiceNow Instance
 
-| Type   | Pattern Example | Required | Default Value      |
-| ------ | --------------- | -------- | ------------------ |
-| String |                 | True     | N/A - User Defined |
+| Type   | Example Value | Required | Default Value      |
+| ------ | ------------- | -------- | ------------------ |
+| String |               | True     | N/A - User Defined |
 
 * `Category: Technical, Costing`
 * Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
@@ -165,9 +165,9 @@ These tags can be used to provide additional information and context about the A
 
 ## Stack
 
-| Type   | Pattern Example | Required | Default Value      |
-| ------ | --------------- | -------- | ------------------ |
-| String |                 | True     | N/A - User Defined |
+| Type   | Example Value | Required | Default Value      |
+| ------ | ------------- | -------- | ------------------ |
+| String |               | True     | N/A - User Defined |
 
 * `Category: Technical, Costing`
 * Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
@@ -175,9 +175,9 @@ These tags can be used to provide additional information and context about the A
 
 ## station
 
-| Type   | Pattern Example | Required | Default Value      |
-| ------ | --------------- | -------- | ------------------ |
-| String |                 | True     | N/A - User Defined |
+| Type   | Example Value | Required | Default Value      |
+| ------ | ------------- | -------- | ------------------ |
+| String |               | True     | N/A - User Defined |
 
 * `Category: Technical, Costing`
 * Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
@@ -187,7 +187,7 @@ These tags can be used to provide additional information and context about the A
 
 ## POC
 
-| Type   | Pattern Example                            | Required | Default Value      |
+| Type   | Example Value(s)                           | Required | Default Value      |
 | ------ | ------------------------------------------ | -------- | ------------------ |
 | String | `foo-sps@jpl.nasa.gov:foo-ds@jpl.nasa.gov` | True     | N/A - User Defined |
 
@@ -200,9 +200,9 @@ These tags can be used to provide additional information and context about the A
 
 ## Venue
 
-| Type   | Pattern Example | Required | Default Value      |
-| ------ | --------------- | -------- | ------------------ |
-| String | `dev`           | True     | N/A - User Defined |
+| Type   | Example Value | Required | Default Value      |
+| ------ | ------------- | -------- | ------------------ |
+| String | `dev`         | True     | N/A - User Defined |
 
 * Description: The name of the venue that the resource is being deployed on.
 * Pattern: `{Venue}`
@@ -213,26 +213,21 @@ These tags can be used to provide additional information and context about the A
 
 ## Proj
 
-| Type   | Pattern Example | Required | Default Value | Category |
-| ------ | --------------- | -------- | ------------- | -------- |
-| String | `foo`           | True     | `foo`         | Business |
+| Type   | Example Value | Required | Default Value | Category |
+| ------ | ------------- | -------- | ------------- | -------- |
+| String | europa        | True     | `foo`         | Business |
 
 * Description: The name of the project or mission.
-* Examples:
-  * `sips`
-  * `europa`
 * Pattern: `{Project}`
 * Pattern Components:
-  * **Project**:`(foo)` for the shorthand project abbreviation
-* Pattern Example:
-  * `foo`
+  * **Project**:`(foo)` for the shorthand project abbreviatio
 * `Category: Technical, Costing`
 
 ## ServiceArea
 
-| Type   | Pattern Example | Required | Default Value      |
-| ------ | --------------- | -------- | ------------------ |
-| String | `sps`           | True     | N/A - User Defined |
+| Type   | Example Value | Required | Default Value      |
+| ------ | ------------- | -------- | ------------------ |
+| String | `sps`         | True     | N/A - User Defined |
 
 * Description: The name of the Unity service area.
 * Pattern: `{ServiceArea}`
@@ -243,9 +238,9 @@ These tags can be used to provide additional information and context about the A
 
 ## Capability
 
-| Type   | Pattern Example | Required | Default Value      |
-| ------ | --------------- | -------- | ------------------ |
-| String | `hysds`         | True     | N/A - User Defined |
+| Type   | Example Value | Required | Default Value      |
+| ------ | ------------- | -------- | ------------------ |
+| String | `hysds`       | True     | N/A - User Defined |
 
 * Description: Name of the application.
 * Pattern: `{Capability}`
