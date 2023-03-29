@@ -42,23 +42,23 @@ This is a living document, and may be subjected to change as requirements may ch
 
 These tags should be provided in all AWS resources.
 
-| Name                                                                                                                                                                                 | Description                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| <mark style="color:red;"></mark>[<mark style="color:red;">Name</mark>](unity-aws-resource-tagging-conventions.md#name)<mark style="color:red;"></mark>                               | Name of the resource.                                                       |
-| [Venue](unity-aws-resource-tagging-conventions.md#venue)                                                                                                                             | The name of the venue that the resource is being deployed on                |
-| [Proj](unity-aws-resource-tagging-conventions.md#project)                                                                                                                            | The name of the project                                                     |
-| [ServiceArea](unity-aws-resource-tagging-conventions.md#servicearea)                                                                                                                 | Which service area is this related to?                                      |
-| [Capability](unity-aws-resource-tagging-conventions.md#capability)                                                                                                                   | Name of the application                                                     |
-| [CapVersion](unity-aws-resource-tagging-conventions.md#capversion)                                                                                                                   | The version number of the capability provided. Assumes semantic versioning. |
-| [Component](unity-aws-resource-tagging-conventions.md#component)                                                                                                                     | What is the primary component that makes up the application                 |
-| <mark style="color:red;"></mark>[<mark style="color:red;">CreatedBy</mark>](unity-aws-resource-tagging-conventions.md#createdby)<mark style="color:red;"></mark>                     | Kion tag used for costing                                                   |
-| <mark style="color:red;"></mark>[<mark style="color:red;">Customer</mark>](unity-aws-resource-tagging-conventions.md#customer)<mark style="color:red;"></mark>                       | Kion tag used for costing                                                   |
-| <mark style="color:red;"></mark>[<mark style="color:red;">Env</mark>](unity-aws-resource-tagging-conventions.md#env)<mark style="color:red;"></mark>                                 | Kion tag used for costing                                                   |
-| <mark style="color:red;"></mark>[<mark style="color:red;">mcpBilling</mark>](unity-aws-resource-tagging-conventions.md#mcpbilling)<mark style="color:red;"></mark>                   | Kion tag used for costing                                                   |
-| <mark style="color:red;"></mark>[<mark style="color:red;">mission</mark>](unity-aws-resource-tagging-conventions.md#mission)<mark style="color:red;"></mark>                         | Kion tag used for costing                                                   |
-| <mark style="color:red;"></mark>[<mark style="color:red;">ServiceNow Instance</mark>](unity-aws-resource-tagging-conventions.md#servicenow-instance)<mark style="color:red;"></mark> | Kion tag used for costing                                                   |
-| <mark style="color:red;"></mark>[<mark style="color:red;">Stack</mark>](unity-aws-resource-tagging-conventions.md#stack)<mark style="color:red;"></mark>                             | Kion tag used for costing                                                   |
-| <mark style="color:red;"></mark>[<mark style="color:red;">station</mark>](unity-aws-resource-tagging-conventions.md#station)<mark style="color:red;"></mark>                         | Kion tag used for costing                                                   |
+| Name                                                                                                                                                                                 | Description                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| <mark style="color:red;"></mark>[<mark style="color:red;">Name</mark>](unity-aws-resource-tagging-conventions.md#name)<mark style="color:red;"></mark>                               | Name of the resource.                                                                |
+| [Venue](unity-aws-resource-tagging-conventions.md#venue)                                                                                                                             | The name of the venue that the resource is being deployed on                         |
+| [Proj](unity-aws-resource-tagging-conventions.md#project)                                                                                                                            | The name of the project/mission (e.g. `europa`), or `unity` if it's a shared service |
+| [ServiceArea](unity-aws-resource-tagging-conventions.md#servicearea)                                                                                                                 | Which service area is this related to?                                               |
+| [Capability](unity-aws-resource-tagging-conventions.md#capability)                                                                                                                   | Name of the application                                                              |
+| [CapVersion](unity-aws-resource-tagging-conventions.md#capversion)                                                                                                                   | The version number of the capability provided. Assumes semantic versioning.          |
+| [Component](unity-aws-resource-tagging-conventions.md#component)                                                                                                                     | What is the primary component that makes up the application                          |
+| <mark style="color:red;"></mark>[<mark style="color:red;">CreatedBy</mark>](unity-aws-resource-tagging-conventions.md#createdby)<mark style="color:red;"></mark>                     | Kion tag used for costing                                                            |
+| <mark style="color:red;"></mark>[<mark style="color:red;">Customer</mark>](unity-aws-resource-tagging-conventions.md#customer)<mark style="color:red;"></mark>                       | Kion tag used for costing                                                            |
+| <mark style="color:red;"></mark>[<mark style="color:red;">Env</mark>](unity-aws-resource-tagging-conventions.md#env)<mark style="color:red;"></mark>                                 | Kion tag used for costing                                                            |
+| <mark style="color:red;"></mark>[<mark style="color:red;">mcpBilling</mark>](unity-aws-resource-tagging-conventions.md#mcpbilling)<mark style="color:red;"></mark>                   | Kion tag used for costing                                                            |
+| <mark style="color:red;"></mark>[<mark style="color:red;">mission</mark>](unity-aws-resource-tagging-conventions.md#mission)<mark style="color:red;"></mark>                         | Kion tag used for costing                                                            |
+| <mark style="color:red;"></mark>[<mark style="color:red;">ServiceNow Instance</mark>](unity-aws-resource-tagging-conventions.md#servicenow-instance)<mark style="color:red;"></mark> | Kion tag used for costing                                                            |
+| <mark style="color:red;"></mark>[<mark style="color:red;">Stack</mark>](unity-aws-resource-tagging-conventions.md#stack)<mark style="color:red;"></mark>                             | Kion tag used for costing                                                            |
+| <mark style="color:red;"></mark>[<mark style="color:red;">station</mark>](unity-aws-resource-tagging-conventions.md#station)<mark style="color:red;"></mark>                         | Kion tag used for costing                                                            |
 
 ### Optional  Tags <a href="#mbt" id="mbt"></a>
 
@@ -205,15 +205,15 @@ These tags can be used to provide additional information and context about the A
 
 ## Proj
 
-| Type   | Example Value | Required | Default Value | Category |
-| ------ | ------------- | -------- | ------------- | -------- |
-| String | `europa`      | True     | `foo`         | Business |
+| Type   | Example Values    | Required | Default Value | Category |
+| ------ | ----------------- | -------- | ------------- | -------- |
+| String | `europa`, `unity` | True     | `foo`         | Business |
 
-* Description: The name of the project or mission.
+* Description: The name of the project/mission (e.g. `europa`), or `unity` if it's a shared service
 * Pattern: `{Project}`
 * Pattern Components:
-  * **Project**:`(foo)` for the shorthand project abbreviatio
-* `Category: Technical, Costing`
+  * **Project**:`(foo)` for the shorthand project abbreviation
+* Category: Technical, Costing
 
 ## ServiceArea
 
