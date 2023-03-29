@@ -93,7 +93,7 @@ These tags can be used to provide additional information and context about the A
   * **ServiceArea**:`(cs\|sps\|ds\|ads\|as)` See `ServiceArea` for more info. The service area abbreviation, or "all" if the resource is to be used by all service areas
   * **Capability**: `([a-z0-9]+)` for the name of the application. See `Capability` below for more info. Should be unique project wide.
   * **Component**: `([a-z0-9]+)` for the component that the application falls under. e.g. (backend) for backend, (ft) for frontend, etc. See `Component` below for more info.
-* Pattern Example:
+* More examples:
   * `foo-dev-sps-hysds-mid01`
   * `foo-train1-rps-rsvp-ft01`
 
@@ -117,8 +117,6 @@ These tags can be used to provide additional information and context about the A
 | ------ | ------------- | -------- | ------------------ |
 | String |               | True     | N/A - User Defined |
 
-
-
 * Description: The customer (who uses it) for the AWS resource
 * Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
 * `Category: Technical, Costing`
@@ -127,12 +125,9 @@ These tags can be used to provide additional information and context about the A
 
 | Type   | Example Value | Required | Default Value      |
 | ------ | ------------- | -------- | ------------------ |
-| String |               | True     | N/A - User Defined |
+| String | `test`        | True     | N/A - User Defined |
 
-
-
-* Description: The environment where this resource resides.
-* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* Description:  This tag is required by Kion/MCP for cost monitoring purposes, and should contain the **same value as the "Venue" tag**.  See documentation [here](unity-aws-resource-tagging-conventions.md#proj).
 * `Category: Technical, Costing`
 
 ## mcpBilling
@@ -149,15 +144,16 @@ These tags can be used to provide additional information and context about the A
 
 | Type   | Example Value | Required | Default Value      |
 | ------ | ------------- | -------- | ------------------ |
-| String |               | True     | N/A - User Defined |
+| String | `europa`      | True     | N/A - User Defined |
 
 * Description:  This tag is required by Kion/MCP for cost monitoring purposes, and should contain the **same value as the "Proj" tag**.  See documentation [here](unity-aws-resource-tagging-conventions.md#proj).
+* `Category: Technical, Costing`
 
 ## ServiceNow Instance
 
 | Type   | Example Value | Required | Default Value      |
 | ------ | ------------- | -------- | ------------------ |
-| String |               | True     | N/A - User Defined |
+| String | ``            | True     | N/A - User Defined |
 
 * `Category: Technical, Costing`
 * Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
@@ -167,7 +163,7 @@ These tags can be used to provide additional information and context about the A
 
 | Type   | Example Value | Required | Default Value      |
 | ------ | ------------- | -------- | ------------------ |
-| String |               | True     | N/A - User Defined |
+| String | `U-AS`        | True     | N/A - User Defined |
 
 * `Category: Technical, Costing`
 * Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
@@ -195,8 +191,6 @@ These tags can be used to provide additional information and context about the A
 * Pattern: `{Poc}`
 * Pattern Components:
   * **Poc**:`([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)` for the email of the creator of the resource.
-* Pattern Example:
-  * `foo@jpl.nasa.gov`
 
 ## Venue
 
@@ -208,8 +202,6 @@ These tags can be used to provide additional information and context about the A
 * Pattern: `{Venue}`
 * Pattern Components:
   * **Venue**:`(dev|test|prod)` for development, test, production
-* Pattern Example:
-  * `dev`
 
 ## Proj
 
@@ -246,123 +238,98 @@ These tags can be used to provide additional information and context about the A
 * Pattern: `{Capability}`
 * Pattern Components:
   * **Capability**:`([a-z0-9]+)` for the capability that is provided by the service area.
-* Pattern Example:
-  * `hysds`
-  * `tenantManager`
 
 ## CapVersion
 
-| Type   | Pattern Example | Required | Default Value      |
-| ------ | --------------- | -------- | ------------------ |
-| String | `1.0.1`         | True     | N/A - User Defined |
+| Type   | Example Value | Required | Default Value      |
+| ------ | ------------- | -------- | ------------------ |
+| String | `1.0.1`       | True     | N/A - User Defined |
 
-* Description: Version of the application.
+* Description: Version of the application.  Make sure to use [semantic versioning](https://semver.org/).
 * Pattern: `{CapVersion}`
 * Pattern Components:
   * **CapVersion**:`^(\d+\.)?(\d+\.)?(\*|\d+)$` for the capability version that is provided by the service area.
-* Pattern Example:
-  * `1.0.0`
-  * `0.0.1`
-  * `1.23.1`
 
 ## Release
 
-| Type   | Pattern Example | Required | Default Value      |
-| ------ | --------------- | -------- | ------------------ |
-| String | `G3.0`          | True     | N/A - User Defined |
+| Type   | Example Value | Required | Default Value      |
+| ------ | ------------- | -------- | ------------------ |
+| String | `G3.0`        | True     | N/A - User Defined |
 
 * Description: Release version that the application belongs to.
 * Pattern: `{Release}`
 * Pattern Components:
-  * **Release**:`^G(\d+\.)?(\d+\.)?(\*|\d+)$` for the release version that is provided by the service area.
-* Pattern Example:
-  * `G1.0`
-  * `G2.1`
-  * `G3.0.1`
+  * **Release**:`^G(\d+\.)?(\d+\.)?(\*|\d+)$` for the release version that is provided by the service area
 
 ## Component
 
-| Type   | Pattern Example | Required | Default Value      |
-| ------ | --------------- | -------- | ------------------ |
-| String | `java`          | True     | N/A - User Defined |
+| Type   | Example Value | Required | Default Value      |
+| ------ | ------------- | -------- | ------------------ |
+| String | `java`        | True     | N/A - User Defined |
 
 * Description: The primary type of application/runtime that will be run on this resource.
 * Pattern: `{Component}`
 * Pattern Components:
   * **Component**:`([a-z0-9]+)` for the primary type of application/runtime that run or support for this resource.
-* Pattern Example:
-  * `nodejs`
-  * `mysql`
-  * `tomcat`
 
 ## SecurityPlanID
 
-| Type         | Pattern Example | Required | Default Value |
-| ------------ | --------------- | -------- | ------------- |
-| Unsigned Int | `644`           | True     | `644`         |
+| Type         | Example Value | Required | Default Value |
+| ------------ | ------------- | -------- | ------------- |
+| Unsigned Int | `644`         | True     | `644`         |
 
 * Description: The JPL security plan ID that this resource falls under.
 * Pattern: `{PlanId}`
 * Pattern Components:
   * **PlanId**:`([0-9]+)` for JPL security plan ID for this resource.
-* Pattern Example:
-  * `644`
 
 ## ExposedWeb
 
-| Type    | Pattern Example | Required | Default Value |
-| ------- | --------------- | -------- | ------------- |
-| Boolean | `false`         | True     | `false`       |
+| Type    | Example Value | Required | Default Value |
+| ------- | ------------- | -------- | ------------- |
+| Boolean | `false`       | True     | `false`       |
 
 * Description: Is this resource exposed to the web?
 * Pattern: `{ExposedWeb}`
 * Pattern Components:
   * **ExposedWeb**:`([true|false]{1})` for true or false
-* Pattern Example:
-  * `false`
 
 ## Experimental
 
-| Type    | Pattern Example | Required | Default Value |
-| ------- | --------------- | -------- | ------------- |
-| Boolean | `false`         | True     | `false`       |
+| Type    | Example Value | Required | Default Value |
+| ------- | ------------- | -------- | ------------- |
+| Boolean | `false`       | True     | `false`       |
 
 * Description: Is this an experimental resource? If so, it will be removed after a period of time.
 * Pattern: `{Experimental}`
 * Pattern Components:
   * **Experiment**:`([true|false]{1})` for true or false
-* Pattern Example:
-  * `false`
 
 ## UserFacing
 
-| Type    | Pattern Example | Required | Default Value |
-| ------- | --------------- | -------- | ------------- |
-| Boolean | `false`         | True     | `false`       |
+| Type    | Example Value | Required | Default Value |
+| ------- | ------------- | -------- | ------------- |
+| Boolean | `false`       | True     | `false`       |
 
 * Description: Is this resource user facing? Does the user interact directly with this resource?
 * Pattern: `{UserFacing}`
 * Pattern Components:
   * **UserFacing**:`([true|false]{1})` for true or false
-* Pattern Example:
-  * `false`
 
 ## CritInfra
 
-| Type         | Pattern Example | Required | Default Value |
-| ------------ | --------------- | -------- | ------------- |
-| Unsigned Int | `5`             | True     | `1`           |
+| Type         | Example Value | Required | Default Value |
+| ------------ | ------------- | -------- | ------------- |
+| Unsigned Int | `5`           | True     | `1`           |
 
 * Description: What is the level of criticality of the resource? This is mesaured on a scale of 5, with 5 being the most critical.
 * Pattern: `{CritInfra}`
 * Pattern Components:
   * **CritInfra**: `([0-5]{1})` for the scale of criticality. How important is this resource (With 5 being critical, i.e. 24/7/365)
-* Pattern Example:
-  * `5`
 
 ## SourceControl
 
-| Type   | Pattern Example                                                                         | Required | Default Value      |
+| Type   | Example Value                                                                           | Required | Default Value      |
 | ------ | --------------------------------------------------------------------------------------- | -------- | ------------------ |
 | String | `https://github.com/binder-examples/continuous-build/blob/foo-G2.1_DS_art_1.0.0.tar.gz` | True     | N/A - User Defined |
 
