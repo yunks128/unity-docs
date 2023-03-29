@@ -206,9 +206,9 @@ These tags can be used to provide additional information and context about the A
 
 ## ServiceArea
 
-| Type   | Example Value | Required | Default Value      |
-| ------ | ------------- | -------- | ------------------ |
-| String | `sps`         | True     | N/A - User Defined |
+| Type   | Example Values                 | Required | Default Value      |
+| ------ | ------------------------------ | -------- | ------------------ |
+| String | `sps`, `ds`, `as`, `ads`, `cs` | True     | N/A - User Defined |
 
 * Description: The name of the Unity service area.
 * Pattern: `{ServiceArea}`
