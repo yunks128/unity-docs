@@ -52,7 +52,6 @@ These tags should be provided in all AWS resources.
 | [CapVersion](unity-aws-resource-tagging-conventions.md#capversion)   | The version number of the capability provided. Assumes semantic versioning.                                           |
 | [Component](unity-aws-resource-tagging-conventions.md#component)     | What is the primary component that makes up the application                                                           |
 | [CreatedBy](unity-aws-resource-tagging-conventions.md#createdby)     | same as [ServiceArea](unity-aws-resource-tagging-conventions.md#servicearea) (see above) -- redundant MCP costing tag |
-| [Customer](unity-aws-resource-tagging-conventions.md#customer)       | The customer (who uses it) for the AWS resource                                                                       |
 | [Env](unity-aws-resource-tagging-conventions.md#env)                 | same as [Venue](unity-aws-resource-tagging-conventions.md#venue) (see above) -- redundant MCP costing tag             |
 | [mission](unity-aws-resource-tagging-conventions.md#mission)         | same as [Proj](unity-aws-resource-tagging-conventions.md#proj) (see above) -- redundant MCP costing tag               |
 | [Stack](unity-aws-resource-tagging-conventions.md#stack)             | same as [Component](unity-aws-resource-tagging-conventions.md#component) (see above) -- redundant MCP costing tag     |
@@ -74,6 +73,7 @@ These tags can be used to provide additional information and context about the A
 | [mcpBilling](unity-aws-resource-tagging-conventions.md#mcpbilling)                   | not needed MCP costing tag                                                     |
 | [ServiceNow Instance](unity-aws-resource-tagging-conventions.md#servicenow-instance) | not needed MCP costing tag                                                     |
 | [station](unity-aws-resource-tagging-conventions.md#station)                         | not needed MCP costing tag                                                     |
+| [Customer](unity-aws-resource-tagging-conventions.md#customer)                       | not needed MCP costing tag                                                     |
 
 ***
 
