@@ -252,9 +252,9 @@ These tags can be used to provide additional information and context about the A
 
 ## Component
 
-| Type   | Example Value | Required | Default Value      |
-| ------ | ------------- | -------- | ------------------ |
-| String | `java`        | True     | N/A - User Defined |
+| Type   | Example Value                 | Required | Default Value      |
+| ------ | ----------------------------- | -------- | ------------------ |
+| String | `cumulus`, `Jupyter`, `HySDS` | True     | N/A - User Defined |
 
 * Description: The primary type of application/runtime that will be run on this resource.
 * Pattern: `{Component}`
