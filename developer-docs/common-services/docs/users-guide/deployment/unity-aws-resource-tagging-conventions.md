@@ -61,19 +61,19 @@ These tags should be provided in all AWS resources.
 
 These tags can be used to provide additional information and context about the AWS resources.
 
-| Name                                                                       | Description                                                                    |
-| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| [POC](unity-aws-resource-tagging-conventions.md#poc)                       | A list of email(s) for the point of contact for the resource                   |
-| [Release](unity-aws-resource-tagging-conventions.md#release)               | The version number that this resource belongs to. Assumes semantic versioning. |
-| [SecurityPlanID](unity-aws-resource-tagging-conventions.md#securityplanid) | IT Security Plan ID for the resource                                           |
-| [ExposedWeb](unity-aws-resource-tagging-conventions.md#exposedweb)         | Will this resource be exposed to the web?                                      |
-| [Experimental](unity-aws-resource-tagging-conventions.md#experimental)     | Is this an experimental resource?                                              |
-| [UserFacing](unity-aws-resource-tagging-conventions.md#userfacing)         | Will this resource be user facing?                                             |
-| [CritInfra](unity-aws-resource-tagging-conventions.md#critinfra)           | Is this resource a part of the critical infrastructure?                        |
-| [SourceControl](unity-aws-resource-tagging-conventions.md#sourcecontrol)   | Documentation or SCM link for resources deployed                               |
-| mcpBilling                                                                 |                                                                                |
-| ServiceNow Instance                                                        |                                                                                |
-| station                                                                    |                                                                                |
+| Name                                                                                 | Description                                                                    |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| [POC](unity-aws-resource-tagging-conventions.md#poc)                                 | A list of email(s) for the point of contact for the resource                   |
+| [Release](unity-aws-resource-tagging-conventions.md#release)                         | The version number that this resource belongs to. Assumes semantic versioning. |
+| [SecurityPlanID](unity-aws-resource-tagging-conventions.md#securityplanid)           | IT Security Plan ID for the resource                                           |
+| [ExposedWeb](unity-aws-resource-tagging-conventions.md#exposedweb)                   | Will this resource be exposed to the web?                                      |
+| [Experimental](unity-aws-resource-tagging-conventions.md#experimental)               | Is this an experimental resource?                                              |
+| [UserFacing](unity-aws-resource-tagging-conventions.md#userfacing)                   | Will this resource be user facing?                                             |
+| [CritInfra](unity-aws-resource-tagging-conventions.md#critinfra)                     | Is this resource a part of the critical infrastructure?                        |
+| [SourceControl](unity-aws-resource-tagging-conventions.md#sourcecontrol)             | Documentation or SCM link for resources deployed                               |
+| [mcpBilling](unity-aws-resource-tagging-conventions.md#mcpbilling)                   | not needed MCP costing tag                                                     |
+| [ServiceNow Instance](unity-aws-resource-tagging-conventions.md#servicenow-instance) | not needed MCP costing tag                                                     |
+| [station](unity-aws-resource-tagging-conventions.md#station)                         | not needed MCP costing tag                                                     |
 
 ***
 
