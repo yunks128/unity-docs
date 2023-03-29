@@ -35,7 +35,7 @@ This is a living document, and may be subjected to change as requirements may ch
 
 * **Technical**: For consolidating and organizing AWS resources.
 * **Automation**: User for filtering resources during infrastructure automation activities
-* **Business**: To help associate AWS costs to the users of the resource
+* **Costing**: To help associate AWS costs to the users of the resource
 * **Security**: For determining security configuration and compliance of AWS resources
 
 ### Mandatory  Tags <a href="#mbt" id="mbt"></a>
@@ -46,17 +46,16 @@ These tags should be provided in all AWS resources.
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | <mark style="color:red;"></mark>[<mark style="color:red;">Name</mark>](unity-aws-resource-tagging-conventions.md#name)<mark style="color:red;"></mark>           | Name of the resource.                                                       |
 | [Venue](unity-aws-resource-tagging-conventions.md#venue)                                                                                                         | The name of the venue that the resource is being deployed on                |
-| [Project](unity-aws-resource-tagging-conventions.md#project)                                                                                                     | The name of the project                                                     |
+| [Proj](unity-aws-resource-tagging-conventions.md#project)                                                                                                        | The name of the project                                                     |
 | [ServiceArea](unity-aws-resource-tagging-conventions.md#servicearea)                                                                                             | Which service area is this related to?                                      |
 | [Capability](unity-aws-resource-tagging-conventions.md#capability)                                                                                               | Name of the application                                                     |
 | [CapVersion](unity-aws-resource-tagging-conventions.md#capversion)                                                                                               | The version number of the capability provided. Assumes semantic versioning. |
 | [Component](unity-aws-resource-tagging-conventions.md#component)                                                                                                 | What is the primary component that makes up the application                 |
 | <mark style="color:red;"></mark>[<mark style="color:red;">CreatedBy</mark>](unity-aws-resource-tagging-conventions.md#createdby)<mark style="color:red;"></mark> | Kion tag used for costing                                                   |
-| <mark style="color:red;">Customer</mark>                                                                                                                         | Kion tag used for costing                                                   |
-| <mark style="color:red;">Env</mark>                                                                                                                              | Kion tag used for costing                                                   |
+| <mark style="color:red;"></mark>[<mark style="color:red;">Customer</mark>](unity-aws-resource-tagging-conventions.md#customer)<mark style="color:red;"></mark>   | Kion tag used for costing                                                   |
+| <mark style="color:red;"></mark>[<mark style="color:red;">Env</mark>](unity-aws-resource-tagging-conventions.md#env)<mark style="color:red;"></mark>             | Kion tag used for costing                                                   |
 | <mark style="color:red;">mcpBilling</mark>                                                                                                                       | Kion tag used for costing                                                   |
 | <mark style="color:red;">mission</mark>                                                                                                                          | Kion tag used for costing                                                   |
-| <mark style="color:red;">Proj</mark>                                                                                                                             | Kion tag used for costing                                                   |
 | <mark style="color:red;">ServiceNow Instance</mark>                                                                                                              | Kion tag used for costing                                                   |
 | <mark style="color:red;">Stack</mark>                                                                                                                            | Kion tag used for costing                                                   |
 | <mark style="color:red;">station</mark>                                                                                                                          | Kion tag used for costing                                                   |
@@ -68,8 +67,6 @@ These tags can be used to provide additional information and context about the A
 | Name           | Description                                                                    |
 | -------------- | ------------------------------------------------------------------------------ |
 | POC            | A list of email(s) for the point of contact for the resource                   |
-| Venue          | The name of the venue that the resource is being deployed on                   |
-| Project        | The name of the project                                                        |
 | Release        | The version number that this resource belongs to. Assumes semantic versioning. |
 | SecurityPlanID | IT Security Plan ID for the resource                                           |
 | ExposedWeb     | Will this resource be exposed to the web?                                      |
@@ -77,12 +74,6 @@ These tags can be used to provide additional information and context about the A
 | UserFacing     | Will this resource be user facing?                                             |
 | CritInfra      | Is this resource a part of the critical infrastructure?                        |
 | SourceControl  | Documentation or SCM link for resources deployed                               |
-
-
-
-> See below for the required tag specifications.
->
-> CreatedBy Customer Env mcpBilling mission Name Proj ServiceNow Instance Stack station
 
 ***
 
@@ -108,11 +99,9 @@ These tags can be used to provide additional information and context about the A
 
 ## CreatedBy
 
-| Type   | Pattern Example    | Required | Default Value      | Category |
-| ------ | ------------------ | -------- | ------------------ | -------- |
-| String | `foo@jpl.nasa.gov` | True     | N/A - User Defined | Business |
-
-
+| Type   | Pattern Example    | Required | Default Value      |
+| ------ | ------------------ | -------- | ------------------ |
+| String | `foo@jpl.nasa.gov` | True     | N/A - User Defined |
 
 * Description: The email of the creator of the AWS resource.
 * Pattern: `{Email}`
@@ -120,6 +109,83 @@ These tags can be used to provide additional information and context about the A
   * **Email** :`(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)` for the email of the creator of the resource.
 * Pattern Example:
   * `foo@jpl.nasa.gov`
+* `Category: Technical, Costing`
+
+## Customer
+
+| Type   | Pattern Example | Required | Default Value      |
+| ------ | --------------- | -------- | ------------------ |
+| String |                 | True     | N/A - User Defined |
+
+
+
+* Description: The customer (who uses it) for the AWS resource
+* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* `Category: Technical, Costing`
+
+## Env
+
+| Type   | Pattern Example | Required | Default Value      |
+| ------ | --------------- | -------- | ------------------ |
+| String |                 | True     | N/A - User Defined |
+
+
+
+* Description: The environment where this resource resides.
+* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* `Category: Technical, Costing`
+
+## mcpBilling
+
+| Type   | Pattern Example | Required | Default Value      |
+| ------ | --------------- | -------- | ------------------ |
+| String |                 | True     | N/A - User Defined |
+
+* Description: <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* `Category: Technical, Costing`
+
+## mission
+
+| Type   | Pattern Example | Required | Default Value      |
+| ------ | --------------- | -------- | ------------------ |
+| String |                 | True     | N/A - User Defined |
+
+* `Category: Technical, Costing`
+* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* Description: <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+
+## ServiceNow Instance
+
+| Type   | Pattern Example | Required | Default Value      |
+| ------ | --------------- | -------- | ------------------ |
+| String |                 | True     | N/A - User Defined |
+
+* `Category: Technical, Costing`
+* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* Description: <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+
+## Stack
+
+| Type   | Pattern Example | Required | Default Value      |
+| ------ | --------------- | -------- | ------------------ |
+| String |                 | True     | N/A - User Defined |
+
+* `Category: Technical, Costing`
+* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* Description: <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+
+## station
+
+| Type   | Pattern Example | Required | Default Value      |
+| ------ | --------------- | -------- | ------------------ |
+| String |                 | True     | N/A - User Defined |
+
+* `Category: Technical, Costing`
+* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* Description: <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+
+
 
 ## POC
 
@@ -147,7 +213,7 @@ These tags can be used to provide additional information and context about the A
 * Pattern Example:
   * `dev`
 
-## Project
+## Proj
 
 | Type   | Pattern Example | Required | Default Value | Category |
 | ------ | --------------- | -------- | ------------- | -------- |
@@ -159,6 +225,7 @@ These tags can be used to provide additional information and context about the A
   * **Project**:`(foo)` for the shorthand project abbreviation
 * Pattern Example:
   * `foo`
+* `Category: Technical, Costing`
 
 ## ServiceArea
 
