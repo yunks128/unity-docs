@@ -48,9 +48,8 @@ These tags should be provided in all AWS resources.
 | [Venue](unity-aws-resource-tagging-conventions.md#venue)             | The name of the venue that the resource is being deployed on                                                                                             |
 | [Proj](unity-aws-resource-tagging-conventions.md#proj)               | The name of the project/mission (e.g. `europa`), or `unity` if it's a shared service                                                                     |
 | [ServiceArea](unity-aws-resource-tagging-conventions.md#servicearea) | Which service area is this related to?                                                                                                                   |
-| [Capability](unity-aws-resource-tagging-conventions.md#capability)   | Name of the application                                                                                                                                  |
 | [CapVersion](unity-aws-resource-tagging-conventions.md#capversion)   | The version number of the capability provided. Assumes semantic versioning.                                                                              |
-| [Component](unity-aws-resource-tagging-conventions.md#component)     | What is the primary component that makes up the application                                                                                              |
+| [Component](unity-aws-resource-tagging-conventions.md#component)     | Unity component.  Ex: `HySDS`, `Cumulus`, `SDAP`, `Dockstore`, etc..                                                                                     |
 | [CreatedBy](unity-aws-resource-tagging-conventions.md#createdby)     | same as [ServiceArea](unity-aws-resource-tagging-conventions.md#servicearea) (see above) -- redundant <mark style="color:yellow;">MCP costing tag</mark> |
 | [Env](unity-aws-resource-tagging-conventions.md#env)                 | same as [Venue](unity-aws-resource-tagging-conventions.md#venue) (see above) -- redundant <mark style="color:yellow;">MCP costing tag</mark>             |
 | [mission](unity-aws-resource-tagging-conventions.md#mission)         | same as [Proj](unity-aws-resource-tagging-conventions.md#proj) (see above) -- redundant <mark style="color:yellow;">MCP costing tag</mark>               |
@@ -62,6 +61,7 @@ These tags can be used to provide additional information and context about the A
 
 | Name                                                                                 | Description                                                                    |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| [Capability](unity-aws-resource-tagging-conventions.md#capability)                   |                                                                                |
 | [POC](unity-aws-resource-tagging-conventions.md#poc)                                 | A list of email(s) for the point of contact for the resource                   |
 | [Release](unity-aws-resource-tagging-conventions.md#release)                         | The version number that this resource belongs to. Assumes semantic versioning. |
 | [SecurityPlanID](unity-aws-resource-tagging-conventions.md#securityplanid)           | IT Security Plan ID for the resource                                           |
