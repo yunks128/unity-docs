@@ -99,16 +99,11 @@ These tags can be used to provide additional information and context about the A
 
 ## CreatedBy
 
-| Type   | Example Value      | Required | Default Value      |
-| ------ | ------------------ | -------- | ------------------ |
-| String | `foo@jpl.nasa.gov` | True     | N/A - User Defined |
+| Type   | Example Values          | Required | Default Value      |
+| ------ | ----------------------- | -------- | ------------------ |
+| String | `sps`, `ds`, `as`, `cs` | True     | N/A - User Defined |
 
-* Description: The email of the creator of the AWS resource.
-* Pattern: `{Email}`
-* Pattern Components:
-  * **Email** :`(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)` for the email of the creator of the resource.
-* Pattern Example:
-  * `foo@jpl.nasa.gov`
+* Description:  This tag is required by Kion/MCP for cost monitoring purposes, and should contain the **same value as the "ServiceArea" tag**.  See documentation [here](unity-aws-resource-tagging-conventions.md#servicearea).
 * `Category: Technical, Costing`
 
 ## Customer
