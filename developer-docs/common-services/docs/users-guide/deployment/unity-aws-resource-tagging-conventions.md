@@ -55,7 +55,7 @@ These tags should be provided in all AWS resources.
 | [Customer](unity-aws-resource-tagging-conventions.md#customer)       | The customer (who uses it) for the AWS resource                                                                       |
 | [Env](unity-aws-resource-tagging-conventions.md#env)                 | same as [Venue](unity-aws-resource-tagging-conventions.md#venue) (see above) -- redundant MCP costing tag             |
 | [mission](unity-aws-resource-tagging-conventions.md#mission)         | same as [Proj](unity-aws-resource-tagging-conventions.md#proj) (see above) -- redundant MCP costing tag               |
-| [Stack](unity-aws-resource-tagging-conventions.md#stack)             | Kion tag used for costing                                                                                             |
+| [Stack](unity-aws-resource-tagging-conventions.md#stack)             | same as [Component](unity-aws-resource-tagging-conventions.md#component) (see above) -- redundant MCP costing tag     |
 
 ### Optional  Tags <a href="#mbt" id="mbt"></a>
 
