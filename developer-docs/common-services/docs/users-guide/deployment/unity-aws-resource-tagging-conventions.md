@@ -151,9 +151,7 @@ These tags can be used to provide additional information and context about the A
 | ------ | --------------- | -------- | ------------------ |
 | String |                 | True     | N/A - User Defined |
 
-* `Category: Technical, Costing`
-* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
-* Description: <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* Description:  This tag is required by Kion/MCP for cost monitoring purposes, and should contain the **same value as the "Proj" tag**.  See documentation [here](unity-aws-resource-tagging-conventions.md#proj).
 
 ## ServiceNow Instance
 
@@ -219,7 +217,10 @@ These tags can be used to provide additional information and context about the A
 | ------ | --------------- | -------- | ------------- | -------- |
 | String | `foo`           | True     | `foo`         | Business |
 
-* Description: The name of the project (Flight mission).
+* Description: The name of the project or mission.
+* Examples:
+  * `sips`
+  * `europa`
 * Pattern: `{Project}`
 * Pattern Components:
   * **Project**:`(foo)` for the shorthand project abbreviation
