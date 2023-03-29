@@ -64,26 +64,26 @@ These tags should be provided in all AWS resources.
 
 These tags can be used to provide additional information and context about the AWS resources.
 
-| Name           | Description                                                                    |
-| -------------- | ------------------------------------------------------------------------------ |
-| POC            | A list of email(s) for the point of contact for the resource                   |
-| Release        | The version number that this resource belongs to. Assumes semantic versioning. |
-| SecurityPlanID | IT Security Plan ID for the resource                                           |
-| ExposedWeb     | Will this resource be exposed to the web?                                      |
-| Experimental   | Is this an experimental resource?                                              |
-| UserFacing     | Will this resource be user facing?                                             |
-| CritInfra      | Is this resource a part of the critical infrastructure?                        |
-| SourceControl  | Documentation or SCM link for resources deployed                               |
+| Name                                                                       | Description                                                                    |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| [POC](unity-aws-resource-tagging-conventions.md#poc)                       | A list of email(s) for the point of contact for the resource                   |
+| [Release](unity-aws-resource-tagging-conventions.md#release)               | The version number that this resource belongs to. Assumes semantic versioning. |
+| [SecurityPlanID](unity-aws-resource-tagging-conventions.md#securityplanid) | IT Security Plan ID for the resource                                           |
+| [ExposedWeb](unity-aws-resource-tagging-conventions.md#exposedweb)         | Will this resource be exposed to the web?                                      |
+| [Experimental](unity-aws-resource-tagging-conventions.md#experimental)     | Is this an experimental resource?                                              |
+| [UserFacing](unity-aws-resource-tagging-conventions.md#userfacing)         | Will this resource be user facing?                                             |
+| [CritInfra](unity-aws-resource-tagging-conventions.md#critinfra)           | Is this resource a part of the critical infrastructure?                        |
+| [SourceControl](unity-aws-resource-tagging-conventions.md#sourcecontrol)   | Documentation or SCM link for resources deployed                               |
 
 ***
 
-#### Baseline Tags Specifications
+## Tag Specifications
 
 ## Name
 
-| Type   | Pattern Example           | Required | Default Value      | Category  |
-| ------ | ------------------------- | -------- | ------------------ | --------- |
-| String | `foo-dev-sps-hysds-mid01` | True     | N/A - User Defined | Technical |
+| Type   | Pattern Example           | Required | Default Value      |
+| ------ | ------------------------- | -------- | ------------------ |
+| String | `foo-dev-sps-hysds-mid01` | True     | N/A - User Defined |
 
 * Description: The name of the AWS resource. All characters need to be in lowercase.
 * Pattern: `{Proj}-{Venue}-{ServiceArea}-{Capability}-{Component}`
@@ -189,9 +189,9 @@ These tags can be used to provide additional information and context about the A
 
 ## POC
 
-| Type   | Pattern Example                            | Required | Default Value      | Category |
-| ------ | ------------------------------------------ | -------- | ------------------ | -------- |
-| String | `foo-sps@jpl.nasa.gov:foo-ds@jpl.nasa.gov` | True     | N/A - User Defined | Business |
+| Type   | Pattern Example                            | Required | Default Value      |
+| ------ | ------------------------------------------ | -------- | ------------------ |
+| String | `foo-sps@jpl.nasa.gov:foo-ds@jpl.nasa.gov` | True     | N/A - User Defined |
 
 * Description: The list of the point of contacts that is responsible for the resource is being deployed on.
 * Pattern: `{Poc}`
@@ -202,9 +202,9 @@ These tags can be used to provide additional information and context about the A
 
 ## Venue
 
-| Type   | Pattern Example | Required | Default Value      | Category  |
-| ------ | --------------- | -------- | ------------------ | --------- |
-| String | `dev`           | True     | N/A - User Defined | Technical |
+| Type   | Pattern Example | Required | Default Value      |
+| ------ | --------------- | -------- | ------------------ |
+| String | `dev`           | True     | N/A - User Defined |
 
 * Description: The name of the venue that the resource is being deployed on.
 * Pattern: `{Venue}`
@@ -229,9 +229,9 @@ These tags can be used to provide additional information and context about the A
 
 ## ServiceArea
 
-| Type   | Pattern Example | Required | Default Value      | Category |
-| ------ | --------------- | -------- | ------------------ | -------- |
-| String | `sps`           | True     | N/A - User Defined | Business |
+| Type   | Pattern Example | Required | Default Value      |
+| ------ | --------------- | -------- | ------------------ |
+| String | `sps`           | True     | N/A - User Defined |
 
 * Description: The name of the Unity service area.
 * Pattern: `{ServiceArea}`
@@ -242,9 +242,9 @@ These tags can be used to provide additional information and context about the A
 
 ## Capability
 
-| Type   | Pattern Example | Required | Default Value      | Category  |
-| ------ | --------------- | -------- | ------------------ | --------- |
-| String | `hysds`         | True     | N/A - User Defined | Technical |
+| Type   | Pattern Example | Required | Default Value      |
+| ------ | --------------- | -------- | ------------------ |
+| String | `hysds`         | True     | N/A - User Defined |
 
 * Description: Name of the application.
 * Pattern: `{Capability}`
@@ -256,9 +256,9 @@ These tags can be used to provide additional information and context about the A
 
 ## CapVersion
 
-| Type   | Pattern Example | Required | Default Value      | Category  |
-| ------ | --------------- | -------- | ------------------ | --------- |
-| String | `1.0.1`         | True     | N/A - User Defined | Technical |
+| Type   | Pattern Example | Required | Default Value      |
+| ------ | --------------- | -------- | ------------------ |
+| String | `1.0.1`         | True     | N/A - User Defined |
 
 * Description: Version of the application.
 * Pattern: `{CapVersion}`
@@ -271,9 +271,9 @@ These tags can be used to provide additional information and context about the A
 
 ## Release
 
-| Type   | Pattern Example | Required | Default Value      | Category  |
-| ------ | --------------- | -------- | ------------------ | --------- |
-| String | `G3.0`          | True     | N/A - User Defined | Technical |
+| Type   | Pattern Example | Required | Default Value      |
+| ------ | --------------- | -------- | ------------------ |
+| String | `G3.0`          | True     | N/A - User Defined |
 
 * Description: Release version that the application belongs to.
 * Pattern: `{Release}`
@@ -286,9 +286,9 @@ These tags can be used to provide additional information and context about the A
 
 ## Component
 
-| Type   | Pattern Example | Required | Default Value      | Category  |
-| ------ | --------------- | -------- | ------------------ | --------- |
-| String | `java`          | True     | N/A - User Defined | Technical |
+| Type   | Pattern Example | Required | Default Value      |
+| ------ | --------------- | -------- | ------------------ |
+| String | `java`          | True     | N/A - User Defined |
 
 * Description: The primary type of application/runtime that will be run on this resource.
 * Pattern: `{Component}`
@@ -301,9 +301,9 @@ These tags can be used to provide additional information and context about the A
 
 ## SecurityPlanID
 
-| Type         | Pattern Example | Required | Default Value | Category |
-| ------------ | --------------- | -------- | ------------- | -------- |
-| Unsigned Int | `644`           | True     | `644`         | Security |
+| Type         | Pattern Example | Required | Default Value |
+| ------------ | --------------- | -------- | ------------- |
+| Unsigned Int | `644`           | True     | `644`         |
 
 * Description: The JPL security plan ID that this resource falls under.
 * Pattern: `{PlanId}`
@@ -314,9 +314,9 @@ These tags can be used to provide additional information and context about the A
 
 ## ExposedWeb
 
-| Type    | Pattern Example | Required | Default Value | Category |
-| ------- | --------------- | -------- | ------------- | -------- |
-| Boolean | `false`         | True     | `false`       | Security |
+| Type    | Pattern Example | Required | Default Value |
+| ------- | --------------- | -------- | ------------- |
+| Boolean | `false`         | True     | `false`       |
 
 * Description: Is this resource exposed to the web?
 * Pattern: `{ExposedWeb}`
@@ -327,9 +327,9 @@ These tags can be used to provide additional information and context about the A
 
 ## Experimental
 
-| Type    | Pattern Example | Required | Default Value | Category              |
-| ------- | --------------- | -------- | ------------- | --------------------- |
-| Boolean | `false`         | True     | `false`       | Automation, Technical |
+| Type    | Pattern Example | Required | Default Value |
+| ------- | --------------- | -------- | ------------- |
+| Boolean | `false`         | True     | `false`       |
 
 * Description: Is this an experimental resource? If so, it will be removed after a period of time.
 * Pattern: `{Experimental}`
@@ -340,9 +340,9 @@ These tags can be used to provide additional information and context about the A
 
 ## UserFacing
 
-| Type    | Pattern Example | Required | Default Value | Category |
-| ------- | --------------- | -------- | ------------- | -------- |
-| Boolean | `false`         | True     | `false`       | Security |
+| Type    | Pattern Example | Required | Default Value |
+| ------- | --------------- | -------- | ------------- |
+| Boolean | `false`         | True     | `false`       |
 
 * Description: Is this resource user facing? Does the user interact directly with this resource?
 * Pattern: `{UserFacing}`
@@ -353,9 +353,9 @@ These tags can be used to provide additional information and context about the A
 
 ## CritInfra
 
-| Type         | Pattern Example | Required | Default Value | Category              |
-| ------------ | --------------- | -------- | ------------- | --------------------- |
-| Unsigned Int | `5`             | True     | `1`           | Automation, Technical |
+| Type         | Pattern Example | Required | Default Value |
+| ------------ | --------------- | -------- | ------------- |
+| Unsigned Int | `5`             | True     | `1`           |
 
 * Description: What is the level of criticality of the resource? This is mesaured on a scale of 5, with 5 being the most critical.
 * Pattern: `{CritInfra}`
@@ -366,9 +366,9 @@ These tags can be used to provide additional information and context about the A
 
 ## SourceControl
 
-| Type   | Pattern Example                                                                         | Required | Default Value      | Category  |
-| ------ | --------------------------------------------------------------------------------------- | -------- | ------------------ | --------- |
-| String | `https://github.com/binder-examples/continuous-build/blob/foo-G2.1_DS_art_1.0.0.tar.gz` | True     | N/A - User Defined | Technical |
+| Type   | Pattern Example                                                                         | Required | Default Value      |
+| ------ | --------------------------------------------------------------------------------------- | -------- | ------------------ |
+| String | `https://github.com/binder-examples/continuous-build/blob/foo-G2.1_DS_art_1.0.0.tar.gz` | True     | N/A - User Defined |
 
 * Description: This should be an URL to the source code/or documentation of the software deployed on the resource.
 * Pattern: `{SourceControl}`
