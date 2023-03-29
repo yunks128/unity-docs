@@ -14,17 +14,12 @@ This is a living document, and may be subjected to change as requirements may ch
 
 ### Table of Contents
 
-1. General Guidelines
-2. Tagging Categories
-3. Mandatory Baseline Tags
-4. Abbreviation Conventions
-   * Tag Abbreviation
-   * S3 Region Endpoint Abbreviations
-5. Resource Specific Tags
-   * Amazon S3
-   * ALBs, Target Groups, and Redis (Short name version)
-   * SSM Parameter Store
-   * KMS Encryption Key
+1. [General Guidelines](unity-aws-resource-tagging-conventions.md#ggl)
+2. [Tagging Categories](unity-aws-resource-tagging-conventions.md#tc)
+3. [Mandatory Tags](unity-aws-resource-tagging-conventions.md#mbt)
+4. [Optional Tags](unity-aws-resource-tagging-conventions.md#mbt-1)
+5. [Abbreviation Conventions](unity-aws-resource-tagging-conventions.md#ac)
+6. [Resource Specific Tags](unity-aws-resource-tagging-conventions.md#rst)
 
 ### General Guidelines <a href="#ggl" id="ggl"></a>
 
@@ -43,7 +38,7 @@ This is a living document, and may be subjected to change as requirements may ch
 * **Business**: To help associate AWS costs to the users of the resource
 * **Security**: For determining security configuration and compliance of AWS resources
 
-### Mandatory Baseline Tags <a href="#mbt" id="mbt"></a>
+### Mandatory  Tags <a href="#mbt" id="mbt"></a>
 
 These tags should be provided in all AWS resources.
 
@@ -66,7 +61,7 @@ These tags should be provided in all AWS resources.
 | <mark style="color:red;">Stack</mark>                                                                                                                            | Kion tag used for costing                                                   |
 | <mark style="color:red;">station</mark>                                                                                                                          | Kion tag used for costing                                                   |
 
-### Optional Baseline Tags <a href="#mbt" id="mbt"></a>
+### Optional  Tags <a href="#mbt" id="mbt"></a>
 
 These tags can be used to provide additional information and context about the AWS resources.
 
