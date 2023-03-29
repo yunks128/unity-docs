@@ -194,14 +194,11 @@ These tags can be used to provide additional information and context about the A
 
 ## Venue
 
-| Type   | Example Value | Required | Default Value      |
-| ------ | ------------- | -------- | ------------------ |
-| String | `dev`         | True     | N/A - User Defined |
+| Type   | Example Value              | Required | Default Value      |
+| ------ | -------------------------- | -------- | ------------------ |
+| String | `Dev`, `Test`, `SIPS-test` | True     | N/A - User Defined |
 
 * Description: The name of the venue that the resource is being deployed on.
-* Pattern: `{Venue}`
-* Pattern Components:
-  * **Venue**:`(dev|test|prod)` for development, test, production
 
 ## Proj
 
