@@ -86,7 +86,7 @@ These tags can be used to provide additional information and context about the A
 | String | `foo-dev-sps-hysds-mid01` | True     | N/A - User Defined | Technical |
 
 * Description: The name of the AWS resource. All characters need to be in lowercase.
-* Pattern: `{Project}-{Venue}-{ServiceArea}-{Capability}-{Component}`
+* Pattern: `{Proj}-{Venue}-{ServiceArea}-{Capability}-{Component}`
 * Pattern Components:
   * **Proj** :`(foo)` for the project abbreviation.
   * **Venue** :`([a-z0-9]{1,6})` See `Venue` below for more info. Limit 6 characters. Examples include dev, test, and prod.
