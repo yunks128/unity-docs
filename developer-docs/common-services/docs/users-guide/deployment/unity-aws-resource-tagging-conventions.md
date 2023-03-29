@@ -49,13 +49,13 @@ These tags should be provided in all AWS resources.
 
 | Name                                                                                                                                                             | Description                                                                 |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| <mark style="color:red;">Name</mark>                                                                                                                             | Name of the resource.                                                       |
-| Venue                                                                                                                                                            | The name of the venue that the resource is being deployed on                |
-| Project                                                                                                                                                          | The name of the project                                                     |
-| ServiceArea                                                                                                                                                      | Which service area is this related to?                                      |
-| Capability                                                                                                                                                       | Name of the application                                                     |
-| CapVersion                                                                                                                                                       | The version number of the capability provided. Assumes semantic versioning. |
-| Component                                                                                                                                                        | What is the primary component that makes up the application                 |
+| <mark style="color:red;"></mark>[<mark style="color:red;">Name</mark>](unity-aws-resource-tagging-conventions.md#name)<mark style="color:red;"></mark>           | Name of the resource.                                                       |
+| [Venue](unity-aws-resource-tagging-conventions.md#venue)                                                                                                         | The name of the venue that the resource is being deployed on                |
+| [Project](unity-aws-resource-tagging-conventions.md#project)                                                                                                     | The name of the project                                                     |
+| [ServiceArea](unity-aws-resource-tagging-conventions.md#servicearea)                                                                                             | Which service area is this related to?                                      |
+| [Capability](unity-aws-resource-tagging-conventions.md#capability)                                                                                               | Name of the application                                                     |
+| [CapVersion](unity-aws-resource-tagging-conventions.md#capversion)                                                                                               | The version number of the capability provided. Assumes semantic versioning. |
+| [Component](unity-aws-resource-tagging-conventions.md#component)                                                                                                 | What is the primary component that makes up the application                 |
 | <mark style="color:red;"></mark>[<mark style="color:red;">CreatedBy</mark>](unity-aws-resource-tagging-conventions.md#createdby)<mark style="color:red;"></mark> | Kion tag used for costing                                                   |
 | <mark style="color:red;">Customer</mark>                                                                                                                         | Kion tag used for costing                                                   |
 | <mark style="color:red;">Env</mark>                                                                                                                              | Kion tag used for costing                                                   |
@@ -93,9 +93,11 @@ These tags can be used to provide additional information and context about the A
 
 #### Baseline Tags Specifications
 
-| Tag      | Description          | Type   | Pattern Example           | Required | Default Value      | Category  |
-| -------- | -------------------- | ------ | ------------------------- | -------- | ------------------ | --------- |
-| **Name** | Name of the resource | String | `foo-dev-sps-hysds-mid01` | True     | N/A - User Defined | Technical |
+## Name
+
+| Type   | Pattern Example           | Required | Default Value      | Category  |
+| ------ | ------------------------- | -------- | ------------------ | --------- |
+| String | `foo-dev-sps-hysds-mid01` | True     | N/A - User Defined | Technical |
 
 * Description: The name of the AWS resource. All characters need to be in lowercase.
 * Pattern: `{Project}-{Venue}-{ServiceArea}-{Capability}-{Component}`
@@ -111,9 +113,9 @@ These tags can be used to provide additional information and context about the A
 
 ## CreatedBy
 
-| Tag           | Description                          | Type   | Pattern Example    | Required | Default Value      | Category |
-| ------------- | ------------------------------------ | ------ | ------------------ | -------- | ------------------ | -------- |
-| **CreatedBy** | Email of the creator of the resource | String | `foo@jpl.nasa.gov` | True     | N/A - User Defined | Business |
+| Type   | Pattern Example    | Required | Default Value      | Category |
+| ------ | ------------------ | -------- | ------------------ | -------- |
+| String | `foo@jpl.nasa.gov` | True     | N/A - User Defined | Business |
 
 
 
@@ -124,9 +126,11 @@ These tags can be used to provide additional information and context about the A
 * Pattern Example:
   * `foo@jpl.nasa.gov`
 
-| Tag     | Description                                                   | Type   | Pattern Example                            | Required | Default Value      | Category |
-| ------- | ------------------------------------------------------------- | ------ | ------------------------------------------ | -------- | ------------------ | -------- |
-| **POC** | A list of email(s) for the point of contact for the resource. | String | `foo-sps@jpl.nasa.gov:foo-ds@jpl.nasa.gov` | True     | N/A - User Defined | Business |
+## POC
+
+| Type   | Pattern Example                            | Required | Default Value      | Category |
+| ------ | ------------------------------------------ | -------- | ------------------ | -------- |
+| String | `foo-sps@jpl.nasa.gov:foo-ds@jpl.nasa.gov` | True     | N/A - User Defined | Business |
 
 * Description: The list of the point of contacts that is responsible for the resource is being deployed on.
 * Pattern: `{Poc}`
@@ -135,9 +139,11 @@ These tags can be used to provide additional information and context about the A
 * Pattern Example:
   * `foo@jpl.nasa.gov`
 
-| Tag       | Description                                                   | Type   | Pattern Example | Required | Default Value      | Category  |
-| --------- | ------------------------------------------------------------- | ------ | --------------- | -------- | ------------------ | --------- |
-| **Venue** | The name of the venue that the resource is being deployed on. | String | `dev`           | True     | N/A - User Defined | Technical |
+## Venue
+
+| Type   | Pattern Example | Required | Default Value      | Category  |
+| ------ | --------------- | -------- | ------------------ | --------- |
+| String | `dev`           | True     | N/A - User Defined | Technical |
 
 * Description: The name of the venue that the resource is being deployed on.
 * Pattern: `{Venue}`
@@ -146,9 +152,11 @@ These tags can be used to provide additional information and context about the A
 * Pattern Example:
   * `dev`
 
-| Tag         | Description             | Type   | Pattern Example | Required | Default Value | Category |
-| ----------- | ----------------------- | ------ | --------------- | -------- | ------------- | -------- |
-| **Project** | The name of the project | String | `foo`           | True     | `foo`         | Business |
+## Project
+
+| Type   | Pattern Example | Required | Default Value | Category |
+| ------ | --------------- | -------- | ------------- | -------- |
+| String | `foo`           | True     | `foo`         | Business |
 
 * Description: The name of the project (Flight mission).
 * Pattern: `{Project}`
@@ -157,9 +165,11 @@ These tags can be used to provide additional information and context about the A
 * Pattern Example:
   * `foo`
 
-| Tag             | Description                        | Type   | Pattern Example | Required | Default Value      | Category |
-| --------------- | ---------------------------------- | ------ | --------------- | -------- | ------------------ | -------- |
-| **ServiceArea** | The name of the Unity service area | String | `sps`           | True     | N/A - User Defined | Business |
+## ServiceArea
+
+| Type   | Pattern Example | Required | Default Value      | Category |
+| ------ | --------------- | -------- | ------------------ | -------- |
+| String | `sps`           | True     | N/A - User Defined | Business |
 
 * Description: The name of the Unity service area.
 * Pattern: `{ServiceArea}`
@@ -168,9 +178,11 @@ These tags can be used to provide additional information and context about the A
 * Pattern Example:
   * `sps`
 
-| Tag            | Description             | Type   | Pattern Example | Required | Default Value      | Category  |
-| -------------- | ----------------------- | ------ | --------------- | -------- | ------------------ | --------- |
-| **Capability** | Name of the application | String | `hysds`         | True     | N/A - User Defined | Technical |
+## Capability
+
+| Type   | Pattern Example | Required | Default Value      | Category  |
+| ------ | --------------- | -------- | ------------------ | --------- |
+| String | `hysds`         | True     | N/A - User Defined | Technical |
 
 * Description: Name of the application.
 * Pattern: `{Capability}`
@@ -180,9 +192,11 @@ These tags can be used to provide additional information and context about the A
   * `hysds`
   * `tenantManager`
 
-| Tag            | Description                                                                 | Type   | Pattern Example | Required | Default Value      | Category  |
-| -------------- | --------------------------------------------------------------------------- | ------ | --------------- | -------- | ------------------ | --------- |
-| **CapVersion** | The version number of the capability provided. Assumes semantic versioning. | String | `1.0.1`         | True     | N/A - User Defined | Technical |
+## CapVersion
+
+| Type   | Pattern Example | Required | Default Value      | Category  |
+| ------ | --------------- | -------- | ------------------ | --------- |
+| String | `1.0.1`         | True     | N/A - User Defined | Technical |
 
 * Description: Version of the application.
 * Pattern: `{CapVersion}`
@@ -193,9 +207,11 @@ These tags can be used to provide additional information and context about the A
   * `0.0.1`
   * `1.23.1`
 
-| Tag         | Description                                                                            | Type   | Pattern Example | Required | Default Value      | Category  |
-| ----------- | -------------------------------------------------------------------------------------- | ------ | --------------- | -------- | ------------------ | --------- |
-| **Release** | The release version number that this resource belongs to. Assumes semantic versioning. | String | `G3.0`          | True     | N/A - User Defined | Technical |
+## Release
+
+| Type   | Pattern Example | Required | Default Value      | Category  |
+| ------ | --------------- | -------- | ------------------ | --------- |
+| String | `G3.0`          | True     | N/A - User Defined | Technical |
 
 * Description: Release version that the application belongs to.
 * Pattern: `{Release}`
@@ -206,9 +222,11 @@ These tags can be used to provide additional information and context about the A
   * `G2.1`
   * `G3.0.1`
 
-| Tag           | Description                                                 | Type   | Pattern Example | Required | Default Value      | Category  |
-| ------------- | ----------------------------------------------------------- | ------ | --------------- | -------- | ------------------ | --------- |
-| **Component** | What is the primary component that makes up the application | String | `java`          | True     | N/A - User Defined | Technical |
+## Component
+
+| Type   | Pattern Example | Required | Default Value      | Category  |
+| ------ | --------------- | -------- | ------------------ | --------- |
+| String | `java`          | True     | N/A - User Defined | Technical |
 
 * Description: The primary type of application/runtime that will be run on this resource.
 * Pattern: `{Component}`
@@ -219,9 +237,11 @@ These tags can be used to provide additional information and context about the A
   * `mysql`
   * `tomcat`
 
-| Tag                | Description                          | Type         | Pattern Example | Required | Default Value | Category |
-| ------------------ | ------------------------------------ | ------------ | --------------- | -------- | ------------- | -------- |
-| **SecurityPlanID** | IT Security Plan ID for the resource | Unsigned Int | `644`           | True     | `644`         | Security |
+## SecurityPlanID
+
+| Type         | Pattern Example | Required | Default Value | Category |
+| ------------ | --------------- | -------- | ------------- | -------- |
+| Unsigned Int | `644`           | True     | `644`         | Security |
 
 * Description: The JPL security plan ID that this resource falls under.
 * Pattern: `{PlanId}`
@@ -230,9 +250,11 @@ These tags can be used to provide additional information and context about the A
 * Pattern Example:
   * `644`
 
-| Tag            | Description                               | Type    | Pattern Example | Required | Default Value | Category |
-| -------------- | ----------------------------------------- | ------- | --------------- | -------- | ------------- | -------- |
-| **ExposedWeb** | Will this resource be exposed to the web? | Boolean | `false`         | True     | `false`       | Security |
+## ExposedWeb
+
+| Type    | Pattern Example | Required | Default Value | Category |
+| ------- | --------------- | -------- | ------------- | -------- |
+| Boolean | `false`         | True     | `false`       | Security |
 
 * Description: Is this resource exposed to the web?
 * Pattern: `{ExposedWeb}`
@@ -241,9 +263,11 @@ These tags can be used to provide additional information and context about the A
 * Pattern Example:
   * `false`
 
-| Tag              | Description                       | Type    | Pattern Example | Required | Default Value | Category              |
-| ---------------- | --------------------------------- | ------- | --------------- | -------- | ------------- | --------------------- |
-| **Experimental** | Is this an experimental resource? | Boolean | `false`         | True     | `false`       | Automation, Technical |
+## Experimental
+
+| Type    | Pattern Example | Required | Default Value | Category              |
+| ------- | --------------- | -------- | ------------- | --------------------- |
+| Boolean | `false`         | True     | `false`       | Automation, Technical |
 
 * Description: Is this an experimental resource? If so, it will be removed after a period of time.
 * Pattern: `{Experimental}`
@@ -252,9 +276,11 @@ These tags can be used to provide additional information and context about the A
 * Pattern Example:
   * `false`
 
-| Tag            | Description                        | Type    | Pattern Example | Required | Default Value | Category |
-| -------------- | ---------------------------------- | ------- | --------------- | -------- | ------------- | -------- |
-| **UserFacing** | Will this resource be user facing? | Boolean | `false`         | True     | `false`       | Security |
+## UserFacing
+
+| Type    | Pattern Example | Required | Default Value | Category |
+| ------- | --------------- | -------- | ------------- | -------- |
+| Boolean | `false`         | True     | `false`       | Security |
 
 * Description: Is this resource user facing? Does the user interact directly with this resource?
 * Pattern: `{UserFacing}`
@@ -263,21 +289,24 @@ These tags can be used to provide additional information and context about the A
 * Pattern Example:
   * `false`
 
-| Tag           | Description                                             | Type         | Pattern Example | Required | Default Value | Category              |
-| ------------- | ------------------------------------------------------- | ------------ | --------------- | -------- | ------------- | --------------------- |
-| **CritInfra** | Is this resource a part of the critical infrastructure? | Unsigned Int | `5`             | True     | `1`           | Automation, Technical |
+## CritInfra
 
-* **CritInfra**
-  * Description: What is the level of criticality of the resource? This is mesaured on a scale of 5, with 5 being the most critical.
-  * Pattern: `{CritInfra}`
-  * Pattern Components:
-    * **CritInfra**: `([0-5]{1})` for the scale of criticality. How important is this resource (With 5 being critical, i.e. 24/7/365)
-  * Pattern Example:
-    * `5`
+| Type         | Pattern Example | Required | Default Value | Category              |
+| ------------ | --------------- | -------- | ------------- | --------------------- |
+| Unsigned Int | `5`             | True     | `1`           | Automation, Technical |
 
-| Tag               | Description                                      | Type   | Pattern Example                                                                         | Required | Default Value      | Category  |
-| ----------------- | ------------------------------------------------ | ------ | --------------------------------------------------------------------------------------- | -------- | ------------------ | --------- |
-| **SourceControl** | Documentation or SCM link for resources deployed | String | `https://github.com/binder-examples/continuous-build/blob/foo-G2.1_DS_art_1.0.0.tar.gz` | True     | N/A - User Defined | Technical |
+* Description: What is the level of criticality of the resource? This is mesaured on a scale of 5, with 5 being the most critical.
+* Pattern: `{CritInfra}`
+* Pattern Components:
+  * **CritInfra**: `([0-5]{1})` for the scale of criticality. How important is this resource (With 5 being critical, i.e. 24/7/365)
+* Pattern Example:
+  * `5`
+
+## SourceControl
+
+| Type   | Pattern Example                                                                         | Required | Default Value      | Category  |
+| ------ | --------------------------------------------------------------------------------------- | -------- | ------------------ | --------- |
+| String | `https://github.com/binder-examples/continuous-build/blob/foo-G2.1_DS_art_1.0.0.tar.gz` | True     | N/A - User Defined | Technical |
 
 * Description: This should be an URL to the source code/or documentation of the software deployed on the resource.
 * Pattern: `{SourceControl}`
