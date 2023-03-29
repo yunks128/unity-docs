@@ -42,19 +42,19 @@ This is a living document, and may be subjected to change as requirements may ch
 
 These tags should be provided in all AWS resources.
 
-| Name                                                                 | Description                                                                                                           |
-| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| [Name](unity-aws-resource-tagging-conventions.md#name)               | Name of the resource.                                                                                                 |
-| [Venue](unity-aws-resource-tagging-conventions.md#venue)             | The name of the venue that the resource is being deployed on                                                          |
-| [Proj](unity-aws-resource-tagging-conventions.md#proj)               | The name of the project/mission (e.g. `europa`), or `unity` if it's a shared service                                  |
-| [ServiceArea](unity-aws-resource-tagging-conventions.md#servicearea) | Which service area is this related to?                                                                                |
-| [Capability](unity-aws-resource-tagging-conventions.md#capability)   | Name of the application                                                                                               |
-| [CapVersion](unity-aws-resource-tagging-conventions.md#capversion)   | The version number of the capability provided. Assumes semantic versioning.                                           |
-| [Component](unity-aws-resource-tagging-conventions.md#component)     | What is the primary component that makes up the application                                                           |
-| [CreatedBy](unity-aws-resource-tagging-conventions.md#createdby)     | same as [ServiceArea](unity-aws-resource-tagging-conventions.md#servicearea) (see above) -- redundant MCP costing tag |
-| [Env](unity-aws-resource-tagging-conventions.md#env)                 | same as [Venue](unity-aws-resource-tagging-conventions.md#venue) (see above) -- redundant MCP costing tag             |
-| [mission](unity-aws-resource-tagging-conventions.md#mission)         | same as [Proj](unity-aws-resource-tagging-conventions.md#proj) (see above) -- redundant MCP costing tag               |
-| [Stack](unity-aws-resource-tagging-conventions.md#stack)             | same as [Component](unity-aws-resource-tagging-conventions.md#component) (see above) -- redundant MCP costing tag     |
+| Name                                                                 | Description                                                                                                                                              |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Name](unity-aws-resource-tagging-conventions.md#name)               | Name of the resource.                                                                                                                                    |
+| [Venue](unity-aws-resource-tagging-conventions.md#venue)             | The name of the venue that the resource is being deployed on                                                                                             |
+| [Proj](unity-aws-resource-tagging-conventions.md#proj)               | The name of the project/mission (e.g. `europa`), or `unity` if it's a shared service                                                                     |
+| [ServiceArea](unity-aws-resource-tagging-conventions.md#servicearea) | Which service area is this related to?                                                                                                                   |
+| [Capability](unity-aws-resource-tagging-conventions.md#capability)   | Name of the application                                                                                                                                  |
+| [CapVersion](unity-aws-resource-tagging-conventions.md#capversion)   | The version number of the capability provided. Assumes semantic versioning.                                                                              |
+| [Component](unity-aws-resource-tagging-conventions.md#component)     | What is the primary component that makes up the application                                                                                              |
+| [CreatedBy](unity-aws-resource-tagging-conventions.md#createdby)     | same as [ServiceArea](unity-aws-resource-tagging-conventions.md#servicearea) (see above) -- redundant <mark style="color:yellow;">MCP costing tag</mark> |
+| [Env](unity-aws-resource-tagging-conventions.md#env)                 | same as [Venue](unity-aws-resource-tagging-conventions.md#venue) (see above) -- redundant <mark style="color:yellow;">MCP costing tag</mark>             |
+| [mission](unity-aws-resource-tagging-conventions.md#mission)         | same as [Proj](unity-aws-resource-tagging-conventions.md#proj) (see above) -- redundant <mark style="color:yellow;">MCP costing tag</mark>               |
+| [Stack](unity-aws-resource-tagging-conventions.md#stack)             | same as [Component](unity-aws-resource-tagging-conventions.md#component) (see above) -- redundant <mark style="color:yellow;">MCP costing tag</mark>     |
 
 ### Optional  Tags <a href="#mbt" id="mbt"></a>
 
