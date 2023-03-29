@@ -8,7 +8,7 @@
 
 ### Introduction
 
-Amazon Web Services provides the ability to assign metadata to AWS resources in the form of **tags**. Unity has compiled a list of tags that we believe will be needed to allow the team to easily categorize resources by purpose, owner, environment, and other specific criteria. This document describes Unity tagging convention and pattern for various projects.
+Amazon Web Services provides the ability to assign metadata to AWS resources in the form of **tags**. Unity has compiled a list of tags that we believe will be needed to allow the team to easily categorize resources by purpose, owner, environment, and other specific criteria.  **Also, importantly, these tags allow for tracking of how much money is spent on the various AWS resources.**  This document describes Unity tagging convention and pattern for various projects.
 
 This is a living document, and may be subjected to change as requirements may change during the developmental cycle.
 
