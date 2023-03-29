@@ -219,14 +219,11 @@ These tags can be used to provide additional information and context about the A
 
 ## Capability
 
-| Type   | Example Value | Required | Default Value      |
-| ------ | ------------- | -------- | ------------------ |
-| String | `hysds`       | True     | N/A - User Defined |
+| Type   | Example Value                            | Required | Default Value      |
+| ------ | ---------------------------------------- | -------- | ------------------ |
+| String | `processing`, `analysis`, `data-storage` | True     | N/A - User Defined |
 
-* Description: Name of the application.
-* Pattern: `{Capability}`
-* Pattern Components:
-  * **Capability**:`([a-z0-9]+)` for the capability that is provided by the service area.
+* Description: The Unity capability
 
 ## CapVersion
 
