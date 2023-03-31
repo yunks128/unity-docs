@@ -44,15 +44,14 @@ These tags should be provided in all AWS resources.
 
 | Name                                                                 | Description                                                                                                                                         |
 | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Name](unity-aws-resource-tagging-conventions.md#name)               | Name of the resource -- <mark style="color:yellow;">MCP/Kion costing tag</mark>                                                                     |
 | [Venue](unity-aws-resource-tagging-conventions.md#venue)             | Venue that the resource is being deployed on.  Ex: `Dev`, `Test`, `SIPS-test`                                                                       |
-| [Proj](unity-aws-resource-tagging-conventions.md#proj)               | The name of the project/mission (e.g. `europa`), or `unity` if it's a shared service -- <mark style="color:yellow;">MCP/Kion costing tag</mark>     |
 | [ServiceArea](unity-aws-resource-tagging-conventions.md#servicearea) | Which service area is this related to? Ex: `sps`, `ds`, `as`, `ads`, `cs`                                                                           |
 | [CapVersion](unity-aws-resource-tagging-conventions.md#capversion)   | The version number of the capability provided                                                                                                       |
 | [Component](unity-aws-resource-tagging-conventions.md#component)     | Unity component.  Ex: `HySDS`, `Cumulus`, `SDAP`, `Dockstore`, etc..                                                                                |
+| [Name](unity-aws-resource-tagging-conventions.md#name)               | Name of the resource -- <mark style="color:yellow;">MCP/Kion costing tag</mark>                                                                     |
+| [Proj](unity-aws-resource-tagging-conventions.md#proj)               | The name of the project/mission (e.g. `europa`), or `unity` if it's a shared service -- <mark style="color:yellow;">MCP/Kion costing tag</mark>     |
 | [CreatedBy](unity-aws-resource-tagging-conventions.md#createdby)     | same as [ServiceArea](unity-aws-resource-tagging-conventions.md#servicearea) (see above) -- <mark style="color:yellow;">MCP/Kion costing tag</mark> |
 | [Env](unity-aws-resource-tagging-conventions.md#env)                 | same as [Venue](unity-aws-resource-tagging-conventions.md#venue) (see above) -- <mark style="color:yellow;">MCP/Kion costing tag</mark>             |
-| [mission](unity-aws-resource-tagging-conventions.md#mission)         | same as [Proj](unity-aws-resource-tagging-conventions.md#proj) (see above) -- <mark style="color:yellow;">MCP/Kion costing tag</mark>               |
 | [Stack](unity-aws-resource-tagging-conventions.md#stack)             | same as [Component](unity-aws-resource-tagging-conventions.md#component) (see above) -- <mark style="color:yellow;">MCP/Kion costing tag</mark>     |
 
 ### Optional  Tags <a href="#mbt" id="mbt"></a>
@@ -70,6 +69,7 @@ These tags can be used to provide additional information and context about the A
 | [UserFacing](unity-aws-resource-tagging-conventions.md#userfacing)                   | Will this resource be user facing?                                             |
 | [CritInfra](unity-aws-resource-tagging-conventions.md#critinfra)                     | Is this resource a part of the critical infrastructure?                        |
 | [SourceControl](unity-aws-resource-tagging-conventions.md#sourcecontrol)             | Documentation or SCM link for resources deployed                               |
+| [mission](unity-aws-resource-tagging-conventions.md#mission)                         | not needed <mark style="color:yellow;">MCP/Kion costing tag</mark>             |
 | [mcpBilling](unity-aws-resource-tagging-conventions.md#mcpbilling)                   | not needed <mark style="color:yellow;">MCP/Kion costing tag</mark>             |
 | [ServiceNow Instance](unity-aws-resource-tagging-conventions.md#servicenow-instance) | not needed <mark style="color:yellow;">MCP/Kion costing tag</mark>             |
 | [station](unity-aws-resource-tagging-conventions.md#station)                         | not needed <mark style="color:yellow;">MCP/Kion costing tag</mark>             |
