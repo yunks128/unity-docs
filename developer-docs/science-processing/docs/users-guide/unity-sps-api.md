@@ -82,7 +82,7 @@ curl -s -0 -X POST "http://${SPS_API}:5002/sps/prewarm" \
 -H 'Content-Type: application/json; charset=utf-8' \
 --data-binary @- << EOF | jq
 { 
-"desired_size": 5
+"num_nodes": 5
 }
 EOF
 ```
