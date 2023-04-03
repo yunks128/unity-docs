@@ -123,7 +123,7 @@ curl -s "http://${SPS_API}:5002/sps/prewarm/${PREWARM_REQUEST_ID}" |  jq
 {
   "status": "Running",
   "last_update_timestamp": "2023-03-29T21:32:33.066399",
-  "desired_size": 1,
+  "num_nodes": 1,
   "ready_nodes": 2,
   "node_group_update": {
     "id": "1c6aa0e8-197f-319f-9cc9-97b1639d5b3e",
