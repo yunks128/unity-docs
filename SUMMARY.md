@@ -81,6 +81,7 @@
       * [Unity SPS API](developer-docs/science-processing/docs/users-guide/unity-sps-api.md)
     * [Developers Guide](developer-docs/science-processing/docs/developers-guide.md)
       * [Tutorial: Execution of the L1B CWL Workflow via the WPS-T API](developer-docs/science-processing/docs/developers-guide/tutorial-execution-of-the-l1b-cwl-workflow-via-the-wps-t-api.md)
+      * [Manual Verification: Testing the SPS Prewarm API](developer-docs/science-processing/docs/developers-guide/manual-verification-testing-the-sps-prewarm-api.md)
     * [Admin Guide](developer-docs/science-processing/docs/admin-guide/README.md)
       * [Cluster Provisioning with Terraform](developer-docs/science-processing/docs/admin-guide/cluster-provisioning-with-terraform.md)
   * [FAQ](developer-docs/science-processing/faq.md)
