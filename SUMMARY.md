@@ -87,7 +87,7 @@
   * [FAQ](developer-docs/science-processing/faq.md)
 * [On-Demand](developer-docs/on-demand.md)
   * [Deployment of On-Demand SPS](developer-docs/on-demand/deployment-of-on-demand-sps.md)
-  * [On Demand API](developer-docs/on-demand/on-demand-api.md)
+  * [Docs](developer-docs/on-demand/docs.md)
 * [System Processes](developer-docs/system-processes/README.md)
   * [Testing](developer-docs/system-processes/testing.md)
   * [Release Process](developer-docs/system-processes/release-process.md)
