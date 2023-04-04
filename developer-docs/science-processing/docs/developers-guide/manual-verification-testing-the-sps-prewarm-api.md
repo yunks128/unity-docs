@@ -21,6 +21,8 @@ load_balancer_hostnames = {
 
 ### Step 2 - Using the SPS API, check the current status of the Verdi node group
 
+#### Get the current number of ready nodes in the Verdi node group <a href="#get-the-current-number-of-worker-nodes" id="get-the-current-number-of-worker-nodes"></a>
+
 ```sh
 curl -s -X GET "http://${SPS_API}:5002/sps/ready-nodes" | jq
 ```
@@ -36,6 +38,8 @@ curl -s -X GET "http://${SPS_API}:5002/sps/ready-nodes" | jq
 ```
 
 </details>
+
+#### Get configuration information about the Verdi node group <a href="#get-information-about-the-node-groups-configuration" id="get-information-about-the-node-groups-configuration"></a>
 
 ```sh
 curl -s -X GET "http://${SPS_API}:5002/sps/node-group-info" | jq
@@ -281,7 +285,7 @@ curl -s -X GET "http://${SPS_API}:5002/sps/node-group-info" | jq
   "desired_size": 7,
   "min_size": 0,
   "max_size": 10,
-  "ready_nodes": 3
+  "ready_nodes": 7
 }
 ```
 
