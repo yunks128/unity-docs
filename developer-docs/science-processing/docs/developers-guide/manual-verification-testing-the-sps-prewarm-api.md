@@ -59,7 +59,7 @@ curl -s -X GET "http://${SPS_API}:5002/sps/node-group-info" | jq
 
 </details>
 
-### Step 3 - Send a few prewarm request to change the desired size of the Verdi node group
+### Step 3 - Send a few prewarm requests to change the desired size of the Verdi node group
 
 #### Set the number of nodes to 7
 
