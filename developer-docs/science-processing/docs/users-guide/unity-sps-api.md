@@ -12,8 +12,8 @@ Currently, the SPS API is implemented by a [FastAPI](https://fastapi.tiangolo.co
 
 ### Get the Current Number of Worker Nodes
 
-{% swagger src="../../../../.gitbook/assets/openapi (1).json" path="/sps/ready-nodes" method="get" %}
-[openapi (1).json](<../../../../.gitbook/assets/openapi (1).json>)
+{% swagger src="../../../../.gitbook/assets/openapi.json" path="/sps/ready-nodes" method="get" %}
+[openapi.json](../../../../.gitbook/assets/openapi.json)
 {% endswagger %}
 
 #### Example Request
@@ -36,8 +36,8 @@ curl -s -X GET "http://${SPS_API}:5002/sps/ready-nodes" | jq
 
 ### Get Information about the Node Group's Configuration
 
-{% swagger src="../../../../.gitbook/assets/openapi (1).json" path="/sps/node-group-info" method="get" %}
-[openapi (1).json](<../../../../.gitbook/assets/openapi (1).json>)
+{% swagger src="../../../../.gitbook/assets/openapi.json" path="/sps/node-group-info" method="get" %}
+[openapi.json](../../../../.gitbook/assets/openapi.json)
 {% endswagger %}
 
 #### Example Request
@@ -70,8 +70,8 @@ curl -s -X GET "http://${SPS_API}:5002/sps/node-group-info" | jq
 
 The **Create Prewarm Request** is used to initialize an increase of the SPS compute infrastructure in anticipation of process executions.
 
-{% swagger src="../../../../.gitbook/assets/openapi (1).json" path="/sps/prewarm" method="post" %}
-[openapi (1).json](<../../../../.gitbook/assets/openapi (1).json>)
+{% swagger src="../../../../.gitbook/assets/openapi.json" path="/sps/prewarm" method="post" %}
+[openapi.json](../../../../.gitbook/assets/openapi.json)
 {% endswagger %}
 
 #### &#x20;Example create prewarm request using curl:
@@ -105,8 +105,8 @@ EOF
 
 The **Get Prewarm Request** is used to view the status of an already initialized prewarm.
 
-{% swagger src="../../../../.gitbook/assets/openapi (1).json" path="/sps/prewarm/{prewarm_request_id}" method="get" %}
-[openapi (1).json](<../../../../.gitbook/assets/openapi (1).json>)
+{% swagger src="../../../../.gitbook/assets/openapi.json" path="/sps/prewarm/{prewarm_request_id}" method="get" %}
+[openapi.json](../../../../.gitbook/assets/openapi.json)
 {% endswagger %}
 
 #### Example get prewarm request using curl:
@@ -150,8 +150,8 @@ curl -s "http://${SPS_API}:5002/sps/prewarm/${PREWARM_REQUEST_ID}" |  jq
 
 **Health Check** is a simple test endpoint to be used by deployment and integration tests to verify the liveness status of the SPS api service.
 
-{% swagger src="../../../../.gitbook/assets/openapi (1).json" path="/sps/health-check" method="get" %}
-[openapi (1).json](<../../../../.gitbook/assets/openapi (1).json>)
+{% swagger src="../../../../.gitbook/assets/openapi.json" path="/sps/health-check" method="get" %}
+[openapi.json](../../../../.gitbook/assets/openapi.json)
 {% endswagger %}
 
 #### Example echo request using curl:
