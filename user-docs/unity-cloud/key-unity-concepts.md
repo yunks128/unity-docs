@@ -18,7 +18,7 @@ This page is a work-in-progress and will include additional material and links t
 
 ## System Overview
 
-Unity is a set of cloud services that provide an end-to-end tool set for science analysis, algorithm development, and scaled processing. They key **** (external facing) services available are:
+Unity is a set of cloud services that provide an end-to-end tool set for science analysis, algorithm development, and scaled processing. They key (external facing) services available are:
 
 * **Application Development**: the Algorithm Development Service (ADS), which includes a JupyterHub environment, code source-control and the Application Catalog (implemented using Dockstore).
 * **Science Processing Service**: For deploying applications and job-management activities you will interact with the WPS-T API provided by the Science Processing Service (SPS) subsystems.&#x20;
