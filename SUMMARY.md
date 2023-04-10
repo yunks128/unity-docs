@@ -90,8 +90,6 @@
   * [Docs](developer-docs/on-demand/docs/README.md)
     * [User Guide](developer-docs/on-demand/docs/user-guide/README.md)
       * [On Demand API](developer-docs/on-demand/docs/user-guide/on-demand-api.md)
-    * [Users Guide](developer-docs/on-demand/docs/users-guide/README.md)
-      * [Unity On-Demand API](developer-docs/on-demand/docs/users-guide/unity-on-demand-api.md)
 
 ***
 
