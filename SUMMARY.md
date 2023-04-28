@@ -48,6 +48,7 @@
         * [Querying for Resources](developer-docs/common-services/docs/users-guide/management-and-monitoring/querying-for-resources.md)
         * [Cost Reporting](developer-docs/common-services/docs/users-guide/management-and-monitoring/cost-reporting.md)
       * [Deployment](developer-docs/common-services/docs/users-guide/deployment/README.md)
+        * [Provided SSM Parameters](developer-docs/common-services/docs/users-guide/deployment/provided-ssm-parameters.md)
         * [Creating Terraform Scripts](developer-docs/common-services/docs/users-guide/deployment/creating-terraform-scripts.md)
         * [Unity AWS Resource Tagging Conventions](developer-docs/common-services/docs/users-guide/deployment/unity-aws-resource-tagging-conventions.md)
         * [Necessary MCP Roles / Policies](developer-docs/common-services/docs/users-guide/deployment/necessary-mcp-roles-policies.md)

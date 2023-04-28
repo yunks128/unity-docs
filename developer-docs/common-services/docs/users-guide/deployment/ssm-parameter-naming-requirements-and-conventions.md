@@ -9,7 +9,9 @@ The only requirements for SSM Parameter key names is that their path start with 
 `/cs/...`\
 `/as/...`
 
-The rest of these suggestions are offered in hopes of unifying the Unity SMS Parameters names around a common convention.
+In many cases, these parameter names will become hard-coded across different repos. So, service areas should document the parameters they create and aim to make breaking changes to them as little as possible. The **Name Form** and **Name Parts** sections of this document cover suggestions for naming based on the way other projects have done it in the past.\
+\
+However a service area chooses to name their parameters, it's important that the parameters provided are well documented and that changes to parameter names or value formats are communicated with the dependent teams.
 
 ### Name Form
 
