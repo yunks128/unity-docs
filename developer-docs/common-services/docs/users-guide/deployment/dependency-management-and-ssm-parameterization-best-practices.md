@@ -1,12 +1,10 @@
 ---
-description: >-
-  Guidance on how deployment time dependencies should be managed through
-  parameterization.
+description: Guidance on how dependencies should be managed through SSM parameterization.
 ---
 
-# Deployment Dependency Management and Parameterization
+# Dependency Management and SSM Parameterization Best Practices
 
-Many applications within Unity have some kind of deployment time dependency. These dependencies can be on infrastructure brought up by the CS team, on applications deployed by other service areas, or on information about the account itself.&#x20;
+Many applications within Unity have some kind of deployment time  dependency. These dependencies can be on infrastructure brought up by the CS team, on applications deployed by other service areas, or on information about the account itself.&#x20;
 
 ## Dependency Overview
 
