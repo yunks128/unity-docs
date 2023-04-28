@@ -53,7 +53,7 @@
         * [Unity AWS Resource Tagging Conventions](developer-docs/common-services/docs/users-guide/deployment/unity-aws-resource-tagging-conventions.md)
         * [Necessary MCP Roles / Policies](developer-docs/common-services/docs/users-guide/deployment/necessary-mcp-roles-policies.md)
         * [SSM Parameter Naming Requirements and Conventions](developer-docs/common-services/docs/users-guide/deployment/ssm-parameter-naming-requirements-and-conventions.md)
-        * [Dependency Management and SSM Parameterization Best Practices](developer-docs/common-services/docs/users-guide/deployment/dependency-management-and-ssm-parameterization-best-practices.md)
+        * [Deployments, Dependency, and SSM Parameterization](developer-docs/common-services/docs/users-guide/deployment/deployments-dependency-and-ssm-parameterization.md)
       * [Security](developer-docs/common-services/docs/users-guide/security/README.md)
         * [Token Management](developer-docs/common-services/docs/users-guide/security/token-management.md)
     * [Developers Guide](developer-docs/common-services/docs/developers-guide/README.md)
