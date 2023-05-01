@@ -8,9 +8,24 @@ description: >-
 
 Many applications within Unity have some kind of deployment or runtime dependency on other resources in the AWS project account. These dependencies can be on infrastructure brought up by the CS team, on applications deployed by other service areas, or on information about the account itself.&#x20;
 
+## Dependency Overview
+
+As mentioned before, many resources in a project account have some kind of dependency on another resource. Some times these dependencies are on dynamic names that will be different account to account. To prevent managing deployment configurations for all unity accounts, and to enable deployment automation - these dependencies need to be parameterized.
+
+**Dependency Example 1 - Application deployment dependent on core resource**: \
+The SPS team's WPS-T endpoints use Kubernetes services that dynamically provision AWS load balancers. In order to specify which subnet to provision the load balancer into, the SPS team needs to know which subnets are available and good for load balancers. These subnets are identified with a subnet-id that changes between accounts
+
+\
+**Dependency Example 2 - Application deployment dependent on account information**: \
+A team wants to dynamically create AWS resources as a part of their deployments. These resources need to be tagged according to the [Unity tagging conventions](https://unity-sds.gitbook.io/docs/developer-docs/common-services/docs/users-guide/deployment/unity-aws-resource-tagging-conventions). In order to form the tags, the team need information about the account it's deploying in such as the project name and venue.
+
+\
+**Dependency Example 3 - Application deployment dependent on other application deployment**: \
+A team wants to read the content of an S3 bucket that is created programmatically by another team's deployment. The reading team needs to know the name of the S3 bucket setup by the other team.
+
 ## Deployments
 
-Unity is meant to be deployable to an AWS account at the push of a button. There are three high-level steps to an automated deployment:\
+During the development of Unity, many of these dependencies have been managed manually (i.e. one team communicates to another about the name of a resource, the state of a deployment, etc.). Long term, Unity is meant to be deployable to an AWS account at the push of a button. Thus rises the need for managing dependencies without a human-in-the-loop. There are three high-level steps to an automated deployment:\
 \
 1\. Account setup\
 2\. Core resource deployments\
@@ -35,21 +50,6 @@ ex. API Gateway, EKS clusters
 Services and apps are the resources deployed by a service area. They are deployed and managed using terraform. Services and apps often have dependencies on core resources, account information, or each other.
 
 ex. SPS ADES, On-Demand API
-
-## Dependency Overview
-
-As mentioned before, many resources in a project account have some kind of dependency on another resource. Some times these dependencies are on dynamic names that will be different account to account. To prevent managing deployment configurations for all unity accounts, and to enable deployment automation - these dependencies need to be parameterized.
-
-**Dependency Example 1 - Application deployment dependent on core resource**: \
-The SPS team's WPS-T endpoints use Kubernetes services that dynamically provision AWS load balancers. In order to specify which subnet to provision the load balancer into, the SPS team needs to know which subnets are available and good for load balancers. These subnets are identified with a subnet-id that changes between accounts
-
-\
-**Dependency Example 2 - Application deployment dependent on account information**: \
-A team wants to dynamically create AWS resources as a part of their deployments. These resources need to be tagged according to the [Unity tagging conventions](https://unity-sds.gitbook.io/docs/developer-docs/common-services/docs/users-guide/deployment/unity-aws-resource-tagging-conventions). In order to form the tags, the team need information about the account it's deploying in such as the project name and venue.
-
-\
-**Dependency Example 3 - Application deployment dependent on other application deployment**: \
-A team wants to read the content of an S3 bucket that is created programmatically by another team's deployment. The reading team needs to know the name of the S3 bucket setup by the other team.
 
 ## Dependency Management with AWS's SSM Parameter Store and Terraform
 
