@@ -8,9 +8,9 @@ description: >-
 
 Many applications within Unity have some kind of deployment or runtime dependency on other resources in the AWS project account. These dependencies can be on infrastructure brought up by the CS team, on applications deployed by other service areas, or on information about the account itself.&#x20;
 
-## Dependency Overview
+## Dependency Examples
 
-As mentioned before, many resources in a project account have some kind of dependency on another resource. Some times these dependencies are on dynamic names that will be different account to account. To prevent managing deployment configurations for all unity accounts, and to enable deployment automation - these dependencies need to be parameterized.
+Below are a few examples of dependencies that exist in Unity.
 
 **Dependency Example 1 - Application deployment dependent on core resource**: \
 The SPS team's WPS-T endpoints use Kubernetes services that dynamically provision AWS load balancers. In order to specify which subnet to provision the load balancer into, the SPS team needs to know which subnets are available and good for load balancers. These subnets are identified with a subnet-id that changes between accounts
