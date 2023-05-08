@@ -4,7 +4,7 @@ description: >-
   either at account initialization or during a key-resource deployment.
 ---
 
-# Provided SSM Parameters
+# Unity SSM Parameters
 
 ## WIP EXAMPLE PARAMETERS- NOT YET IMPLEMENTED
 
@@ -24,3 +24,10 @@ description: >-
 | /account/network/subnets/public  | List of public subnets in the account.  | StringList |
 | /account/network/vpc/ids         | List of usable VPCs in the account,     | StringList |
 
+### /sps/...
+
+|            |     |     |
+| ---------- | --- | --- |
+| /sps/.../a | tbd | tbb |
+| /sps/.../b | tbd | tbc |
+|            |     |     |
