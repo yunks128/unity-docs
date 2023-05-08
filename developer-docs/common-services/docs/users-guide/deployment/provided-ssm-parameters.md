@@ -26,8 +26,8 @@ description: >-
 
 ### /sps/...
 
-|            |     |     |
-| ---------- | --- | --- |
-| /sps/.../a | tbd | tbb |
-| /sps/.../b | tbd | tbc |
-|            |     |     |
+| Name       | Description | Type |
+| ---------- | ----------- | ---- |
+| /sps/.../a | tbd         | tbb  |
+| /sps/.../b | tbd         | tbc  |
+|            |             |      |
