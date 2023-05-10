@@ -4,7 +4,7 @@ description: >-
   parameterization.
 ---
 
-# Deployments, Dependency, and SSM Parameterization
+# Deployments, Dependency, and SSM Parameters
 
 Many applications within Unity have some kind of deployment or runtime dependency on other resources in the AWS project account. These dependencies can be on infrastructure brought up by the CS team, on applications deployed by other service areas, or on information about the account itself.&#x20;
 
@@ -91,4 +91,4 @@ resource "kubernetes_service" "my_service" {
 
 With each part of the deployment managing it's dependencies through SSM the whole picture looks like this:
 
-<figure><img src="../../../../../.gitbook/assets/SSM &#x26; Deployments Overview.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/SSM &#x26; Deployments Overview (3).png" alt=""><figcaption></figcaption></figure>
