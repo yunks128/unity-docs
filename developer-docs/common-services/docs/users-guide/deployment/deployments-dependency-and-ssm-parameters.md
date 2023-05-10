@@ -94,4 +94,4 @@ resource "kubernetes_service" "my_service" {
 
 With each part of the deployment managing it's dependencies through SSM the whole picture looks like this:
 
-<figure><img src="../../../../../.gitbook/assets/SSM &#x26; Deployments Overview (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/SSM &#x26; Deployments Overview (8).png" alt=""><figcaption></figcaption></figure>
