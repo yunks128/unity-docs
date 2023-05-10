@@ -27,11 +27,14 @@ A team wants to read the content of an S3 bucket that is created programmaticall
 
 During the development of Unity, many of these dependencies have been managed manually (i.e. one team communicates to another about the name of a resource, the state of a deployment, etc.). Long term, Unity is meant to be deployable to an AWS account at the push of a button. Thus rises the need for managing dependencies without a human-in-the-loop. There are three high-level steps to an automated deployment:\
 \
-1\. Account setup\
-2\. Core resource deployments\
-3\. Unity service and apps deployments
 
-<figure><img src="../../../../../.gitbook/assets/SSM &#x26; Deployments Overview - No SSM.png" alt=""><figcaption></figcaption></figure>
+
+1\. Launching the Management Dashboard\
+2\. Account setup \
+3\. Core resource deployments\
+4\. Unity service and apps deployments
+
+<figure><img src="../../../../../.gitbook/assets/Screenshot 2023-05-09 at 5.20.48 PM.png" alt=""><figcaption></figcaption></figure>
 
 #### Account Setup
 
