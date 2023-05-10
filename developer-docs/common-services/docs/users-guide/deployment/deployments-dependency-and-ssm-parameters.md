@@ -34,7 +34,7 @@ During the development of Unity, many of these dependencies have been managed ma
 3\. Core resource deployments\
 4\. Unity service and apps deployments
 
-<figure><img src="../../../../../.gitbook/assets/Screenshot 2023-05-09 at 5.20.48 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/Screenshot 2023-05-09 at 5.36.09 PM.png" alt=""><figcaption></figcaption></figure>
 
 #### Account Setup
 
