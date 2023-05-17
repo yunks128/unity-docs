@@ -1,6 +1,6 @@
 # Testing
 
-Software development requires different levels of testing at each individual level fo the development lifecycle. Though the scope of the testing is different, it **shall always be automated where possible**.
+Software development requires different levels of testing at each individual level fo the development lifecycle. Thought the scope of the testing is different, it **shall always be automated where possible**.
 
 ### Rules
 
@@ -23,7 +23,7 @@ Software development requires different levels of testing at each individual lev
 * Service teams own all unit and 'integration' testing within their service area
 * unit and integration tests shall all be automated and run on checkin **and/or** deployment
 * PSE will own the test plan for the TEST environment
-* Development Teams/Service areas own the test procedures/executions for the TEST environment
+* Development Teams/Service areas own the test procedures/executions for the TEST envrionment
 * Test plan will focus on system level testing exercising the standards based interfaces, not the underlying implementation, that is, it should test the WPS, not ‘HySDS’.
 
 These 2 items ensure that a certain level of validation is occurring at the system level while not blocking development teams. This work has to be _**synergistic**_.

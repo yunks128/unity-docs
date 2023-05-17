@@ -16,9 +16,11 @@
     * [Advanced Tutorials](user-docs/unity-cloud/tutorials/advanced-tutorials/README.md)
       * [Managing Permission](user-docs/unity-cloud/tutorials/advanced-tutorials/managing-permission.md)
   * [Endpoints](user-docs/unity-cloud/endpoints.md)
-  * [Unity Releases](user-docs/unity-cloud/unity-releases/README.md)
-    * [Unity Prototype Release 1 Documentation](user-docs/unity-cloud/unity-releases/unity-prototype-release-1-documentation.md)
-    * [Unity Prototype Release 2 Documentation](user-docs/unity-cloud/unity-releases/unity-prototype-release-2-documentation.md)
+  * [Releases](user-docs/unity-cloud/releases/README.md)
+    * [Unity Release 23.1](user-docs/unity-cloud/releases/unity-release-23.1.md)
+    * [Unity Prototype Release 3](user-docs/unity-cloud/releases/unity-prototype-release-3.md)
+    * [Unity Prototype Release 2](user-docs/unity-cloud/releases/unity-prototype-release-2.md)
+    * [Unity Prototype Release 1](user-docs/unity-cloud/releases/unity-prototype-release-1.md)
 * [Community Edition](user-docs/community-edition.md)
 
 ## Developer Docs
@@ -96,9 +98,11 @@
 
 ***
 
-* [Testing](testing/README.md)
-  * [System Processes](testing/system-processes/README.md)
-    * [Release Process](testing/system-processes/release-process.md)
+* [System Lifecycle](system-lifecycle/README.md)
+  * [System Processes](system-lifecycle/system-processes.md)
+  * [Release Process](system-lifecycle/release-process.md)
+  * [Testing](system-lifecycle/testing.md)
+  * [Project Management using Github Projects](system-lifecycle/project-management-using-github-projects.md)
 
 ## Getting Help
 
