@@ -98,6 +98,7 @@
 
 ***
 
+* [Architecture](architecture.md)
 * [System Lifecycle](system-lifecycle/README.md)
   * [System Processes](system-lifecycle/system-processes.md)
   * [Release Process](system-lifecycle/release-process.md)
