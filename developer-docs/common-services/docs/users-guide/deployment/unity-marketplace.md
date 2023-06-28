@@ -10,6 +10,15 @@ description: >-
 
 coming soon..
 
-## Procedure&#x20;
+## Procedure for Adding a Component to the Marketplace
 
-coming soon..
+1. Create a repository that houses code/scripts that do a deployment (e.g. terraform, CloudFormation, and/or shell scripts)
+2. Structure the repository to have the correct entry point directory (e.g. `terraform-unity`)
+3. Create a zip file of the repository
+4. Fork the marketplace repo
+5. Add your application
+6. Submit your PR
+7. Ensure the checks pass
+8. Merge PR
+9. Application is available!
+
