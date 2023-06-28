@@ -22,6 +22,7 @@ coming soon..
    2. Create a metadata.json file for your application
 6. Submit your PR
 7. Ensure the checks pass
+   1. (Doesn't exist yet, but in the future, there will be a CI/CD system that checks for validity)
 8. Merge PR
 9. Application is available!
 
