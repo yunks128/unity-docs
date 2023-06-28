@@ -17,9 +17,9 @@ coming soon..
 3. Create a zip file of the repository
 4. Fork the [marketplace repo](https://github.com/unity-sds/unity-marketplace)
 5. Add your application
-   1. Go to [https://github.com/unity-sds/unity-marketplace/tree/main/applications](https://github.com/unity-sds/unity-marketplace/tree/main/applications)
-   2. Create a directory, and version sub-directory for your application
-   3. Create a metadata.json file for your application
+   1. Under the `applications` directory, create a directory, and version sub-directory for your application.&#x20;
+      1. See examples here:  [https://github.com/unity-sds/unity-marketplace/tree/main/applications](https://github.com/unity-sds/unity-marketplace/tree/main/applications)
+   2. Create a metadata.json file for your application
 6. Submit your PR
 7. Ensure the checks pass
 8. Merge PR
