@@ -15,12 +15,7 @@ Software development requires different levels of testing at each individual lev
 
 ### Unity Development Environments
 
-| Environment                         | Owner          | Description                                                                                            | Gate                   | Tenant Accessible |
-| ----------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------ | ---------------------- | ----------------- |
-| Development                         | Dev Teams      | Environment for the initial and continued development of a unity software component                    | Unit test              | No                |
-| Software Integration and Test (SIT) | Dev team leads | Environment for the integration between components of the Unity system (across service areas)          | Unit Test              |                   |
-| Test                                | PSE/I\&T       | Environment for mature components and formal testing of the entire system before release to production | Integration tests      | No                |
-| Production                          | PSE            | Production environment for the Unity platform                                                          | System Release Testing | Yes               |
+<table><thead><tr><th>Environment</th><th width="171">Owner</th><th>Description</th><th>Gate</th><th>Tenant Accessible</th></tr></thead><tbody><tr><td>Development</td><td>Dev Teams</td><td>Environment for the initial and continued development of a unity software component</td><td>Unit test</td><td>No</td></tr><tr><td>Software Integration and Test (SIT)</td><td>Dev team leads</td><td>Environment for the integration between components of the Unity system (across service areas)</td><td>Unit Test</td><td></td></tr><tr><td>Test</td><td>PSE/I&#x26;T</td><td>Environment for mature components and formal testing of the entire system before release to production</td><td>Integration tests</td><td>No</td></tr><tr><td>Production</td><td>PSE</td><td>Production environment for the Unity platform</td><td>System Release Testing</td><td>Yes</td></tr></tbody></table>
 
 ### Test Plan and Procedures
 
