@@ -25,4 +25,5 @@ coming soon..
    1. (Doesn't exist yet, but in the future, there will be a CI/CD system that checks for validity)
 8. Merge PR
 9. Application is available!
+   1. The application should now be able to be deployed via the Management Console UI.
 
