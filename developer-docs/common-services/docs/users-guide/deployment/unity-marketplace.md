@@ -27,3 +27,71 @@ coming soon..
 9. Application is available!
    1. The application should now be able to be deployed via the Management Console UI.
 
+\--------------------
+
+## Marketplace metadata.json Specification
+
+### # Schema
+
+See the [schema here](https://github.com/unity-sds/unity-marketplace#readme).
+
+### Elements
+
+### `properties.Name`
+
+description coming soon..
+
+### `properties.Version`
+
+description coming soon..
+
+### `properties.Channel`
+
+description coming soon..
+
+### `properties.Owner`
+
+description coming soon..
+
+### `properties.Description`
+
+description coming soon..
+
+### `properties.Description`
+
+description coming soon..
+
+### `properties.Repository`
+
+description coming soon..
+
+### `properties.Tags`
+
+description coming soon..
+
+### `properties.Category`
+
+description coming soon..
+
+### `properties.IamRoles`
+
+description coming soon..
+
+### `properties.Package`
+
+description coming soon..
+
+### `properties.ManagedDependencies`
+
+description coming soon..
+
+### `properties.Backend`
+
+description coming soon..
+
+### `properties.DefaultDeployment`
+
+description coming soon..
+
+
+
