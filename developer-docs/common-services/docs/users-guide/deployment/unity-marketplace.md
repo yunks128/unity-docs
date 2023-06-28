@@ -20,6 +20,7 @@ coming soon..
    1. Under the `applications` directory, create a directory, and version sub-directory for your application.&#x20;
       1. See examples here:  [https://github.com/unity-sds/unity-marketplace/tree/main/applications](https://github.com/unity-sds/unity-marketplace/tree/main/applications)
    2. Create a metadata.json file for your application
+      1. [See notes here, about the schema](unity-marketplace.md#marketplace-metadata.json-specification)
 6. Submit your PR
 7. Ensure the checks pass
    1. (Doesn't exist yet, but in the future, there will be a CI/CD system that checks for validity)
@@ -31,7 +32,7 @@ coming soon..
 
 ## Marketplace metadata.json Specification
 
-### # Schema
+### Schema
 
 See the [schema here](https://github.com/unity-sds/unity-marketplace#readme).
 
