@@ -6,6 +6,8 @@ description: >-
 
 # Unity Marketplace
 
+[https://github.com/unity-sds/unity-marketplace](https://github.com/unity-sds/unity-marketplace)
+
 ## Prerequisites
 
 coming soon..
@@ -34,7 +36,7 @@ coming soon..
 
 ### Schema
 
-See the [schema here](https://github.com/unity-sds/unity-marketplace#readme).
+See the [schema here](https://github.com/unity-sds/unity-marketplace#readme).&#x20;
 
 ### Elements
 
