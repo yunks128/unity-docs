@@ -57,6 +57,7 @@
         * [SSM Parameter Naming Requirements and Conventions](developer-docs/common-services/docs/users-guide/deployment/ssm-parameter-naming-requirements-and-conventions.md)
         * [Deployments, Dependency, and SSM Parameters](developer-docs/common-services/docs/users-guide/deployment/deployments-dependency-and-ssm-parameters.md)
         * [Unity Marketplace](developer-docs/common-services/docs/users-guide/deployment/unity-marketplace.md)
+        * [Management Console](developer-docs/common-services/docs/users-guide/deployment/management-console.md)
       * [Security](developer-docs/common-services/docs/users-guide/security/README.md)
         * [Token Management](developer-docs/common-services/docs/users-guide/security/token-management.md)
     * [Developers Guide](developer-docs/common-services/docs/developers-guide/README.md)
