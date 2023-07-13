@@ -42,40 +42,15 @@ This is a living document, and may be subjected to change as requirements may ch
 
 These tags should be provided in all AWS resources.
 
-| Name                                                                 | Description                                                                                                                                         |
-| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Venue](unity-aws-resource-tagging-conventions.md#venue)             | Venue that the resource is being deployed on.  Ex: `Dev`, `Test`, `SIPS-test`                                                                       |
-| [ServiceArea](unity-aws-resource-tagging-conventions.md#servicearea) | Which service area is this related to? Ex: `sps`, `ds`, `as`, `ads`, `cs`                                                                           |
-| [CapVersion](unity-aws-resource-tagging-conventions.md#capversion)   | The version number of the capability provided                                                                                                       |
-| [Component](unity-aws-resource-tagging-conventions.md#component)     | Unity component.  Ex: `HySDS`, `Cumulus`, `SDAP`, `Dockstore`, etc..                                                                                |
-| [Name](unity-aws-resource-tagging-conventions.md#name)               | Name of the resource -- <mark style="color:yellow;">MCP/Kion costing tag</mark>                                                                     |
-| [Proj](unity-aws-resource-tagging-conventions.md#proj)               | Unity Project Ex: `sips` or `unity` (shared service) -- <mark style="color:yellow;">MCP/Kion costing tag</mark>                                     |
-| [CreatedBy](unity-aws-resource-tagging-conventions.md#createdby)     | same as [ServiceArea](unity-aws-resource-tagging-conventions.md#servicearea) (see above) -- <mark style="color:yellow;">MCP/Kion costing tag</mark> |
-| [Env](unity-aws-resource-tagging-conventions.md#env)                 | same as [Venue](unity-aws-resource-tagging-conventions.md#venue) (see above) -- <mark style="color:yellow;">MCP/Kion costing tag</mark>             |
-| [Stack](unity-aws-resource-tagging-conventions.md#stack)             | same as [Component](unity-aws-resource-tagging-conventions.md#component) (see above) -- <mark style="color:yellow;">MCP/Kion costing tag</mark>     |
+<table><thead><tr><th width="142">Name</th><th>Description</th></tr></thead><tbody><tr><td><a href="unity-aws-resource-tagging-conventions.md#venue">Venue</a></td><td>Venue that the resource is being deployed on.  Ex: <code>Dev</code>, <code>Test</code>, <code>SIPS-test</code></td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#servicearea">ServiceArea</a></td><td>Which service area is this related to? Ex: <code>sps</code>, <code>ds</code>, <code>as</code>, <code>ads</code>, <code>cs</code></td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#capversion">CapVersion</a></td><td>The version number of the capability provided</td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#component">Component</a></td><td>Unity component.  Ex: <code>HySDS</code>, <code>Cumulus</code>, <code>SDAP</code>, <code>Dockstore</code>, etc..</td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#name">Name</a></td><td>Name of the resource -- <mark style="color:yellow;">MCP/Kion costing tag</mark></td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#proj">Proj</a></td><td>Unity Project Ex: <code>sips</code> or <code>unity</code> (shared service) -- <mark style="color:yellow;">MCP/Kion costing tag</mark></td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#createdby">CreatedBy</a></td><td>same as <a href="unity-aws-resource-tagging-conventions.md#servicearea">ServiceArea</a> (see above) -- <mark style="color:yellow;">MCP/Kion costing tag</mark></td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#env">Env</a></td><td>same as <a href="unity-aws-resource-tagging-conventions.md#venue">Venue</a> (see above) -- <mark style="color:yellow;">MCP/Kion costing tag</mark></td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#stack">Stack</a></td><td>same as <a href="unity-aws-resource-tagging-conventions.md#component">Component</a> (see above) -- <mark style="color:yellow;">MCP/Kion costing tag</mark></td></tr></tbody></table>
 
 ### Optional  Tags <a href="#mbt" id="mbt"></a>
 
 These tags can be used to provide additional information and context about the AWS resources.
 
-| Name                                                                                 | Description                                                                    |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| [Capability](unity-aws-resource-tagging-conventions.md#capability)                   |                                                                                |
-| [POC](unity-aws-resource-tagging-conventions.md#poc)                                 | A list of email(s) for the point of contact for the resource                   |
-| [Release](unity-aws-resource-tagging-conventions.md#release)                         | The version number that this resource belongs to. Assumes semantic versioning. |
-| [SecurityPlanID](unity-aws-resource-tagging-conventions.md#securityplanid)           | IT Security Plan ID for the resource                                           |
-| [ExposedWeb](unity-aws-resource-tagging-conventions.md#exposedweb)                   | Will this resource be exposed to the web?                                      |
-| [Experimental](unity-aws-resource-tagging-conventions.md#experimental)               | Is this an experimental resource?                                              |
-| [UserFacing](unity-aws-resource-tagging-conventions.md#userfacing)                   | Will this resource be user facing?                                             |
-| [CritInfra](unity-aws-resource-tagging-conventions.md#critinfra)                     | Is this resource a part of the critical infrastructure?                        |
-| [SourceControl](unity-aws-resource-tagging-conventions.md#sourcecontrol)             | Documentation or SCM link for resources deployed                               |
-| [mission](unity-aws-resource-tagging-conventions.md#mission)                         | not needed <mark style="color:yellow;">MCP/Kion costing tag</mark>             |
-| [mcpBilling](unity-aws-resource-tagging-conventions.md#mcpbilling)                   | not needed <mark style="color:yellow;">MCP/Kion costing tag</mark>             |
-| [ServiceNow Instance](unity-aws-resource-tagging-conventions.md#servicenow-instance) | not needed <mark style="color:yellow;">MCP/Kion costing tag</mark>             |
-| [station](unity-aws-resource-tagging-conventions.md#station)                         | not needed <mark style="color:yellow;">MCP/Kion costing tag</mark>             |
-| [Customer](unity-aws-resource-tagging-conventions.md#customer)                       | not needed <mark style="color:yellow;">MCP/Kion costing tag</mark>             |
+<table><thead><tr><th width="193">Name</th><th>Description</th></tr></thead><tbody><tr><td><a href="unity-aws-resource-tagging-conventions.md#capability">Capability</a></td><td></td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#poc">POC</a></td><td>A list of email(s) for the point of contact for the resource</td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#release">Release</a></td><td>The version number that this resource belongs to. Assumes semantic versioning.</td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#securityplanid">SecurityPlanID</a></td><td>IT Security Plan ID for the resource</td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#exposedweb">ExposedWeb</a></td><td>Will this resource be exposed to the web?</td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#experimental">Experimental</a></td><td>Is this an experimental resource?</td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#userfacing">UserFacing</a></td><td>Will this resource be user facing?</td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#critinfra">CritInfra</a></td><td>Is this resource a part of the critical infrastructure?</td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#sourcecontrol">SourceControl</a></td><td>Documentation or SCM link for resources deployed</td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#mission">mission</a></td><td>not needed <mark style="color:yellow;">MCP/Kion costing tag</mark></td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#mcpbilling">mcpBilling</a></td><td>not needed <mark style="color:yellow;">MCP/Kion costing tag</mark></td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#servicenow-instance">ServiceNow Instance</a></td><td>not needed <mark style="color:yellow;">MCP/Kion costing tag</mark></td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#station">station</a></td><td>not needed <mark style="color:yellow;">MCP/Kion costing tag</mark></td></tr><tr><td><a href="unity-aws-resource-tagging-conventions.md#customer">Customer</a></td><td>not needed <mark style="color:yellow;">MCP/Kion costing tag</mark></td></tr></tbody></table>
 
-***
+
 
 ## Tag Specifications
 
@@ -113,7 +88,7 @@ These tags can be used to provide additional information and context about the A
 | String | `Sounder SIPS Admin` | True     | N/A - User Defined |
 
 * Description: The customer (who uses it) for the AWS resource
-* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://127.0.0.1:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
 * `Category: Technical, Costing`
 
 ## Env
@@ -131,8 +106,8 @@ These tags can be used to provide additional information and context about the A
 | ------ | ------------- | -------- | ------------------ |
 | String | `true`        | True     | N/A - User Defined |
 
-* Description: <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
-* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* Description: <mark style="color:red;">TODO:</mark> [Galen Hollins](http://127.0.0.1:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://127.0.0.1:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
 * `Category: Technical, Costing`
 
 ## mission
@@ -151,8 +126,8 @@ These tags can be used to provide additional information and context about the A
 | String | tbd           | True     | N/A - User Defined |
 
 * `Category: Technical, Costing`
-* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
-* Description: <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://127.0.0.1:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* Description: <mark style="color:red;">TODO:</mark> [Galen Hollins](http://127.0.0.1:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
 
 ## Stack
 
@@ -161,8 +136,8 @@ These tags can be used to provide additional information and context about the A
 | String | `U-AS`        | True     | N/A - User Defined |
 
 * `Category: Technical, Costing`
-* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
-* Description: <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://127.0.0.1:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* Description: <mark style="color:red;">TODO:</mark> [Galen Hollins](http://127.0.0.1:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
 
 ## station
 
@@ -171,8 +146,8 @@ These tags can be used to provide additional information and context about the A
 | String | `tbd`         | True     | N/A - User Defined |
 
 * `Category: Technical, Costing`
-* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
-* Description: <mark style="color:red;">TODO:</mark> [Galen Hollins](http://localhost:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* Example:  <mark style="color:red;">TODO:</mark> [Galen Hollins](http://127.0.0.1:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
+* Description: <mark style="color:red;">TODO:</mark> [Galen Hollins](http://127.0.0.1:5000/u/bzYDKXoPxld10sWkbG1EP6O4TUX2 "mention")<mark style="color:red;">provide more description and examples here</mark>
 
 
 

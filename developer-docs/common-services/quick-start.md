@@ -97,7 +97,7 @@ The envisioned lifecycle of building, testing, and deploying of Unity service co
 * Terraform destroy via push-button OR
 * [Manually destroying via terraform](https://github.com/unity-sds/unity-cs/wiki/Manually-Destroying-via-Terraform)
 
-***
+
 
 ## Security
 
