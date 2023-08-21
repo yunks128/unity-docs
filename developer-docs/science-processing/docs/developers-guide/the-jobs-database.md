@@ -66,7 +66,7 @@ A list of strings corresponding to the labels field of the job execution request
 **stop-time**\
 <mark style="color:orange;">**Not yet implemented**</mark>
 
-### How Jobs are Updated in the Database
+## How Jobs are Updated in the Database
 
 A job is first added to the jobs database on a successful execute request to the WPS-T ADES server. When a job is first added it has status "submitted".
 
