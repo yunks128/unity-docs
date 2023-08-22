@@ -1,11 +1,11 @@
-# Data
+# Analytics
 
 {% content-ref url="features.md" %}
 [features.md](features.md)
 {% endcontent-ref %}
 
-{% content-ref url="quick-start.md" %}
-[quick-start.md](quick-start.md)
+{% content-ref url="quick-start/" %}
+[quick-start](quick-start/)
 {% endcontent-ref %}
 
 {% content-ref url="docs/" %}
