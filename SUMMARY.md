@@ -61,6 +61,7 @@
         * [Management Console](developer-docs/common-services/docs/users-guide/deployment/management-console.md)
       * [Security](developer-docs/common-services/docs/users-guide/security/README.md)
         * [Token Management](developer-docs/common-services/docs/users-guide/security/token-management.md)
+        * [Cognito User Group Standards](developer-docs/common-services/docs/users-guide/security/cognito-user-group-standards.md)
     * [Developers Guide](developer-docs/common-services/docs/developers-guide/README.md)
       * [Kubernetes Support](developer-docs/common-services/docs/developers-guide/kubernetes-support/README.md)
         * [Kubernetes Deployment](developer-docs/common-services/docs/developers-guide/kubernetes-support/kubernetes-deployment.md)
