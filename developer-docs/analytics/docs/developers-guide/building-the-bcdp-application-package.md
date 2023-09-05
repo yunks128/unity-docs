@@ -4,7 +4,7 @@ description: Build BCDP OGC app using the Unity app-pack-generator
 
 # Building the BCDP application package
 
-Below is an overview for the process of building the BCDP application package. Examples of built BCDP workflows can also be found in the \[examples]\([https://github.com/unity-sds/unity-analytics-bcdp/tree/main/examples](https://github.com/unity-sds/unity-analytics-bcdp/tree/main/examples)) directory in the U-AS BCDP GitHub repository.
+Below is an overview for the process of building the BCDP application package. Examples of built BCDP workflows can also be found in the [examples](https://github.com/unity-sds/unity-analytics-bcdp/tree/main/examples) directory in the U-AS BCDP GitHub repository.
 
 ### Pre-requisites
 
