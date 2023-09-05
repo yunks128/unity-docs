@@ -18,8 +18,8 @@ description: >-
 
 ### /sps/...
 
-| Name       | Description | Type |
-| ---------- | ----------- | ---- |
-| /sps/.../a | tbd         | tbb  |
-| /sps/.../b | tbd         | tbc  |
-|            |             |      |
+| Name                                          | Description                                                                                                     | Type   |
+| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------ |
+| `/unity/sps/{sps deployment name}/spsApi/url` | the full load balancer url, for the SPS API.  For example: `/unity/sps/unity-dev-sps-hysds-eks-drew/spsApi/url` | String |
+| /sps/.../b                                    | tbd                                                                                                             | tbc    |
+|                                               |                                                                                                                 |        |
