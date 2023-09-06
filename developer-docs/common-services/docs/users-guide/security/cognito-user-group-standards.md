@@ -5,6 +5,8 @@ Cognito User Groups can be created in a Cognito user pool. These Cognito User Gr
 * A single User Group can contain multiple Cognito Users.
 * A single Cognito User can be in multiple Cognito User Groups
 
+<figure><img src="../../../../../.gitbook/assets/Screenshot 2023-09-06 at 10.14.40 AM.png" alt=""><figcaption><p>Example Cognito User Groups and Users</p></figcaption></figure>
+
 To create a Cognito User Group, at least following attributes are required. A User Group can be created in AWS Console (\[Amazon Cognito] -> \[User pools] -> \[unity-user-pool]-> Create group).
 
 * **Group name**
