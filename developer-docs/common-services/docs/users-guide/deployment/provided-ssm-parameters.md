@@ -8,18 +8,38 @@ description: >-
 
 ## WIP EXAMPLE PARAMETERS- NOT YET IMPLEMENTED
 
-## /account
+## /unity/<mark style="color:blue;">core</mark>/...
 
-<table><thead><tr><th width="270.3333333333333">Name</th><th>Description</th><th>Type</th></tr></thead><tbody><tr><td>/account/project</td><td>Name of the project that owns and operates the account. The {project} part of a {project}-{venue} account name.</td><td>String</td></tr><tr><td>/account/venue</td><td>Name of the venue that runs in the account. The {venue} part of a {project}-{venue} account name.</td><td>String</td></tr><tr><td>/account/id</td><td>The AWS account ID.</td><td>String</td></tr></tbody></table>
+<table><thead><tr><th width="360.3333333333333">SSM Key</th><th width="297">Description</th><th>Type</th></tr></thead><tbody><tr><td>/unity/core/aws_account_id</td><td>The AWS account ID.</td><td>String</td></tr><tr><td>/unity/core/project</td><td>Name of the project that owns and operates the account. The {project} part of a {project}-{venue} account name.</td><td>String</td></tr><tr><td>/unity/core/venue</td><td></td><td>String</td></tr></tbody></table>
 
-### /account/network&#x20;
+## /unity/<mark style="color:blue;">account</mark>/...
 
-<table><thead><tr><th width="325.3333333333333">Name</th><th>Description</th><th>Type</th></tr></thead><tbody><tr><td>/account/network/subnets/private</td><td>List of private subnets in the account.</td><td>StringList</td></tr><tr><td>/account/network/subnets/public</td><td>List of public subnets in the account.</td><td>StringList</td></tr><tr><td>/account/network/vpc/ids</td><td>List of usable VPCs in the account,</td><td>StringList</td></tr></tbody></table>
+<table><thead><tr><th width="359.3333333333333">SSM Key</th><th width="294">Description</th><th>Type</th></tr></thead><tbody><tr><td>/unity/account/venue </td><td>Name of the venue that runs in the account. The {venue} part of a {project}-{venue} account name.</td><td>String</td></tr></tbody></table>
+
+## /unity/<mark style="color:blue;">account</mark>/<mark style="color:blue;">network</mark>/...&#x20;
+
+<table><thead><tr><th width="356.3333333333333">Name</th><th width="274">Description</th><th>Type</th></tr></thead><tbody><tr><td>/unity/account/network/subnet_list</td><td></td><td></td></tr><tr><td>/unity/account/network/subnets/private</td><td>List of private subnets in the account.</td><td>StringList</td></tr><tr><td>/unity/account/network/subnets/public</td><td>List of public subnets in the account.</td><td>StringList</td></tr><tr><td>/unity/account/network/vpc/ids</td><td>List of usable VPCs in the account,</td><td>StringList</td></tr><tr><td>/unity/account/network/vpc_id</td><td></td><td></td></tr></tbody></table>
+
+###
+
+## /unity/<mark style="color:blue;">account</mark>/<mark style="color:blue;">eks</mark>/...
+
+
+
+<table><thead><tr><th width="362.3333333333333">SSM Key</th><th width="282">Description</th><th>Type</th></tr></thead><tbody><tr><td>/unity/account/eks/cluster_sg </td><td></td><td></td></tr><tr><td>/unity/account/eks/eks_iam_node_role</td><td></td><td></td></tr><tr><td>/unity/account/eks/eks_iam_role</td><td></td><td></td></tr><tr><td>/unity/account/eks/node_sg</td><td></td><td></td></tr></tbody></table>
+
+###
+
+## /unity/<mark style="color:blue;">account</mark>/<mark style="color:blue;">roles</mark>/...
+
+
+
+<table><thead><tr><th width="363.3333333333333">SSM Key</th><th width="276">Description</th><th>Type</th></tr></thead><tbody><tr><td>/unity/account/roles/eksInstanceRoleArn</td><td></td><td></td></tr><tr><td>/unity/account/roles/eksServiceRoleArn</td><td></td><td></td></tr></tbody></table>
 
 ### /sps/...
 
-| Name                                          | Description                                                                                                     | Type   |
-| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------ |
-| `/unity/sps/{sps deployment name}/spsApi/url` | the full load balancer url, for the SPS API.  For example: `/unity/sps/unity-dev-sps-hysds-eks-drew/spsApi/url` | String |
-| /sps/.../b                                    | tbd                                                                                                             | tbc    |
-|                                               |                                                                                                                 |        |
+<table><thead><tr><th width="348.3333333333333">Name</th><th width="283">Description</th><th>Type</th></tr></thead><tbody><tr><td><code>/unity/sps/{sps deployment name}/spsApi/url</code></td><td>the full load balancer url, for the SPS API.  For example: <code>/unity/sps/unity-dev-sps-hysds-eks-drew/spsApi/url</code></td><td>String</td></tr><tr><td>/sps/.../b</td><td>tbd</td><td>tbc</td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
+
+
+
+## /mcp
