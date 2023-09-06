@@ -1,7 +1,8 @@
 ---
 description: >-
-  This page describes the SSM Parameters that CS creates in a project account
-  either at account initialization or during a key-resource deployment.
+  This page describes the SSM Parameters that CS and/or the service area
+  deployments create in a project account. These can be accessed by other
+  service areas, as needed.
 ---
 
 # Unity SSM Parameters
