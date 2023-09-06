@@ -36,10 +36,40 @@ description: >-
 
 <table><thead><tr><th width="363.3333333333333">SSM Key</th><th width="276">Description</th><th>Type</th></tr></thead><tbody><tr><td>/unity/account/roles/eksInstanceRoleArn</td><td></td><td></td></tr><tr><td>/unity/account/roles/eksServiceRoleArn</td><td></td><td></td></tr></tbody></table>
 
-### /sps/...
+## /<mark style="color:blue;">sps</mark>/...
 
 <table><thead><tr><th width="348.3333333333333">Name</th><th width="283">Description</th><th>Type</th></tr></thead><tbody><tr><td><code>/unity/sps/{sps deployment name}/spsApi/url</code></td><td>the full load balancer url, for the SPS API.  For example: <code>/unity/sps/unity-dev-sps-hysds-eks-drew/spsApi/url</code></td><td>String</td></tr><tr><td>/sps/.../b</td><td>tbd</td><td>tbc</td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
 
 
 
-## /mcp
+## /<mark style="color:blue;">mcp</mark>/...
+
+
+
+| MCP-defined values                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| See: [https://caas.gsfc.nasa.gov/display/GSD1/MCP+AMI+Configuration+and+Usage](https://caas.gsfc.nasa.gov/display/GSD1/MCP+AMI+Configuration+and+Usage) |
+
+
+
+##
+
+## /unity/<mark style="color:blue;">cs</mark>/<mark style="color:blue;">routing</mark>/...
+
+
+
+|                                                           |   |   |
+| --------------------------------------------------------- | - | - |
+| /unity/cs/routing/api-gateway/rest-api-id                 |   |   |
+| /unity/cs/routing/shared-services-api-gateway/rest-api-id |   |   |
+|                                                           |   |   |
+
+
+
+## unity/<mark style="color:blue;">cs</mark>/<mark style="color:blue;">security</mark>/...
+
+|                                                                   |   |   |
+| ----------------------------------------------------------------- | - | - |
+| /unity/cs/security/shared-services-cognito-user-pool/user-pool-id |   |   |
+|                                                                   |   |   |
+|                                                                   |   |   |
