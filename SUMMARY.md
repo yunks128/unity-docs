@@ -118,6 +118,8 @@
 * [Architecture](architecture/README.md)
   * [Deployments- Projects and Venues](architecture/deployments-projects-and-venues.md)
   * [Venue Managed Services](architecture/venue-managed-services.md)
+  * [Architectural Decision Records](architecture/architectural-decision-records/README.md)
+    * [ADR Template](architecture/architectural-decision-records/adr-template.md)
 * [System Lifecycle](system-lifecycle/README.md)
   * [System Processes](system-lifecycle/system-processes.md)
   * [Release Process](system-lifecycle/release-process.md)
