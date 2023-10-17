@@ -62,6 +62,10 @@ See our Frequently Asked Questions (FAQ) or reach out to our team via the links 
 [contact-us.md](getting-help/contact-us.md)
 {% endcontent-ref %}
 
+{% content-ref url="getting-help/submit-an-issue.md" %}
+[submit-an-issue.md](getting-help/submit-an-issue.md)
+{% endcontent-ref %}
+
 ## Get Involved
 
 Unity is an open source project and welcomes contributions and involvment! Please see our Get Involved page below for further guidance.&#x20;

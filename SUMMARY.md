@@ -131,6 +131,7 @@
 * [FAQ](getting-help/faq.md)
 * [Glossary](getting-help/glossary.md)
 * [Contact Us](getting-help/contact-us.md)
+* [Submit an Issue](getting-help/submit-an-issue.md)
 
 ***
 
