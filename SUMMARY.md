@@ -90,6 +90,7 @@
   * [Features](developer-docs/data/features.md)
   * [Quick Start](developer-docs/data/quick-start.md)
   * [Docs](developer-docs/data/docs/README.md)
+    * [UDS Open API Specs](developer-docs/data/docs/uds-open-api-specs.md)
     * [Users Guide](developer-docs/data/docs/users-guide.md)
     * [Developers Guide](developer-docs/data/docs/developers-guide.md)
     * [Admin Guide](developer-docs/data/docs/admin-guide.md)
