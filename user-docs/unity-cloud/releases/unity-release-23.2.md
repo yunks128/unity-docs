@@ -22,11 +22,20 @@ Please see the Service Area Changelogs for detailed information and release arti
 
 ## Capabilities by Service Area
 
-| Capability                | Service Area | Description                                                                                                          |
-| ------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------- |
-| Jobs Database             | SPS          | SNS Based system for sending job updates from the ADES to the EMS.                                                   |
-| CHIRP Workflow Executions | SPS, ADS, DS | Workflows for chirp data execution including search, stage-in, execution, stage-out and data catalog were developed. |
-|                           |              |                                                                                                                      |
+| Capability                          | Service Area | Description                                                                                                               |
+| ----------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| Jobs Database                       | SPS          | SNS Based system for sending job updates from the ADES to the EMS.                                                        |
+| CHIRP Workflow Executions           | SPS, ADS, DS | Workflows for chirp data execution including search, stage-in, execution, stage-out and data catalog were developed.      |
+| App-Pack-Gen                        | ADS          | Application package generation was developed and updated for STAC based inputs, and automated generation from MCP GitLab. |
+| Container Registry                  | ADS          | A private container registry to house non-public containers.                                                              |
+| Application Catalog                 | ADS          | Various updates, database restoration, API for retrieving files.                                                          |
+| DAPA Timeseries                     | AS           | Prototyped DAPA endpoint and translator for exposing data specific analysis services                                      |
+| Nightly Deployment                  | CS           | deploy and teardown on nightly basis including management console, API Gateway, etc.                                      |
+| Management Console                  | CS           | Venue setup and deployment scripts                                                                                        |
+| Venue Cost Monitoring               | CS           | Documented tagging expectations and query for non-tagged resources.                                                       |
+| CMR and staging workflow components | DS           | Added STAC based CMR/DAPA query and stage-in, out tasks for use.                                                          |
+| On-demand cloud formation templates | On-Demand    | Simple AWS native way of deploying management console.                                                                    |
+| Tophat and dashboard prototype      | UIUX         | Prototype for viewing and submitting jobs to the science processing platform.                                             |
 
 ## System Release Test Plan
 
