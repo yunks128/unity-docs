@@ -17,7 +17,7 @@ Initially, system releases will be manually curated efforts every few months. Th
 | Unity .1 R3 | [Unity .1 Prototype Release 3](unity-prototype-release-3.md) | 09/15/2022 | Unity Prototype R3... |
 | Unity 23.1  | [Unity 23.1 Prototype Release](unity-release-23.1.md)        | 04/07/2023 | Unity 23.1 Release    |
 | Unity 23.2  | Unity 23.2 Prototype Release                                 | 06/30/2023 | TBD                   |
-| Unity 23.3  | Unity 23.3 Prototype Release                                 | 09/22/2023 | TBD                   |
+| Unity 23.3  | Unity 23.3 Prototype Release                                 | 10/31/2023 | Unity 23.3 Release    |
 
 Release Process
 
