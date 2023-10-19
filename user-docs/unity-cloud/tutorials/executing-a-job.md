@@ -7,6 +7,5 @@ After this tutorial you'll be able to
 * Monitor the status of the job request
 * Find the result of your job in the data catalog
 
-{% embed url="https://github.com/unity-sds/sounder-sips-tutorial/blob/main/jupyter-notebooks/tutorials/3_working_with_jobs.ipynb" %}
-Working with Jos tutorial
-{% endembed %}
+The Notebook tutorial can be found at [https://github.com/unity-sds/sounder-sips-tutorial/blob/main/jupyter-notebooks/tutorials/3\_working\_with\_jobs.ipynb](https://github.com/unity-sds/sounder-sips-tutorial/blob/main/jupyter-notebooks/tutorials/3\_working\_with\_jobs.ipynb)&#x20;
+
