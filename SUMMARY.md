@@ -63,6 +63,7 @@
         * [Deployments, Dependency, and SSM Parameters](developer-docs/common-services/docs/users-guide/deployment/deployments-dependency-and-ssm-parameters.md)
         * [Unity Marketplace](developer-docs/common-services/docs/users-guide/deployment/unity-marketplace.md)
         * [Management Console](developer-docs/common-services/docs/users-guide/deployment/management-console.md)
+        * [Unity Account Bootstrapping Process](developer-docs/common-services/docs/users-guide/deployment/unity-account-bootstrapping-process.md)
       * [Security](developer-docs/common-services/docs/users-guide/security/README.md)
         * [Unity Security Cases](developer-docs/common-services/docs/users-guide/security/unity-security-cases.md)
         * [Unity Security Guidelines](developer-docs/common-services/docs/users-guide/security/unity-security-guidelines.md)
