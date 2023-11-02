@@ -12,13 +12,13 @@ Unity is comprised of shared services and project specific managed services. Sha
 * Project - a tenant of the system. Projects could be a mission (e.g. SBD, Mars 2020, etc) or a Research and Analysis (R\&A) project funded by proposal. Projects are a logical grouping of project owned and operated resources.
 * Venue - Venues contain deployments of one or more managed services. In practice, these are individual Mission Cloud Platform (MCP) AWS accounts with specific purposes and goals and serve as a cost isolation implementation as well as the way in which we can lifecycle project specific services and adaptations.
 
-<figure><img src="../.gitbook/assets/Multi-tenant deployment - PRoject and Venue Deployment.png" alt=""><figcaption><p>Logical Deployment of Unity Projects</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Multi-tenant deployment - PRoject and Venue Deployment.png" alt=""><figcaption><p>Logical Deployment of Unity Projects</p></figcaption></figure>
 
 In the above diagram, there are 3 separate projects using Unity. They will all deploy their own venues and services within their project. Remember, projects are logical groupings. You can't "log in" to a project. All three represented projects will use the same Unity Shared Services, such as authentication, the same data catalog, and so on.
 
 A project cannot use Unity without at least a single venue. A project can consist of more than one venue. The above diagram shows how different projects can use one or more venues to run their missions.
 
-<figure><img src="../.gitbook/assets/Multi-tenant deployment - Project and Venue Deployment w venues.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Multi-tenant deployment - Project and Venue Deployment w venues.png" alt=""><figcaption></figcaption></figure>
 
 Project 1 has created 2 venues.
 

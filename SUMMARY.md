@@ -119,7 +119,8 @@
 ***
 
 * [Architecture](architecture/README.md)
-  * [Deployments- Projects and Venues](architecture/deployments-projects-and-venues.md)
+  * [Deployments- Projects and Venues](architecture/deployments-projects-and-venues/README.md)
+    * [Unity Owned Venues](architecture/deployments-projects-and-venues/unity-owned-venues.md)
   * [Venue Managed Services](architecture/venue-managed-services.md)
   * [Architectural Decision Records](architecture/architectural-decision-records/README.md)
     * [ADR Template](architecture/architectural-decision-records/adr-template.md)
