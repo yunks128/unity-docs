@@ -22,6 +22,16 @@ What is the status, such as proposed, accepted, rejected, deprecated, superseded
 
 Provide user story, feature, tickets, etc for which the decision needs to be made
 
+### Alternatives
+
+The high level major option spaces explored for the decision. Should include the "chosen" option as well as others.
+
+Option 1&#x20;
+
+Option 2
+
+... Option N
+
 ### **Decision and Rationale**
 
 What are we proposing or doing? Why was this decision made. some options for why a decision are made can come from:
