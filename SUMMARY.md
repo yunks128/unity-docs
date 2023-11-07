@@ -123,6 +123,7 @@
     * [Unity Owned Venues](architecture/deployments-projects-and-venues/unity-owned-venues.md)
   * [Venue Managed Services](architecture/venue-managed-services.md)
   * [Architectural Decision Records](architecture/architectural-decision-records/README.md)
+    * [Data Services custom metadata search](architecture/architectural-decision-records/data-services-custom-metadata-search.md)
     * [ADR Template](architecture/architectural-decision-records/adr-template.md)
 * [System Lifecycle](system-lifecycle/README.md)
   * [System Processes](system-lifecycle/system-processes.md)
