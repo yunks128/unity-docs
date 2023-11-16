@@ -104,6 +104,7 @@
     * [Users Guide](developer-docs/science-processing/docs/users-guide/README.md)
       * [Unity SPS API](developer-docs/science-processing/docs/users-guide/unity-sps-api.md)
     * [Developers Guide](developer-docs/science-processing/docs/developers-guide.md)
+      * [Running the L1B CWL PGE in HySDS](developer-docs/science-processing/docs/developers-guide/running-the-l1b-cwl-pge-in-hysds.md)
       * [The Jobs Database](developer-docs/science-processing/docs/developers-guide/the-jobs-database.md)
       * [Tutorial: Execution of the L1B CWL Workflow via the WPS-T API](developer-docs/science-processing/docs/developers-guide/tutorial-execution-of-the-l1b-cwl-workflow-via-the-wps-t-api.md)
       * [Manual Verification: Testing the SPS Prewarm API](developer-docs/science-processing/docs/developers-guide/manual-verification-testing-the-sps-prewarm-api.md)
