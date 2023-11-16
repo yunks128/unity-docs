@@ -56,12 +56,22 @@ During the **Selecting a stack template** step choose the **Upload a template fi
 
 Follow the AWS guide for Creating a stack with the AWS CLI: [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-cli-creating-stack.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-cli-creating-stack.html)
 
+{% hint style="info" %}
+Use the validate-template command to view the description of parameters of the template [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-validate-template.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-validate-template.html)
+
+For example:
+
+`aws cloudformation validate-template --template-body file://${PATH_TO_TEMPLATE}`
+
+
+{% endhint %}
+
 For ease of use an example create stack command is provided below.
 
-```
+```bash
 aws cloudformation create-stack \
   --stack-name ${STACK_NAME} \
-  --template-body file://template.yml \
+  --template-body file://${PATH_TO_TEMPLATE} \
   --capabilities CAPABILITY_IAM \
   --parameters ParameterKey=VPCID,ParameterValue=${VPCID} \
     ParameterKey=PublicSubnetID1,ParameterValue=${PublicSubnetID1} \
