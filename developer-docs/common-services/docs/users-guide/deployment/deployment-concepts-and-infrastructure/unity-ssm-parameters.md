@@ -39,7 +39,7 @@ description: >-
 
 ## /<mark style="color:blue;">sps</mark>/...
 
-<table><thead><tr><th width="348.3333333333333">Name</th><th width="283">Description</th><th>Type</th></tr></thead><tbody><tr><td><code>/unity/sps/{sps deployment name}/spsApi/url</code></td><td>the full load balancer url, for the SPS API.  For example: <code>/unity/sps/unity-dev-sps-hysds-eks-drew/spsApi/url</code></td><td>String</td></tr><tr><td>/sps/.../b</td><td>tbd</td><td>tbc</td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="348.3333333333333">Name</th><th width="283">Description</th><th>Type</th></tr></thead><tbody><tr><td><code>/unity/sps/{sps deployment name}/spsApi/url</code></td><td>the full load balancer url, for the SPS API.  For example: <code>/unity/sps/unity-dev-sps-hysds-eks-drew/spsApi/url</code></td><td>String</td></tr><tr><td>/sps/processing/workflows/unity_username</td><td></td><td></td></tr><tr><td>/sps/processing/workflows/unity_password</td><td></td><td></td></tr></tbody></table>
 
 
 
