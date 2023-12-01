@@ -37,4 +37,6 @@
 
 7\) Project User (the one that has the Unity-ManagementConsole-Admin role) logs into Management Console via CloudFront
 
-8\) Project User deploys further marketplace items
+8\) Project user runs Core Setup actions in Management Console
+
+9\) Project User deploys further marketplace items
