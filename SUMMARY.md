@@ -66,6 +66,7 @@
           * [Creating Terraform Scripts](developer-docs/common-services/docs/users-guide/deployment/deployment-concepts-and-infrastructure/creating-terraform-scripts.md)
           * [Unity AWS Resource Tagging Conventions](developer-docs/common-services/docs/users-guide/deployment/deployment-concepts-and-infrastructure/unity-aws-resource-tagging-conventions.md)
           * [Unity SSM Parameters](developer-docs/common-services/docs/users-guide/deployment/deployment-concepts-and-infrastructure/unity-ssm-parameters.md)
+          * [Detailed Breakdown of Project Onboarding Steps](developer-docs/common-services/docs/users-guide/deployment/deployment-concepts-and-infrastructure/detailed-breakdown-of-project-onboarding-steps.md)
         * [Shared Services Deployment](developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment.md)
       * [Security](developer-docs/common-services/docs/users-guide/security/README.md)
         * [Unity Security Cases](developer-docs/common-services/docs/users-guide/security/unity-security-cases.md)
