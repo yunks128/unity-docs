@@ -13,8 +13,8 @@
 5\) **Unity Team sets up initial set of users/roles** (manually for now):
 
 1. Creates each user in Cognito
-2. Each user gets a Unity-ManagementConsole-ReadOnly role
-3. One or more users get the Unity-ManagementConsole-Admin role
+2. Each user gets a `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly` role
+3. One or more users get the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role
 
 6\) Project (or Unity personnel for now) launches PartnerSolution from project AWS account, which deploys Management Console EC2.
 
@@ -35,7 +35,7 @@
 7. Checks policies/perms
 8. Creates sqlite DB
 
-7\) Project User (the one that has the Unity-ManagementConsole-Admin role) logs into Management Console via CloudFront
+7\) Project User (the one that has the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role) logs into Management Console via CloudFront
 
 8\) Project user runs Core Setup actions in Management Console
 
