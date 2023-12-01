@@ -2,15 +2,15 @@
 
 <figure><img src="../../../../../../.gitbook/assets/SSM &#x26; Deployments Overview (2).png" alt=""><figcaption></figcaption></figure>
 
-1\) Project obtains their own AWS account (Bring your own Account).
+1\) Project **obtains their own AWS account** (Bring your own Account).
 
-2\) Project agrees to EC2 conditions (EULA / FIPS) on their new account
+2\) Project **agrees to EC2 conditions** (EULA / FIPS) on their new account
 
-3\) Project notifies Unity team that they want to onboard to Unity
+3\) Project **notifies Unity team** that they want to onboard to Unity
 
 4\) Project lets Unity know what the set of "starter" users are (name, email address, etc..)
 
-5\) Unity Team sets up initial set of users/roles (manually for now):
+5\) **Unity Team sets up initial set of users/roles** (manually for now):
 
 1. Creates each user in Cognito
 2. Each user gets a Unity-ManagementConsole-ReadOnly role
