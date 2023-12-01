@@ -1,5 +1,7 @@
 # Detailed Breakdown of Project Onboarding Steps
 
+<figure><img src="../../../../../../.gitbook/assets/SSM &#x26; Deployments Overview (2).png" alt=""><figcaption></figcaption></figure>
+
 1\) Project obtains their own AWS account (Bring your own Account).
 
 2\) Project agrees to EC2 conditions (EULA / FIPS) on their new account
