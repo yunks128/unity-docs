@@ -59,18 +59,27 @@ description: >-
 
 
 
-|                                                           |   |   |
-| --------------------------------------------------------- | - | - |
-| /unity/cs/routing/api-gateway/rest-api-id                 |   |   |
-| /unity/cs/routing/shared-services-api-gateway/rest-api-id |   |   |
-|                                                           |   |   |
+| SSM Key                                                   | Description |   |
+| --------------------------------------------------------- | ----------- | - |
+| /unity/cs/routing/api-gateway/rest-api-id                 |             |   |
+| /unity/cs/routing/shared-services-api-gateway/rest-api-id |             |   |
+|                                                           |             |   |
 
 
 
 ## unity/<mark style="color:blue;">cs</mark>/<mark style="color:blue;">security</mark>/...
 
-|                                                                   |   |   |
-| ----------------------------------------------------------------- | - | - |
-| /unity/cs/security/shared-services-cognito-user-pool/user-pool-id |   |   |
-|                                                                   |   |   |
-|                                                                   |   |   |
+| SSM Key                                                           | Description | Type |
+| ----------------------------------------------------------------- | ----------- | ---- |
+| /unity/cs/security/shared-services-cognito-user-pool/user-pool-id |             |      |
+|                                                                   |             |      |
+|                                                                   |             |      |
+
+## Other Values
+
+| SSM Key                                                                  | Description | Type |
+| ------------------------------------------------------------------------ | ----------- | ---- |
+| /unity/project-api-gateway/cs-lambda-authorizer-cognito-client-id-list   |             |      |
+| /unity/project-api-gateway/cs-lambda-authorizer-cognito-user-pool-id     |             |      |
+| /unity/project-api-gateway/cs-lambda-authorizer-cognito-user-groups-list |             |      |
+| /unity/project-api-gateway/cs-lambda-authorizer-invoke-role-arn          |             |      |
