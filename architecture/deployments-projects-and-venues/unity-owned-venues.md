@@ -4,7 +4,11 @@ description: These are the currently "unity" owned venues.
 
 # Unity Owned Venues
 
-<figure><img src="../../.gitbook/assets/Unity Venues and SDLC (1).png" alt=""><figcaption></figcaption></figure>
+<div data-full-width="true">
+
+<figure><img src="../../.gitbook/assets/Unity Venues and SDLC (4).png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 | Venue            | Description                                                                                                    | Services                                                                                                                                               | Shared Service Account |
 | ---------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- |
