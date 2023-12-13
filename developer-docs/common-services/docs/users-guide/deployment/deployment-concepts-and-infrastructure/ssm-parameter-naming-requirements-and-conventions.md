@@ -4,10 +4,10 @@ description: This page describes naming conventions for SSM Parameters.
 
 # SSM Parameter Naming Requirements and Conventions
 
-The only requirements for SSM Parameter key names is that their path start with a service area name, where the service area name is one of those accepted by the [AWS Resource Tagging Conventions](https://unity-sds.gitbook.io/docs/developer-docs/common-services/docs/users-guide/deployment/unity-aws-resource-tagging-conventions#servicearea). For example:\
-`/sps/...`\
-`/cs/...`\
-`/as/...`
+The only requirements for SSM Parameter key names is that their path start with `/unity/`followed by a  service area name, where the service area name is one of those accepted by the [AWS Resource Tagging Conventions](https://unity-sds.gitbook.io/docs/developer-docs/common-services/docs/users-guide/deployment/unity-aws-resource-tagging-conventions#servicearea).  For example:\
+`/unity/sps/...`\
+`/unity/cs/...`\
+`/unity/as/...`
 
 In many cases, these parameter names will become hard-coded across different repos. So, service areas should document the parameters they create and aim to make breaking changes to them as little as possible. The **Name Form** and **Name Parts** sections of this document cover suggestions for naming based on the way other projects have done it in the past.\
 \
@@ -16,7 +16,7 @@ However a service area chooses to name their parameters, it's important that the
 ### Name Form
 
 We suggest that a key have a name of the form:\
-`{service area}/{category}/{component}/{resource}`&#x20;
+`/unity/{service area}/{category}/{component}/{resource}`&#x20;
 
 ### Name Parts
 
