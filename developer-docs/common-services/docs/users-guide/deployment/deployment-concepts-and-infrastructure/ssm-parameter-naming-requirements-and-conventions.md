@@ -4,7 +4,7 @@ description: This page describes naming conventions for SSM Parameters.
 
 # SSM Parameter Naming Requirements and Conventions
 
-The only requirements for SSM Parameter key names is that their path start with `/unity/`followed by a  service area name, where the service area name is one of those accepted by the [AWS Resource Tagging Conventions](https://unity-sds.gitbook.io/docs/developer-docs/common-services/docs/users-guide/deployment/unity-aws-resource-tagging-conventions#servicearea).  For example:\
+The only requirements for SSM Parameter key names is that their path start with `/unity/`  followed by a  service area name, where the service area name is one of those accepted by the [AWS Resource Tagging Conventions](https://unity-sds.gitbook.io/docs/developer-docs/common-services/docs/users-guide/deployment/unity-aws-resource-tagging-conventions#servicearea).  For example:\
 `/unity/sps/...`\
 `/unity/cs/...`\
 `/unity/as/...`
@@ -13,6 +13,8 @@ In many cases, these parameter names will become hard-coded across different rep
 \
 However a service area chooses to name their parameters, it's important that the parameters provided are well documented and that changes to parameter names or value formats are communicated with the dependent teams.
 
+See the [Unity SSM Parameters](unity-ssm-parameters.md) page for a list of the actual parameters expected in the Unity system.
+
 ### Name Form
 
 We suggest that a key have a name of the form:\
@@ -20,5 +22,5 @@ We suggest that a key have a name of the form:\
 
 ### Name Parts
 
-<table><thead><tr><th width="193.33333333333331">Part</th><th width="170">Description</th><th>Examples</th></tr></thead><tbody><tr><td><code>{service area}</code></td><td>The service area that creates and updates the SSM Parameter.</td><td><code>/sps/...</code><br><code>/cs/...</code><br><code>/as/...</code></td></tr><tr><td><code>{category}</code></td><td>The category of service provided by the service area that this SSM Parameter is related to.</td><td><code>/sps/processing/...</code><br><code>/sps/scaling/...</code><br><code>/cs/routing/...</code></td></tr><tr><td><code>{component}</code></td><td>The specific component of that the SSM Parameter is related to. </td><td><code>/sps/processing/hysds/...</code><br><code>/sps/scaling/auto-scaling-group/...</code><br><code>/cs/routing/api-gateway/...</code></td></tr><tr><td><code>{resource}</code></td><td>The descriptive name of what the SSM Parameter is providing a value for.</td><td><code>/sps/processing/hysds/mozart_url</code><br><code>/sps/scaling/auto-scaling-group/arn</code><br><code>/cs/routing/api-gateway/rest-api-id</code></td></tr></tbody></table>
+<table><thead><tr><th width="193.33333333333331">Part</th><th width="170">Description</th><th>Examples</th></tr></thead><tbody><tr><td><code>{service area}</code></td><td>The service area that creates and updates the SSM Parameter.</td><td><code>/unity/sps/...</code><br><code>/unity/cs/...</code><br><code>/unity/as/...</code></td></tr><tr><td><code>{category}</code></td><td>The category of service provided by the service area that this SSM Parameter is related to.</td><td><code>/unity/sps/processing/...</code><br><code>/unity/sps/scaling/...</code><br><code>/unit/cs/routing/...</code></td></tr><tr><td><code>{component}</code></td><td>The specific component of that the SSM Parameter is related to. </td><td><code>/unity/sps/processing/hysds/...</code><br><code>/unity/sps/scaling/auto-scaling-group/...</code><br><code>/unity/cs/routing/api-gateway/...</code></td></tr><tr><td><code>{resource}</code></td><td>The descriptive name of what the SSM Parameter is providing a value for.</td><td><code>/unity/sps/processing/hysds/mozart_url</code><br><code>/unity/sps/scaling/auto-scaling-group/arn</code><br><code>/unity/cs/routing/api-gateway/rest-api-id</code></td></tr></tbody></table>
 
