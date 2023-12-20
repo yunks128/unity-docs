@@ -11,3 +11,5 @@ See the following pages:
 [ssm-parameter-naming-requirements-and-conventions.md](ssm-parameter-naming-requirements-and-conventions.md "mention")
 
 [standard-set-of-ssm-parameters.md](standard-set-of-ssm-parameters.md "mention")
+
+[deployments-dependency-and-ssm-parameters.md](deployments-dependency-and-ssm-parameters.md "mention")
