@@ -5,7 +5,7 @@ description: >-
   service areas, as needed.
 ---
 
-# Unity SSM Parameters
+# Standard Set of SSM Parameters
 
 ## WIP EXAMPLE PARAMETERS- NOT YET IMPLEMENTED
 

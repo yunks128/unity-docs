@@ -13,7 +13,7 @@ In many cases, these parameter names will become hard-coded across different rep
 \
 However a service area chooses to name their parameters, it's important that the parameters provided are well documented and that changes to parameter names or value formats are communicated with the dependent teams.
 
-See the [Unity SSM Parameters](unity-ssm-parameters.md) page for a list of the actual parameters expected in the Unity system.
+See the [Unity SSM Parameters](./) page for a list of the actual parameters expected in the Unity system.
 
 ### Name Form
 
