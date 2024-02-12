@@ -51,6 +51,6 @@ The validate.sh script does the following:
 * Verifies that the cluster is reachable with 'kubectl get all -A'
 * Teardown the cluster with 'terraform destroy'
 
-### Step 1: Deploy SPS with Airflow onto the EKS Cluster
+### Step 2: Deploy SPS with Airflow onto the EKS Cluster
 
 Once the EKS cluster is up and running, the SPS system can be deployed onto it following these instructions.
