@@ -2,7 +2,7 @@
 description: Documentation for provisioning a U-SPS cluster on MCP using Terraform
 ---
 
-# Cluster Provisioning with Terraform
+# Obsolete: Cluster Provisioning with Terraform
 
 ### Dev Requirements:
 
