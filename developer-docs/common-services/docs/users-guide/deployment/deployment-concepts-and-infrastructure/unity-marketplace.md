@@ -15,7 +15,7 @@ coming soon..
 ## Procedure for Adding a Component to the Marketplace
 
 1. **Create a repository** that houses code/scripts that do a deployment (e.g. terraform, CloudFormation, and/or shell scripts)
-2. **Structure the repository** to have the correct entry point directory (e.g. `terraform-unity`).  There is an option to override the `terraform-unity` directory convention (i.e. in the case where multiple source repos lead to the marketplace deployment).  Technically speaking, your terraform code doesn't have to be co-located with your application code.
+2. **Structure the repository** to have the correct entry point directory (e.g. `terraform-unity`).  There is an option to override the `terraform-unity` directory convention (i.e. in the case where multiple source repos lead to the marketplace deployment).  Technically speaking, your terraform code doesn't have to be co-located with your application code.  If you are writing your only terraform, a convention is to have a `main.tf`, however this is optional as upon deployment time the directory containing terraform files will just be scanned, and create a DAG in the end, that will be terraform-applied.
 3. **Create a release** (zip file of the repository).  This should be put in your Github "Releases", in your repo, that can be referenced by a SHA.
 4. Fork the [marketplace repo](https://github.com/unity-sds/unity-marketplace)
 5. **Add your application**
