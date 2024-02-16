@@ -15,7 +15,7 @@ coming soon..
 ## Procedure for Adding a Component to the Marketplace
 
 1. **Create a repository** that houses code/scripts that do a deployment (e.g. terraform, CloudFormation, and/or shell scripts)
-2. **Structure the repository** to have the correct entry point directory (e.g. `terraform-unity`).  There is an option to override the `terraform-unity` directory convention (i.e. in the case where multiple source repos lead to the marketplace deployment).
+2. **Structure the repository** to have the correct entry point directory (e.g. `terraform-unity`).  There is an option to override the `terraform-unity` directory convention (i.e. in the case where multiple source repos lead to the marketplace deployment).  Technically speaking, your terraform code doesn't have to be co-located with your application code.
 3. **Create a release** (zip file of the repository).  This should be put in your Github "Releases", in your repo, that can be referenced by a SHA.
 4. Fork the [marketplace repo](https://github.com/unity-sds/unity-marketplace)
 5. **Add your application**
@@ -61,13 +61,9 @@ description coming soon..
 
 description coming soon..
 
-### `properties.Description`
-
-description coming soon..
-
 ### `properties.Repository`
 
-description coming soon..
+More for display purposes from the Marketplace UI.  This can be free-form, and will display.
 
 ### `properties.Tags`
 
@@ -83,7 +79,7 @@ description coming soon..
 
 ### `properties.Package`
 
-description coming soon..
+Represents the packaged-up deployable unit.  This field can be a pointer to a git SHA or zip file URL of a Github release.  The zip file URL is the preferred approach.  This field is that is git-pulled upon deployment via the Management Console.
 
 ### `properties.ManagedDependencies`
 
@@ -91,7 +87,11 @@ description coming soon..
 
 ### `properties.Backend`
 
-description coming soon..
+e.g. "terraform"
+
+### `properties.WorkDir`
+
+This can override the default `terraform-unity` directory (see above)
 
 ### `properties.DefaultDeployment`
 
