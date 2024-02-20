@@ -69,9 +69,9 @@ git clone https://github.com/unity-sds/unity-sps-prototype.git
    *   From the root of the repository, execute the following commands:
 
        ```sh
-       venue=INSERT-VENUE
-       developer=INSERT-JPL-USERNAME
-       counter=INSERT-COUNTER
+       venue=INSERT-VENUE # It’s just recommended to have this value match the counter included in the EKS cluster name. This will help you/others identify resources that are a part of the same SPS system.
+       developer=INSERT-JPL-USERNAME # It’s just recommended to have this value match the counter included in the EKS cluster name. This will help you/others identify resources that are a part of the same SPS system.
+       counter=INSERT-COUNTER # It’s just recommended to have this value match the counter included in the EKS cluster name. This will help you/others identify resources that are a part of the same SPS system.
        tfvars_filename=unity-${venue}-sps-${developer}-${counter}.tfvars
 
        cd terraform-unity
@@ -84,7 +84,7 @@ git clone https://github.com/unity-sds/unity-sps-prototype.git
        ```sh
        <!-- BEGIN_TF_DOCS -->
        airflow_webserver_password = "" # The password you would like to use for accessing Airflow
-       counter                    = "" # It’s just recommended to have this value match the counter included in the EKS cluster name. This will help you/others identify resources that are a part of the same SPS system.
+       counter                    = "" # It’s recommended to have this value match the counter included in the EKS cluster name. This will help you/others identify resources that are a part of the same SPS system.
        custom_airflow_docker_image = {
          "name": "ghcr.io/unity-sds/unity-sps-prototype/sps-airflow",
          "tag": "develop" # Set this to the value you used when you built a custom SPS Airflow image
@@ -106,7 +106,7 @@ git clone https://github.com/unity-sds/unity-sps-prototype.git
        project             = "unity"
        release             = "" # The current release/sprint you are deploying for, e.g. 24.1
        service_area        = "sps"
-       venue               = "" # The MCP venue which you are deploying into. It’s just recommended to have this value match the counter included in the EKS cluster name. This will help you/others identify resources that are a part of the same SPS system.
+       venue               = "" # The MCP venue which you are deploying into. It’s recommended to have this value match the counter included in the EKS cluster name. This will help you/others identify resources that are a part of the same SPS system.
        <!-- END_TF_DOCS -->
        ```
 
