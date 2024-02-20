@@ -9,9 +9,9 @@ description: Documentation for deploying an Airflow-based U-SPS on MCP using Ter
 * Access to an MCP account (aka a 'venue')
 * An SPS EKS cluster deployed in the same MCP account you would like SPS Airflow deployed into. To do this, following the instructions in the [docs](sps-cluster-provisioning-with-terraform.md).
 * The following tools installed on the personal laptop:
-  * The [AWS CLI](https://aws.amazon.com/cli/) tool
-  * [Terraform](https://www.terraform.io/)
-  * The Kubernetes client [kubectl](https://kubernetes.io/docs/reference/kubectl/)
+  * [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli) - Infrastructure-as-code tool.
+  * [tfenv](https://github.com/tfutils/tfenv) - Terraform version manager.
+  * [terraform-docs](https://github.com/terraform-docs/terraform-docs) - Auto-generate documentation and `tfvar` files from Terraform modules.
 
 ## Dependencies from the other Unity Service Areas
 
