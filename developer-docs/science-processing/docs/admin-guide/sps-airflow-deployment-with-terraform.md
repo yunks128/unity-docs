@@ -31,6 +31,7 @@ git clone https://github.com/unity-sds/unity-sps-prototype.git
 
 ### Configure Python environment
 
+* This Python environment will be used for executing tests.
 *   From the root of the repository, create a Python virtualenv:
 
     ```sh
