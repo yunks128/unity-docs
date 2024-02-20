@@ -102,6 +102,6 @@ Feature: Airflow API health check
 From within the Terraform root module directory (`terraform-unity/`), run the following command to destroy the SPS cluster:
 
 ```
-$ terraform destroy
+terraform destroy
 ```
 
