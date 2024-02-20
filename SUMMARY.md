@@ -114,7 +114,7 @@
       * [Tutorial: Execution of the L1B CWL Workflow via the WPS-T API](developer-docs/science-processing/docs/developers-guide/tutorial-execution-of-the-l1b-cwl-workflow-via-the-wps-t-api.md)
       * [Manual Verification: Testing the SPS Prewarm API](developer-docs/science-processing/docs/developers-guide/manual-verification-testing-the-sps-prewarm-api.md)
     * [Admin Guide](developer-docs/science-processing/docs/admin-guide/README.md)
-      * [Obsolete: Cluster Provisioning with Terraform](developer-docs/science-processing/docs/admin-guide/obsolete-cluster-provisioning-with-terraform.md)
+      * [SPS Airflow Deployment with Terraform](developer-docs/science-processing/docs/admin-guide/sps-airflow-deployment-with-terraform.md)
       * [SPS Cluster Provisioning with Terraform](developer-docs/science-processing/docs/admin-guide/sps-cluster-provisioning-with-terraform.md)
   * [FAQ](developer-docs/science-processing/faq.md)
 * [On-Demand](developer-docs/on-demand.md)
