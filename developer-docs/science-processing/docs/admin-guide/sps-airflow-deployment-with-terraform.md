@@ -8,64 +8,130 @@ description: Documentation for deploying an Airflow-based U-SPS on MCP using Ter
 
 * Access to an MCP account (aka a 'venue')
 * An SPS EKS cluster deployed in the same MCP account you would like SPS Airflow deployed into. To do this, following the instructions in the [docs](sps-cluster-provisioning-with-terraform.md).
+* A customized SPS Airflow image with SPS DAGs baked into it. To build this image, following the instructions in the docs.
 * The following tools installed on the personal laptop:
   * [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli) - Infrastructure-as-code tool.
   * [tfenv](https://github.com/tfutils/tfenv) - Terraform version manager.
   * [terraform-docs](https://github.com/terraform-docs/terraform-docs) - Auto-generate documentation and `tfvar` files from Terraform modules.
+  * [Python](https://www.python.org/)
 
 ## Dependencies from the other Unity Service Areas
 
 A successful deployment of SPS depends on the following items from other the other Unity Service Areas.
 
-<table><thead><tr><th width="139">Service Area</th><th width="262">Description</th><th width="142">AWS Service</th><th>Naming Convention</th></tr></thead><tbody><tr><td>Common Services (CS)</td><td>An SSM parameter containing public and private subnet lists for the VPC that the SPS EKS cluster is deployed in.</td><td>AWS Systems Manager - SSM paramter.</td><td><code>/unity/cs/account/network/subnet_list</code></td></tr></tbody></table>
+<table><thead><tr><th width="148">Service Area</th><th width="262">Description</th><th width="142">AWS Service</th><th>Naming Convention</th></tr></thead><tbody><tr><td>Common Services (CS)</td><td>An SSM parameter containing public and private subnet lists for the VPC that the SPS EKS cluster is deployed in.</td><td>AWS Systems Manager - SSM paramter.</td><td><code>/unity/cs/account/network/subnet_list</code></td></tr></tbody></table>
 
-## Create a tfvars file to specify input variables
+## Setup Instructions
 
-Input variables (including secrets) can be set in `terraform.tfvars`, a template can be auto-generated using `terraform-docs` as shown below.
+### Clone the SPS repository
 
-```shell
-cd terraform-unity
-terraform-docs tfvars hcl . --output-file "terraform.tfvars"
+```sh
+git clone https://github.com/unity-sds/unity-sps-prototype.git
 ```
 
-```json
-<!-- BEGIN_TF_DOCS -->
-airflow_webserver_password = ""
-counter                    = ""
-custom_airflow_docker_image = {
-  "name": "ghcr.io/unity-sds/unity-sps-prototype/sps-airflow",
-  "tag": "develop"
-}
-eks_cluster_name = ""
-helm_charts = {
-  "airflow": {
-    "chart": "airflow",
-    "repository": "https://airflow.apache.org",
-    "version": "1.11.0"
-  },
-  "keda": {
-    "chart": "keda",
-    "repository": "https://kedacore.github.io/charts",
-    "version": "v2.13.1"
-  }
-}
-kubeconfig_filepath = "../k8s/kubernetes.yml"
-project             = "unity"
-release             = ""
-service_area        = "sps"
-venue               = ""
-<!-- END_TF_DOCS -->
-```
+### Python environment setup instructions
 
-## Deploy SPS Airflow
+*   From the root of the repository, create a Python virtualenv:
 
-From within the Terraform root module directory (`terraform-unity/`), run the following commands to initialize, and apply the Terraform module:
+    ```sh
+    python -m virtualenv venv
+    ```
+*   Install the required Python dependencies included in the `unity-sps-prototype` repo:
 
-```bash
-cd terraform-unity/
-terraform init
-terraform apply
-```
+    ```sh
+    source venv/bin/activate
+    cd unity-test
+    pip install -r requirements.txt
+    ```
+*   Create a `.env` file for sensitive values used in the tests:
+
+    ```sh
+    touch .env
+    ```
+*   The `.env` should contain the following:
+
+    ```sh
+    AIRFLOW_WEBSERVER_PASSWORD=INSERT-PASSWORD
+    ```
+
+### Configure the Terraform Workspace and prepare a `tfvars` File
+
+1. If using `tfenv`, create a `.terraform-version` file at the root of the repo and insert the required Terraform version that is specified in `versions.tf`.
+2.  Ensure the Terraform version you are using is equal to the value specified in `versions.tf`:
+
+    ```sh
+    terraform --version
+    ```
+3. Auto-generate a tfvars template file using `terraform-docs`. After the auto-generated tfvars template files are created, **certain values will need to be specified manually**, those values are described below:
+   *   Commands:
+
+       ```sh
+       venue=dev
+       developer=INSERT-JPL-USERNAME
+       counter=1
+       tfvars_filename=unity-${venue}-sps-${developer}-${counter}.tfvars
+
+       cd terraform-unity
+       mkdir tfvars
+       terraform-docs tfvars hcl . --output-file "tfvars/${tfvars_filename}"
+       ```
+   * **Note:** The `BEGIN_TF_DOCS` and `END_TF_DOCS` tags will need to be removed from the tfvars file.
+   *   Manually override the following values in the auto-generated tfvars file:
+
+       * **Note:** The provided values assume you are deploying locally using LocalStack and would like to deploy to the `dev` venue. For the value of `GITHUB_PERSONAL_ACCESS_TOKEN` either use/generate your own or contact [@drewm](https://github.jpl.nasa.gov/drewm).
+
+       ```sh
+       <!-- BEGIN_TF_DOCS -->
+       airflow_webserver_password = ""
+       counter                    = ""
+       custom_airflow_docker_image = {
+         "name": "ghcr.io/unity-sds/unity-sps-prototype/sps-airflow",
+         "tag": "develop"
+       }
+       eks_cluster_name = ""
+       helm_charts = {
+         "airflow": {
+           "chart": "airflow",
+           "repository": "https://airflow.apache.org",
+           "version": "1.11.0"
+         },
+         "keda": {
+           "chart": "keda",
+           "repository": "https://kedacore.github.io/charts",
+           "version": "v2.13.1"
+         }
+       }
+       kubeconfig_filepath = "../k8s/kubernetes.yml"
+       project             = "unity"
+       release             = ""
+       service_area        = "sps"
+       venue               = ""
+       <!-- END_TF_DOCS -->
+       ```
+
+## Resource provisioning with Terraform
+
+1.  Run a Terraform init:
+
+    ```sh
+    cd resource_provisioning/terraform/pipeline/
+    terraform init
+    ```
+2.  Run a Terraform plan:
+
+    ```sh
+    terraform plan -var-file=tfvars/${tfvars_filename}
+    ```
+3.  If you are satisfied with the output of the Terraform plan, run a Terraform apply to provision the cluster:
+
+    ```sh
+    terraform apply -var-file=tfvars/${tfvars_filename}
+    ```
+4.  If you are done using the resources deployed by the `terraform apply`, destroy the resources using the `terraform destroy` command:
+
+    ```sh
+    terraform destroy -var-file=tfvars/${tfvars_filename}
+    ```
 
 ## Retrieve the endpoint for the Airflow UI
 
@@ -78,7 +144,7 @@ load_balancer_hostnames = {
 
 ## Smoke test the SPS Airflow deployment
 
-```bash
+```sh
 AIRFLOW_ENDPOINT=http://k8s-airflow-airflowi-52301ddb8d-1489339230.us-west-2.elb.amazonaws.com:5000
 pytest -s -vv --gherkin-terminal-reporter step_defs/test_airflow_api_health.py --airflow-endpoint $AIRFLOW_ENDPOINT
 ```
@@ -97,11 +163,5 @@ Feature: Airflow API health check
 =============================================== 1 passed in 0.37s ===============================================
 ```
 
-## Teardown the Cluster
 
-From within the Terraform root module directory (`terraform-unity/`), run the following command to destroy the SPS cluster:
-
-```
-terraform destroy
-```
 
