@@ -116,7 +116,7 @@
     * [Admin Guide](developer-docs/science-processing/docs/admin-guide/README.md)
       * [SPS Airflow Deployment with Terraform](developer-docs/science-processing/docs/admin-guide/sps-airflow-deployment-with-terraform.md)
       * [SPS Cluster Provisioning with Terraform](developer-docs/science-processing/docs/admin-guide/sps-cluster-provisioning-with-terraform.md)
-      * [SPS Airflow Custom Image Docker Build Instructions](developer-docs/science-processing/docs/admin-guide/sps-airflow-custom-image-docker-build-instructions.md)
+      * [SPS Airflow Custom Docker Image Build Instructions](developer-docs/science-processing/docs/admin-guide/sps-airflow-custom-docker-image-build-instructions.md)
   * [FAQ](developer-docs/science-processing/faq.md)
 * [On-Demand](developer-docs/on-demand.md)
   * [Deployment of On-Demand SPS](developer-docs/on-demand/deployment-of-on-demand-sps.md)
