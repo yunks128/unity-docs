@@ -8,7 +8,7 @@ description: Documentation for deploying an Airflow-based U-SPS on MCP using Ter
 
 * Access to an MCP account (aka a 'venue')
 * An SPS EKS cluster deployed in the same MCP account you would like SPS Airflow deployed into. To do this, following the instructions in the [docs](sps-cluster-provisioning-with-terraform.md).
-* A customized SPS Airflow image with SPS DAGs baked into it. To build this image, following the instructions in the docs.
+* A customized SPS Airflow image with SPS DAGs baked into it. To build this image, following the instructions in the [docs](sps-airflow-custom-image-docker-build-instructions.md).
 * The following tools installed on the personal laptop:
   * [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli) - Infrastructure-as-code tool.
   * [tfenv](https://github.com/tfutils/tfenv) - Terraform version manager.
@@ -29,7 +29,7 @@ A successful deployment of SPS depends on the following items from other the oth
 git clone https://github.com/unity-sds/unity-sps-prototype.git
 ```
 
-### Python environment setup instructions
+### Configure Python environment
 
 *   From the root of the repository, create a Python virtualenv:
 
@@ -51,7 +51,9 @@ git clone https://github.com/unity-sds/unity-sps-prototype.git
 *   The `.env` should contain the following:
 
     ```sh
-    AIRFLOW_WEBSERVER_PASSWORD=INSERT-PASSWORD
+    # The password you would like to use for accessing Airflow,
+    # this should match the value specified in your tfvars used to deploy Airflow
+    AIRFLOW_WEBSERVER_PASSWORD=
     ```
 
 ### Configure the Terraform Workspace and prepare a `tfvars` File
@@ -62,8 +64,8 @@ git clone https://github.com/unity-sds/unity-sps-prototype.git
     ```sh
     terraform --version
     ```
-3. Auto-generate a tfvars template file using `terraform-docs`. After the auto-generated tfvars template files are created, **certain values will need to be specified manually**, those values are described below:
-   *   Commands:
+3. Auto-generate a tfvars template file using `terraform-docs`. After the auto-generated tfvars template files are created, **certain values will need to be specified manually.** The values which will need to be specified manually are tagged with comments in the example auto-generated tfvars provided below:
+   *   From the root of the repository, execute the following commands:
 
        ```sh
        venue=dev
@@ -75,20 +77,18 @@ git clone https://github.com/unity-sds/unity-sps-prototype.git
        mkdir tfvars
        terraform-docs tfvars hcl . --output-file "tfvars/${tfvars_filename}"
        ```
-   * **Note:** The `BEGIN_TF_DOCS` and `END_TF_DOCS` tags will need to be removed from the tfvars file.
-   *   Manually override the following values in the auto-generated tfvars file:
-
-       * **Note:** The provided values assume you are deploying locally using LocalStack and would like to deploy to the `dev` venue. For the value of `GITHUB_PERSONAL_ACCESS_TOKEN` either use/generate your own or contact [@drewm](https://github.jpl.nasa.gov/drewm).
+   * Manually override the following values in the auto-generated tfvars file:
+   *   **Note:** The `BEGIN_TF_DOCS` and `END_TF_DOCS` tags will need to be removed from the tfvars file.
 
        ```sh
        <!-- BEGIN_TF_DOCS -->
-       airflow_webserver_password = ""
-       counter                    = ""
+       airflow_webserver_password = "" # The password you would like to use for accessing Airflow
+       counter                    = "" # The counter should match the counter included in the EKS cluster name
        custom_airflow_docker_image = {
          "name": "ghcr.io/unity-sds/unity-sps-prototype/sps-airflow",
-         "tag": "develop"
+         "tag": "develop" # Set this to the value you used when you built a custom SPS Airflow image
        }
-       eks_cluster_name = ""
+       eks_cluster_name = "" # The EKS cluster which you are deploying Airflow into
        helm_charts = {
          "airflow": {
            "chart": "airflow",
@@ -101,11 +101,11 @@ git clone https://github.com/unity-sds/unity-sps-prototype.git
            "version": "v2.13.1"
          }
        }
-       kubeconfig_filepath = "../k8s/kubernetes.yml"
+       kubeconfig_filepath = "../k8s/kubernetes.yml" # The path to the kubeconfig which corresponds to the EKS cluster which you are deploying Airflow into 
        project             = "unity"
-       release             = ""
+       release             = "" # The current release/sprint you are deploying for, e.g. 24.1
        service_area        = "sps"
-       venue               = ""
+       venue               = "" # The MCP venue which you are deploying into, this value should match the venue included in the EKS cluster name
        <!-- END_TF_DOCS -->
        ```
 
@@ -114,7 +114,7 @@ git clone https://github.com/unity-sds/unity-sps-prototype.git
 1.  Run a Terraform init:
 
     ```sh
-    cd resource_provisioning/terraform/pipeline/
+    cd terraform-unity
     terraform init
     ```
 2.  Run a Terraform plan:
@@ -144,7 +144,11 @@ load_balancer_hostnames = {
 
 ## Smoke test the SPS Airflow deployment
 
+From the root of the repository, execute the following commands:
+
 ```sh
+source venv
+cd unity-test
 AIRFLOW_ENDPOINT=http://k8s-airflow-airflowi-52301ddb8d-1489339230.us-west-2.elb.amazonaws.com:5000
 pytest -s -vv --gherkin-terminal-reporter step_defs/test_airflow_api_health.py --airflow-endpoint $AIRFLOW_ENDPOINT
 ```
