@@ -24,8 +24,8 @@ A successful deployment of SPS depends on the following items from other the oth
 Input variables (including secrets) can be set in `terraform.tfvars`, a template can be auto-generated using `terraform-docs` as shown below.
 
 ```shell
-$ cd terraform-unity
-$ terraform-docs tfvars hcl . --output-file "terraform.tfvars"
+cd terraform-unity
+terraform-docs tfvars hcl . --output-file "terraform.tfvars"
 ```
 
 ```json
@@ -62,12 +62,42 @@ venue               = ""
 From within the Terraform root module directory (`terraform-unity/`), run the following commands to initialize, and apply the Terraform module:
 
 ```bash
-$ cd terraform-unity/
-$ terraform init
-$ terraform apply
+cd terraform-unity/
+terraform init
+terraform apply
 ```
 
-### Teardown the Cluster
+## Retrieve the endpoint for the Airflow UI
+
+```bash
+terraform output
+load_balancer_hostnames = {
+  "airflow" = "http://k8s-airflow-airflowi-52301ddb8d-1489339230.us-west-2.elb.amazonaws.com:5000"
+}
+```
+
+## Smoke test the SPS Airflow deployment
+
+```bash
+AIRFLOW_ENDPOINT=http://k8s-airflow-airflowi-52301ddb8d-1489339230.us-west-2.elb.amazonaws.com:5000
+pytest -s -vv --gherkin-terminal-reporter step_defs/test_airflow_api_health.py --airflow-endpoint $AIRFLOW_ENDPOINT
+```
+
+### Expected output
+
+```bash
+Feature: Airflow API health check
+    Scenario: Check API health
+        Given the Airflow API is up and running
+        When I send a GET request to the health endpoint
+        Then I receive a response with status code 200
+        And each Airflow component is reported as healthy
+        And each Airflow component's last heartbeat was received less than 30 seconds ago
+    PASSED
+=============================================== 1 passed in 0.37s ===============================================
+```
+
+## Teardown the Cluster
 
 From within the Terraform root module directory (`terraform-unity/`), run the following command to destroy the SPS cluster:
 
