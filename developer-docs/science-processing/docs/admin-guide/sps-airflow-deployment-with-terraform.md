@@ -26,7 +26,7 @@ A successful deployment of SPS depends on the following items from other the oth
 ### Clone the SPS repository
 
 ```sh
-git clone https://github.com/unity-sds/unity-sps-prototype.git
+git clone https://github.com/unity-sds/unity-sps.git
 ```
 
 ### Configure Python environment
@@ -37,7 +37,7 @@ git clone https://github.com/unity-sds/unity-sps-prototype.git
     ```sh
     python -m virtualenv venv
     ```
-*   Install the required Python dependencies included in the `unity-sps-prototype` repo:
+*   Install the required Python dependencies included in the `unity-sps` repo:
 
     ```sh
     source venv/bin/activate
@@ -86,7 +86,7 @@ git clone https://github.com/unity-sds/unity-sps-prototype.git
        airflow_webserver_password = "" # The password you would like to use for accessing Airflow
        counter                    = "" # It’s recommended to have this value match the counter included in the EKS cluster name. This will help you/others identify resources that are a part of the same SPS system.
        custom_airflow_docker_image = {
-         "name": "ghcr.io/unity-sds/unity-sps-prototype/sps-airflow",
+         "name": "ghcr.io/unity-sds/unity-sps/sps-airflow",
          "tag": "develop" # Set this to the value you used when you built a custom SPS Airflow image
        }
        eks_cluster_name = "" # The EKS cluster which you are deploying Airflow into
