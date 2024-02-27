@@ -4,7 +4,7 @@
 
 ## User Docs
 
-* [Unity Cloud](user-docs/unity-cloud/README.md)
+* [Unity Managed Services](user-docs/unity-cloud/README.md)
   * [Getting Started](user-docs/unity-cloud/getting-started.md)
   * [Unity Account and Login](user-docs/unity-cloud/unity-account-and-login.md)
   * [Key Unity Concepts](user-docs/unity-cloud/key-unity-concepts.md)
@@ -22,7 +22,6 @@
     * [Unity Prototype Release 3](user-docs/unity-cloud/releases/unity-prototype-release-3.md)
     * [Unity Prototype Release 2](user-docs/unity-cloud/releases/unity-prototype-release-2.md)
     * [Unity Prototype Release 1](user-docs/unity-cloud/releases/unity-prototype-release-1.md)
-* [Community Edition](user-docs/community-edition.md)
 
 ## Developer Docs
 

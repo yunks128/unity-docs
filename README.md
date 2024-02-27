@@ -22,8 +22,8 @@ Unity is both a hosted platform for running a full SDS as well as an open source
 [unity-cloud](user-docs/unity-cloud/)
 {% endcontent-ref %}
 
-{% content-ref url="user-docs/community-edition.md" %}
-[community-edition.md](user-docs/community-edition.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 ## Services
