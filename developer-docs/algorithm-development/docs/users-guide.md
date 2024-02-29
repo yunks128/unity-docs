@@ -11,9 +11,13 @@ For the following User Guide, we'll use the following use case for a simple algo
 
 In the above example, the 'processing' can be as trivial or as complex as you'd like, we will do a relatively straight forward example here. Other examples can be found in our github and algorithm catalogs.&#x20;
 
+For our processing example, we will simply dump the header of a netcdf file to an output file. \
+\
+`ncdump -h <myfile.nc> > myfile.hdr.txt`
+
 ### Getting Started
 
-Im general, the MDPS Algorithm Developer will focus on processing data _once it has been downloaded and is local to your code._ This is how it will run when packaged and sent to the processing systems within the MDPS. **However**, to test your code within the jupyter environment,  you will need to make data available on your own- that is, download and stage the data locally from a DAAC within the jupyter environment.
+In general, the MDPS Algorithm Developer will focus on processing data _once it has been downloaded and is local to your code._ This is how it will run when packaged and sent to the processing systems within the MDPS. **However**, to test your code within the jupyter environment,  you will need to make data available on your own- that is, download and stage the data locally from a DAAC within the jupyter environment.
 
 Once the data are local, you can begin to write an algorithm that will process the data based on that data location (**Hint:** That location of the data should be a variable within your code- it will not be known ahead of time). When you are satisfied with the code and the outputs (if any) being produced, it's time to add some code that will enable this to run in the MDPS environment.
 
@@ -47,6 +51,8 @@ When your process runs, it will potentially be run in any number of nodes on any
 
 For any number of reasons, you might want to modify some value at run time. This is where the concept of variables comes in- any variable definition within a cell marked with the "parameters" tag, but not containing a stage-in or stage-out annotation will be treated as a variable. Variables should have a sensible default, and that default type will mark what kind of variable the field is (e.g. `"default"` will create a string default where as `0` will create an integer.
 
+In our example application, say we wanted to dump a variable instead of just the header. Besides changing the command, we might want to be able to specify at runtime the variable to dump. So a field like \`\``netcdf_var_to_dump = "radiance"` that can be overridden at runtime might make sense. This could even be an array if we want to dump multiple variables.
+
 **Note:** a good (required?) practice is to pass in an "output collection variable" to which all of the output files will belong. This output\_collection should be an already created collection within the unity environment. If it does not exist within the unity environment, the file will still be written to a persistent store, but will not be catalogged in the MDPS data catalog.
 
 #### Input, outputs and variables - Key Takeaways
@@ -58,9 +64,28 @@ The key takeaway with regards to inputs and outputs are as follows:
 3. Any output file you wanted persisted, but exist in a stac item file belonging to a catalog.json file.
 4. MDPS provides tools to read and write these STAC files. See [https://github.com/unity-sds/unity-example-application/blob/main/process.ipynb](https://github.com/unity-sds/unity-example-application/blob/main/process.ipynb) for more details.
 
+### Dependencies
 
+Basic python is fine and all, but what if you have a lot of complex setup? Perhaps you require GDAL to be present on the system for some raster transformations, or your own custom python code to be installed? Or specific versions of platform software? The above examples is trivial in these regards, but take an example like the [SBG Preprocessing](https://github.com/unity-sds/SBG-unity-preprocess) example, with the following imports:
 
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-02-29 at 12.05.33 PM.png" alt=""><figcaption><p>An example of some complex imports not available in default installations</p></figcaption></figure>
 
+When creating an algorithm with dependencies, we need to tell the system that these are required. When we are running interactively within the environment, we can simply do a `pip install` or a `conda install` to make the libraries available to our notebook.
 
+When building a package for execution in the processing platform, we must specify these packages as build time. Because our packages are based on repo2docker, we are able to specify this in any of the underlying repo2docker supported mechanisms, but in practice we've found 2 methods that work very simply.
 
+#### requirements.txt and runtime.txt
+
+If your code is simply `pip install`ing dependencies, as long as your repository contains a requirements.txt file, those will be installed in the docker container that will execute your code. If you want to specify the python runtime of your process, include it as a single line in a 'runtime.txt' file:
+
+> `cat runtime.txt`\
+> `python-3.9`
+
+**Note**: it's best practice to specify specific versions of libraries in your requirements.txt file so that the build is consistent.
+
+#### environment.yml
+
+For more complex software installs, including a conda environment.yml file will use that as the basis for the container built with your code. This can be combined with conda installs, pip installs, and even pip installs of github repositories where necessary.
+
+**Note:** If both an environment.yml file and a requirements.txt file are specified, the environment.yml file is used. it will not install requirements.txt after installing the base environment!
 
