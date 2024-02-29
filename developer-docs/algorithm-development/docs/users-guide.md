@@ -21,6 +21,8 @@ After this "wrapper" code has been added, we will then use a set of tools or ser
 
 ### Inputs, outputs, and variables
 
+An example application can be found here: [https://github.com/unity-sds/unity-example-application/blob/main/process.ipynb](https://github.com/unity-sds/unity-example-application/blob/main/process.ipynb) The following will use this as the basis of illustration.
+
 Your code can expect a few things when executed, these include the location of data files you want to process, the location that output files should be written to, and any variables you want passed in- perhaps these are configuration parameters for your algorithm.
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2024-02-29 at 11.11.38 AM.png" alt=""><figcaption><p>Example Inputs, outputs, and variables <a href="https://github.com/unity-sds/unity-example-application/blob/main/process.ipynb">https://github.com/unity-sds/unity-example-application/blob/main/process.ipynb</a></p></figcaption></figure>
@@ -40,6 +42,23 @@ You may notice a comment field `# type: stage-in` on the same line as the variab
 #### Outputs
 
 When your process runs, it will potentially be run in any number of nodes on any number of clusters. We can't write data to a disk and assume it will be discoverable by other algorithms or users. To persist this data to somewhere common- we must define the outputs of a process. Marking a variable as `# type: stage-out` will insert a directory to which you can write any output files to and will be available for long term storage. In order for these files to be persisted, however, a STAC `catalog.json` file with corresponding item files for each dataset must be written to that directory. Again, MDPS provides tools for creating this programmatically.
+
+#### Variables
+
+For any number of reasons, you might want to modify some value at run time. This is where the concept of variables comes in- any variable definition within a cell marked with the "parameters" tag, but not containing a stage-in or stage-out annotation will be treated as a variable. Variables should have a sensible default, and that default type will mark what kind of variable the field is (e.g. `"default"` will create a string default where as `0` will create an integer.
+
+**Note:** a good (required?) practice is to pass in an "output collection variable" to which all of the output files will belong. This output\_collection should be an already created collection within the unity environment. If it does not exist within the unity environment, the file will still be written to a persistent store, but will not be catalogged in the MDPS data catalog.
+
+#### Input, outputs and variables - Key Takeaways
+
+The key takeaway with regards to inputs and outputs are as follows:
+
+1. To automatically stage input files, mark the variable with a `#type: stage-in` annotation. Stage-in types are not files or directories, but a **STAC Catalog** to be read.
+2. To persist files after a run, the `#type: stage-out` annotation should be used, and will point to a directory to which all output files should be written.
+3. Any output file you wanted persisted, but exist in a stac item file belonging to a catalog.json file.
+4. MDPS provides tools to read and write these STAC files. See [https://github.com/unity-sds/unity-example-application/blob/main/process.ipynb](https://github.com/unity-sds/unity-example-application/blob/main/process.ipynb) for more details.
+
+
 
 
 
