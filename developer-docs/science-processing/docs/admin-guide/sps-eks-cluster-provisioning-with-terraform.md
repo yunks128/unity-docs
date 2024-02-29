@@ -1,4 +1,4 @@
-# SPS Cluster Provisioning with Terraform
+# 🧱 SPS EKS Cluster Provisioning with Terraform
 
 This page contains instructions on how to deploy the Unity Science Process System (SPS) to an AWS account managed by the NASA Mission Cloud Platform (MCP).
 

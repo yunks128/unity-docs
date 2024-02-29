@@ -7,7 +7,7 @@ description: Documentation for deploying an Airflow-based U-SPS on MCP using Ter
 ## Prerequisites
 
 * Access to an MCP account (aka a 'venue')
-* An SPS EKS cluster deployed in the same MCP account you would like SPS Airflow deployed into. To do this, following the instructions in the [docs](sps-cluster-provisioning-with-terraform.md).
+* An SPS EKS cluster deployed in the same MCP account you would like SPS Airflow deployed into. To do this, following the instructions in the [docs](sps-eks-cluster-provisioning-with-terraform.md).
 * A customized SPS Airflow image with SPS DAGs baked into it. To build this image, following the instructions in the [docs](sps-airflow-custom-docker-image-build-instructions.md).
 * The following tools installed on the personal laptop:
   * [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli) - Infrastructure-as-code tool.

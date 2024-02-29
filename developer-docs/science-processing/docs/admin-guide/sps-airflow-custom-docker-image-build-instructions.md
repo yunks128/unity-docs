@@ -5,7 +5,7 @@ description: >-
   DAGs into the image.
 ---
 
-# SPS Airflow Custom Docker Image Build Instructions
+# 🛠️ SPS Airflow Custom Docker Image Build Instructions
 
 ## Instructions
 
