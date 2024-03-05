@@ -21,11 +21,11 @@ The EKS cluster can be deployed step-by-step using the following instructions:
   * export AWS\_REGION=us-west-2
   * export AWS\_PROFILE=XXXXXXXXXXXX\_mcp-tenantOperator
 * Checkout the source code repository:
-  * git clone https://github.com/unity-sds/unity-sps-prototype.git
+  * git clone https://github.com/unity-sds/unity-sps.git
 * Choose a name for the EKS cluster to be deployed. For example:
   * export CLUSTER\_NAME="unity-sps-myname-test"
 * Deploy the cluster via Terraform:
-  * cd unity-sps-prototype/terraform-unity/modules/terraform-eks-cluster
+  * cd unity-sps/terraform-unity/modules/terraform-eks-cluster
   * terraform init
   * terraform workspace new $CLUSTER\_NAME
   * terraform apply -var "cluster\_name=$CLUSTER\_NAME"
@@ -37,7 +37,7 @@ The EKS cluster can be deployed step-by-step using the following instructions:
 
 Alternatively, the repository also contains a shell script that can be executed to test the creation, smoke-testing and destruction of an EKS cluster. To execute the script:
 
-* cd unity-sps-prototype/terraform-unity/modules/terraform-eks-cluster
+* cd unity-sps/terraform-unity/modules/terraform-eks-cluster
 * terraform init
 * ./validate.sh
 
