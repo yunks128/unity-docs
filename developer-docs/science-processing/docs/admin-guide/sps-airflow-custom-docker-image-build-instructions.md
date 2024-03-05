@@ -9,6 +9,6 @@ description: >-
 
 ## Instructions
 
-* From the `unity-sps-prototype` repository on Github, navigate to the `Actions` page run the `Build Docker Images` workflow. Specify your working branch and a custom tag that makes sense for you.
+* From the `unity-sps` repository on Github, navigate to the `Actions` page run the `Build Docker Images` workflow. Specify your working branch and a custom tag that makes sense for you.
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
