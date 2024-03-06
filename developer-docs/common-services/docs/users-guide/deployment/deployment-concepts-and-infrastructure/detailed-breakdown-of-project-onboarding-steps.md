@@ -16,15 +16,34 @@
 2. Each user gets a `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly` role
 3. One or more users get the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role
 
-6\) Project (or Unity personnel for now) launches PartnerSolution from project AWS account, which deploys Management Console EC2.
+6\) Project (or Unity personnel for now) sets up Management Console in project account.
 
-6a) Steps automated by CloudFormation:
+6a) Creates a bastion host in project AWS account, which is able to deploy Management Console EC2.
+
+* EC2 configuration
+  * a t2.micro instance with [current CSET Ubuntu 20.04 AMI](https://caas.gsfc.nasa.gov/display/GSD1/MCP+AMI+Configuration+and+Usage)
+  * select keypair to use
+  * select a standard security group that gives access on port 22.  Lock down to JPL source IPs
+  * Under Advanced, select an IAM Instance Profile of `Unity-CS_Service_Role-instance-profile`
+  * launch instance
+  * connect to instance via SSM connection
+  * `sudo su - ubuntu`
+  * `` git clone https://github.com/unity-sds/unity-cs-infra.git` ``
+
+6b) Deploy Management console using bastion host
+
+* &#x20;connect to bastion instance via SSM connection
+* `sudo su - ubuntu`
+* `cd unity-cs-infra/nightly_tests`
+* `./run.sh --destroy false --run-tests false --project-name <PROJECT> --venue-name <VENUE>`
+
+&#x20;Steps automated by CloudFormation:
 
 1. Creates roles/policies (aws-role-create / run.sh) in project account
 2. Creates ALB
 3. Spins up Management Console EC2
 
-6b) Steps automated as part of Management Console EC2 Boot Up:
+Steps automated as part of Management Console EC2 Boot Up:
 
 1. Provisions ECS/httpd (and points it to ALB)
 2. Connects shared services CloudFront to httpd Provision S3 bucket proj-level API Gateway ("/", parent placeholder for future routes)
