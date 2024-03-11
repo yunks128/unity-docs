@@ -36,7 +36,7 @@
 * `sudo su - ubuntu`
 * `cd unity-cs-infra/nightly_tests`
 * `./run.sh --destroy false --run-tests false --project-name <PROJECT> --venue-name <VENUE>`
-* TO DESTROY:&#x20;
+* TO DESTROY (after you are done using the Management Console):&#x20;
   * In the Management Console, click the "Uninstall" button
   * `./destroy.sh--project-name <PROJECT> --venue-name <VENUE>`
 
