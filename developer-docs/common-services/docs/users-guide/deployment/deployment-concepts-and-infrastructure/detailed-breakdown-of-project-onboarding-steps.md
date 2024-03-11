@@ -38,7 +38,7 @@
 * `./run.sh --destroy false --run-tests false --project-name <PROJECT> --venue-name <VENUE>`
 * TO DESTROY:&#x20;
   * In the Management Console, click the "Uninstall" button
-  * \`./destroy.sh`--project-name <PROJECT> --venue-name <VENUE>`
+  * `./destroy.sh--project-name <PROJECT> --venue-name <VENUE>`
 
 &#x20;Steps automated by CloudFormation:
 
