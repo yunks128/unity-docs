@@ -21,7 +21,7 @@
 6a) Creates a bastion host in project AWS account, which is able to deploy Management Console EC2.
 
 * EC2 configuration
-  * a t2.micro instance with [current CSET Ubuntu 20.04 AMI](https://caas.gsfc.nasa.gov/display/GSD1/MCP+AMI+Configuration+and+Usage)
+  * a t2.micro instance with the AMI specified in the /mcp/amis/ubuntu2004-cset SSM param
   * select keypair to use
   * select a standard security group that gives access on port 22.  Lock down to JPL source IPs
   * Under Advanced, select an IAM Instance Profile of `Unity-CS_Service_Role-instance-profile`
