@@ -28,7 +28,7 @@
   * launch instance
   * connect to instance via SSM connection
   * `sudo su - ubuntu`
-  * `` git clone https://github.com/unity-sds/unity-cs-infra.git` ``
+  * `git clone https://github.com/unity-sds/unity-cs-infra.git`
 
 6b) Deploy Management console using bastion host
 
