@@ -12,53 +12,46 @@
 
 5\) **Unity Team sets up initial set of users/roles** (manually for now):
 
-1. Creates each user in Cognito
-2. Each user gets a `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly` role
-3. One or more users get the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role
+* Creates each user in Cognito
+* Each user gets a `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly` role
+* One or more users get the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role
 
-6\) Project (or Unity personnel for now) sets up Management Console in project account.
+6\) Unity Team sets up roles on account:
 
-6a) Creates a bastion host in project AWS account, which is able to deploy Management Console EC2.
+* Export short-term access keys for account on command-line
+* execute the [create roles script](https://github.com/unity-sds/unity-cs-infra/blob/main/aws\_role\_create/create\_roles\_and\_policies.sh)
 
-* EC2 configuration
-  * a t2.micro instance with the AMI specified in the /mcp/amis/ubuntu2004-cset SSM param
-  * select keypair to use
-  * select a standard security group that gives access on port 22.  Lock down to JPL source IPs
-  * Under Advanced, select an IAM Instance Profile of `Unity-CS_Service_Role-instance-profile`
-  * launch instance
-  * connect to instance via SSM connection
-  * `sudo su - ubuntu`
-  * `git clone https://github.com/unity-sds/unity-cs-infra.git`
+7\) **Unity Teams sets up the venue bastion host**
 
-6b) Deploy Management console using bastion host
+* Creates an EC2 bastion host in project AWS account, which is able to deploy Management Console EC2.
+  * Create EC2 instance with the following configuration:
+    * a t2.micro instance with the AMI specified in the /mcp/amis/ubuntu2004-cset SSM param
+    * select keypair to use (create a new one and save it for future use)
+    * select a standard security group that gives access on port 22.  Lock down to JPL source IPs
+    * Make sure to put it in a public subnet (under the VPC setting)
+    * Under Advanced, select an IAM Instance Profile of `Unity-CS_Service_Role-instance-profile`
+    * launch instance
 
-* &#x20;connect to bastion instance via SSM connection
+8\) **Unity Team deploys the Management Console**
+
+* connect to instance via SSM connection (or SSH via pem file)
 * `sudo su - ubuntu`
+* `git clone https://github.com/unity-sds/unity-cs-infra.git`
+* Back in the AWS console, create an image (AMI) from the EC2, to have as a backup.
 * `cd unity-cs-infra/nightly_tests`
 * `./run.sh --destroy false --run-tests false --project-name <PROJECT> --venue-name <VENUE>`
-* TO DESTROY (after you are done using the Management Console):&#x20;
-  * In the Management Console, click the "Uninstall" button
+* Make sure to copy the URL of the Management Console that gets printed to the console, as part of running the above command.
+
+OPTIONAL STEPS IF YOU NEED TO DESTROY MANAGEMENT CONSOLE:
+
+* In the Management Console, click the "Uninstall" button
+* Run the following on the bastion host:
   * `./destroy.sh --project-name <PROJECT> --venue-name <VENUE>`
 
-&#x20;Steps automated by CloudFormation:
 
-1. Creates roles/policies (aws-role-create / run.sh) in project account
-2. Creates ALB
-3. Spins up Management Console EC2
 
-Steps automated as part of Management Console EC2 Boot Up:
+9\) **Project User** (the one that has the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role) **logs into Management Console** via CloudFront.   Use the URL that was copied above.
 
-1. Provisions ECS/httpd (and points it to ALB)
-2. Connects shared services CloudFront to httpd Provision S3 bucket proj-level API Gateway ("/", parent placeholder for future routes)
-3. Executes script to connect SS APIGW (proxy+) to proj-level
-4. Deploys auth lambda code
-5. Adds API GW authorizer
-6. Writes out config file
-7. Checks policies/perms
-8. Creates sqlite DB
+10\) **Project user runs Core Setup actions in Management Console**
 
-7\) Project User (the one that has the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role) logs into Management Console via CloudFront
-
-8\) Project user runs Core Setup actions in Management Console
-
-9\) Project User deploys further marketplace items
+11\) **Project User deploys further marketplace items**
