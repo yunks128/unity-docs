@@ -1,14 +1,12 @@
 # Detailed Breakdown of Project Onboarding Steps
 
-<figure><img src="../../../../../../.gitbook/assets/SSM &#x26; Deployments Overview (2).png" alt=""><figcaption></figcaption></figure>
-
 1\) Project **obtains their own AWS account** (Bring your own Account).
 
 2\) Project **agrees to EC2 conditions** (EULA / FIPS) on their new account
 
 3\) Project **notifies Unity team** that they want to onboard to Unity
 
-4\) Project lets Unity know what the set of "starter" users are (name, email address, etc..)
+4\) **Project lets Unity know what the set of "starter" users are** (name, email address, etc..)
 
 5\) **Unity Team sets up initial set of users/roles** (manually for now):
 
@@ -16,7 +14,7 @@
 * Each user gets a `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly` role
 * One or more users get the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role
 
-6\) Unity Team sets up roles on account:
+6\) **Unity Team sets up roles on account**:
 
 * Export short-term access keys for account on command-line
 * execute the [create roles script](https://github.com/unity-sds/unity-cs-infra/blob/main/aws\_role\_create/create\_roles\_and\_policies.sh)
