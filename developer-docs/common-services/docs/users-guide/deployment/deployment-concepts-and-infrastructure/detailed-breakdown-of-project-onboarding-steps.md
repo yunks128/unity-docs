@@ -30,7 +30,7 @@
     * Under Advanced, select an IAM Instance Profile of `Unity-CS_Service_Role-instance-profile`
     * launch instance
 
-8\) **Unity Team deploys the Management Console**
+8\) **Unity Team (or Project Team) deploys the Management Console**
 
 * connect to instance via SSM connection (or SSH via pem file)
 * `sudo su - ubuntu`
