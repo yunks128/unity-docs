@@ -29,14 +29,17 @@
     * Make sure to put it in a public subnet (under the VPC setting)
     * Under Advanced, select an IAM Instance Profile of `Unity-CS_Service_Role-instance-profile`
     * launch instance
+  * Connect to instance
+  * `sudo su - ubuntu`
+  * `git clone https://github.com/unity-sds/unity-cs-infra.git`
+  * Back in the AWS console, create an image (AMI) from the EC2, to have as a backup.
 
 8\) **Unity Team (or Project Team) deploys the Management Console**
 
 * connect to instance via SSM connection (or SSH via pem file)
 * `sudo su - ubuntu`
-* `git clone https://github.com/unity-sds/unity-cs-infra.git`
-* Back in the AWS console, create an image (AMI) from the EC2, to have as a backup.
 * `cd unity-cs-infra/nightly_tests`
+* `git pull`
 * `./run.sh --destroy false --run-tests false --project-name <PROJECT> --venue-name <VENUE>`
 * Make sure to copy the URL of the Management Console that gets printed to the console, as part of running the above command.
 
