@@ -20,20 +20,24 @@ The EKS cluster can be deployed step-by-step using the following instructions:
 * Set the shell environment accordingly.
   * export AWS\_REGION=us-west-2
   * export AWS\_PROFILE=XXXXXXXXXXXX\_mcp-tenantOperator
+  * export VENUE="test"
+    * or export VENUE="dev"
 * Checkout the source code repository:
   * git clone https://github.com/unity-sds/unity-sps.git
 * Choose a name for the EKS cluster to be deployed. For example:
-  * export CLUSTER\_NAME="unity-sps-myname-test"
+  * export DEPLOYMENT\_NAME="myname"
+* Set a simple counter variable so you don't have to search for the cluster name in the terraform output:
+  * export COUNTER="aaa1" (or any other alphanumeric string)
 * Deploy the cluster via Terraform:
   * cd unity-sps/terraform-unity/modules/terraform-eks-cluster
   * terraform init
-  * terraform workspace new $CLUSTER\_NAME
-  * terraform apply -var "cluster\_name=$CLUSTER\_NAME"
-  * aws eks update-kubeconfig --region $AWS\_REGION --name $CLUSTER\_NAME --kubeconfig ./temp\_kube\_cfg
+  * terraform workspace new ${DEPLOYMENT\_NAME}
+  * terraform apply -var "deployment\_name=${DEPLOYMENT\_NAME}" -var "counter=${COUNTER}" -var "venue=${venue}"
+  * aws eks update-kubeconfig --region $AWS\_REGION --name "unity-${VENUE}-sps-eks-${DEPLOYMENT\_NAME}-${COUNTER}" --kubeconfig ./temp\_kube\_cfg
   * export KUBECONFIG=./temp\_kube\_cfg
   * kubectl get all -A
 * Later, after the EKS cluster is no more useful, it can be destroyed wit the following command:
-  * terraform destroy -var "cluster\_name=$CLUSTER\_NAME"
+  * terraform destroy -var "deployment\_name=${DEPLOYMENT\_NAME}" -var "counter=${COUNTER}" -var "venue=${venue}"
 
 Alternatively, the repository also contains a shell script that can be executed to test the creation, smoke-testing and destruction of an EKS cluster. To execute the script:
 
