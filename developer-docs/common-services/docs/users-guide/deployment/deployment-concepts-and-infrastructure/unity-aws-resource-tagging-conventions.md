@@ -74,9 +74,7 @@ These tags can be used to provide additional information and context about the A
 
 ## CreatedBy
 
-| Type   | Example Values          | Required | Default Value      |
-| ------ | ----------------------- | -------- | ------------------ |
-| String | `sps`, `ds`, `as`, `cs` | True     | N/A - User Defined |
+<table><thead><tr><th>Type</th><th width="234">Example Values</th><th>Required</th><th>Default Value</th></tr></thead><tbody><tr><td>String</td><td><code>sps</code>, <code>ds</code>, <code>as</code>, <code>cs</code>, <code>ads</code>, <code>uiux</code></td><td>True</td><td>N/A - User Defined</td></tr></tbody></table>
 
 * Description:  This tag is required by Kion/MCP for cost monitoring purposes, and should contain the **same value as the "ServiceArea" tag**.  See documentation [here](unity-aws-resource-tagging-conventions.md#servicearea).
 * `Category: Technical, Costing`
