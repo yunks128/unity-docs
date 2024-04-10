@@ -17,11 +17,13 @@
       * [Managing Permission](user-docs/unity-cloud/tutorials/advanced-tutorials/managing-permission.md)
   * [Endpoints](user-docs/unity-cloud/endpoints.md)
   * [Releases](user-docs/unity-cloud/releases/README.md)
+    * [Unity Prototype 1.0.0](user-docs/unity-cloud/releases/unity-prototype-1.0.0.md)
     * [Unity Release 23.2](user-docs/unity-cloud/releases/unity-release-23.2.md)
     * [Unity Release 23.1](user-docs/unity-cloud/releases/unity-release-23.1.md)
     * [Unity Prototype Release 3](user-docs/unity-cloud/releases/unity-prototype-release-3.md)
     * [Unity Prototype Release 2](user-docs/unity-cloud/releases/unity-prototype-release-2.md)
     * [Unity Prototype Release 1](user-docs/unity-cloud/releases/unity-prototype-release-1.md)
+  * [Page](user-docs/unity-cloud/page.md)
 
 ## Developer Docs
 
