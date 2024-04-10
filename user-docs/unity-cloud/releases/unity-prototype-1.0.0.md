@@ -30,10 +30,10 @@ Please see the Service Area Changelogs for detailed information and release arti
 | App-pacakge-generation | U-ADS        | Application package generation service for converting a github repository into an application package for execution in the processing services.                                          |
 | Venue Deployments      | U-CS, all    | Dev, test and prod shared service venues deployed. unity-dev, unity-test and unity-prod project venues deployed. SBG-dev venue created.                                                  |
 | Management Console     | U-CS         |                                                                                                                                                                                          |
-| DAPA Process Mapper    | U-AS         |                                                                                                                                                                                          |
-| SDAP deployment        | U-AS         |                                                                                                                                                                                          |
-| Navbar integration     | UIUX         |                                                                                                                                                                                          |
-| unity-py updates       | UIUX         |                                                                                                                                                                                          |
+| DAPA Process Mapper    | U-AS         | Shared service deployment to map Collections to back-end analysis (currently SDAP) calls                                                                                                 |
+| SDAP deployment        | U-AS         | Mostly-automated deployment of SDAP into Unity venues.                                                                                                                                   |
+| SSDF                   | U-AS         | App-packaging of the SSDF analysis code                                                                                                                                                  |
+| unity-py updates       | UIUX         | Project and Venue implementations, STAC improvements, custom metadata, collection creation.                                                                                              |
 | SBG Workflows          | PSE          | SBS representative workflows created for L2A and L2B workflows. Includes 6 application packages, an orchestration notebook, auxiliary data products, automated and custom app packaging. |
 
 ## System Release Test Plan
