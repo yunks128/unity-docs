@@ -21,20 +21,20 @@ Please see the Service Area Changelogs for detailed information and release arti
 
 ## Capabilities by Service Area
 
-| Capability             | Service Area | Description                                                                                                                                                                         |
-| ---------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| STAC Browser           | U-DS         | Visually browse the data catalog and view product metadata                                                                                                                          |
-| Custom Metadata        | U-DS         | Project Metadata registration and search                                                                                                                                            |
-| STAC Url Staging       | U-DS         | Ability to stage in via a STAC url in application packages                                                                                                                          |
-| Airflow                | U-SPS        | Implementation of Airflow as a UI/EMS+ADES for Unity system. Allows for project defined DAG authoring, monitoring and metrics on executions, and log visibility to identify issues. |
-| App-pacakge-generation | U-ADS        | Application package generation service for converting a github repository into an application package for execution in the processing services.                                     |
-| Venue Deployments      | U-CS, all    | Dev, test and prod shared service venues deployed. unity-dev, unity-test and unity-prod project venues deployed. SBG-dev venue created.                                             |
-| Management Console     | U-CS         |                                                                                                                                                                                     |
-| DAPA Process Mapper    | U-AS         |                                                                                                                                                                                     |
-| SDAP deployment        | U-AS         |                                                                                                                                                                                     |
-| Navbar integration     | UIUX         |                                                                                                                                                                                     |
-| unity-py updates       | UIUX         |                                                                                                                                                                                     |
-| SBG Workflows          | PSE          |                                                                                                                                                                                     |
+| Capability             | Service Area | Description                                                                                                                                                                              |
+| ---------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| STAC Browser           | U-DS         | Visually browse the data catalog and view product metadata                                                                                                                               |
+| Custom Metadata        | U-DS         | Project Metadata registration and search                                                                                                                                                 |
+| STAC Url Staging       | U-DS         | Ability to stage in via a STAC url in application packages                                                                                                                               |
+| Airflow                | U-SPS        | Implementation of Airflow as a UI/EMS+ADES for Unity system. Allows for project defined DAG authoring, monitoring and metrics on executions, and log visibility to identify issues.      |
+| App-pacakge-generation | U-ADS        | Application package generation service for converting a github repository into an application package for execution in the processing services.                                          |
+| Venue Deployments      | U-CS, all    | Dev, test and prod shared service venues deployed. unity-dev, unity-test and unity-prod project venues deployed. SBG-dev venue created.                                                  |
+| Management Console     | U-CS         |                                                                                                                                                                                          |
+| DAPA Process Mapper    | U-AS         |                                                                                                                                                                                          |
+| SDAP deployment        | U-AS         |                                                                                                                                                                                          |
+| Navbar integration     | UIUX         |                                                                                                                                                                                          |
+| unity-py updates       | UIUX         |                                                                                                                                                                                          |
+| SBG Workflows          | PSE          | SBS representative workflows created for L2A and L2B workflows. Includes 6 application packages, an orchestration notebook, auxiliary data products, automated and custom app packaging. |
 
 ## System Release Test Plan
 
