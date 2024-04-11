@@ -27,3 +27,15 @@ To create a Cognito User Group, at least following attributes are required. A Us
       ```
 * **Description**
   * The group description must be 2048 characters or fewer.
+
+**Example Scenario (UI Navbar):**
+
+<figure><img src="../../../../../.gitbook/assets/Screenshot 2024-04-11 at 3.12.03 PM.png" alt="" width="375"><figcaption></figcaption></figure>
+
+* User : Peter, on the SIPS Team
+* Access : Peter has access to the Airflow and Jupyter
+* So the Cognito User "Peter"  cloud have groups:
+  * ```
+    Unity-SIPS-Dev-Airflow-Admin
+    Unity-SIPS-Dev-Jupyter-Access
+    ```
