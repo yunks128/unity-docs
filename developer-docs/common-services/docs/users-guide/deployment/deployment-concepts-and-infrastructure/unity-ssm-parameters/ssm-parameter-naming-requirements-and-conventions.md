@@ -17,8 +17,28 @@ See the [Unity SSM Parameters](./) page for a list of the actual parameters expe
 
 ### Name Form
 
-We suggest that a key have a name of the form:\
-`/unity/{service area}/{category}/{component}/{resource}`&#x20;
+There is no hard-and-fast requirement for naming here, but in 99% of the cases, parameters should fall under the following two variants:
+
+1.  **Things that are agnostic of a project/venue:**
+
+    `/unity/WHATEVER/...`\
+    Examples:&#x20;
+
+    \- `/unity/cs/account/network/vpc_id` (VPC ID doesn’t change per project/venue)\
+    \- `/unity/cs/account/network/subnet_list` (“)  \
+    \- `/unity/shared-services/aws/account` (hopefully true that project/venues in an account use same SS account)
+2. **Things that are tied to a project/venue:** \
+   `/unity/${project}/${venue}/WHATEVER/...` \
+   Examples:\
+   \- `/unity/sbg/dev/sps/${DEPLOYMENT_NAME}/${DEPLOYMENT_COUNTER}/processing/airflow/ui_url` \
+   \- `/unity/deployment/${PROJECT_NAME}/${VENUE_NAME}/status` (status of a particular deployment)
+
+The recommended form for the `WHATEVER` portion mentioned above is:\
+`{service area}/{category}/{component}/{resource}`&#x20;
+
+
+
+
 
 ### Name Parts
 
