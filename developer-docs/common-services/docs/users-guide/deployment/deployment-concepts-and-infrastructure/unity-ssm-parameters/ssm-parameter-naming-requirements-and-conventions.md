@@ -30,7 +30,7 @@ There is no hard-and-fast requirement for naming here, but in 99% of the cases, 
 2. **Things that are tied to a project/venue:** \
    `/unity/${project}/${venue}/WHATEVER/...` \
    Examples:\
-   \- `/unity/sbg/dev/sps/${DEPLOYMENT_NAME}/${DEPLOYMENT_COUNTER}/processing/airflow/ui_url` \
+   \- `/unity/sbg/dev/sps/${DEPLOYMENT_NAME}/${DEPLOYMENT_COUNTER}/processing/airflow/ui_url` (sbg=project, and dev=venue, in this example)\
    \- `/unity/${PROJECT_NAME}/${VENUE_NAME}/deployment/status` (status of a particular deployment)
 
 The recommended form for the `WHATEVER` portion mentioned above is:\
