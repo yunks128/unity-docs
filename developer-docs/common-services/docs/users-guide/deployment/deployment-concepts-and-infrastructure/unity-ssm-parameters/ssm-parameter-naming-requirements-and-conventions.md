@@ -31,7 +31,7 @@ There is no hard-and-fast requirement for naming here, but in 99% of the cases, 
    `/unity/${project}/${venue}/WHATEVER/...` \
    Examples:\
    \- `/unity/sbg/dev/sps/${DEPLOYMENT_NAME}/${DEPLOYMENT_COUNTER}/processing/airflow/ui_url` \
-   \- `/unity/deployment/${PROJECT_NAME}/${VENUE_NAME}/status` (status of a particular deployment)
+   \- `/unity/${PROJECT_NAME}/${VENUE_NAME}/deployment/status` (status of a particular deployment)
 
 The recommended form for the `WHATEVER` portion mentioned above is:\
 `{service area}/{category}/{component}/{resource}`&#x20;
