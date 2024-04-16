@@ -6,7 +6,9 @@ description: >-
 
 # Deployments- Projects and Venues
 
-Unity is comprised of shared services and project specific managed services. Shared services are services that are common to all users of the unity system, and they interact with one deployment of those services. These are true multi-tenant systems. Managed services, on the other hand, are deployed for a specific purpose and is isolated from other managed services.
+<figure><img src="../../.gitbook/assets/Multi-tenant deployment - Shared and Single Tenant Services (1) (1).png" alt=""><figcaption><p>Multi-tenant (shared) vs Single-tenant services</p></figcaption></figure>
+
+Unity is comprised of shared services and project specific managed services. Shared services are services that are common to all users of the unity system, and they interact with one deployment of those services. These are true multi-tenant systems. Single-Tenant Managed services, on the other hand, are deployed for specific purposes and are isolated from other managed services. single tenant system are only accessible by certain project users.
 
 * Shared Service - A service that is used by all users, across all projects, in the unity system.
 * Project - a tenant of the system. Projects could be a mission (e.g. SBD, Mars 2020, etc) or a Research and Analysis (R\&A) project funded by proposal. Projects are a logical grouping of project owned and operated resources.
