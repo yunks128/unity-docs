@@ -18,8 +18,8 @@ At its core, Unity is a software platform for running SDSes in the cloud. It is 
 
 Unity is both a hosted platform for running a full SDS as well as an open source project that can be independently launched and operated - depending on your use case. We recommend the best way to get started with Unity is through our hosted services (Unity Cloud). Our Community Edition instructions detail how to get started with the non-hosted platform edition.
 
-{% content-ref url="user-docs/unity-cloud/" %}
-[unity-cloud](user-docs/unity-cloud/)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% content-ref url="broken-reference" %}
