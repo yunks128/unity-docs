@@ -18,14 +18,6 @@ At its core, Unity is a software platform for running SDSes in the cloud. It is 
 
 Unity is both a hosted platform for running a full SDS as well as an open source project that can be independently launched and operated - depending on your use case. We recommend the best way to get started with Unity is through our hosted services (Unity Cloud). Our Community Edition instructions detail how to get started with the non-hosted platform edition.
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
 ## Services
 
 The concept of a service is fundamental to Unity. It represents both an organizational as well as logical grouping of capabilities important to an SDS. Each service area is independently managed and can be included in a potential deployment scenario of Unity. Please see the below links for further information regarding services provided by Unity.&#x20;

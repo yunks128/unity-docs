@@ -127,20 +127,20 @@
     * [User Guide](developer-docs/on-demand/docs/user-guide/README.md)
       * [On Demand API](developer-docs/on-demand/docs/user-guide/on-demand-api.md)
 
-***
+## System Docs
 
-* [Architecture](architecture/README.md)
-  * [Deployments- Projects and Venues](architecture/deployments-projects-and-venues/README.md)
-    * [Unity Owned Venues](architecture/deployments-projects-and-venues/unity-owned-venues.md)
-  * [Venue Managed Services](architecture/venue-managed-services.md)
-  * [Architectural Decision Records](architecture/architectural-decision-records/README.md)
-    * [Data Services custom metadata search](architecture/architectural-decision-records/data-services-custom-metadata-search.md)
-    * [ADR Template](architecture/architectural-decision-records/adr-template.md)
-* [System Lifecycle](system-lifecycle/README.md)
-  * [System Processes](system-lifecycle/system-processes.md)
-  * [Release Process](system-lifecycle/release-process.md)
-  * [Testing](system-lifecycle/testing.md)
-  * [Project Management using Github Projects](system-lifecycle/project-management-using-github-projects.md)
+* [Architecture](system-docs/architecture/README.md)
+  * [Deployments- Projects and Venues](system-docs/architecture/deployments-projects-and-venues/README.md)
+    * [Unity Owned Venues](system-docs/architecture/deployments-projects-and-venues/unity-owned-venues.md)
+  * [Venue Managed Services](system-docs/architecture/venue-managed-services.md)
+  * [Architectural Decision Records](system-docs/architecture/architectural-decision-records/README.md)
+    * [Data Services custom metadata search](system-docs/architecture/architectural-decision-records/data-services-custom-metadata-search.md)
+    * [ADR Template](system-docs/architecture/architectural-decision-records/adr-template.md)
+* [System Lifecycle](system-docs/system-lifecycle/README.md)
+  * [System Processes](system-docs/system-lifecycle/system-processes.md)
+  * [Release Process](system-docs/system-lifecycle/release-process.md)
+  * [Testing](system-docs/system-lifecycle/testing.md)
+  * [Project Management using Github Projects](system-docs/system-lifecycle/project-management-using-github-projects.md)
 
 ## Getting Help
 

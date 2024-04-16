@@ -8,11 +8,11 @@ The Unity Architecture follows a [C4](https://c4model.com/) architecture definit
 
 ### System Context
 
-![](../.gitbook/assets/Context.png)
+![](../../.gitbook/assets/Context.png)
 
 ### Service Areas&#x20;
 
-![](<../.gitbook/assets/Service Areas.png>)
+![](<../../.gitbook/assets/Service Areas.png>)
 
 Service areas are how work and responsibility for foundational services are structured within the Unity system. The high level functionality services are defined as:
 
@@ -28,6 +28,6 @@ there are two others which are more broad in scope, either in how the other serv
 
 ### Containers
 
-![](../.gitbook/assets/Containers.png)
+![](../../.gitbook/assets/Containers.png)
 
 Containers are the subsystems within the Unity System. Above we have the demarcated by the service area responsible for their development. Users, however, do not see the 'service' area portion, they see different services, applications, or UIs that usually combine on or more of the above subsystems to accomplish _some end-user goal._

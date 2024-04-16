@@ -6,7 +6,7 @@ description: These are the currently "unity" owned venues.
 
 <div data-full-width="true">
 
-<figure><img src="../../.gitbook/assets/Unity Venues and SDLC (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Unity Venues and SDLC (5).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
