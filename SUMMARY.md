@@ -11,6 +11,7 @@
   * [Tutorials](user-docs/unity-cloud/tutorials/README.md)
     * [The Development Environment](user-docs/unity-cloud/tutorials/the-development-environment/README.md)
       * [Developing an Algorithm](user-docs/unity-cloud/tutorials/the-development-environment/users-guide.md)
+      * [Packaging an Algorithm](user-docs/unity-cloud/tutorials/the-development-environment/packaging-an-algorithm.md)
     * [Exploring the Unity Data Catalog](user-docs/unity-cloud/tutorials/exploring-the-unity-data-catalog.md)
     * [Exploring the Application Catalog](user-docs/unity-cloud/tutorials/exploring-the-application-catalog.md)
     * [Executing a Job](user-docs/unity-cloud/tutorials/executing-a-job.md)
