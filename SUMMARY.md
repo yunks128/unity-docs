@@ -141,7 +141,7 @@
   * [Release Process](system-docs/system-lifecycle/release-process.md)
   * [Testing](system-docs/system-lifecycle/testing.md)
   * [Project Management using Github Projects](system-docs/system-lifecycle/project-management-using-github-projects.md)
-* [🚧 Recipes](system-docs/recipes.md)
+* [Recipes](system-docs/recipes.md)
 
 ## Getting Help
 
