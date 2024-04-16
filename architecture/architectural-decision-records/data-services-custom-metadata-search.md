@@ -9,7 +9,7 @@ What is the status, such as proposed, accepted, rejected, deprecated, superseded
 | Status   | Date       |
 | -------- | ---------- |
 | Proposed | 10/12/2023 |
-|          |            |
+| Accepted | 11/1/2023  |
 
 ### **Context**
 
