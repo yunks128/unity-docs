@@ -10,7 +10,7 @@ description: Frequently Asked Questions
 
 <summary>Can I run my own algorithms on Unity?</summary>
 
-Currently, within the Jupyter-based interface you may unit test your own algorithms. Running your algorithms at scale in our Science Processing system is a future capability being actively developed.
+Currently, within the Jupyter-based interface you may unit test your own algorithms with 'local data'. Once packaged as an algorithm pacakge, you can run your algorithm at scale within the science processing services.&#x20;
 
 </details>
 
