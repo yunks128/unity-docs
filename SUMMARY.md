@@ -9,7 +9,8 @@
   * [Unity Account and Login](user-docs/unity-cloud/unity-account-and-login.md)
   * [Key Unity Concepts](user-docs/unity-cloud/key-unity-concepts.md)
   * [Tutorials](user-docs/unity-cloud/tutorials/README.md)
-    * [The Development Environment](user-docs/unity-cloud/tutorials/the-development-environment.md)
+    * [The Development Environment](user-docs/unity-cloud/tutorials/the-development-environment/README.md)
+      * [Developing an Algorithm](user-docs/unity-cloud/tutorials/the-development-environment/users-guide.md)
     * [Exploring the Unity Data Catalog](user-docs/unity-cloud/tutorials/exploring-the-unity-data-catalog.md)
     * [Exploring the Application Catalog](user-docs/unity-cloud/tutorials/exploring-the-application-catalog.md)
     * [Executing a Job](user-docs/unity-cloud/tutorials/executing-a-job.md)
@@ -23,7 +24,6 @@
     * [Unity Prototype Release 3](user-docs/unity-cloud/releases/unity-prototype-release-3.md)
     * [Unity Prototype Release 2](user-docs/unity-cloud/releases/unity-prototype-release-2.md)
     * [Unity Prototype Release 1](user-docs/unity-cloud/releases/unity-prototype-release-1.md)
-  * [Page](user-docs/unity-cloud/page.md)
 
 ## Developer Docs
 
