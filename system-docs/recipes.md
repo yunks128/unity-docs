@@ -1,4 +1,4 @@
-# 🚧 Recipes
+# Recipes
 
 Many projects need to do similar things while adding their own project specific information or processing to a given step. In this section we describe some common use cases and how they can be accomplished within the Unity System.
 
