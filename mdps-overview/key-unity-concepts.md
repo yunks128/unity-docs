@@ -18,7 +18,7 @@ This page is a work-in-progress and will include additional material and links t
 
 ## System Overview
 
-<figure><img src="../../.gitbook/assets/ESO Context - Platform Functional Areas (4).png" alt=""><figcaption><p>High level functional areas</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ESO Context - Platform Functional Areas (4).png" alt=""><figcaption><p>High level functional areas</p></figcaption></figure>
 
 Unity is a set of managed services that provide an end-to-end tool set for science analysis, algorithm development, and scaled processing. They key (external facing) services available are:
 
@@ -37,7 +37,7 @@ As of the "prototype 1" release of the system, the interface between Dockstore a
 
 Below are the key technologies supported by the MDPS system. These are the technologies that will be supported long term by the MDPS project. Specific implementation technologies can change over time, but we are committing to the following core set of technologies:
 
-**OGC Application Packages**: Based on [OGC best practices](https://docs.ogc.org/bp/20-089r1.html), application packages are the bundling of executable code and _how- that is, the interface-_ that code is to be run. Here we package executables as _containers_ and the interface is implemented as common worklow language documents. Application Packages are the standard unit of execution, and support many languages and options.
+**OGC Application Packages**: Based on[ OGC best practices](https://docs.ogc.org/bp/20-089r1.html), application packages are the bundling of executable code and how- that is, the interface- that code is to be run. Here we package executables as containers and the interface is implemented as common workflow language documents. Application Packages are the standard unit of execution, and support many languages, options, and dynamic inputs.
 
 **Containers**:  a package of code and its dependencies based on the [https://opencontainers.org/](https://opencontainers.org/) specification. Often "Docker" is the first thought when container are mentioned, but MDPS strives to be agnostic on the _runner_ (Docker, podman, and others) of the container.
 
@@ -49,5 +49,5 @@ Below are the key technologies supported by the MDPS system. These are the techn
 
 **WPS/WPS-T**: Web Processing Service and Web Processing Service-Transactional are OGC standards for the deployment, execution, and monitoring of a process. We use WPS to standardize how an application package is deployed, executed, and results are returned.
 
-<figure><img src="../../.gitbook/assets/ESO Context - Platform Functional Areas and Standards (2).png" alt=""><figcaption><p>Functional Areas with Key Technologies</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ESO Context - Platform Functional Areas and Standards (2).png" alt=""><figcaption><p>Functional Areas with Key Technologies</p></figcaption></figure>
 
