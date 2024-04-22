@@ -41,8 +41,7 @@ git clone https://github.com/unity-sds/unity-sps.git
 
     ```sh
     source venv/bin/activate
-    cd unity-test
-    pip install -r requirements.txt
+    pip install -e ".[develop, test]"
     ```
 *   Create a `.env` file for sensitive values used in the tests:
 
