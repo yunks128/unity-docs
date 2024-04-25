@@ -15,3 +15,7 @@ Following the above tutorial, we delegate responsibility for the `test.mdps.mcp.
 Within each shared service venue, there are two more subdomains- `www` and `api`. The route UI and API traffic to the appropriate endpoints within a venue. Below is a diagram of what this looks like at the shared service level:
 
 <figure><img src="../../../../../../.gitbook/assets/Domains, URLs and Certs - Page 2 (1).png" alt=""><figcaption><p>Delegation of subdomains for shared services.</p></figcaption></figure>
+
+### Certificates
+
+In each private hosted zone, we should request a wildcard certificate good for any subdomain within that zone. For dev.mdps.mcp.nasa.gov, we have a wildcard certificate \*.dev.mdps.mcp.nasa.gov which can be used within a hosted zone to create urls for various services. The only **reserved** subdomains for a given domain are **api** and **www**, which are used to route API and UI based traffic.
