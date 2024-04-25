@@ -36,3 +36,14 @@ Add the accounts that require access to this share as "principles"
 When a new venue comes online, we will need to update the list of principles to share these parameters with!
 {% endhint %}
 
+## Adding a new venue account to a resource share
+
+Modify the "unity-shared-service-resources" share
+
+<figure><img src="../../../../../.gitbook/assets/Screenshot 2024-04-25 at 11.33.21 AM.png" alt=""><figcaption></figcaption></figure>
+
+Add the new principle (AWS Account) to the share:
+
+<figure><img src="../../../../../.gitbook/assets/Screenshot 2024-04-25 at 11.33.34 AM.png" alt=""><figcaption></figcaption></figure>
+
+Save the resource and the new account should now have access.
