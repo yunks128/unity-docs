@@ -12,7 +12,7 @@ Currently Shared Services deployment is primarily a manual process.  However, au
 
 Shared Services deployments have specific network setups to enable the appropriate routing of requests to the desired resource. These resources can live in any number of shared service environments (dev, test, and production) or can live in a venue, which is associated with a single shared service environment.
 
-
+see [network-configurations.md](network-configurations.md "mention") for more details.
 
 ## Required SSM Parameters in shared environments
 
@@ -27,15 +27,15 @@ While the shared services have free reign over creating required SSM parameters 
 
 First, create the parameters above using the _advanced_ parameter setting:
 
-<figure><img src="../../../../../.gitbook/assets/Screenshot 2024-04-25 at 11.19.57 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/Screenshot 2024-04-25 at 11.19.57 AM.png" alt=""><figcaption></figcaption></figure>
 
 To share resources with other accounts, a resource share must be created via resource access manager (RAM). Create a resource share and select the above created parameters:
 
-<figure><img src="../../../../../.gitbook/assets/Screenshot 2024-04-25 at 11.23.00 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/Screenshot 2024-04-25 at 11.23.00 AM.png" alt=""><figcaption></figcaption></figure>
 
 Add the accounts that require access to this share as "principles"
 
-<figure><img src="../../../../../.gitbook/assets/Screenshot 2024-04-25 at 11.24.58 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/Screenshot 2024-04-25 at 11.24.58 AM.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 When a new venue comes online, we will need to update the list of principles to share these parameters with!
@@ -45,10 +45,10 @@ When a new venue comes online, we will need to update the list of principles to 
 
 Modify the "unity-shared-service-resources" share
 
-<figure><img src="../../../../../.gitbook/assets/Screenshot 2024-04-25 at 11.33.21 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/Screenshot 2024-04-25 at 11.33.21 AM.png" alt=""><figcaption></figcaption></figure>
 
 Add the new principle (AWS Account) to the share:
 
-<figure><img src="../../../../../.gitbook/assets/Screenshot 2024-04-25 at 11.33.34 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/Screenshot 2024-04-25 at 11.33.34 AM.png" alt=""><figcaption></figcaption></figure>
 
 Save the resource and the new account should now have access.
