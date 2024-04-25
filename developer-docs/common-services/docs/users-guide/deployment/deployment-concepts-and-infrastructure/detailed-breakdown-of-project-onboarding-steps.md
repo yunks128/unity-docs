@@ -14,6 +14,8 @@
 * Each user gets a `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly` role
 * One or more users get the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role
 
+5a) **Unity team adds project AWS account to shared service Resource Access Manager** (RAM) to enable sharing of SSM parameters. See [shared-services-deployment.md](../shared-services-deployment.md "mention") for more instructions.
+
 6\) **Unity Team sets up roles on account**:
 
 * Export short-term access keys for account on command-line
