@@ -14,11 +14,12 @@ Currently Shared Services deployment is primarily a manual process.  However, au
 
 While the shared services have free reign over creating required SSM parameters for their own use, there are a number of parameters that are required by venues at deployment time, and they are as follows.
 
-| Parameter Name                        | Value                                       |        |
-| ------------------------------------- | ------------------------------------------- | ------ |
-| /unity/shared-services/dapa/client-id | Client ID to be used for data services      | Manual |
-| /unity/shared-services/dapa/api-url   | The API url for calling unity data services | Manual |
-|                                       |                                             |        |
+| Parameter Name                                  | Value                                                            |        |
+| ----------------------------------------------- | ---------------------------------------------------------------- | ------ |
+| /unity/shared-services/dapa/client-id           | Client ID to be used for data services                           | Manual |
+| /unity/shared-services/dapa/api-url             | The API url for calling unity data services                      | Manual |
+| /unity/healthCheck/shared-services/data-catalog | The endpoint used to check the health status of the Data Catalog | Manual |
+| /unity/shared-services/cognito/domain           | The Cognito domain URL                                           |        |
 
 First, create the parameters above using the _advanced_ parameter setting:
 
