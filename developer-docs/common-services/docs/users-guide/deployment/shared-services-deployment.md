@@ -8,7 +8,11 @@ description: >-
 
 Currently Shared Services deployment is primarily a manual process.  However, automated & streamlined support is intended to be available at a later date.
 
-##
+## Networking Setup
+
+Shared Services deployments have specific network setups to enable the appropriate routing of requests to the desired resource. These resources can live in any number of shared service environments (dev, test, and production) or can live in a venue, which is associated with a single shared service environment.
+
+
 
 ## Required SSM Parameters in shared environments
 
