@@ -4,11 +4,13 @@ description: >-
   account
 ---
 
-# Shared Services Deployment
+# 🚧 Shared Services Deployment
 
 Currently Shared Services deployment is primarily a manual process.  However, automated & streamlined support is intended to be available at a later date.
 
 ## Required SSM Parameters in shared environments
+
+While the shared services have free reign over creating required SSM parameters for their own use, there are a number of parameters that are required by venues at deployment time, and they are as follows.
 
 | Parameter Name                        | Value                                       |        |
 | ------------------------------------- | ------------------------------------------- | ------ |
