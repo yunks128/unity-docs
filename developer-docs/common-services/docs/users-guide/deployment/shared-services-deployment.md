@@ -12,7 +12,7 @@ Currently Shared Services deployment is primarily a manual process.  However, au
 
 Shared Services deployments have specific network setups to enable the appropriate routing of requests to the desired resource. These resources can live in any number of shared service environments (dev, test, and production) or can live in a venue, which is associated with a single shared service environment.
 
-see [shared-service-network-configurations.md](shared-services-deployment/shared-service-network-configurations.md "mention") for more details.
+see [shared-service-network-configurations](shared-services-deployment/shared-service-network-configurations/ "mention") for more details.
 
 ## Required SSM Parameters in shared environments
 

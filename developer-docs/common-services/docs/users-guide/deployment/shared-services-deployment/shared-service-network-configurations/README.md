@@ -14,7 +14,7 @@ Following the above tutorial, we delegate responsibility for the `test.mdps.mcp.
 
 Within each shared service venue, there are two more subdomains- `www` and `api`. The route UI and API traffic to the appropriate endpoints within a venue. Below is a diagram of what this looks like at the shared service level:
 
-<figure><img src="../../../../../../.gitbook/assets/Domains, URLs and Certs - Page 2 (1).png" alt=""><figcaption><p>Delegation of subdomains for shared services.</p></figcaption></figure>
+<figure><img src="../../../../../../../.gitbook/assets/Domains, URLs and Certs - Page 2 (1).png" alt=""><figcaption><p>Delegation of subdomains for shared services.</p></figcaption></figure>
 
 ### Certificates
 
