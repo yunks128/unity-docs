@@ -8,13 +8,15 @@
 
 4\) **Project lets Unity know what the set of "starter" users are** (name, email address, etc..)
 
-5\) **Unity Team sets up initial set of users/roles** (manually for now):
+5a) **Unity Team sets up initial set of users/roles** (manually for now):
 
 * Creates each user in Cognito
 * Each user gets a `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly` role
 * One or more users get the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role
 
-5a) **Unity team adds project AWS account to shared service Resource Access Manager** (RAM) to enable sharing of SSM parameters. See [shared-services-deployment.md](../shared-services-deployment.md "mention") for more instructions.
+5b) **Unity team adds project AWS account to shared service Resource Access Manager** (RAM) to enable sharing of SSM parameters. See [shared-services-deployment.md](../shared-services-deployment.md "mention") for more instructions.
+
+5c) **Unity team requests** wildcard cert for the venue, must add the cname record/value to the SHARED SERVICES DNS to approve its creation.
 
 6\) **Unity Team sets up roles on account**:
 
