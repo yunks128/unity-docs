@@ -60,12 +60,18 @@ OPTIONAL STEPS IF YOU NEED TO DESTROY MANAGEMENT CONSOLE:
 * Run the following on the bastion host:
   * `./destroy.sh --project-name <PROJECT> --venue-name <VENUE>`
 
-`8b)` **Unity Team deploys API Gateway to venue account**; adds API routes to shared service API Gateway
+~~`8b)` **Unity Team deploys API Gateway to venue account**; adds API routes to shared service API Gateway~~
 
-8c) **Unity Team deploys HTTPD proxy to venue account (automatic with mgmt console)**; Unity team adds HTTPD routes to shared service&#x20;
+~~8c) **Unity Team deploys HTTPD proxy to venue account (automatic with mgmt console)**; Unity team adds HTTPD routes to shared service~~&#x20;
 
 9\) **Project User** (the one that has the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role) **logs into Management Console** via CloudFront.   Use the URL that was copied above.
 
 10\) **Project user runs Core Setup actions in Management Console**
 
 11\) **Project User deploys further marketplace items**
+
+**11-1) Project User deploys Venue HTTPD**
+
+**11-2) Project User deploys Venue API Gateway**
+
+**11-3) Project User notifies U-CS team of HTTP location and API Gateway URL for inclusion in shared service API  and HTTPD proxies**
