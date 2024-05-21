@@ -45,7 +45,7 @@
   * `git clone https://github.com/unity-sds/unity-cs-infra.git`
   * Back in the AWS console, create an image (AMI) from the EC2, to have as a backup.
 
-8a) **Unity Team (or Project Team) deploys the Management Console**
+8\) **Unity Team (or Project Team) deploys the Management Console**
 
 * connect to instance via SSM connection (or SSH via pem file)
 * `sudo su - ubuntu`
@@ -59,10 +59,6 @@ OPTIONAL STEPS IF YOU NEED TO DESTROY MANAGEMENT CONSOLE:
 * In the Management Console, click the "Uninstall" button
 * Run the following on the bastion host:
   * `./destroy.sh --project-name <PROJECT> --venue-name <VENUE>`
-
-~~`8b)` **Unity Team deploys API Gateway to venue account**; adds API routes to shared service API Gateway~~
-
-~~8c) **Unity Team deploys HTTPD proxy to venue account (automatic with mgmt console)**; Unity team adds HTTPD routes to shared service~~&#x20;
 
 9\) **Project User** (the one that has the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role) **logs into Management Console** via CloudFront.   Use the URL that was copied above.
 
