@@ -52,3 +52,20 @@ Add the new principle (AWS Account) to the share:
 <figure><img src="../../../../../.gitbook/assets/Screenshot 2024-04-25 at 11.33.34 AM.png" alt=""><figcaption></figcaption></figure>
 
 Save the resource and the new account should now have access.
+
+
+
+## Example of accessing a shared SSM value from a Venue account
+
+```
+// Get the account ID of shared services
+data "aws_ssm_parameter" "ssAcctNum" {
+  name = "/unity/shared-services/aws/account"
+}
+
+// access a shared parameter
+data "aws_ssm_parameter" "cognito_domain" {
+  name = "arn:aws:ssm:us-west-2:${var.ssAcctNum}:parameter/unity/shared-services/cognito/domain"
+}
+```
+
