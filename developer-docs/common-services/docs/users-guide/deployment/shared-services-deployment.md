@@ -23,7 +23,8 @@ While the shared services have free reign over creating required SSM parameters 
 | /unity/shared-services/dapa/client-id           | Client ID to be used for data services                           | Manual |
 | /unity/shared-services/dapa/api-url             | The API url for calling unity data services                      | Manual |
 | /unity/healthCheck/shared-services/data-catalog | The endpoint used to check the health status of the Data Catalog | Manual |
-| /unity/shared-services/cognito/domain           | The Cognito domain URL                                           |        |
+| /unity/shared-services/cognito/domain           | The Cognito domain URL                                           | TBD    |
+| /unity/shared-services/cloudfront/distribution  |                                                                  | TBD    |
 
 First, create the parameters above using the _advanced_ parameter setting:
 
