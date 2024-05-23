@@ -69,3 +69,12 @@ data "aws_ssm_parameter" "cognito_domain" {
 }
 ```
 
+### Command-line Example:
+
+```
+// View what the shared params are
+$ aws ssm describe-parameters --shared
+
+// Access a specific shared SSM param
+$ aws ssm get-parameter --name "arn:aws:ssm:us-west-2:237868123451:parameter/unity/test/cross-account-sharing"
+```
