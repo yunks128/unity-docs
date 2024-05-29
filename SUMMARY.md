@@ -95,6 +95,7 @@
       * [API](developer-docs/common-services/docs/developers-guide/api.md)
       * [Build from Source Code](developer-docs/common-services/docs/developers-guide/build-from-source-code.md)
       * [Creating a Release](developer-docs/common-services/docs/developers-guide/creating-a-release.md)
+      * [HTTPD Server Deployment](developer-docs/common-services/docs/developers-guide/httpd-server-deployment.md)
     * [Admin Guide](developer-docs/common-services/docs/admin-guide/README.md)
       * [User and Role Management](developer-docs/common-services/docs/admin-guide/user-and-role-management.md)
   * [FAQ](developer-docs/common-services/faq.md)
