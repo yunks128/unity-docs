@@ -8,11 +8,36 @@ description: >-
 
 [https://github.com/unity-sds/unity-marketplace](https://github.com/unity-sds/unity-marketplace)
 
-## Prerequisites
+## General Process
 
-coming soon..
+1. For your component, Test your Infrastructure As Code (IAC) locally
+2. Add you component's IAC to the Marketplace
 
-## Procedure for Adding a Component to the Marketplace
+## 1) Test your IAC Locally
+
+Before integrating your IAC into the Unity marketplace, you should test locally to ensure it works as expected.  At this time, it's suggested that you write your deployment IAC using [Terraform](https://www.terraform.io/).&#x20;
+
+Your IAC should have (at a minimum) the following:
+
+* a `variables.tf` file, containing placeholders to variables that the Management Console will inject in. These are:
+  * project
+  * venue
+  * deployment\_name
+  * tags
+  * installprefix
+
+Test your terraform locally by:
+
+1. Sourcing the short-term access keys of the `Unity-venue-dev` account
+2. `terraform init`
+3. `terraform plan`
+4. `terraform apply`
+5. Verify resources were deployed
+6. `terraform destroy`
+
+Once you are fully satisfied with the results, move on to section "2" below.
+
+## 2) Add your Component's IAC to the Marketplace
 
 1. **Create a repository** that houses code/scripts that do a deployment (e.g. terraform, CloudFormation, and/or shell scripts)
 2. **Structure the repository** to have the correct entry point directory (e.g. `terraform-unity`).  There is an option to override the `terraform-unity` directory convention (i.e. in the case where multiple source repos lead to the marketplace deployment).  Technically speaking, your terraform code doesn't have to be co-located with your application code.  If you are writing your only terraform, a convention is to have a `main.tf`, however this is optional as upon deployment time the directory containing terraform files will just be scanned, and create a DAG in the end, that will be terraform-applied.
