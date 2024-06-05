@@ -46,7 +46,7 @@ Test your terraform locally by:
 5. Verify resources were deployed
 6. `terraform destroy`
 
-Once you are fully satisfied with the results, move on to section "2" below.
+Once you are fully satisfied with the results, move on to the section below.
 
 ## 2) Add your Component's IAC to the Marketplace
 
