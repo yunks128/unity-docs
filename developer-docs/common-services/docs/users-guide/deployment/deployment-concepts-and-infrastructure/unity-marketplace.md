@@ -25,7 +25,17 @@ Your IAC should have (at a minimum) the following:
   * deployment\_name
   * tags
   * installprefix
+* For example, see this code block:&#x20;
+
+```
+// Some code (variables.tf)
+```
+
 * NOTE: you may need inlude a `provider` terraform resource with the correct region.  This is probably not necessary when deployed via the Management Console.&#x20;
+
+```
+// Some code (example main.tf)
+```
 
 Test your terraform locally by:
 
