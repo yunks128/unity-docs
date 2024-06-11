@@ -56,7 +56,6 @@
 
 OPTIONAL STEPS IF YOU NEED TO DESTROY MANAGEMENT CONSOLE:
 
-* In the Management Console, click the "Uninstall" button
 * Run the following on the bastion host:
   * `./destroy.sh --project-name <PROJECT> --venue-name <VENUE>`
 
