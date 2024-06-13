@@ -120,6 +120,7 @@
       * [The Jobs Database](developer-docs/science-processing/docs/developers-guide/the-jobs-database.md)
       * [Tutorial: Execution of the L1B CWL Workflow via the WPS-T API](developer-docs/science-processing/docs/developers-guide/tutorial-execution-of-the-l1b-cwl-workflow-via-the-wps-t-api.md)
       * [Manual Verification: Testing the SPS Prewarm API](developer-docs/science-processing/docs/developers-guide/manual-verification-testing-the-sps-prewarm-api.md)
+      * [Tutorial: Register, Execute, and Unregister a Process using the OGC API - Processes](developer-docs/science-processing/docs/developers-guide/tutorial-register-execute-and-unregister-a-process-using-the-ogc-api-processes.md)
     * [Admin Guide](developer-docs/science-processing/docs/admin-guide/README.md)
       * [🚀 SPS Airflow Deployment with Terraform](developer-docs/science-processing/docs/admin-guide/sps-airflow-deployment-with-terraform.md)
       * [🧱 SPS EKS Cluster Provisioning with Terraform](developer-docs/science-processing/docs/admin-guide/sps-eks-cluster-provisioning-with-terraform.md)
