@@ -34,7 +34,7 @@
 
 * Creates an EC2 bastion host in project AWS account, which is able to deploy Management Console EC2.
   * Create EC2 instance with the following configuration:
-    * a t2.micro instance with the AMI specified in the /mcp/amis/ubuntu2004-cset SSM param
+    * a `t2.micro` instance with the AMI specified in the `/mcp/amis/ubuntu2004-cset` SSM param
     * select keypair to use (create a new one and save it for future use)
     * select a standard security group that gives access on port 22.  Lock down to JPL source IPs
     * Make sure to put it in a public subnet (under the VPC setting)
