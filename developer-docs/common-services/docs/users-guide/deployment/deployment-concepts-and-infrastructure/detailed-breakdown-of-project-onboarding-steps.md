@@ -52,7 +52,7 @@
 * `cd unity-cs-infra/nightly_tests`
 * `git pull`
 * `./run.sh --destroy false --run-tests false --project-name <PROJECT> --venue-name <VENUE>`
-* Make sure to copy the URL of the Management Console that gets printed to the console, as part of running the above command.
+* Make sure to copy the URL of the Management Console that gets printed to the console, as part of running the above command.  If any issues or errors encountered, see below "Debugging Management Console" section.
 
 OPTIONAL STEPS IF YOU NEED TO DESTROY MANAGEMENT CONSOLE:
 
@@ -70,3 +70,13 @@ OPTIONAL STEPS IF YOU NEED TO DESTROY MANAGEMENT CONSOLE:
 **11-2) Project User deploys Venue API Gateway**
 
 **11-3) Project User notifies U-CS team of HTTP location and API Gateway URL for inclusion in shared service API  and HTTPD proxies**
+
+
+
+## Debugging Issues with the Management Console
+
+1\) SSH into Management Console EC2 instance
+
+2\) `cd /var/log/`
+
+3\) `cat managementconsole.log`
