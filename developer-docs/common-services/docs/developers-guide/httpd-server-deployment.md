@@ -131,8 +131,14 @@ If the application/website hidden behind the proxy does not have sone of the  pa
 
 [https://httpd.apache.org/docs/2.4/rewrite/intro.html](https://httpd.apache.org/docs/2.4/rewrite/intro.html)
 
-&#x20;
+## &#x20;How to install and enable mod\_auth\_openidc?
 
-&#x20;
+```
+sudo apt-get install libapache2-mod-auth-openidc
+```
+
+```
+sudo a2enmod auth_openidc
+```
 
 &#x20;
