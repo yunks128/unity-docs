@@ -9,7 +9,7 @@ This tutorial assumes that the CWL workflow already exists at some public locati
 
 ## Step 1: Register the generic CWL DAG
 
-The Unity SPS comes bundled with a DAG that allows to execute a generic CWL workflow. When SPS is first installed, this DAG does not show up in the Airflow UI because it is not registered yet. To register it, we must execute an HTTP request to the OGC "register" method exposed by the SPS. The id of the DAG (which is part of the request) is "cwl\_dag\_new".
+The Unity SPS comes bundled with a DAG that allows to execute a generic CWL workflow. When SPS is first installed, this DAG does not show up in the Airflow UI because it is not registered yet. To register it, we must execute an HTTP request to the OGC "processes" method exposed by the SPS. The id of the DAG (which is part of the request) is "cwl\_dag".
 
 First define the SPS OGC endpoint, for example: export OGC\_API = http://k8s-airflow-ogcproce-abcdefgh1j-123456789.us-west-2.elb.amazonaws.com:5001
 
@@ -25,7 +25,7 @@ curl -s -0 -X POST "${OGC_API}/processes" \
 -H 'Content-Type: application/json; charset=utf-8' \
 --data-binary @- << EOF | jq
 {
-   "id": "cwl_dag_new",
+   "id": "cwl_dag",
    "title": "DAG to execute a generic CWL workflow",
    "description": "placeholder description",
    "version": "1.0.0",
@@ -391,10 +391,10 @@ EOF
 
 ```
 {
-    "title": "SBG L1 to L2 end-to-end CWL step by step dag",
+    "title": "CWL DAG",
     "description": "placeholder description",
     "metadata": null,
-    "id": "sbg_L1_to_L2_e2e_cwl_step_by_step_dag",
+    "id": "cwl_dag",
     "version": "1.0.0",
     "jobControlOptions": [
         "async-execute",
