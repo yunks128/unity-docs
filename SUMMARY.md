@@ -115,6 +115,7 @@
   * [Docs](developer-docs/science-processing/docs/README.md)
     * [Users Guide](developer-docs/science-processing/docs/users-guide/README.md)
       * [Unity SPS API](developer-docs/science-processing/docs/users-guide/unity-sps-api.md)
+      * [Tutorial: Register and Execute a CWL Workflow](developer-docs/science-processing/docs/users-guide/tutorial-register-and-execute-a-cwl-workflow.md)
     * [Developers Guide](developer-docs/science-processing/docs/developers-guide.md)
       * [Running the L1B CWL PGE in HySDS](developer-docs/science-processing/docs/developers-guide/running-the-l1b-cwl-pge-in-hysds.md)
       * [The Jobs Database](developer-docs/science-processing/docs/developers-guide/the-jobs-database.md)
