@@ -54,7 +54,7 @@ Detailed instructions on creating an Application Load Balancer available at: [ht
 
 2. Create an Application Load Balancer and (E.g.: ucs-httpd-alb) and use the security group created above.
 3. Note the DNS URL of the Application Load balancer.
-4. Create a load balancer target group (E.g.: ucs-httpd-server-tg).
+4. Create a load balancer target group (E.g.: ucs-httpd-server-tg) which the ability to access instances on port 443.
 
 * Add the EC2 instance created above to the target group.
 * Modify the security group.
@@ -91,7 +91,7 @@ Detailed instructions on creating an Application Load Balancer available at: [ht
 7. Add the following content to the sites-available/unity-cs.conf file.
 
 ```
-<VirtualHost *:80>
+<VirtualHost *:443>
     ServerName unity.httpd.server
     ServerAlias unity.httpd.server
     ServerAdmin unity-cs@test.com
@@ -133,6 +133,10 @@ If the application/website hidden behind the proxy does not have sone of the  pa
 
 ## &#x20;How to install and enable mod\_auth\_openidc?
 
+To use Cognito authentication with Apache httpd server, it is required to use the module called mod\_auth\_openidc. \
+\
+You can install and enable mod\_auth\_openidc as follows.
+
 ```
 sudo apt-get install libapache2-mod-auth-openidc
 ```
@@ -141,4 +145,75 @@ sudo apt-get install libapache2-mod-auth-openidc
 sudo a2enmod auth_openidc
 ```
 
-&#x20;
+The following httpd site configuration has an example showing how to use mod\_auth\_openidc with Cognito.\
+
+
+<pre><code>&#x3C;VirtualHost *:443>
+<strong>    ServerName httpd-experimeantal-alb-************.us-west-2.elb.amazonaws.com
+</strong>    ServerAdmin postmaster@unity.httpd
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    SSLProxyEngine On
+    SSLCertificateFile /etc/ssl/certs/apache-selfsigned.crt
+    SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key
+    SSLProxyCheckPeerCN off
+    SSLProxyCheckPeerExpire on
+    SSLProxyCheckPeerName off
+
+    RewriteEngine On
+    RewriteCond %{HTTP:Connection} Upgrade [NC]
+    RewriteCond %{HTTP:Upgrade} websocket [NC]
+    RewriteRule /unity/dev/(.*) wss://ucs-httpd-alb-********.us-west-2.elb.amazonaws.com:4443/$1 [P,L] [END]
+
+    ProxyRequests Off
+    
+    OIDCScope "openid email profile"
+    OIDCProviderMetadataURL https://cognito-idp.us-west-2.amazonaws.com/&#x3C;COGNITO_USER_POOL_ID>/.well-known/openid-configuration
+    OIDCClientID &#x3C;COGNITO_CLIENT_ID>
+    OIDCClientSecret &#x3C;COGNITO_CLIENT_SECRET>
+
+    # OIDCRedirectURI is a vanity URL that must point to a path protected by this module but must NOT point to any content
+    OIDCRedirectURI https://httpd-experimeantal-alb-************.us-west-2.elb.amazonaws.com:4443/redirect-url
+    OIDCCryptoPassphrase *******************
+
+
+   &#x3C;Location / >
+      ProxyPreserveHost on
+       AuthType openid-connect
+       Require valid-user
+    &#x3C;/Location>
+
+    &#x3C;Location /path1 >
+      ProxyPreserveHost on
+       AuthType openid-connect
+       Require valid-user
+
+       ProxyPass https://www.site1.com
+       ProxyPassReverse https://www.site1.com
+    &#x3C;/Location>
+
+    &#x3C;Location /path2 >
+       ProxyPreserveHost on
+       AuthType openid-connect
+       Require valid-user
+
+       ProxyPass https://www.site2.com
+       ProxyPassReverse https://www.site2.com
+    &#x3C;/Location>
+
+    &#x3C;Location /unity/dev>
+       ProxyPreserveHost on
+       AuthType openid-connect
+       Require valid-user
+
+       # Added to point to httpd within the unity-venue-dev account
+       ProxyPass  https://ucs-httpd-alb-*********.us-west-2.elb.amazonaws.com:4443
+       ProxyPassReverse  https://ucs-httpd-alb-**********.us-west-2.elb.amazonaws.com:4443
+    &#x3C;/Location>     
+ &#x3C;/VirtualHost>                        
+</code></pre>
+
+
+
+&#x20;\
+More deatils on mod\_auth\_openidc can be found on [https://github.com/OpenIDC/mod\_auth\_openidc](https://github.com/OpenIDC/mod\_auth\_openidc)
