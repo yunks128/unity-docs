@@ -79,7 +79,7 @@ Detailed instructions on creating an Application Load Balancer available at: [ht
 * Setup health check for HTTP and path /
 
 5. Associate the target group created above to the load balancer.
-6. Update the security group of EC2 instance created above (E.g.: httpd-sec-group)  to allow traffic to port 80 only from Application Load Balancer security group (E.g.: ucs-httpd-alb-sec-group) created above.&#x20;
+6. Update the security group of EC2 instance created above (E.g.: httpd-sec-group)  to allow traffic to port 443 only from Application Load Balancer security group (E.g.: ucs-httpd-alb-sec-group) created above.&#x20;
 7. Access the DNS URL of the Application Load balancer and see if it shows the default page of Apache 2 (httpd) server.&#x20;
 
 ## Steps to create a new site and setup
