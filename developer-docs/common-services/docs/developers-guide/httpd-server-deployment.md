@@ -125,7 +125,7 @@ ProxyPassReverse /example http://www.example.com/
 
 ```
 
-
+A detailed example is provided in the following section.
 
 If the application/website hidden behind the proxy does not have sone of the  paths defined as absolute paths, then it is required to rewrite paths using the rewrite module as follows.
 
