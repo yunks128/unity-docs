@@ -40,7 +40,7 @@ sudo a2enmod  rewrite
 
 6. Restart Apache2 (httpd)
 
-&#x20;        `systemctl restart apache2`
+&#x20;        sudo `systemctl restart apache2`
 
 &#x20;
 
