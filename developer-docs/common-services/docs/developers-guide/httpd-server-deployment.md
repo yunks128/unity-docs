@@ -36,9 +36,27 @@ sudo a2enmod  ssl
 sudo a2enmod  rewrite
 ```
 
+6. Genrate self signed SSL certificates with the following command.
+
+```
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+```
+
+Provide appropriate values as shown in the following example to generate the certificates (feel free to change the values such as email address and common name as required).
+
+```
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:CA
+Locality Name (eg, city) []:LA
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Unity
+Organizational Unit Name (eg, section) []:CS
+Common Name (e.g. server FQDN or YOUR name) []:shared-services-httpd-unity-test
+Email Address []:test@test.com
+```
 
 
-6. Restart Apache2 (httpd)
+
+7. Restart Apache2 (httpd)
 
 &#x20;        sudo `systemctl restart apache2`
 
