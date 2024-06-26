@@ -68,7 +68,7 @@ Detailed instructions on creating an Application Load Balancer available at: [ht
 
 1. Create a security group for an Application Load Balancer (E.g.: ucs-httpd-alb-sec-group).
 
-&#x20;        \- Allow traffic to TCP port 8080 and 4443 from required sources.
+&#x20;        \- Allow traffic to TCP port 443 from required sources.
 
 2. Create an Application Load Balancer and (E.g.: ucs-httpd-alb) and use the security group created above.
 3. Note the DNS URL of the Application Load balancer.
