@@ -11,7 +11,7 @@ An HTTPD server deployed on an EC2 instance is used as a proxy to route network 
 1. Create a new security group (E.g.: httpd-sec-group) with only traffic allowed from port 22.
 2. Launch an Ubuntu based EC2 instance with,
 
-&#x20;      \- The AMI MCP Ubuntu 20.04 CSET 20240515T143543
+&#x20;      \- The AMI "MCP Ubuntu 20.04 CSET 20240515T143543"
 
 &#x20;      \- Size of the EC2 instance can be Micro (or larger if it is required to handle many requests)
 
