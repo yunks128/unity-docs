@@ -66,21 +66,19 @@ Email Address []:test@test.com
 
 Detailed instructions on creating an Application Load Balancer available at: [https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-application-load-balancer.html](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-application-load-balancer.html). The following instructions provides a summary of steps.
 
-1. Create a security group for an Application Load Balancer (E.g.: ucs-httpd-alb-sec-group).
+1. Create a load balancer target group (E.g.: ucs-httpd-server-tg) which the ability to access instances on HTTPS port 443 ([https://us-west-2.console.aws.amazon.com/ec2/home?region=us-west-2#TargetGroups:](https://us-west-2.console.aws.amazon.com/ec2/home?region=us-west-2#TargetGroups:)).
+   * Add the EC2 instance created above to the target group.
+   * Setup health check for HTTPS and path /
+2. Create a security group for an Application Load Balancer (E.g.: ucs-httpd-alb-sec-group).
 
 &#x20;        \- Allow traffic to TCP port 443 from required sources.
 
 2. Create an Application Load Balancer and (E.g.: ucs-httpd-alb) and use the security group created above.
-3. Note the DNS URL of the Application Load balancer.
-4. Create a load balancer target group (E.g.: ucs-httpd-server-tg) which the ability to access instances on port 443.
-
-* Add the EC2 instance created above to the target group.
-* Modify the security group.
-* Setup health check for HTTP and path /
-
-5. Associate the target group created above to the load balancer.
-6. Update the security group of EC2 instance created above (E.g.: httpd-sec-group)  to allow traffic to port 443 only from Application Load Balancer security group (E.g.: ucs-httpd-alb-sec-group) created above.&#x20;
-7. Access the DNS URL of the Application Load balancer and see if it shows the default page of Apache 2 (httpd) server.&#x20;
+   * Associate the target group created above to the load balancer.
+   * Request a certificate (from ACM)
+   * Note the DNS URL of the Application Load balancer.
+3. Update the security group of EC2 instance created above (E.g.: httpd-sec-group)  to allow traffic to port 443 only from Application Load Balancer security group (E.g.: ucs-httpd-alb-sec-group) created above.&#x20;
+4. Access the DNS URL of the Application Load balancer and see if it shows the default page of Apache 2 (httpd) server.&#x20;
 
 ## Steps to create a new site and setup
 
