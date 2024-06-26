@@ -58,7 +58,7 @@ Email Address []:test@test.com
 
 7. Restart Apache2 (httpd)
 
-&#x20;        sudo `systemctl restart apache2`
+&#x20;       `sudo systemctl restart apache2`
 
 &#x20;
 
