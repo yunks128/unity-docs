@@ -126,7 +126,7 @@ In this step, you will deploy the Airflow orchestration engine using a Helm Char
 
 ## Interacting with an existing SPS Deployment
 
-Administrators can interact with an existing SPS deployment by creating and using an appropriate KUBECONFIG file.
+There are 3 steps required to interact with an existing SPS cluster
 
 * Define the AWS environmental variable for the desired venue:
   * export AWS\_REGION=us-west-2
