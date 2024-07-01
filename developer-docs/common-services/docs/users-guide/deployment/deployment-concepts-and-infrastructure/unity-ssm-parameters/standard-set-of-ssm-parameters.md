@@ -19,7 +19,7 @@ description: >-
 
 ## /unity/<mark style="color:blue;">account</mark>/<mark style="color:blue;">network</mark>/...&#x20;
 
-<table><thead><tr><th width="356.3333333333333">Name</th><th width="274">Description</th><th>Type</th></tr></thead><tbody><tr><td>/unity/account/network/subnet_list</td><td></td><td></td></tr><tr><td>/unity/account/network/subnets/private</td><td>List of private subnets in the account.</td><td>StringList</td></tr><tr><td>/unity/account/network/subnets/public</td><td>List of public subnets in the account.</td><td>StringList</td></tr><tr><td>/unity/account/network/vpc/ids</td><td>List of usable VPCs in the account,</td><td>StringList</td></tr><tr><td>/unity/account/network/vpc_id</td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="356.3333333333333">Name</th><th width="274">Description</th><th>Type</th></tr></thead><tbody><tr><td>/unity/account/network/subnet_list</td><td></td><td></td></tr><tr><td>/unity/account/network/subnets/private</td><td>List of private subnets in the account.</td><td>StringList</td></tr><tr><td>/unity/account/network/subnets/public</td><td>List of public subnets in the account.</td><td>StringList</td></tr><tr><td>/unity/account/network/vpc/ids</td><td>List of usable VPCs in the account,</td><td>StringList</td></tr><tr><td>/unity/account/network/vpc_id</td><td></td><td></td></tr><tr><td>/unity/account/network/ssl</td><td>The ARN of the SSL certificate for use in the mdps venue.</td><td>String</td></tr></tbody></table>
 
 ###
 
