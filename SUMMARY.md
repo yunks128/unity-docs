@@ -127,6 +127,7 @@
       * [🧱 SPS EKS Cluster Provisioning with Terraform](developer-docs/science-processing/docs/admin-guide/sps-eks-cluster-provisioning-with-terraform.md)
       * [🛠️ SPS Airflow Custom Docker Image Build Instructions](developer-docs/science-processing/docs/admin-guide/sps-airflow-custom-docker-image-build-instructions.md)
   * [FAQ](developer-docs/science-processing/faq.md)
+  * [Obsolete](developer-docs/science-processing/obsolete.md)
 * [On-Demand](developer-docs/on-demand.md)
   * [Deployment of On-Demand SPS](developer-docs/on-demand/deployment-of-on-demand-sps.md)
   * [Docs](developer-docs/on-demand/docs/README.md)
