@@ -97,6 +97,7 @@
       * [Creating a Release](developer-docs/common-services/docs/developers-guide/creating-a-release.md)
       * [HTTPD Server Deployment](developer-docs/common-services/docs/developers-guide/httpd-server-deployment.md)
     * [Admin Guide](developer-docs/common-services/docs/admin-guide/README.md)
+      * [Venue Certificate Creation](developer-docs/common-services/docs/admin-guide/venue-certificate-creation.md)
       * [User and Role Management](developer-docs/common-services/docs/admin-guide/user-and-role-management.md)
   * [FAQ](developer-docs/common-services/faq.md)
   * [Contributing](developer-docs/common-services/contributing.md)
