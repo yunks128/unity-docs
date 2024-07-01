@@ -36,6 +36,7 @@ The SPS deployment process consists of 3 steps:
 
 ### Step 1: Provision an Elastic Kubernetes Service (EKS) Cluster on MCP
 
+* cd unity-sps/terraform-unity/modules/terraform-unity-sps-eks
 * Setup an additional environmental variable that defines the component to be deployed, in this case EKS:
   * export COMPONENT=eks
 * Define variables to configure the Terraform S3 backend:
@@ -45,30 +46,30 @@ The SPS deployment process consists of 3 steps:
     * This is the specific path to the Terraform state on S3 for this SPS component. This key is uniquely identified by the environmental vaiables previously set. Note that that all state files will be stored inside a common folder "sps/tfstates".
 * Deploy the cluster via Terraform:
   * cd unity-sps/terraform-unity/modules/terraform-eks-cluster
-  * terraform init
-  * terraform workspace new ${DEPLOYMENT\_NAME}
-  * terraform apply -var "deployment\_name=${DEPLOYMENT\_NAME}" -var "counter=${COUNTER}" -var "venue=${venue}"
-  * aws eks update-kubeconfig --region $AWS\_REGION --name "unity-${VENUE}-sps-eks-${DEPLOYMENT\_NAME}-${COUNTER}" --kubeconfig ./temp\_kube\_cfg
-  * export KUBECONFIG=./temp\_kube\_cfg
-  * kubectl get all -A
+  * terraform init -reconfigure -backend-config="bucket=$BUCKET" -backend-config="key=$KEY"
+  * Create a Terraform configuration file which, at a minimum, must contain values for all Terraform variables that do not have defaults:
+    * mkdir -p tfvar
+    * export TFVARS\_FILENAME=${PROJECT}-${VENUE}-${SERVICE\_AREA}-${COMPONENT}-${DEPLOYMENT}-${COUNTER}.tfvars
+    * terraform-docs tfvars hcl . --output-file tfvars/${TFVARS\_FILENAME}
+    * edit tfvars/${TFVARS\_FILENAME}
+      * Remove the first and last comment lines containing "...TF\_DOCS..."
+      * Insert the proper values for "counter", "deployment\_name", and "venue".
+      * You may leave all the other fields as they are
+  * Warning: before starting the deployment, make sure the AWS temporary credentials are going to be valid for 30+ minutes - if in doubt, renew them to avoid deployment failure and an ensuing messy process of manual clean up
+  * terraform apply --var-file=tfvars/${TFVARS\_FILENAME}
+  * If everythong looks good, type "yes" to start the deployment process, which will take 20-30 minutes
+  * When the deployment completes successfully, create a Kubernetes file to interact with the EKS cluster:
+    * export CLUSTER\_NAME=${PROJECT}-${VENUE}-sps-eks-${DEPLOYMENT}-${COUNTER}
+    * aws eks update-kubeconfig --region $AWS\_REGION --name "${CLUSTER\_NAME}" --kubeconfig ./temp\_kube\_cfg
+    *   aws eks update-kubeconfig --region us-west-2 --name $CLUSTER\_NAME --kubeconfig ./$CLUSTER\_NAME.cfg
+
+        export KUBECONFIG=$PWD/$CLUSTER\_NAME.cfg
+    * echo $KUBECONFIG
+  * Verify you can interact with the EKS cluster:
+    * kubectl get all -A
 * Later, after the EKS cluster is no more useful, it can be destroyed wit the following command:
-  * terraform destroy -var "deployment\_name=${DEPLOYMENT\_NAME}" -var "counter=${COUNTER}" -var "venue=${venue}"
-
-Alternatively, the repository also contains a shell script that can be executed to test the creation, smoke-testing and destruction of an EKS cluster. To execute the script:
-
-* cd unity-sps/terraform-unity/modules/terraform-eks-cluster
-* terraform init
-* ./validate.sh
-
-The validate.sh script does the following:
-
-* Generates a random alpha-numeric cluster name
-* Creates a new Terraform workspace with the cluster name
-* Runs 'terraform init' in the workspace
-* Runs 'terraform apply -var "cluster\_name=random-cluster-name"'
-* Initializes a kubeconfig for the cluster
-* Verifies that the cluster is reachable with 'kubectl get all -A'
-* Teardown the cluster with 'terraform destroy'
+  * terraform destroy--var-file=tfvars/${TFVARS\_FILENAME}"
+    * If everything looks good, type "yes" to start the destruction process
 
 ### Step 2: Deploy SPS with Airflow onto the EKS Cluster
 
