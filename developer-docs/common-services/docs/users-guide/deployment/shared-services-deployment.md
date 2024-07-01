@@ -66,7 +66,7 @@ data "aws_ssm_parameter" "ssAcctNum" {
 
 // access a shared parameter
 data "aws_ssm_parameter" "cognito_domain" {
-  name = "arn:aws:ssm:us-west-2:${var.ssAcctNum}:parameter/unity/shared-services/cognito/domain"
+  name = "arn:aws:ssm:us-west-2:${data.aws_ssm_parameter.ssAcctNum}:parameter/unity/shared-services/cognito/domain"
 }
 ```
 
