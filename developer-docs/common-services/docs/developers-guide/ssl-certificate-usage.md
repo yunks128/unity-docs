@@ -1,6 +1,10 @@
 # SSL Certificate Usage
 
-The msot common reason for needing an SSL certificate is to create a secure listener for a load balancer target group. Some other usages include adding a certificate to a cloudfront endpoint or an API Gateway.
+The most common reason for needing an SSL certificate is to create a secure listener for a load balancer target group. Some other usages include adding a certificate to a cloudfront endpoint or an API Gateway.
+
+{% hint style="info" %}
+Note, the certificates created for each venue assume that the user will be retrieving the resource through the api gateway or the HTTPD proxy. The certificate is given the \*.mdps.mcp.nasa.gov" naming convention, and will throw errors if access directly (e.g. `https://my-random-alb-52301ddb8d-563022104.us-west-2.elb.amazonaws.com)`
+{% endhint %}
 
 ### Adding a secure listener to a Load Balancer
 
