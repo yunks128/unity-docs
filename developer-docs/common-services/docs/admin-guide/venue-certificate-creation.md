@@ -66,6 +66,6 @@ The CNAME value entries end with a period. This must be included.
 
 ### Next Steps
 
-With the valid certificate, teams can now utilize this certificate in their load balancers, cloud formation, and other entries to enforce SSL.
+With the valid certificate, teams can now utilize this certificate in their load balancers, cloud formation, and other entries to enforce SSL. see [ssl-certificate-usage.md](../developers-guide/ssl-certificate-usage.md "mention")for more information.
 
 Documentation is up to date as of 7/1/2024
