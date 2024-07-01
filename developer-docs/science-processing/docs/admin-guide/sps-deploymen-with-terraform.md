@@ -36,6 +36,8 @@ The SPS deployment process consists of 3 steps:
 
 ### Step 1: Provision an Elastic Kubernetes Service (EKS) Cluster on MCP
 
+In this step, you will deploy a Kubernetes cluster onto the AWS infrastructure.
+
 * cd unity-sps/terraform-unity/modules/terraform-unity-sps-eks
 * Setup an additional environmental variable that defines the component to be deployed, in this case EKS:
   * export COMPONENT=eks
@@ -48,7 +50,7 @@ The SPS deployment process consists of 3 steps:
   * cd unity-sps/terraform-unity/modules/terraform-eks-cluster
   * terraform init -reconfigure -backend-config="bucket=$BUCKET" -backend-config="key=$KEY"
   * Create a Terraform configuration file which, at a minimum, must contain values for all Terraform variables that do not have defaults:
-    * mkdir -p tfvar
+    * mkdir -p tfvars
     * export TFVARS\_FILENAME=${PROJECT}-${VENUE}-${SERVICE\_AREA}-${COMPONENT}-${DEPLOYMENT}-${COUNTER}.tfvars
     * terraform-docs tfvars hcl . --output-file tfvars/${TFVARS\_FILENAME}
     * edit tfvars/${TFVARS\_FILENAME}
@@ -57,13 +59,11 @@ The SPS deployment process consists of 3 steps:
       * You may leave all the other fields as they are
   * Warning: before starting the deployment, make sure the AWS temporary credentials are going to be valid for 30+ minutes - if in doubt, renew them to avoid deployment failure and an ensuing messy process of manual clean up
   * terraform apply --var-file=tfvars/${TFVARS\_FILENAME}
-  * If everythong looks good, type "yes" to start the deployment process, which will take 20-30 minutes
+    * If everything looks good, type "yes" to start the deployment process, which will take 20-30 minutes
   * When the deployment completes successfully, create a Kubernetes file to interact with the EKS cluster:
     * export CLUSTER\_NAME=${PROJECT}-${VENUE}-sps-eks-${DEPLOYMENT}-${COUNTER}
-    * aws eks update-kubeconfig --region $AWS\_REGION --name "${CLUSTER\_NAME}" --kubeconfig ./temp\_kube\_cfg
-    *   aws eks update-kubeconfig --region us-west-2 --name $CLUSTER\_NAME --kubeconfig ./$CLUSTER\_NAME.cfg
-
-        export KUBECONFIG=$PWD/$CLUSTER\_NAME.cfg
+    * aws eks update-kubeconfig --region us-west-2 --name $CLUSTER\_NAME --kubeconfig ./$CLUSTER\_NAME.cfg
+    * export KUBECONFIG=$PWD/$CLUSTER\_NAME.cfg
     * echo $KUBECONFIG
   * Verify you can interact with the EKS cluster:
     * kubectl get all -A
@@ -73,4 +73,28 @@ The SPS deployment process consists of 3 steps:
 
 ### Step 2: Deploy SPS with Airflow onto the EKS Cluster
 
-Once the EKS cluster is up and running, the SPS system can be deployed onto it following these instructions.
+In this step, you will deploy the Karpenter controller onto the EKS cluster. Karpenter is a Kubernetes plugin to manage auto-scaling of EC2 nodes to execute workloads.
+
+* cd unity-sps/terraform-unity/modules/terraform-unity-sps-karpenter
+* Setup the environment to deploy Karpenter:
+  * export COMPONENT=karpenter
+  * export KEY=sps/tfstates/${PROJECT}-${VENUE}-${SERVICE\_AREA}-${COMPONENT}-${DEPLOYMENT}-${COUNTER}.tfstate
+  * echo $KEY
+  * Note: it is assumed all other environment variables defined above are still defined in the current environment
+  * Warning: it is recommended to renew the AWS credentials before starting deployment
+* Initialize Terraform for the new cluster and deployment:
+  * terraform init -reconfigure -backend-config="bucket=$BUCKET" -backend-config="key=$KEY"
+* Just like before, create a Terraform configuration file which, at a minimum, must contain values for all Terraform variables that do not have defaults:
+  * mkdir -p tfvars
+  * export TFVARS\_FILENAME=${PROJECT}-${VENUE}-${SERVICE\_AREA}-${COMPONENT}-${DEPLOYMENT}-${COUNTER}.tfvars
+  * terraform-docs tfvars hcl . --output-file tfvars/${TFVARS\_FILENAME}
+  * edit tfvars/${TFVARS\_FILENAME}
+    * Remove the first and last comment lines containing "...TF\_DOCS..."
+    * Insert the proper values for "counter", "deployment\_name", and "venue".
+    * You may leave all the other fields as they are
+  * terraform apply --var-file=tfvars/${TFVARS\_FILENAME}
+    * If everything looks good, type "yes" to start the deployment process, which will take 20-30 minutes
+    * The Karpenter deployment should only take a few minutes
+  * Later, to destroy the Karpenter infrastructure:
+    * terraform destroy--var-file=tfvars/${TFVARS\_FILENAME}"
+      * If everything looks good type "yes"
