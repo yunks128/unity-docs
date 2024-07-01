@@ -1,4 +1,4 @@
-# 🧱 SPS Deploymen with Terraform
+# 🧱 SPS Deployment with Terraform
 
 This page contains instructions on how to deploy the Unity Science Process System (SPS) to an AWS account managed by the NASA Mission Cloud Platform (MCP). The instructions describe creating a new SPS instance from scratch, storing the resulting Terraform state on an S3 back-end. Migrating the state of an existing SPS instance from the local storage to S3 is also possible, but not covered here.
 
@@ -71,9 +71,9 @@ In this step, you will deploy a Kubernetes cluster onto the AWS infrastructure.
   * terraform destroy--var-file=tfvars/${TFVARS\_FILENAME}"
     * If everything looks good, type "yes" to start the destruction process
 
-### Step 2: Deploy SPS with Airflow onto the EKS Cluster
+### Step 2: Deploy Karpenter onto the EKS Cluster
 
-In this step, you will deploy the Karpenter controller onto the EKS cluster. Karpenter is a Kubernetes plugin to manage auto-scaling of EC2 nodes to execute workloads.
+In this step, you will use a Helm Chart to deploy the Karpenter controller onto the EKS cluster. Karpenter is a Kubernetes plugin to manage auto-scaling of EC2 nodes to execute workloads.
 
 * cd unity-sps/terraform-unity/modules/terraform-unity-sps-karpenter
 * Setup the environment to deploy Karpenter:
@@ -98,3 +98,65 @@ In this step, you will deploy the Karpenter controller onto the EKS cluster. Kar
   * Later, to destroy the Karpenter infrastructure:
     * terraform destroy--var-file=tfvars/${TFVARS\_FILENAME}"
       * If everything looks good type "yes"
+
+### Step 3: Deploy Airflow onto the EKS Cluster
+
+In this step, you will deploy the Airflow orchestration engine using a Helm Chart onto the existing EKS cluster.
+
+* cd unity-sps/terraform-unity
+* Setup the environment to deploy Airflow:
+* export COMPONENT=airflow
+* export KEY=sps/tfstates/${PROJECT}-${VENUE}-${SERVICE\_AREA}-${COMPONENT}-${DEPLOYMENT}-${COUNTER}.tfstate
+* echo $KEY
+* Note: it is assumed all other environment variables defined above are still defined in the current environment
+* Warning: it is recommended to renew the AWS credentials before starting deployment
+* Initialize Terraform for the new cluster and deployment:
+  * terraform init -reconfigure -backend-config="bucket=$BUCKET" -backend-config="key=$KEY"
+* Create  Terraform configuration file for the Airflow component:
+  * mkdir -p tfvars
+  * export TFVARS\_FILENAME=${PROJECT}-${VENUE}-${SERVICE\_AREA}-${COMPONENT}-${DEPLOYMENT}-${COUNTER}.tfvars
+  * terraform-docs tfvars hcl . --output-file tfvars/${TFVARS\_FILENAME}
+  * edit tfvars/${TFVARS\_FILENAME}
+    * Just like before, remove the first/last comment lines and dd the values for "counter", "venue", "deployment\_name"
+    * Also enter the values for "airflow\_webserver\_password" (choose one value) and "kubeconfig\_filepath" (enter the value of $KUBECONFIG)
+  * Warning: it is recommended to rebnew the AWS credentials
+  * terraform apply --var-file=tfvars/${TFVARS\_FILENAME}
+    * If everything looks good, type "yes" to start the deployment process, which will take 20-30 minutes
+    * The Airflow deployment should around 15-20 minutes
+
+## Interacting with an existing SPS Deployment
+
+Administrators can interact with an existing SPS deployment by creating and using an appropriate KUBECONFIG file.
+
+* Define the AWS environmental variable for the desired venue:
+  * export AWS\_REGION=us-west-2
+  * export AWS\_PROFILE=XXXXXXXXXXXX\_mcp-tenantOperator
+* Renew the AWS credentials for the appropriate MCP venue, adding them to \~/.aws/credentials
+* Generate a new KUBECONFIG file to point to the desired cluster (you can skip this step if the proper KUBECONFIG file already exists on your local system):
+  * cd \<any directory>
+  * export PROJECT=\<project>
+  * export SERVICE\_AREA=sps
+  * export VENUE=\<venue>
+  * export DEPLOYMENT=\<deployment>
+  * export COUNTER=\<counter>
+  * export CLUSTER\_NAME=${PROJECT}-${VENUE}-sps-eks-${DEPLOYMENT}-${COUNTER}
+    * Example: export CLUSTER\_NAME=unity-dev-sps-eks-nightly-2
+  * aws eks update-kubeconfig --region us-west-2 --name $CLUSTER\_NAME --kubeconfig ./$CLUSTER\_NAME.cfg
+  * export KUBECONFIG=$PWD/$CLUSTER\_NAME.cfg
+  * kubectl get all -A
+  * kubectl get pods -n airflow
+
+Additionally, to make updates to an existing cluster, the appropriate Terraform configuration file is needed, and the Terraform backend needs to be reconfigured to reference the appropriate state on S3. So to update the EKS/Karpenter/Airflow deployment:
+
+* cd unity-sps/terraform-unity/modules/terraform-unity-sps-eks
+  * or cd unity-sps/terraform-unity/modules/terraform-unity-sps-karpenter
+  * or cd unity-sps/terraform-unity
+* export COMPONENT=eks
+  * or export COMPONENT=karpenter
+  * or export COMPONENT=airflow
+* export KEY=sps/tfstates/${PROJECT}-${VENUE}-${SERVICE\_AREA}-${COMPONENT}-${DEPLOYMENT}-${COUNTER}.tfstate
+* echo $KEY
+* terraform init -reconfigure -backend-config="bucket=$BUCKET" -backend-config="key=$KEY"
+* export TFVARS\_FILENAME=\<existing desired Terraform config file in tfvars/ sub-directory>
+  * Note: if updarting the "airflow" component, the config file must be edited to reflect the loocal path to KUBECONFIG
+* terraform apply --var-file=tfvars/${TFVARS\_FILENAME}
