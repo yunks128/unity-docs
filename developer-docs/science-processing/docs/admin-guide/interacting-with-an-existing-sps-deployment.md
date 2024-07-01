@@ -46,7 +46,7 @@ You must re-initialize the Terraform state to reference the proper file on S3. T
   * Make sure that the value of $KEY is what you expect
 * terraform init -reconfigure -backend-config="bucket=$BUCKET" -backend-config="key=$KEY"
 
-## Reference the proper Terraform config file
+## Step 3: Reference the proper Terraform config file
 
 Terraform configuration files for the various clusters are checked-in into GitHub and available on the local system in the "tfvars/" sub-directory of the current component.
 
