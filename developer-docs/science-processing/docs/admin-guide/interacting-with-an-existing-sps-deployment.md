@@ -60,5 +60,5 @@ Terraform configuration files for the various clusters are checked-in into GitHu
 Note: when destroying the whole deployment, components must be destroyed in reverse order of creation, i.e.:
 
 * First destroi airflow
-* The destroy karpenter
+* Then destroy karpenter
 * Finally destroy eks
