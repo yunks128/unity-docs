@@ -121,6 +121,7 @@
       * [🚀 SPS Airflow Deployment with Terraform](developer-docs/science-processing/docs/admin-guide/sps-airflow-deployment-with-terraform.md)
       * [🧱 SPS EKS Cluster Provisioning with Terraform](developer-docs/science-processing/docs/admin-guide/sps-eks-cluster-provisioning-with-terraform.md)
       * [🧱 SPS Deployment with Terraform](developer-docs/science-processing/docs/admin-guide/sps-deployment-with-terraform.md)
+      * [🧱 Interacting with an Existing SPS Deployment](developer-docs/science-processing/docs/admin-guide/interacting-with-an-existing-sps-deployment.md)
       * [🛠️ SPS Airflow Custom Docker Image Build Instructions](developer-docs/science-processing/docs/admin-guide/sps-airflow-custom-docker-image-build-instructions.md)
   * [FAQ](developer-docs/science-processing/faq.md)
   * [Obsolete](developer-docs/science-processing/obsolete/README.md)
