@@ -25,7 +25,7 @@
 
 5c) **In Project Venue Account:** **Unity team requests** wildcard cert for the venue, must add the cname record/value to the SHARED SERVICES DNS to approve its creation.
 
-5d) The following commands must be run in the venue account to ceate service linked roles for various resources:
+5d) The following commands must be run in the venue account to create service linked roles for various resources:
 
 ```
 # Required role for spot ec2/fleet creation
