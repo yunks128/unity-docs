@@ -16,14 +16,14 @@ An HTTPD server deployed on an EC2 instance is used as a proxy to route network 
 &#x20;      \- Size of the EC2 instance can be Micro (or larger if it is required to handle many requests)
 
 3. Connect to the EC2 instance with Session Manager.
-4. Install Apache 2 (The new Ubuntu version of HTTPD) on Ubuntu as follows.
+4. Install Apache 2 (The new Ubuntu version of HTTPD) on Ubuntu as follows:
 
 ```
 sudo apt update
 sudo apt install apache2
 ```
 
-3. Enable Apache2 modules with the following commands.
+3. Enable Apache2 modules with the following commands:
 
 ```
 sudo a2enmod  http
@@ -36,7 +36,7 @@ sudo a2enmod  ssl
 sudo a2enmod  rewrite
 ```
 
-6. Genrate self signed SSL certificates with the following command.
+6. Generate self-signed SSL certificates with the following command:
 
 ```
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
