@@ -10,6 +10,10 @@ description: These are the currently "unity" owned venues.
 
 </div>
 
+{% hint style="info" %}
+The below environments, while useful for certain cases, are almost entirely moot from an MDPS user perspective. The users venues, weither they be for development, testing, operations, reprocessing, or on-demand usage will all be "production" venues- that is, they live in the "production" MDPS system and point to services in the `Unity-Prod` accounts.
+{% endhint %}
+
 ### Environments
 
 | Account Name  | Description                                                                                                              | Services                                                                                                                                                                            |
