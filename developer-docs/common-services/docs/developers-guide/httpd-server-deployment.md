@@ -4,7 +4,7 @@ description: Instructions to deploy HTTPD server on EC2
 
 # HTTPD Server Deployment
 
-An HTTPD server deployed on an EC2 instance is used as a proxy to route network requests to relevant blackened services such as Management Console, JupyterHub and other HTTPD servers. The EC2 based deployment was selected to enable rapid experimenting and troubleshooting compared to the ECS version of HTTPD. One we have a solid set of configurations, the venue level HTTPD server will be migrated from EC2 to ECS.
+An HTTPD server deployed on an EC2 instance is used as a proxy to route network requests to relevant blackened services such as Management Console, JupyterHub and other HTTPD servers. The EC2 based deployment was selected to enable rapid experimenting and troubleshooting compared to the ECS version of HTTPD. Once we have a solid set of configurations, the venue level HTTPD server will be migrated from EC2 to ECS.
 
 ## The steps to deploy HTTPD on EC2
 
