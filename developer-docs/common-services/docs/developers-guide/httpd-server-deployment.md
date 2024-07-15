@@ -30,7 +30,7 @@ sudo a2enmod  http
 sudo a2enmod  headers
 sudo a2enmod  proxy
 sudo a2enmod  proxy_html
-sudo sudo a2enmod  proxy_http
+sudo a2enmod  proxy_http
 sudo a2enmod  proxy_wstunnel
 sudo a2enmod  ssl
 sudo a2enmod  rewrite
