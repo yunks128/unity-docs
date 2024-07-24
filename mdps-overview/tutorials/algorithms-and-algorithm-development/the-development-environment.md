@@ -10,7 +10,7 @@ If you're confused by any of these words, and even if you're somewhat familiar w
 
 #### Instance Types
 
-<figure><img src="../../../../.gitbook/assets/Screenshot 2024-04-16 at 7.50.20 AM.png" alt="" width="518"><figcaption><p>Environments available once you log in</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-04-16 at 7.50.20 AM.png" alt="" width="518"><figcaption><p>Environments available once you log in</p></figcaption></figure>
 
 When you log in to jupyter for the first time, you'll have a single option- start my server- available to you. After clicking that button, you'll be given the option of several environments to use. As a project, you can request specific environments with specific libraries included by default. The ones you see above are the general environments supplied to all Unity users. There are no difference between them with regards to CPU and Memory resources. For specifics on hardward specifications, please reach out to your venue administrator.
 
@@ -18,9 +18,9 @@ When you log in to jupyter for the first time, you'll have a single option- star
 
 
 
-<figure><img src="../../../../.gitbook/assets/Screenshot 2024-04-16 at 7.57.35 AM.png" alt="" width="563"><figcaption><p>The Jupyter Interface</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-04-16 at 7.57.35 AM.png" alt="" width="563"><figcaption><p>The Jupyter Interface</p></figcaption></figure>
 
-Once you log in and select an instance type, you'll be presented the general interface above. For specifics on using the environment, please check out the [#jupyter-notebooks-huh](./#jupyter-notebooks-huh "mention") section above.
+Once you log in and select an instance type, you'll be presented the general interface above. For specifics on using the environment, please check out the [#jupyter-notebooks-huh](the-development-environment.md#jupyter-notebooks-huh "mention") section above.
 
 The left hand side is your file explorer, where you can upload, download, and navigate the files within your notebook instance. **note:** This is not a "shared" environment, files placed here are not available to other notebook users, and they are not made available "in the cloud". These are only available to you when you're logged into the notebook. These files are persisted between logins, so you can go away and come back in a month and all your files should be here.
 
