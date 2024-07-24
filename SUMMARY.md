@@ -76,6 +76,7 @@
         * [🚧 Shared Services Deployment](developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment.md)
           * [Shared Service Network Configurations](developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment/shared-service-network-configurations/README.md)
             * [Adding a DNS record for a shared service resource](developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment/shared-service-network-configurations/adding-a-dns-record-for-a-shared-service-resource.md)
+        * [Updating Venue Deployment](developer-docs/common-services/docs/users-guide/deployment/updating-venue-deployment.md)
       * [Security](developer-docs/common-services/docs/users-guide/security/README.md)
         * [Unity Security Cases](developer-docs/common-services/docs/users-guide/security/unity-security-cases.md)
         * [Unity Security Guidelines](developer-docs/common-services/docs/users-guide/security/unity-security-guidelines.md)
