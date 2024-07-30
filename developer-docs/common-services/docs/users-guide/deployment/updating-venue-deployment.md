@@ -18,11 +18,12 @@ description: Procedure for updating a venue deployment
    7. `cd /etc/apache2/sites-enabled`
    8. `vi unity-cs.conf`
    9. TODO: Link in future script that creates/modifies HTTPD shared services configuration.
-   10. Update the two lines that look like below, to provide the new ALB URL (from step above):
+   10. Update the line that looks like `RewriteRule /unity/dev/(.*) ws://unity-dev-http-alb.... [P,L] [END]` to have the new ALB URL.
+   11. Update the two lines that look like below, to provide the new ALB URL (from step above):
        1. ```
           ProxyPass  http://unity-dev-httpd-alb-285256043.us-west-2.elb.amazonaws.com:8080
-             ProxyPassReverse  http://unity-dev-httpd-alb-285256043.us-west-2.elb.amazonaws.com:8080
+          ProxyPassReverse  http://unity-dev-httpd-alb-285256043.us-west-2.elb.amazonaws.com:8080
           ```
-   11. Restart HTTPD:
+   12. Restart HTTPD:
        1. `sudo systemctl restart apache2`
-   12.
+   13.
