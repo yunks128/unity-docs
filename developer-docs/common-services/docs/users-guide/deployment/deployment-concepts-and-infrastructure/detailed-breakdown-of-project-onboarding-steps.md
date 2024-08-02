@@ -39,18 +39,24 @@
    * Creates an EC2 bastion host in project AWS account, which is able to deploy Management Console EC2.
    *   Create EC2 instance with the following configuration:
 
-       * a `t2.micro` instance with the AMI specified in the `/mcp/amis/ubuntu2004-cset` SSM param
-       *   **Name of instance:**  Use the format `unity-<PROJECT>-<VENUE>-cs-management_console-bastion`
-
-           &#x20;
-       * **AMI ID:** "My AMIs" --> "Shared With Me" --> enter AMI ID in the drop-down text box
+       * **Name of instance:**
+         * Use the format `unity-<PROJECT>-<VENUE>-cs-management_console-bastion`
+       * **AMI / instance type**:&#x20;
+         * Get the AMI ID to use, by opening another tab, and copying the AMI specified in the `/mcp/amis/ubuntu2004-cset` SSM param
+         * Go to "My AMIs" --> "Shared With Me" --> enter AMI ID in the drop-down text box
+         * use a `t2.micro` instance
        * **Key Pair:**&#x20;
          * If a key pair doesn't already exist, create one in the format `unity-<PROJECT>-<VENUE>-bastion-pem` (do this in another tab first)
          * select keypair (use "Select Existing Keypair") to use (create a new one and save it for future use)
-       * Security Group:&#x20;
-         * If an existing security
-         * select a standard security group that gives access on port 22.   Use the `mc-bastion-sg`
-       * Make sure to put it in a public subnet (under the VPC setting)
+       * **Security Group:**&#x20;
+         * If an existing `mc-bastion-sg` security doesn't already exist, then create one. It should have:
+           * INCOMING CONNECTIONS:
+             * none
+           * OUTGOING CONNECTIONS:
+             * open custom TCP for 443 to anywhere, and 80 to anywhere
+         * Select the `mc-bastion-sg` security group.
+       * **Networking:**
+         * Make sure to select a public subnet (under the VPC setting)
        * Under Advanced, select an IAM Instance Profile of `Unity-CS_Service_Role-instance-profile`
        * launch instance
        * Connect to instance
