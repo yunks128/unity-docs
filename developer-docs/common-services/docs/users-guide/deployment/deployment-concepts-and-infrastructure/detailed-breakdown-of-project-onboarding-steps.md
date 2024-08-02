@@ -44,8 +44,12 @@
 
            &#x20;
        * **AMI ID:** "My AMIs" --> "Shared With Me" --> enter AMI ID in the drop-down text box
-       * select keypair to use (create a new one and save it for future use)
-       * select a standard security group that gives access on port 22.   Use the `mc-bastion-sg`
+       * **Key Pair:**&#x20;
+         * If a key pair doesn't already exist, create one in the format `unity-<PROJECT>-<VENUE>-bastion-pem` (do this in another tab first)
+         * select keypair (use "Select Existing Keypair") to use (create a new one and save it for future use)
+       * Security Group:&#x20;
+         * If an existing security
+         * select a standard security group that gives access on port 22.   Use the `mc-bastion-sg`
        * Make sure to put it in a public subnet (under the VPC setting)
        * Under Advanced, select an IAM Instance Profile of `Unity-CS_Service_Role-instance-profile`
        * launch instance
