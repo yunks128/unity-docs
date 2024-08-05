@@ -12,13 +12,13 @@
 4. **Project lets Unity know what the set of "starter" users are** (name, email address, etc..)
 5.  **Unity Team sets up initial set of users/roles** (manually for now):
 
-    * Unity team creates Cognito user groups (roles)
+    * Unity team **creates Cognito user groups** (roles)
       * `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly` role
       * `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role
       * `Unity_Viewer`
       * `Unity_Admin`
       * The Cognito user group naming convention is available at [Cognito User Group Standards](../../security/cognito-user-group-standards.md)
-    * Unity team creates Cognito users
+    * Unity team **creates Cognito users**
       * Each user should be created in the Shared Services Cognito user pool
       * Each user should be assigned these Groups at a minimum:
         * `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly`
