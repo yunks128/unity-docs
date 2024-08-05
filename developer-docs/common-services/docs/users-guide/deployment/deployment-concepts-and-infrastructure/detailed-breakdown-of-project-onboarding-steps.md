@@ -85,17 +85,20 @@
         * `./destroy.sh --project-name <PROJECT> --venue-name <VENUE>`
 
 
-11. **Project User** (the one that has the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role) **logs into Management Console** via CloudFront.   Use the URL that was copied above.\
+11. **Configure Shared Services HTTPD server to route to Venue "entry" ALB.**
+    1. See steps [here](https://unity-sds.gitbook.io/docs/developer-docs/common-services/docs/users-guide/deployment/updating-venue-deployment).\
 
-12. **Project user runs Core Setup actions in Management Console**\
+12. **Project User** (the one that has the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role) **logs into Management Console** via CloudFront.   Use the URL that was copied above.\
 
-13. **Project User deploys further marketplace items**\
+13. **Project user runs Core Setup actions in Management Console**\
 
-14. **Project User deploys Venue HTTPD**\
+14. **Project User deploys further marketplace items**\
 
-15. **Project User deploys Venue API Gateway**\
+15. **Project User deploys Venue HTTPD**\
 
-16. **Project User notifies U-CS team of HTTP location and API Gateway URL for inclusion in shared service API  and HTTPD proxies**
+16. **Project User deploys Venue API Gateway**\
+
+17. **Project User notifies U-CS team of HTTP location and API Gateway URL for inclusion in shared service API  and HTTPD proxies**
 
 
 
