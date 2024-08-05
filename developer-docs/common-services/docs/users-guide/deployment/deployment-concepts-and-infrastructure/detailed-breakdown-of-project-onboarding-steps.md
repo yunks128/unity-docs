@@ -10,21 +10,21 @@
 2. Project **agrees to EC2 conditions** (EULA / FIPS) on their new account
 3. Project **notifies Unity team** that they want to onboard to Unity
 4. **Project lets Unity know what the set of "starter" users are** (name, email address, etc..)
-5. **Unity Team sets up initial set of users/roles** (manually for now):
-   *   Unity team creates Cognito users
+5.  **Unity Team sets up initial set of users/roles** (manually for now):
 
-       * Each user should be created in the Shared Services Cognito user pool
-       * The Cognito user naming convention is available at [Cognito User Standards](../../security/cognito-user-standards.md)
-       * Unity team collects user names (preferably the NASA AUIDs) and a valid email addresses for  users to create Cognito users
-       * After creating the user in the Cognito user pool, the user receives a temporary password through email with instructions to change the password
-
-
-   *   Unity team creates Cognito user groups (roles)
-
-       * Each user gets a `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly` role
-       * One or more users get the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role
-       * One user can have more than one Cognito user group
-       * The Cognito user group naming convention is available at [Cognito User Group Standards](../../security/cognito-user-group-standards.md)
+    * Unity team creates Cognito user groups (roles)
+      * Each user gets a `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly` role
+      * One or more users get the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role
+      * One user can have more than one Cognito user group
+      * The Cognito user group naming convention is available at [Cognito User Group Standards](../../security/cognito-user-group-standards.md)
+    * Unity team creates Cognito users
+      * Each user should be created in the Shared Services Cognito user pool
+      * Each user should be assigned these Groups:
+        * `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly`
+        * `Unity_Viewer`
+      * The Cognito user naming convention is available at [Cognito User Standards](../../security/cognito-user-standards.md)
+      * Unity team collects user names (preferably the NASA AUIDs) and a valid email addresses for  users to create Cognito users
+      * After creating the user in the Cognito user pool, the user receives a temporary password through email with instructions to change the password
 
 
 6. **Unity team adds project AWS account to shared service Resource Access Manager** (RAM) to enable sharing of SSM parameters. See [shared-services-deployment.md](../shared-services-deployment.md "mention") for more instructions.
