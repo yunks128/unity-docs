@@ -19,7 +19,7 @@
       * The Cognito user group naming convention is available at [Cognito User Group Standards](../../security/cognito-user-group-standards.md)
     * Unity team creates Cognito users
       * Each user should be created in the Shared Services Cognito user pool
-      * Each user should be assigned these Groups:
+      * Each user should be assigned these Groups at a minimum:
         * `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly`
         * `Unity_Viewer`
       * The Cognito user naming convention is available at [Cognito User Standards](../../security/cognito-user-standards.md)
