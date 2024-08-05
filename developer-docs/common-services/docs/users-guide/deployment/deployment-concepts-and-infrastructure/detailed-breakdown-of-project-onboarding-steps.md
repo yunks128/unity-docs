@@ -6,10 +6,14 @@
 
 ### Venue Account Onboarding Procedure:
 
-1. Project **obtains their own AWS account** (Bring your own Account).
-2. Project **agrees to EC2 conditions** (EULA / FIPS) on their new account
-3. Project **notifies Unity team** that they want to onboard to Unity
-4. **Project lets Unity know what the set of "starter" users are** (name, email address, etc..)
+1. Project **obtains their own AWS account** (Bring your own Account).\
+
+2. Project **agrees to EC2 conditions** (EULA / FIPS) on their new account\
+
+3. Project **notifies Unity team** that they want to onboard to Unity\
+
+4. **Project lets Unity know what the set of "starter" users are** (name, email address, etc..)\
+
 5.  **Unity Team sets up initial set of users/roles** (manually for now):
 
     * Unity team **creates Cognito user groups** (roles)
@@ -28,8 +32,10 @@
       * After creating the user in the Cognito user pool, the user receives a temporary password through email with instructions to change the password
 
 
-6. **Unity team adds project AWS account to shared service Resource Access Manager** (RAM) to enable sharing of SSM parameters. See [shared-services-deployment.md](../shared-services-deployment.md "mention") for more instructions.
-7. **In Project Venue Account:** **Unity team requests** wildcard cert for the venue, must add the cname record/value to the SHARED SERVICES DNS to approve its creation. [See instructions here](https://app.gitbook.com/s/cUYkPD7kBe7iT1LABkPZ/tips-and-tricks/speed-up-with-quick-find).
+6. **Unity team adds project AWS account to shared service Resource Access Manager** (RAM) to enable sharing of SSM parameters. See [shared-services-deployment.md](../shared-services-deployment.md "mention") for more instructions.\
+
+7. **In Project Venue Account:** **Unity team requests** wildcard cert for the venue, must add the cname record/value to the SHARED SERVICES DNS to approve its creation. [See instructions here](https://app.gitbook.com/s/cUYkPD7kBe7iT1LABkPZ/tips-and-tricks/speed-up-with-quick-find).\
+
 8.  **Unity Team sets up roles on account**:
 
     * Export short-term access keys for account on command-line
@@ -79,11 +85,16 @@
         * `./destroy.sh --project-name <PROJECT> --venue-name <VENUE>`
 
 
-11. **Project User** (the one that has the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role) **logs into Management Console** via CloudFront.   Use the URL that was copied above.
-12. **Project user runs Core Setup actions in Management Console**
-13. **Project User deploys further marketplace items**
-14. **Project User deploys Venue HTTPD**
-15. **Project User deploys Venue API Gateway**
+11. **Project User** (the one that has the `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin` role) **logs into Management Console** via CloudFront.   Use the URL that was copied above.\
+
+12. **Project user runs Core Setup actions in Management Console**\
+
+13. **Project User deploys further marketplace items**\
+
+14. **Project User deploys Venue HTTPD**\
+
+15. **Project User deploys Venue API Gateway**\
+
 16. **Project User notifies U-CS team of HTTP location and API Gateway URL for inclusion in shared service API  and HTTPD proxies**
 
 
