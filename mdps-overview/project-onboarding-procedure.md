@@ -27,7 +27,7 @@ description: >-
     <figure><img src="../.gitbook/assets/Screenshot 2024-08-06 at 2.14.27 PM.png" alt=""><figcaption><p>Creating a new project user request</p></figcaption></figure>
 
     &#x20;
-5. <mark style="color:orange;">**Project Team**</mark> **waits for notification from the **<mark style="color:purple;">**MDPS Team**</mark> that everything is setup and ready to use (see step 13 below)\
+5. <mark style="color:orange;">**Project**</mark> **waits for notification from the **<mark style="color:purple;">**MDPS Team**</mark> that everything is setup and ready to use (see step 13 below)\
    &#x20;
 6.  <mark style="color:purple;">**MDPS Team**</mark>** sets up initial set of users/roles** (manually for now):
 
