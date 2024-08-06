@@ -1,8 +1,8 @@
-# Detailed Breakdown of Project Onboarding Steps
+# Project Onboarding Procedure
 
 ### Prerequisites
 
-1. Shared Services account is setup. See [shared-services-deployment.md](../shared-services-deployment.md "mention") for more instructions.
+1. Shared Services account is setup. See [shared-services-deployment.md](../developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment.md "mention") for more instructions.
 
 ### Venue Account Onboarding Procedure:
 
@@ -21,18 +21,18 @@
       * `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin`
       * `Unity_Viewer`
       * `Unity_Admin`
-      * The Cognito user group naming convention is available at [Cognito User Group Standards](../../security/cognito-user-group-standards.md)
+      * The Cognito user group naming convention is available at [Cognito User Group Standards](../developer-docs/common-services/docs/users-guide/security/cognito-user-group-standards.md)
     * Unity team **creates Cognito users**
       * Each user should be created in the Shared Services Cognito user pool
       * Each user should be assigned these Groups at a minimum:
         * `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly`
         * `Unity_Viewer`
-      * The Cognito user naming convention is available at [Cognito User Standards](../../security/cognito-user-standards.md)
+      * The Cognito user naming convention is available at [Cognito User Standards](../developer-docs/common-services/docs/users-guide/security/cognito-user-standards.md)
       * Unity team collects user names (preferably the NASA AUIDs) and a valid email addresses for  users to create Cognito users
       * After creating the user in the Cognito user pool, the user receives a temporary password through email with instructions to change the password
 
 
-6. **Unity team adds project AWS account to shared service Resource Access Manager** (RAM) to enable sharing of SSM parameters. See [shared-services-deployment.md](../shared-services-deployment.md "mention") for more instructions.\
+6. **Unity team adds project AWS account to shared service Resource Access Manager** (RAM) to enable sharing of SSM parameters. See [shared-services-deployment.md](../developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment.md "mention") for more instructions.\
 
 7. **In Project Venue Account:** **Unity team requests** wildcard cert for the venue, must add the cname record/value to the SHARED SERVICES DNS to approve its creation. [See instructions here](https://app.gitbook.com/s/cUYkPD7kBe7iT1LABkPZ/tips-and-tricks/speed-up-with-quick-find).\
 

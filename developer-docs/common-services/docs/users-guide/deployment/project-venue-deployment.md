@@ -6,7 +6,7 @@ description: >-
 
 # Project/Venue Deployment
 
-TODO: steps work in progress, better details coming soon.. See [project-onboarding-procedure.md](deployment-concepts-and-infrastructure/project-onboarding-procedure.md "mention")for more details
+TODO: steps work in progress, better details coming soon.. See [project-onboarding-procedure.md](../../../../../mdps-overview/project-onboarding-procedure.md "mention")for more details
 
 1\) Project AWS account identified for onboarding into Unity (Bring your own Account).
 

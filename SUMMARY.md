@@ -6,6 +6,7 @@
 
 * [Getting Started](mdps-overview/getting-started.md)
 * [Key Unity Concepts](mdps-overview/key-unity-concepts.md)
+* [Project Onboarding Procedure](mdps-overview/project-onboarding-procedure.md)
 * [Unity Account and Login](mdps-overview/unity-account-and-login.md)
 * [Tutorials](mdps-overview/tutorials/README.md)
   * [Algorithms and Algorithm Development](mdps-overview/tutorials/algorithms-and-algorithm-development/README.md)
@@ -72,7 +73,6 @@
             * [Standard Set of SSM Parameters](developer-docs/common-services/docs/users-guide/deployment/deployment-concepts-and-infrastructure/unity-ssm-parameters/standard-set-of-ssm-parameters.md)
             * [SSM Parameter Naming Requirements and Conventions](developer-docs/common-services/docs/users-guide/deployment/deployment-concepts-and-infrastructure/unity-ssm-parameters/ssm-parameter-naming-requirements-and-conventions.md)
             * [Deployments, Dependency, and SSM Parameters](developer-docs/common-services/docs/users-guide/deployment/deployment-concepts-and-infrastructure/unity-ssm-parameters/deployments-dependency-and-ssm-parameters.md)
-          * [Project Onboarding Procedure](developer-docs/common-services/docs/users-guide/deployment/deployment-concepts-and-infrastructure/project-onboarding-procedure.md)
         * [🚧 Shared Services Deployment](developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment.md)
           * [Shared Service Network Configurations](developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment/shared-service-network-configurations/README.md)
             * [Adding a DNS record for a shared service resource](developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment/shared-service-network-configurations/adding-a-dns-record-for-a-shared-service-resource.md)
