@@ -18,8 +18,9 @@ description: >-
 3.  Project **notifies MDPS Team** that they want to onboard to Unity by creating a "New Project Venue Request" issue in [this MDPS repository](https://github.com/unity-sds/issue-triage/issues/new/choose):
 
     <figure><img src="../.gitbook/assets/Screenshot 2024-08-06 at 1.08.14 PM (1).png" alt=""><figcaption></figcaption></figure>
-4. **Project lets MDPS Team know what the set of "starter" users are** (name, email address, etc..)\
+4.  **Project lets MDPS Team know what the set of project users are,** by creating "New User Request" issue(s) in [this MDPS repository](https://github.com/unity-sds/issue-triage/issues/new/choose):
 
+    <figure><img src="../.gitbook/assets/Screenshot 2024-08-06 at 2.14.27 PM.png" alt=""><figcaption></figcaption></figure>
 5.  **MDPS Team sets up initial set of users/roles** (manually for now):
 
     * MDPS Team **creates Cognito user groups** (roles)
