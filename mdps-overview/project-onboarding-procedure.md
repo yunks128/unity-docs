@@ -24,9 +24,11 @@ description: >-
     &#x20;
 4.  <mark style="color:orange;">**Project**</mark>** lets MDPS Team know what the set of project users are,** by creating "New User Request" issue(s) in [this MDPS repository](https://github.com/unity-sds/issue-triage/issues/new/choose):
 
-    <figure><img src="../.gitbook/assets/Screenshot 2024-08-06 at 2.14.27 PM.png" alt=""><figcaption></figcaption></figure>
-5. <mark style="color:orange;">**Project Team**</mark> **waits for notification from the **<mark style="color:purple;">**MDPS Team**</mark> that everything is setup and ready to use (see step 13 below)\
+    <figure><img src="../.gitbook/assets/Screenshot 2024-08-06 at 2.14.27 PM.png" alt=""><figcaption><p>Creating a new project user request</p></figcaption></figure>
 
+    &#x20;
+5. <mark style="color:orange;">**Project Team**</mark> **waits for notification from the **<mark style="color:purple;">**MDPS Team**</mark> that everything is setup and ready to use (see step 13 below)\
+   &#x20;
 6.  <mark style="color:purple;">**MDPS Team**</mark>** sets up initial set of users/roles** (manually for now):
 
     * <mark style="color:purple;">**MDPS Team**</mark>** creates Cognito user groups** (roles)
@@ -44,9 +46,9 @@ description: >-
       * Unity team collects user names (preferably the NASA AUIDs) and a valid email addresses for  users to create Cognito users
       * After creating the user in the Cognito user pool, the user receives a temporary password through email with instructions to change the password
 
-
+    &#x20;
 7. <mark style="color:purple;">**MDPS Team**</mark>** adds project AWS account to shared service Resource Access Manager** (RAM) to enable sharing of SSM parameters. See [shared-services-deployment.md](../developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment.md "mention") for more instructions.\
-
+   &#x20;
 8. <mark style="color:purple;">**MDPS Team**</mark>** requests wildcard cert In Project Venue Account.**
    * must add the cname record/value to the SHARED SERVICES DNS to approve its creation. [See instructions here](https://app.gitbook.com/s/cUYkPD7kBe7iT1LABkPZ/tips-and-tricks/speed-up-with-quick-find).\
 
@@ -95,21 +97,23 @@ description: >-
     * OPTIONAL STEPS IF YOU NEED TO DESTROY MANAGEMENT CONSOLE:
       * Run the following on the bastion host:
       * `./destroy.sh --project-name <PROJECT> --venue-name <VENUE>`\
-
+        &#x20;
 12. <mark style="color:purple;">**MDPS Team**</mark>** configures Shared Services HTTPD server to route to Venue "entry" ALB.**
     * See steps [here](https://unity-sds.gitbook.io/docs/developer-docs/common-services/docs/users-guide/deployment/updating-venue-deployment).\
-
+      &#x20;
 13. <mark style="color:purple;">**MDPS Team**</mark> reaches out to <mark style="color:orange;">**Project Team**</mark>, to notify them that their account is ready for use.
 
     * URL(s) and instructions to log into services is provided to Project Team.
     * See also [Unity Account and Login instructions](https://unity-sds.gitbook.io/docs/mdps-overview/unity-account-and-login).
 
-
+    &#x20;
 14. <mark style="color:orange;">**Project User**</mark>  **logs into Management Console** via CloudFront.   Use the URL that was copied above.\
-
+    &#x20;
 15. <mark style="color:orange;">**Project User**</mark>** runs Core Setup actions in Management Console**\
-
+    &#x20;
 16. <mark style="color:orange;">**Project User**</mark>** optionally deploys further marketplace items**
+
+    &#x20;
 
 
 
