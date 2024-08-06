@@ -109,6 +109,7 @@ description: >-
 15. <mark style="color:orange;">**Project**</mark> [logs into MDPS](https://unity-sds.gitbook.io/docs/mdps-overview/unity-account-and-login) using the URLs provided, and does work.  For example:
     * <mark style="color:orange;">**Project Algorithm Developer**</mark> logs into JuptyerHub and creates/tests algorithms
     * <mark style="color:orange;">**Project Administrator**</mark> logs into Management Console, and installs/updates MDPS services
+    * <mark style="color:orange;">**Project Workflow Developer**</mark> logs into SPS/Airflow and edits DAG code
     * etc..
 
 &#x20;
