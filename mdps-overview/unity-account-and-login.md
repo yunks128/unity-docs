@@ -7,7 +7,7 @@ description: >-
 # Unity Account and Login
 
 {% hint style="info" %}
-**Prerequisite**:  The project account, users, roles, etc.. must be setup first, by the Unity support team [per these instructions](https://unity-sds.gitbook.io/docs/developer-docs/common-services/docs/users-guide/deployment/deployment-concepts-and-infrastructure/detailed-breakdown-of-project-onboarding-steps)
+**PREREQUISITE**:  The project account, users, roles, etc.. [must be setup first, by the Unity support team](https://unity-sds.gitbook.io/docs/mdps-overview/project-onboarding-procedure)
 {% endhint %}
 
 ### Logging in for the first time (test or development systems)
