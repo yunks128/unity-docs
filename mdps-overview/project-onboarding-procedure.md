@@ -104,14 +104,16 @@ description: >-
 13. <mark style="color:purple;">**MDPS Team**</mark> reaches out to <mark style="color:orange;">**Project Team**</mark>, to notify them that their account is ready for use.
 
     * URL(s) and instructions to log into services is provided to Project Team.
-    * See also [Unity Account and Login instructions](https://unity-sds.gitbook.io/docs/mdps-overview/unity-account-and-login).
 
     &#x20;
-14. <mark style="color:orange;">**Project User**</mark>  **logs into Management Console** via CloudFront.   Use the URL that was copied above.\
+14. <mark style="color:orange;">**Project User**</mark>  **logs into MDPS services such as the Management Console, JupyterHub, or others,  using the URLs that were provided.**\
+    &#x20;&#x20;
+15. <mark style="color:orange;">**Project User**</mark>  **logs into MDPS services such as the Management Console, JupyterHub, or others, using the URLs that were provided.**
+    * See also: [Unity Account and Login instructions](https://unity-sds.gitbook.io/docs/mdps-overview/unity-account-and-login).\
+      &#x20;
+16. <mark style="color:orange;">**Project User**</mark>** runs Core Setup actions in Management Console**\
     &#x20;
-15. <mark style="color:orange;">**Project User**</mark>** runs Core Setup actions in Management Console**\
-    &#x20;
-16. <mark style="color:orange;">**Project User**</mark>** optionally deploys further marketplace items**
+17. <mark style="color:orange;">**Project User**</mark>** optionally deploys further marketplace items**
 
     &#x20;
 
