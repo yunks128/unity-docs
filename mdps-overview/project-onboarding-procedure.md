@@ -79,8 +79,8 @@ description: >-
        * Back in the AWS console, create an image (AMI) from the EC2, to have as a backup.
 
 
-10. **Unity Team (or Project Team) deploys the Management Console**
-    * connect to instance via SSM connection (or SSH via pem file)
+10. **Unity Team (or Project Team) deploys the Venue Infrastructure (Networking stack, Management Console, and more)**
+    * connect to instance via AWS SSM connection
     * `sudo su - ubuntu`
     * `cd unity-cs-infra/nightly_tests`
     * `git pull`
