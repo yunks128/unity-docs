@@ -51,7 +51,7 @@ description: >-
    &#x20;
 8. <mark style="color:purple;">**MDPS Team**</mark>** requests wildcard cert In Project Venue Account.**
    * must add the cname record/value to the SHARED SERVICES DNS to approve its creation. [See instructions here](https://app.gitbook.com/s/cUYkPD7kBe7iT1LABkPZ/tips-and-tricks/speed-up-with-quick-find).\
-
+     &#x20;&#x20;
 9.  <mark style="color:purple;">**MDPS Team**</mark>** sets up roles on account**:
 
     * Export short-term access keys for account on command-line
