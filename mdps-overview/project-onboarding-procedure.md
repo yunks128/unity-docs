@@ -17,7 +17,7 @@ description: >-
    &#x20;
 2. <mark style="color:orange;">**Project**</mark> **agrees to EC2 conditions** (EULA / FIPS) on their new account\
    &#x20;
-3.  <mark style="color:orange;">**Project**</mark> **notifies MDPS Team** that they want to onboard to Unity by creating a "New Project Venue Request" issue in [this MDPS repository](https://github.com/unity-sds/issue-triage/issues/new/choose):
+3.  <mark style="color:orange;">**Project**</mark> **notifies MDPS Team** that they want to onboard to MDPS by creating a "New Project Venue Request" issue in [this MDPS repository](https://github.com/unity-sds/issue-triage/issues/new/choose):
 
     <figure><img src="../.gitbook/assets/Screenshot 2024-08-06 at 1.08.14 PM (1).png" alt=""><figcaption><p>Creating a new project venue request</p></figcaption></figure>
 
