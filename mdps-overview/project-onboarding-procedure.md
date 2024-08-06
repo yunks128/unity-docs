@@ -1,3 +1,10 @@
+---
+description: >-
+  New users (projects) of MDPS need to have their AWS account setup, users
+  setup, and linked together with a MDPS shared services account.  This
+  procedure outlines the steps needed to accomplish this.
+---
+
 # Project Onboarding Procedure
 
 {% hint style="info" %}
