@@ -15,7 +15,7 @@ description: >-
 
 2. Project **agrees to EC2 conditions** (EULA / FIPS) on their new account\
 
-3.  Project **notifies MDPS Team** that they want to onboard to Unity by creating a "New Project Venue Request" in [this MDPS repository](https://github.com/unity-sds/issue-triage/issues/new/choose):
+3.  Project **notifies MDPS Team** that they want to onboard to Unity by creating a "New Project Venue Request" issue in [this MDPS repository](https://github.com/unity-sds/issue-triage/issues/new/choose):
 
     <figure><img src="../.gitbook/assets/Screenshot 2024-08-06 at 1.08.14 PM (1).png" alt=""><figcaption></figcaption></figure>
 4. **Project lets MDPS Team know what the set of "starter" users are** (name, email address, etc..)\
