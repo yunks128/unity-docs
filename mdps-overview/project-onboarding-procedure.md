@@ -105,11 +105,12 @@ description: >-
     &#x20;&#x20;
 14. <mark style="color:purple;">**MDPS Team**</mark> reaches out to <mark style="color:orange;">**Project Team**</mark>, to notify them that their account is ready for use.
     * URL(s) and instructions to log into services is provided to Project Team.\
-      &#x20; &#x20;
-15. <mark style="color:orange;">**Project User**</mark>  **logs into MDPS services such as the Management Console, JupyterHub, or others, using the URLs that were provided.**
-    * See also: [Unity Account and Login instructions](https://unity-sds.gitbook.io/docs/mdps-overview/unity-account-and-login).\
-      &#x20; \
-      &#x20;
+      &#x20;  &#x20;
+15. <mark style="color:orange;">**Project**</mark> [logs into MDPS](https://unity-sds.gitbook.io/docs/mdps-overview/unity-account-and-login) using the URLs provided, and does work.  For example:
+    * Project Algorithm developer logs into JuptyerHub and creates/tests algorithms
+    * Project Administrator logs into Management Console, and installs/updates MDPS services
+    * etc..\
+      &#x20;&#x20;
 16. <mark style="color:orange;">**Project User**</mark>** optionally deploys further marketplace items**
 
     &#x20;
