@@ -7,7 +7,7 @@ description: >-
 # Unity Account and Login
 
 {% hint style="info" %}
-**PREREQUISITE**:  The project account, users, roles, etc.. [must be setup first, by the Unity support team](https://unity-sds.gitbook.io/docs/mdps-overview/project-onboarding-procedure)
+**PREREQUISITE**:  The project account, users, roles, etc.. [must be setup first, by the MDPS support team](https://unity-sds.gitbook.io/docs/mdps-overview/project-onboarding-procedure)
 {% endhint %}
 
 ### Logging in for the first time (test or development systems)
