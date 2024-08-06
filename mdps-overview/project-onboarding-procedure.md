@@ -1,8 +1,10 @@
 # Project Onboarding Procedure
 
-### Prerequisites
+{% hint style="info" %}
+PREREQUISITES:
 
-1. Shared Services account is setup. See [shared-services-deployment.md](../developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment.md "mention") for more instructions.
+* The [Shared Services, account must be setup](../developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment.md)
+{% endhint %}
 
 ### Venue Account Onboarding Procedure:
 
