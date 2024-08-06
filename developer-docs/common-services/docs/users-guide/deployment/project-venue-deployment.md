@@ -6,7 +6,7 @@ description: >-
 
 # Project/Venue Deployment
 
-TODO: steps work in progress, better details coming soon.. See [detailed-breakdown-of-project-onboarding-steps.md](deployment-concepts-and-infrastructure/detailed-breakdown-of-project-onboarding-steps.md "mention")for more details
+TODO: steps work in progress, better details coming soon.. See [project-onboarding-procedure.md](deployment-concepts-and-infrastructure/project-onboarding-procedure.md "mention")for more details
 
 1\) Project AWS account identified for onboarding into Unity (Bring your own Account).
 
@@ -15,3 +15,4 @@ TODO: steps work in progress, better details coming soon.. See [detailed-breakdo
 3\) Project User logs into Management Console via CloudFront
 
 4\) Project User deploys further marketplace items
+
