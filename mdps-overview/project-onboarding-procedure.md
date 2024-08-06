@@ -17,19 +17,19 @@ description: >-
 
 2. Project **agrees to EC2 conditions** (EULA / FIPS) on their new account\
 
-3. Project **notifies Unity team** that they want to onboard to Unity\
+3. Project **notifies MDPS Team** that they want to onboard to Unity\
 
-4. **Project lets Unity know what the set of "starter" users are** (name, email address, etc..)\
+4. **Project lets MDPS Team know what the set of "starter" users are** (name, email address, etc..)\
 
-5.  **Unity Team sets up initial set of users/roles** (manually for now):
+5.  **MDPS Team sets up initial set of users/roles** (manually for now):
 
-    * Unity team **creates Cognito user groups** (roles)
+    * MDPS Team **creates Cognito user groups** (roles)
       * `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly`
       * `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin`
       * `Unity_Viewer`
       * `Unity_Admin`
       * The Cognito user group naming convention is available at [Cognito User Group Standards](../developer-docs/common-services/docs/users-guide/security/cognito-user-group-standards.md)
-    * Unity team **creates Cognito users**
+    * MDPS Team **creates Cognito users**
       * Each user should be created in the Shared Services Cognito user pool
       * Each user should be assigned these Groups at a minimum:
         * `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly`
@@ -39,17 +39,17 @@ description: >-
       * After creating the user in the Cognito user pool, the user receives a temporary password through email with instructions to change the password
 
 
-6. **Unity team adds project AWS account to shared service Resource Access Manager** (RAM) to enable sharing of SSM parameters. See [shared-services-deployment.md](../developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment.md "mention") for more instructions.\
+6. **MDPS team adds project AWS account to shared service Resource Access Manager** (RAM) to enable sharing of SSM parameters. See [shared-services-deployment.md](../developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment.md "mention") for more instructions.\
 
-7. **In Project Venue Account:** **Unity team requests** wildcard cert for the venue, must add the cname record/value to the SHARED SERVICES DNS to approve its creation. [See instructions here](https://app.gitbook.com/s/cUYkPD7kBe7iT1LABkPZ/tips-and-tricks/speed-up-with-quick-find).\
+7. **In Project Venue Account:** **MDPS Team requests** wildcard cert for the venue, must add the cname record/value to the SHARED SERVICES DNS to approve its creation. [See instructions here](https://app.gitbook.com/s/cUYkPD7kBe7iT1LABkPZ/tips-and-tricks/speed-up-with-quick-find).\
 
-8.  **Unity Team sets up roles on account**:
+8.  **MDPS Team sets up roles on account**:
 
     * Export short-term access keys for account on command-line
     * execute the [create roles script](https://github.com/unity-sds/unity-cs-infra/blob/main/aws\_role\_create/create\_roles\_and\_policies.sh)
 
 
-9. **Unity Teams sets up the venue bastion host**
+9. **MDPS Team sets up the venue bastion host**
    * Creates an EC2 bastion host in project AWS account, which is able to deploy Management Console EC2.
    *   Create EC2 instance with the following configuration:
 
@@ -79,11 +79,10 @@ description: >-
        * Back in the AWS console, create an image (AMI) from the EC2, to have as a backup.
 
 
-10. **Unity Team (or Project Team) deploys the Venue Infrastructure (Networking stack, Management Console, and more)**
+10. **MDPS Team (or Project Team) deploys the Venue Infrastructure (Networking stack, Management Console, and more)**
     * connect to instance via AWS SSM connection
     * `sudo su - ubuntu`
-    * `cd unity-cs-infra/nightly_tests`
-    * `git pull`
+    * `cd unity-cs-infra/nightly_tests ; git pull`
     * `./run.sh --destroy false --run-tests false --project-name <PROJECT> --venue-name <VENUE>`
     * Make sure to copy the URL of the Management Console that gets printed to the console, as part of running the above command.  If any issues or errors encountered, see below "Debugging Management Console" section.
     *   OPTIONAL STEPS IF YOU NEED TO DESTROY MANAGEMENT CONSOLE:
