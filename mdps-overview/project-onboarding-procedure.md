@@ -103,7 +103,7 @@ description: >-
       &#x20;
 13. <mark style="color:purple;">**MDPS Team**</mark>** runs Core Setup actions in Management Console**\
     &#x20;&#x20;
-14. <mark style="color:purple;">**MDPS Team**</mark> reaches out to <mark style="color:orange;">**Project Team**</mark>, to notify them that their account is ready for use.
+14. <mark style="color:purple;">**MDPS Team**</mark> reaches out to <mark style="color:orange;">**Project**</mark>, to notify them that their account is ready for use.
     * URL(s) and instructions to log into services is provided to Project Team.\
       &#x20;  &#x20;
 15. <mark style="color:orange;">**Project**</mark> [logs into MDPS](https://unity-sds.gitbook.io/docs/mdps-overview/unity-account-and-login) using the URLs provided, and does work.  For example:
