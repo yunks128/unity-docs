@@ -21,7 +21,9 @@ description: >-
 4.  <mark style="color:orange;">**Project**</mark>** lets MDPS Team know what the set of project users are,** by creating "New User Request" issue(s) in [this MDPS repository](https://github.com/unity-sds/issue-triage/issues/new/choose):
 
     <figure><img src="../.gitbook/assets/Screenshot 2024-08-06 at 2.14.27 PM.png" alt=""><figcaption></figcaption></figure>
-5.  <mark style="color:purple;">**MDPS Team**</mark>** sets up initial set of users/roles** (manually for now):
+5. <mark style="color:orange;">**Project Team**</mark> **waits for notification from the **<mark style="color:purple;">**MDPS Team**</mark> that everything is setup and ready to use (see step 13 below)\
+
+6.  <mark style="color:purple;">**MDPS Team**</mark>** sets up initial set of users/roles** (manually for now):
 
     * <mark style="color:purple;">**MDPS Team**</mark>** creates Cognito user groups** (roles)
       * `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly`
@@ -39,48 +41,48 @@ description: >-
       * After creating the user in the Cognito user pool, the user receives a temporary password through email with instructions to change the password
 
 
-6. <mark style="color:purple;">**MDPS Team**</mark>** adds project AWS account to shared service Resource Access Manager** (RAM) to enable sharing of SSM parameters. See [shared-services-deployment.md](../developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment.md "mention") for more instructions.\
+7. <mark style="color:purple;">**MDPS Team**</mark>** adds project AWS account to shared service Resource Access Manager** (RAM) to enable sharing of SSM parameters. See [shared-services-deployment.md](../developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment.md "mention") for more instructions.\
 
-7. <mark style="color:purple;">**MDPS Team**</mark>** requests wildcard cert In Project Venue Account.**
+8. <mark style="color:purple;">**MDPS Team**</mark>** requests wildcard cert In Project Venue Account.**
    * must add the cname record/value to the SHARED SERVICES DNS to approve its creation. [See instructions here](https://app.gitbook.com/s/cUYkPD7kBe7iT1LABkPZ/tips-and-tricks/speed-up-with-quick-find).\
 
-8.  <mark style="color:purple;">**MDPS Team**</mark>** sets up roles on account**:
+9.  <mark style="color:purple;">**MDPS Team**</mark>** sets up roles on account**:
 
     * Export short-term access keys for account on command-line
     * execute the [create roles script](https://github.com/unity-sds/unity-cs-infra/blob/main/aws\_role\_create/create\_roles\_and\_policies.sh)
 
 
-9. <mark style="color:purple;">**MDPS Team**</mark>** sets up the venue bastion host**
-   * Creates an EC2 bastion host in project AWS account, which is able to deploy Management Console EC2.
-   *   Create EC2 instance with the following configuration:
+10. <mark style="color:purple;">**MDPS Team**</mark>** sets up the venue bastion host**
+    * Creates an EC2 bastion host in project AWS account, which is able to deploy Management Console EC2.
+    *   Create EC2 instance with the following configuration:
 
-       * **Name of instance:**
-         * Use the format `unity-<PROJECT>-<VENUE>-cs-management_console-bastion`
-       * **AMI / instance type**:&#x20;
-         * Get the AMI ID to use, by opening another tab, and copying the AMI specified in the `/mcp/amis/ubuntu2004-cset` SSM param
-         * Go to "My AMIs" --> "Shared With Me" --> enter AMI ID in the drop-down text box
-         * use a `t2.micro` instance
-       * **Key Pair:**&#x20;
-         * If a key pair doesn't already exist, create one in the format `unity-<PROJECT>-<VENUE>-bastion-pem` (do this in another tab first)
-         * select keypair (use "Select Existing Keypair") to use (create a new one and save it for future use)
-       * **Security Group:**&#x20;
-         * If an existing `mc-bastion-sg` security doesn't already exist, then create one. It should have:
-           * INCOMING CONNECTIONS:
-             * none
-           * OUTGOING CONNECTIONS:
-             * open custom TCP for 443 to anywhere, and 80 to anywhere
-         * Select the `mc-bastion-sg` security group.
-       * **Networking:**
-         * Make sure to select a public subnet (under the VPC setting)
-       * Under Advanced, select an IAM Instance Profile of `Unity-CS_Service_Role-instance-profile`
-       * launch instance
-       * Connect to instance
-       * `sudo su - ubuntu`
-       * `git clone https://github.com/unity-sds/unity-cs-infra.git`
-       * Back in the AWS console, create an image (AMI) from the EC2, to have as a backup.
+        * **Name of instance:**
+          * Use the format `unity-<PROJECT>-<VENUE>-cs-management_console-bastion`
+        * **AMI / instance type**:&#x20;
+          * Get the AMI ID to use, by opening another tab, and copying the AMI specified in the `/mcp/amis/ubuntu2004-cset` SSM param
+          * Go to "My AMIs" --> "Shared With Me" --> enter AMI ID in the drop-down text box
+          * use a `t2.micro` instance
+        * **Key Pair:**&#x20;
+          * If a key pair doesn't already exist, create one in the format `unity-<PROJECT>-<VENUE>-bastion-pem` (do this in another tab first)
+          * select keypair (use "Select Existing Keypair") to use (create a new one and save it for future use)
+        * **Security Group:**&#x20;
+          * If an existing `mc-bastion-sg` security doesn't already exist, then create one. It should have:
+            * INCOMING CONNECTIONS:
+              * none
+            * OUTGOING CONNECTIONS:
+              * open custom TCP for 443 to anywhere, and 80 to anywhere
+          * Select the `mc-bastion-sg` security group.
+        * **Networking:**
+          * Make sure to select a public subnet (under the VPC setting)
+        * Under Advanced, select an IAM Instance Profile of `Unity-CS_Service_Role-instance-profile`
+        * launch instance
+        * Connect to instance
+        * `sudo su - ubuntu`
+        * `git clone https://github.com/unity-sds/unity-cs-infra.git`
+        * Back in the AWS console, create an image (AMI) from the EC2, to have as a backup.
 
 
-10. <mark style="color:purple;">**MDPS Team**</mark>** deploys the Venue Infrastructure (Networking stack, Management Console, and more)**
+11. <mark style="color:purple;">**MDPS Team**</mark>** deploys the Venue Infrastructure (Networking stack, Management Console, and more)**
     * connect to instance via AWS SSM connection
     * `sudo su - ubuntu`
     * `cd unity-cs-infra/nightly_tests ; git pull`
@@ -90,19 +92,20 @@ description: >-
       * Run the following on the bastion host:
       * `./destroy.sh --project-name <PROJECT> --venue-name <VENUE>`\
 
-11. <mark style="color:purple;">**MDPS Team**</mark>** configures Shared Services HTTPD server to route to Venue "entry" ALB.**
+12. <mark style="color:purple;">**MDPS Team**</mark>** configures Shared Services HTTPD server to route to Venue "entry" ALB.**
     * See steps [here](https://unity-sds.gitbook.io/docs/developer-docs/common-services/docs/users-guide/deployment/updating-venue-deployment).\
 
-12. <mark style="color:purple;">**MDPS Team**</mark> reaches out to <mark style="color:orange;">**Project Team**</mark>, to notify them that their account is ready for use.
+13. <mark style="color:purple;">**MDPS Team**</mark> reaches out to <mark style="color:orange;">**Project Team**</mark>, to notify them that their account is ready for use.
 
     * URL(s) and instructions to log into services is provided to Project Team.
+    * See also [Unity Account and Login instructions](https://unity-sds.gitbook.io/docs/mdps-overview/unity-account-and-login).
 
 
-13. <mark style="color:orange;">**Project User**</mark>  **logs into Management Console** via CloudFront.   Use the URL that was copied above.\
+14. <mark style="color:orange;">**Project User**</mark>  **logs into Management Console** via CloudFront.   Use the URL that was copied above.\
 
-14. <mark style="color:orange;">**Project User**</mark>** runs Core Setup actions in Management Console**\
+15. <mark style="color:orange;">**Project User**</mark>** runs Core Setup actions in Management Console**\
 
-15. <mark style="color:orange;">**Project User**</mark>** optionally deploys further marketplace items**
+16. <mark style="color:orange;">**Project User**</mark>** optionally deploys further marketplace items**
 
 
 
