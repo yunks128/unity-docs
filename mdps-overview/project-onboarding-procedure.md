@@ -92,13 +92,7 @@
 
 13. **Project user runs Core Setup actions in Management Console**\
 
-14. **Project User deploys further marketplace items**\
-
-15. **Project User deploys Venue HTTPD**\
-
-16. **Project User deploys Venue API Gateway**\
-
-17. **Project User notifies U-CS team of HTTP location and API Gateway URL for inclusion in shared service API  and HTTPD proxies**
+14. **Project User deploys further marketplace items**
 
 
 
