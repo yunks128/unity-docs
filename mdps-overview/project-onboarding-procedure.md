@@ -7,7 +7,9 @@ description: >-
 
 # Project Onboarding Procedure
 
+{% hint style="info" %}
 **PREREQUISITE**:  The [Shared Services, account must be setup](../developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment.md)
+{% endhint %}
 
 ### Venue Account Onboarding Procedure:
 
