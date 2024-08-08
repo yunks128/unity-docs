@@ -22,8 +22,8 @@ description: >-
 5. Now you will have the login prompt. Use the username and password that were emailed to you. \
    ![](../.gitbook/assets/login-4-user-pass.png)
 6. You should be immediately asked to change your password. Please do so.
-7. After you have input your login information, Jupyter will ask you to choose "Server Options". If you choose the Minimal environment it will not have many basic tools installed. We suggest using the Sounder SIPS Development Environment.\
-   ![](../.gitbook/assets/login-5-server-options.png)
+7. After you have input your login information, Jupyter will ask you to choose "Server Options". If you choose the Minimal environment it will not have many basic tools installed. We suggest using the Unity - Datascience Environment.\
+   ![](../.gitbook/assets/new-acct-jupyter-server-options.png)
 8. Once you've chosen the server options, Juypter will load. \
    ![](../.gitbook/assets/login-6-jupyter-loading.png)
 
