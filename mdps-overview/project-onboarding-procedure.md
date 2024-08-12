@@ -36,6 +36,7 @@ description: >-
       * `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin`
       * `Unity_Viewer`
       * `Unity_Admin`
+      * `Unity-<PROJECT>-<VENUE>-viewer`
       * The Cognito user group naming convention is available at [Cognito User Group Standards](../developer-docs/common-services/docs/users-guide/security/cognito-user-group-standards.md)
     * <mark style="color:purple;">**MDPS Team**</mark> **creates Cognito users**
       * Each user should be created in the Shared Services Cognito user pool
