@@ -22,9 +22,7 @@ description: >-
     <figure><img src="../.gitbook/assets/Screenshot 2024-08-06 at 1.08.14 PM (1).png" alt=""><figcaption><p>Creating a new project venue request</p></figcaption></figure>
 
     &#x20;
-4.  <mark style="color:orange;">**Project**</mark>** lets MDPS Team know what the set of project users are,** by creating "New User Request" issue(s) in [this MDPS repository](https://github.com/unity-sds/issue-triage/issues/new/choose):
-
-    <figure><img src="../.gitbook/assets/Screenshot 2024-08-06 at 2.14.27 PM.png" alt=""><figcaption><p>Creating a new project user request</p></figcaption></figure>
+4.  <mark style="color:orange;">**Project**</mark>** lets MDPS Team know what the set of project users are.** TODO: Methodology for this needs more discussion.
 
     &#x20;
 5. <mark style="color:orange;">**Project**</mark> **waits for notification from the **<mark style="color:purple;">**MDPS Team**</mark> that everything is setup and ready to use (see step 13 below)\
