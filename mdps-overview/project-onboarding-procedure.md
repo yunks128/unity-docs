@@ -25,7 +25,7 @@ description: >-
     * Existing AWS Account ID
     * NASA ID (Agency User ID), of initial MDPS user
     * Email address of initial MDPS user
-    * Set of initial users, if known (NASA AUID & email addresses for all)
+    * Set of other users, if known (NASA AUID & email addresses for all)
 
     &#x20; &#x20;
 4. <mark style="color:orange;">**Project**</mark> **waits for notification from the **<mark style="color:purple;">**MDPS Team**</mark> that everything is setup and ready to use (see step 13 below)\
