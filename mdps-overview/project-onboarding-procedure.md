@@ -22,7 +22,7 @@ description: >-
     <figure><img src="../.gitbook/assets/Screenshot 2024-08-06 at 1.08.14 PM (1).png" alt=""><figcaption><p>Creating a new project venue request</p></figcaption></figure>
 
     &#x20;
-4.  <mark style="color:orange;">**Project**</mark>** lets MDPS Team know what the set of project users are.** TODO: Methodology for this needs more discussion.
+4.  <mark style="color:orange;">**Project**</mark>** lets MDPS Team know what the set of project users are.** <mark style="color:red;">TODO: Methodology for this needs more discussion.  For now this will probably just be an email sent to the MDPS Team.</mark>
 
     &#x20;
 5. <mark style="color:orange;">**Project**</mark> **waits for notification from the **<mark style="color:purple;">**MDPS Team**</mark> that everything is setup and ready to use (see step 13 below)\
