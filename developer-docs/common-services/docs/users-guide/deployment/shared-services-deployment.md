@@ -10,7 +10,7 @@ Currently Shared Services deployment is primarily a manual process.  However, au
 
 ## Users & Roles Setup
 
-Project users and roles will be defined using AWS Cognito.
+Project users and roles will be defined in the Shared Services account, using AWS Cognito.
 
 In the Shared Services account, the <mark style="color:purple;">**MDPS Team**</mark> needs to create a set of **Cognito user groups** (roles):
 
