@@ -30,23 +30,13 @@ description: >-
     &#x20; &#x20;
 4. <mark style="color:orange;">**Project**</mark> **waits for notification from the **<mark style="color:purple;">**MDPS Team**</mark> that everything is setup and ready to use (see step 13 below)\
    &#x20;
-5.  <mark style="color:purple;">**MDPS Team**</mark>** sets up initial set of users/roles** (manually for now):
+5.  Per the information (email address & AUID) in the email sent in step 3, the <mark style="color:purple;">**MDPS Team**</mark>** sets up initial set of users**:
 
-    * <mark style="color:purple;">**MDPS Team**</mark>** creates Cognito user groups** (roles)
-      * `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly`
-      * `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin`
+    * Each user should be created in the Shared Services AWS account Cognito user pool
+    * Each user should be assigned these Groups at a minimum:
       * `Unity_Viewer`
-      * `Unity_Admin`
-      * `Unity-<PROJECT>-<VENUE>-viewer`
-      * The Cognito user group naming convention is available at [Cognito User Group Standards](../developer-docs/common-services/docs/users-guide/security/cognito-user-group-standards.md)
-    * <mark style="color:purple;">**MDPS Team**</mark> **creates Cognito users**
-      * Each user should be created in the Shared Services Cognito user pool
-      * Each user should be assigned these Groups at a minimum:
-        * `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly`
-        * `Unity_Viewer`
-      * The Cognito user naming convention is available at [Cognito User Standards](../developer-docs/common-services/docs/users-guide/security/cognito-user-standards.md)
-      * Unity team collects user names (preferably the NASA AUIDs) and a valid email addresses for  users to create Cognito users
-      * After creating the user in the Cognito user pool, the user receives a temporary password through email with instructions to change the password
+    * The Cognito user naming convention is available at [Cognito User Standards](../developer-docs/common-services/docs/users-guide/security/cognito-user-standards.md)
+    * After creating the user in the Cognito user pool, the <mark style="color:orange;">**Project User**</mark> receives a temporary password through email with instructions to change the password
 
     &#x20;
 6. <mark style="color:purple;">**MDPS Team**</mark>** adds project AWS account to shared service Resource Access Manager** (RAM) to enable sharing of SSM parameters. See [shared-services-deployment.md](../developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment.md "mention") for more instructions.\
