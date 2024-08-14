@@ -8,6 +8,21 @@ description: >-
 
 Currently Shared Services deployment is primarily a manual process.  However, automated & streamlined support is intended to be available at a later date.
 
+## Users & Roles Setup
+
+Project users and roles will be defined using AWS Cognito.
+
+In the Shared Services account, the <mark style="color:purple;">**MDPS Team**</mark> needs to create a set of **Cognito user groups** (roles):
+
+* `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly`
+* `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin`
+* `Unity_Viewer`
+* `Unity_Admin`
+* `Unity-<PROJECT>-<VENUE>-viewer`
+* NOTE: The Cognito user group naming conventions can be viewed in [Cognito User Group Standards](../security/cognito-user-group-standards.md)
+
+Users will be created by the <mark style="color:purple;">**MDPS Team**</mark> for each project as part of the [Project Onboarding Procedure](https://unity-sds.gitbook.io/docs/mdps-overview/project-onboarding-procedure).
+
 ## Networking Setup
 
 Shared Services deployments have specific network setups to enable the appropriate routing of requests to the desired resource. These resources can live in any number of shared service environments (dev, test, and production) or can live in a venue, which is associated with a single shared service environment.
