@@ -21,7 +21,11 @@ In the Shared Services account, the <mark style="color:purple;">**MDPS Team**</m
 * `Unity-<PROJECT>-<VENUE>-viewer`
 * NOTE: The Cognito user group naming conventions can be viewed in [Cognito User Group Standards](../security/cognito-user-group-standards.md)
 
-Users will be created by the <mark style="color:purple;">**MDPS Team**</mark> for each project as part of the [Project Onboarding Procedure](https://unity-sds.gitbook.io/docs/mdps-overview/project-onboarding-procedure).
+{% hint style="info" %}
+Users will NOT be created at the time the Shared Services account is setup, but rather they be created by the <mark style="color:purple;">**MDPS Team**</mark> for each project as part of the [Project Onboarding Procedure](https://unity-sds.gitbook.io/docs/mdps-overview/project-onboarding-procedure).
+{% endhint %}
+
+## &#x20;
 
 ## Networking Setup
 
