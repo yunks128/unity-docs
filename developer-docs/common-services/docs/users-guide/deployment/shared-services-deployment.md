@@ -20,11 +20,8 @@ Project users and roles will be defined in the Shared Services account, using AW
 
 In the Shared Services account, the <mark style="color:purple;">**MDPS Team**</mark> needs to create a set of **Cognito user groups** (roles):
 
-* `Unity-<PROJECT>-<VENUE>-ManagementConsole-ReadOnly`
-* `Unity-<PROJECT>-<VENUE>-ManagementConsole-Admin`
 * `Unity_Viewer`
 * `Unity_Admin`
-* `Unity-<PROJECT>-<VENUE>-viewer`
 * NOTE: The Cognito user group naming conventions can be viewed in [Cognito User Group Standards](../security/cognito-user-group-standards.md)
 
 {% hint style="info" %}
