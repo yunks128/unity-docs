@@ -19,8 +19,11 @@ description: >-
    &#x20;&#x20;
 3.  <mark style="color:orange;">**Project**</mark> **notifies **<mark style="color:purple;">**MDPS Team**</mark> that they want to onboard to MDPS by sending an email to `mdps-support@jpl.nasa.gov` The email should include the following information:
 
+    * Project Name (e.g. `Sounder SIPS`)
+    * <mark style="color:blue;">Project Identifier</mark> short string (e.g. <mark style="color:blue;">`ssips`</mark>)
     * Project Description
-    * Venue Name (e.g. `DEV`, `TEST`, `UAT`, `PROD`, etc..)
+    * Venue Name (e.g. `Sounder SIPS Development Venue`)
+    * <mark style="color:green;">Venue Identifier</mark> (e.g. <mark style="color:green;">`DEV`</mark>, `TEST`, `UAT`, `PROD`, etc..)
     * Venue Purpose
     * Existing AWS Account ID
     * NASA ID (Agency User ID), of initial MDPS user
@@ -55,13 +58,14 @@ description: >-
    *   Create EC2 instance with the following configuration:
 
        * **Name of instance:**
-         * Use the format `unity-<PROJECT>-<VENUE>-cs-management_console-bastion`
+         * Use the format:
+           * &#x20;`unity-`<mark style="color:blue;">`<PROJECT>`</mark>`-`<mark style="color:green;">`<VENUE>`</mark>`-cs-management_console-bastion`
        * **AMI / instance type**:&#x20;
          * Get the AMI ID to use, by opening another tab, and copying the AMI specified in the `/mcp/amis/ubuntu2004-cset` SSM param
          * Go to "My AMIs" --> "Shared With Me" --> enter AMI ID in the drop-down text box
          * use a `t2.micro` instance
        * **Key Pair:**&#x20;
-         * If a key pair doesn't already exist, create one in the format `unity-<PROJECT>-<VENUE>-bastion-pem` (do this in another tab first)
+         * If a key pair doesn't already exist, create one in the format `unity-`<mark style="color:blue;">`<PROJECT>`</mark>`-`<mark style="color:green;">`<VENUE>`</mark>`-bastion-pem` (do this in another tab first)
          * select keypair (use "Select Existing Keypair") to use (create a new one and save it for future use)
        * **Security Group:**&#x20;
          * If an existing `mc-bastion-sg` security doesn't already exist, then create one. It should have:
@@ -84,11 +88,11 @@ description: >-
     * connect to instance via AWS SSM connection
     * `sudo su - ubuntu`
     * `cd unity-cs-infra/nightly_tests ; git pull`
-    * `./run.sh --destroy false --run-tests false --project-name <PROJECT> --venue-name <VENUE>`
+    * `./run.sh --destroy false --run-tests false --project-name`` `<mark style="color:blue;">`<PROJECT>`</mark>` ``--venue-name`` `<mark style="color:green;">`<VENUE>`</mark>
     * Make sure to copy the URL of the Management Console that gets printed to the console, as part of running the above command.  If any issues or errors encountered, see below "Debugging Management Console" section.
     * OPTIONAL STEPS IF YOU NEED TO DESTROY MANAGEMENT CONSOLE:
       * Run the following on the bastion host:
-      * `./destroy.sh --project-name <PROJECT> --venue-name <VENUE>`\
+      * `./destroy.sh --project-name`` `<mark style="color:blue;">`<PROJECT>`</mark>` ``--venue-name`` `<mark style="color:green;">`<VENUE>`</mark>\
         &#x20;
 11. <mark style="color:purple;">**MDPS Team**</mark>** configures Shared Services HTTPD server to route to Venue "entry" ALB.**
     * See steps [here](https://unity-sds.gitbook.io/docs/developer-docs/common-services/docs/users-guide/deployment/updating-venue-deployment).\
@@ -98,7 +102,7 @@ description: >-
 13. <mark style="color:purple;">**MDPS Team**</mark> reaches out to <mark style="color:orange;">**Project**</mark>, to notify them that their account is ready for use.
     * URL(s) and instructions to log into services is provided to Project Team.\
       &#x20;  &#x20;
-14. <mark style="color:orange;">**Project**</mark> [logs into MDPS](https://unity-sds.gitbook.io/docs/mdps-overview/unity-account-and-login) using the URLs provided, and does work.  For example:
+14. <mark style="color:orange;">**Project Users**</mark> [log into MDPS](https://unity-sds.gitbook.io/docs/mdps-overview/unity-account-and-login) using the URLs provided, and do work.  For example:
     * <mark style="color:orange;">**Project Algorithm Developer**</mark> logs into JuptyerHub and creates/tests algorithms
     * <mark style="color:orange;">**Project Administrator**</mark> logs into Management Console, and installs/updates MDPS services
     * <mark style="color:orange;">**Project Workflow Engineer**</mark> logs into SPS/Airflow and edits DAG code

@@ -8,6 +8,12 @@ description: >-
 
 Currently Shared Services deployment is primarily a manual process.  However, automated & streamlined support is intended to be available at a later date.
 
+Nominally, three Shared Services accounts exist:
+
+<figure><img src="../../../../../.gitbook/assets/Unity Venues and SDLC (6).png" alt=""><figcaption><p>the three main MDPS Shared Services accounts</p></figcaption></figure>
+
+Each project account brings their own AWS account, that will be associated with a Unity Shared Services account.  Almost all customers will want to use the `Unity-Prod` account, since this is the most stable Shared Services account.
+
 ## Users & Roles Setup
 
 Project users and roles will be defined in the Shared Services account, using AWS Cognito.
