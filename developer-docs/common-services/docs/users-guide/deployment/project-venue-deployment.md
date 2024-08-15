@@ -6,13 +6,10 @@ description: >-
 
 # Project/Venue Deployment
 
-TODO: steps work in progress, better details coming soon.. See [project-onboarding-procedure.md](../../../../../mdps-overview/project-onboarding-procedure.md "mention")for more details
+At a high-level deploying a project venue is accomplished by:
 
-1\) Project AWS account identified for onboarding into Unity (Bring your own Account).
+1. Identifying which Shared Services account to use, and [creating one if necessary](https://unity-sds.gitbook.io/docs/developer-docs/common-services/docs/users-guide/deployment/shared-services-deployment).
+2. Following the [Project Onboarding Procedure](https://unity-sds.gitbook.io/docs/mdps-overview/project-onboarding-procedure)
 
-2\) Project (U-CS does this part for now) launches PartnerSolution from project AWS account, which deploys Management Console EC2.
 
-3\) Project User logs into Management Console via CloudFront
-
-4\) Project User deploys further marketplace items
 
