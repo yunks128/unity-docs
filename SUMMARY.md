@@ -99,7 +99,7 @@
       * [Build from Source Code](developer-docs/common-services/docs/developers-guide/build-from-source-code.md)
       * [Creating a Release](developer-docs/common-services/docs/developers-guide/creating-a-release.md)
       * [HTTPD Server Deployment](developer-docs/common-services/docs/developers-guide/httpd-server-deployment/README.md)
-        * [HTTPD Site Configurations](developer-docs/common-services/docs/developers-guide/httpd-server-deployment/httpd-site-configurations.md)
+        * [Shared Services HTTPD Site Configurations](developer-docs/common-services/docs/developers-guide/httpd-server-deployment/shared-services-httpd-site-configurations.md)
       * [SSL Certificate Usage](developer-docs/common-services/docs/developers-guide/ssl-certificate-usage.md)
     * [Admin Guide](developer-docs/common-services/docs/admin-guide/README.md)
       * [Venue Certificate Creation](developer-docs/common-services/docs/admin-guide/venue-certificate-creation.md)
