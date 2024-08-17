@@ -163,7 +163,7 @@ sudo apt-get install libapache2-mod-auth-openidc
 sudo a2enmod auth_openidc
 ```
 
-The following httpd site configuration has an example showing how to use mod\_auth\_openidc with Cognito.\
+The following HTTPD site configuration shows an example showing how to use mod\_auth\_openidc with Cognito (Also, the  [Shared Services HTTPD Site Configurations](shared-services-httpd-site-configurations.md) shows the exact configuration template used in Unity with Cognito specific variables).\
 
 
 <pre><code>&#x3C;VirtualHost *:443>
@@ -230,6 +230,8 @@ The following httpd site configuration has an example showing how to use mod\_au
     &#x3C;/Location>     
  &#x3C;/VirtualHost>                        
 </code></pre>
+
+
 
 
 
