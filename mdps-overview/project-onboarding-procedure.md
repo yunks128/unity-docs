@@ -75,6 +75,8 @@ description: >-
         * **Key Pair:**&#x20;
           * If a key pair doesn't already exist, create one in the format `unity-`<mark style="color:blue;">`<PROJECT>`</mark>`-`<mark style="color:green;">`<VENUE>`</mark>`-bastion-pem` (do this in another tab first)
           * select keypair (use "Select Existing Keypair") to use (create a new one and save it for future use)
+        * **Networking:**
+          * Make sure to select a public subnet (under the VPC setting)
         * **Security Group:**&#x20;
           * If an existing `mc-bastion-sg` security doesn't already exist, then create one. It should have:
             * INCOMING CONNECTIONS:
@@ -82,10 +84,9 @@ description: >-
             * OUTGOING CONNECTIONS:
               * open custom TCP for 443 to anywhere, and 80 to anywhere
           * Select the `mc-bastion-sg` security group.
-        * **Networking:**
-          * Make sure to select a public subnet (under the VPC setting)
         * Under Advanced, select an IAM Instance Profile of `Unity-CS_Service_Role-instance-profile`
         * launch instance
+          * NOTE: if this is the first time deploying to this AWS account, you may need to click on the error link and subscript/accept the Ubuntu Pro FIPS 20.04 LTS agreement, then click re-try on the launch instance.
         * Connect to instance
         * `sudo su - ubuntu`
         * `git clone https://github.com/unity-sds/unity-cs-infra.git`
@@ -97,6 +98,12 @@ description: >-
     * `sudo su - ubuntu`
     * `cd unity-cs-infra/nightly_tests ; git pull`
     * `./run.sh --destroy false --run-tests false --project-name`` `<mark style="color:blue;">`<PROJECT>`</mark>` ``--venue-name`` `<mark style="color:green;">`<VENUE>`</mark>
+      * NOTE: If this is the first time deploying to this AWS account, you may have to manually entry a few SSM parameters such as
+        * `/unity/cs/github/username`
+        * `/unity/cs/github/useremail`
+        * `/unity/cs/githubtoken`
+        * `/unity/ci/slack-web-hook-url`
+        * PLEASE CONSULT THE MDPS U-CS Team to determine what values to use, if you are unsure.
     * Make sure to copy the URL of the Management Console that gets printed to the console, as part of running the above command.  If any issues or errors encountered, see below "Debugging Management Console" section.
     * OPTIONAL STEPS IF YOU NEED TO DESTROY MANAGEMENT CONSOLE:
       * Run the following on the bastion host:
