@@ -98,7 +98,7 @@ description: >-
     * `sudo su - ubuntu`
     * `cd unity-cs-infra/nightly_tests ; git pull`
     * `./run.sh --destroy false --run-tests false --project-name`` `<mark style="color:blue;">`<PROJECT>`</mark>` ``--venue-name`` `<mark style="color:green;">`<VENUE>`</mark>
-      * NOTE: If this is the first time deploying to this AWS account, you may have to manually entry a few SSM parameters such as
+      * NOTE: If this is the first time deploying to this AWS account, you may have to manually enter a few SSM parameters such as:
         * `/unity/cs/github/username`
         * `/unity/cs/github/useremail`
         * `/unity/cs/githubtoken`
