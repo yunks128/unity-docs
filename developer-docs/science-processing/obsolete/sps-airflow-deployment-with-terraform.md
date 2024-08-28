@@ -19,7 +19,7 @@ description: Documentation for deploying an Airflow-based U-SPS on MCP using Ter
 
 A successful deployment of SPS depends on the following items from other the other Unity Service Areas.
 
-<table><thead><tr><th width="148">Service Area</th><th width="262">Description</th><th width="142">AWS Service</th><th>Naming Convention</th></tr></thead><tbody><tr><td>Common Services (CS)</td><td>An SSM parameter containing public and private subnet lists for the VPC that the SPS EKS cluster is deployed in.</td><td>AWS Systems Manager - SSM paramter.</td><td><code>/unity/cs/account/network/subnet_list</code></td></tr></tbody></table>
+<table><thead><tr><th width="148">Service Area</th><th width="262">Description</th><th width="142">AWS Service</th><th>Naming Convention</th></tr></thead><tbody><tr><td>Common Services (CS)</td><td>An SSM parameter containing public and private subnet lists for the VPC that the SPS EKS cluster is deployed in.</td><td>AWS Systems Manager - SSM paramter.</td><td><code>/unity/account/network/subnet_list</code></td></tr></tbody></table>
 
 ## Setup Instructions
 

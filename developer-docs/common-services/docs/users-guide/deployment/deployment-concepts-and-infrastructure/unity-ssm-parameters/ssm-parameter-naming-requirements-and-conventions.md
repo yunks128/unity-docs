@@ -24,8 +24,8 @@ There is no hard-and-fast requirement for naming here, but in 99% of the cases, 
     `/unity/WHATEVER/...`\
     Examples:&#x20;
 
-    \- `/unity/cs/account/network/vpc_id` (VPC ID doesn’t change per project/venue)\
-    \- `/unity/cs/account/network/subnet_list` (“)  \
+    \- `/unity/account/network/vpc_id` (VPC ID doesn’t change per project/venue)\
+    \- `/unity/account/network/subnet_list` (“)  \
     \- `/unity/shared-services/aws/account` (hopefully true that project/venues in an account use same SS account)
 2. **Things that are tied to a project/venue:** \
    `/unity/${project}/${venue}/WHATEVER/...` \
