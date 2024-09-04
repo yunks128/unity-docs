@@ -105,9 +105,10 @@ description: >-
         * `/unity/ci/slack-web-hook-url`
         * PLEASE CONSULT THE MDPS U-CS Team to determine what values to use, if you are unsure.
     * Make sure to copy the URL of the Management Console that gets printed to the console, as part of running the above command.  If any issues or errors encountered, see below "Debugging Management Console" section.
-    * OPTIONAL STEPS IF YOU NEED TO DESTROY MANAGEMENT CONSOLE:
+    * **OPTIONAL STEPS IF YOU NEED TO DESTROY the Venue Infrastructure:**
       * Run the following on the bastion host:
-      * `./destroy.sh --project-name`` `<mark style="color:blue;">`<PROJECT>`</mark>` ``--venue-name`` `<mark style="color:green;">`<VENUE>`</mark>\
+      * `./destroy.sh --project-name`` `<mark style="color:blue;">`<PROJECT>`</mark>` ``--venue-name`` `<mark style="color:green;">`<VENUE>`</mark>
+      * NOTE: the S3 bucket holding the terraform state files will not be deleted via the `destroy.sh` script.  It would be available for re-use next time around, if you deploy using the same \<PROJECT> and \<VENUE>. \
         &#x20;
 12. <mark style="color:purple;">**MDPS Team**</mark>** configures Shared Services HTTPD server to route to Venue "entry" ALB.**
     * See steps [here](https://unity-sds.gitbook.io/docs/developer-docs/common-services/docs/users-guide/deployment/updating-venue-deployment).\
