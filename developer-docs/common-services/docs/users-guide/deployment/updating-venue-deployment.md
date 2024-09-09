@@ -16,7 +16,7 @@ description: Procedure for updating a venue deployment
    5. Log into (e.g. using SSM connect) `shared-services-httpd` instance.
    6. `sudo su - ubuntu`
    7. `cd /etc/apache2/sites-enabled`
-   8. `vi unity-cs.conf`
+   8. `sudo vi unity-cs.conf`
    9. TODO: Link in future script that creates/modifies HTTPD shared services configuration.
    10. Update the line that looks like `RewriteRule /unity/dev/(.*) ws://unity-dev-http-alb.... [P,L] [END]` to have the new ALB URL.
    11. Update the two lines that look like below, to provide the new ALB URL (from step above):
