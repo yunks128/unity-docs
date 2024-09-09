@@ -18,12 +18,27 @@ description: Procedure for updating a venue deployment
    7. `cd /etc/apache2/sites-enabled`
    8. `sudo vi unity-cs.conf`
    9. TODO: Link in future script that creates/modifies HTTPD shared services configuration.
-   10. Update the line that looks like `RewriteRule /unity/dev/(.*) ws://unity-dev-http-alb.... [P,L] [END]` to have the new ALB URL.
-   11. Update the two lines that look like below, to provide the new ALB URL (from step above):
-       1. ```
-          ProxyPass  http://unity-dev-httpd-alb-285256043.us-west-2.elb.amazonaws.com:8080
-          ProxyPassReverse  http://unity-dev-httpd-alb-285256043.us-west-2.elb.amazonaws.com:8080
-          ```
-   12. Restart HTTPD:
-       1. `sudo systemctl restart apache2`
-   13.
+   10. Edit the file to conform to the [instructions here](https://unity-sds.gitbook.io/docs/developer-docs/common-services/docs/developers-guide/httpd-server-deployment/shared-services-httpd-site-configurations), to add a block similar to:\
+       \`\`\`\
+       &#x20;   RewriteCond %{HTTP:Connection} Upgrade \[NC]\
+       &#x20;   RewriteCond %{HTTP:Upgrade} websocket \[NC]\
+       &#x20;   RewriteCond %{REQUEST\_URI} "/emit/dev/"\
+       &#x20;   RewriteRule /emit/dev/(.\*) ws://emit-dev-httpd-alb-875152633.us-west-2.elb.amazonaws.com:8080/$1 \[P,L] \[END]
+
+       &#x20;
+
+       &#x20;   \<Location "/emit/dev/">\
+       &#x20;      ProxyPreserveHost on\
+       &#x20;      AuthType openid-connect\
+       &#x20;      Require valid-user
+
+       &#x20;
+
+       &#x20;      \# Added to point to httpd within the unity-venue-dev account\
+       &#x20;      ProxyPass "[http://emit-dev-httpd-alb-875152633.us-west-2.elb.amazonaws.com:8080/emit/dev/"](http://emit-dev-httpd-alb-875152633.us-west-2.elb.amazonaws.com:8080/emit/dev/%22)\
+       &#x20;      ProxyPassReverse "[http://emit-dev-httpd-alb-875152633.us-west-2.elb.amazonaws.com:8080/emit/dev/"](http://emit-dev-httpd-alb-875152633.us-west-2.elb.amazonaws.com:8080/emit/dev/%22)\
+       \</Location>\
+       \`\`\`
+   11. Restart HTTPD:
+
+`sudo systemctl restart apache2`
