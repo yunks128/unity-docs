@@ -29,7 +29,7 @@ An example application can be found here: [https://github.com/unity-sds/unity-ex
 
 Your code can expect a few things when executed, these include the location of data files you want to process, the location that output files should be written to, and any variables you want passed in- perhaps these are configuration parameters for your algorithm.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2024-02-29 at 11.11.38 AM.png" alt=""><figcaption><p>Example Inputs, outputs, and variables <a href="https://github.com/unity-sds/unity-example-application/blob/main/process.ipynb">https://github.com/unity-sds/unity-example-application/blob/main/process.ipynb</a></p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Screenshot 2024-02-29 at 11.11.38 AM.png" alt=""><figcaption><p>Example Inputs, outputs, and variables <a href="https://github.com/unity-sds/unity-example-application/blob/main/process.ipynb">https://github.com/unity-sds/unity-example-application/blob/main/process.ipynb</a></p></figcaption></figure>
 
 A final note about the cell above- it **must be tagged with the "parameters" tag** within the jupyter notebook. This will tell the algorithm build system that this is where input, output and variables are defined.
 
@@ -68,7 +68,7 @@ The key takeaway with regards to inputs and outputs are as follows:
 
 Basic python is fine and all, but what if you have a lot of complex setup? Perhaps you require GDAL to be present on the system for some raster transformations, or your own custom python code to be installed? Or specific versions of platform software? The above examples is trivial in these regards, but take an example like the [SBG Preprocessing](https://github.com/unity-sds/SBG-unity-preprocess) example, with the following imports:
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2024-02-29 at 12.05.33 PM.png" alt=""><figcaption><p>An example of some complex imports not available in default installations</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Screenshot 2024-02-29 at 12.05.33 PM.png" alt=""><figcaption><p>An example of some complex imports not available in default installations</p></figcaption></figure>
 
 When creating an algorithm with dependencies, we need to tell the system that these are required. When we are running interactively within the environment, we can simply do a `pip install` or a `conda install` to make the libraries available to our notebook.
 
