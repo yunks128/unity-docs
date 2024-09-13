@@ -23,7 +23,7 @@ aws sts assume-role --role-arn <role-arn> --role-session-name <random-unique-ses
 
 * \<role-arn> is the arn of the role for which the user is getting access. This should generally look like `arn:aws:iam:<account-id>:role/unity-<project>-<venue>-sts`
 * A \<random-unique-session-id>. This can be anything, but should incldue the name of the user this token is for and a date or time stamp. e.g. unityuser12252025
-* The \<external-id> is configured as part of the role itself, and is meant to prevent "confused deputy" problem, in which a user might accidentally request the resources of another project/venue. This is currently not given to the end user (for now), but is used as a secondary, sanity check that we're generating a token for the correct account.
+* The \<external-id> is configured as part of the role itself, and is meant to prevent "confused deputy" problem, in which a user might accidentally request the resources of another project/venue. This is currently not given to the end user (for now), but is used as a secondary, sanity check that we're generating a token for the correct account. The external-id can be found in the IAM role policy document, or in an SSM parameter called `/unity/{project}/{venue}/cs/sts/role/external-id.`Ideally the external-id is provided by the r_equesting user_ to ensure access to the role_._
 
 The result of the call is a json object with a few items:
 
